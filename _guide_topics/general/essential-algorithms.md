@@ -14,12 +14,12 @@ TODO: This needs to be shimmed for Mac Platform.
 ---
 
 <div class="row">
-<div class="col-12" markdown="1">   
+<div class="col-10" markdown="1">   
 # Essential Algorithms and Data Structures for Computational Design in Grasshopper First Edition
 
 
 </div>
-<div class="col-md-12 col-sm-12 col-sm-12" markdown="1">  
+<div class="col-md-10 col-sm-12 col-sm-12" markdown="1">  
 
 *Essential Algorithms and Data Structures for Computational Design* introduces effective methodologies to develop complex 3D modeling algorithms using Grasshopper. It also covers extensively the data structure adopted by Grasshopper and its core organization and management tools.
 
@@ -97,67 +97,52 @@ Download the <a href="{{ site.baseurl }}/files/math-samplesandtutorials.zip.zip"
 
    2.2 [Generating lists]({{ site.baseurl }}/guides/general/essential-algorithms/data-structures/#22-generating-lists)  
 
-   2.2 [Generating lists]({{ site.baseurl }}/guides/general/essential-algorithms/data-structures/#22-generating-lists)  
+   2.3 [List operations]({{ site.baseurl }}/guides/general/essential-algorithms/data-structures/#23-list-operations)  
 
-   2.2 [Transformation operations]({{ site.baseurl }}/guides/general/essential-mathematics/matrices-transformations/#22-transformation-operations)  
-&nbsp;&nbsp; Translation (move) transformation   
-&nbsp;&nbsp; Rotation transformation  
-&nbsp;&nbsp; Scale transformation  
-&nbsp;&nbsp; Shear transformation  
-&nbsp;&nbsp; Mirror or reflection transformation  
-&nbsp;&nbsp; Planar Projection transformation  
+   2.4 [List matching]({{ site.baseurl }}/guides/general/essential-algorithms/data-structures/#24-list-matching)  
+
+   2.5 [Data structures tutorials]({{ site.baseurl }}/guides/general/essential-algorithms/data-structures/#25-data-structures-tutorials)  
+&nbsp;&nbsp; Variable thickness pipe tutorial   
+&nbsp;&nbsp; Custom matching tutorial  
+&nbsp;&nbsp; Simple truss tutorial  
+&nbsp;&nbsp; Pearl necklace tutorial    
 
 </div>
 <div class="col-md-4" markdown="1"> 
 
 
-### 3. [Parametric Curves and Surfaces]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/)
+### 3. [Advanced Data Structures]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/)
 
-   3.1 [Parametric curve]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#31-parametric-curves)  
-&nbsp;&nbsp; Curve parameter  
-&nbsp;&nbsp; Curve domain or interval  
-&nbsp;&nbsp; Curve evaluation  
-&nbsp;&nbsp; Tangent vector to a curve  
-&nbsp;&nbsp; Cubic polynomial curves  
-&nbsp;&nbsp; Evaluating cubic Bézier curves  
+   3.1 [The Grasshopper data structure]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/#31-the-grasshopper-data-structure)  
+&nbsp;&nbsp; Introduction   
+&nbsp;&nbsp; Processing data trees  
+&nbsp;&nbsp; Data tree notation 
 
-   3.2 [NURBS curves]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#32-nurbs-curves)  
-&nbsp;&nbsp; Degree  
-&nbsp;&nbsp; Control points  
-&nbsp;&nbsp; Weights of control points  
-&nbsp;&nbsp; Knots  
-&nbsp;&nbsp; Knots are parameter values  
-&nbsp;&nbsp; Evaluation rule  
-&nbsp;&nbsp; Characteristics of NURBS curves  
-&nbsp;&nbsp; Evaluating NURBS curves  
+   3.2 [Generating trees]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/#32-generating-trees)  
 
-   3.3 [Curve geometric continuity]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#33-curve-geometric-continuity)   
+   3.3 [Tree matching]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/#33-tree-matching)   
 
-   3.4 [Curve curvature]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#34-curve-curvature)   
+   3.4 [Traversing trees]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/#34-traversing-trees)   
 
-   3.5 [Parametric surfaces]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#35-parametric-surfaces)   
-&nbsp;&nbsp; Surface parameters  
-&nbsp;&nbsp; Surface domain  
-&nbsp;&nbsp; Surface evaluation  
-&nbsp;&nbsp; Tangent plane of a surface  
+   3.5 [Basic tree operations]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/#35-basic-tree-operations)   
+&nbsp;&nbsp; Viewing the tree structure  
+&nbsp;&nbsp; List operations on trees  
+&nbsp;&nbsp; Grafting from lists to a trees  
+&nbsp;&nbsp; Flattening from trees to lists
+&nbsp;&nbsp; Combining data streams
+&nbsp;&nbsp; Flipping the data structure
+&nbsp;&nbsp; Simplifying the data structure     
 
-   3.6 [Surface geometric continuity]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#36-surface-geometric-continuity)     
+   3.6 [Advanced tree operations ]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/#36-advanced-tree-operations)     
+&nbsp;&nbsp; Relative items  
+&nbsp;&nbsp; Split trees  
+&nbsp;&nbsp; Path mapper  
 
-   3.7 [Surface curvature]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#37-surface-curvature)     
-&nbsp;&nbsp; Principal curvatures  
-&nbsp;&nbsp; Gaussian curvature  
-&nbsp;&nbsp; Mean curvature  
-
-   3.8 [NURBS surfaces]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#38-nurbs-surfaces)     
-&nbsp;&nbsp; Characteristics of NURBS surfaces  
-&nbsp;&nbsp; Singularity in NURBS surfaces  
-&nbsp;&nbsp; Trimmed NURBS surfaces  
-
-   3.9 [Polysurfaces]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#39-polysurfaces)     
-
-   3.10 [Tutorials]({{ site.baseurl }}/guides/general/essential-mathematics/parametric-curves-surfaces/#310-tutorials)     
-&nbsp;&nbsp; Continuity between curves  
-&nbsp;&nbsp; Surfaces with singularity  
+   3.7 [Advanced data structures tutorials ]({{ site.baseurl }}/guides/general/essential-algorithms/advanced-data-structures/#37-advanced-data-structures-tutorials)     
+&nbsp;&nbsp; Sloped roof tutorial  
+&nbsp;&nbsp; Diagonal triangles tutorial  
+&nbsp;&nbsp; Zigzag tutorial  
+&nbsp;&nbsp; Weaving tutorial  
 
 </div>
 </div>

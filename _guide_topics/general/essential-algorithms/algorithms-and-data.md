@@ -1,6 +1,6 @@
 ---
-title: 1 Vector Mathematics
-description: This guide discusses vector math including vector representation, vector operation, and line and plane equations.
+title: 1 Algorithms and Data
+description: This chapter introduces a methodology to help creative designers develop new algorithmic solutions.
 authors: ['rajaa_issa']
 sdk: ['General']
 languages: unset
@@ -12,23 +12,13 @@ keywords: ['mathematics', 'geometry', 'grasshopper3d']
 layout: toc-guide-page
 category_page: guides/general/essential-mathematics/
 ---
-A vector indicates a quantity, such as velocity or force, that has direction and length. Vectors in 3D coordinate systems are represented with an ordered set of three real numbers and look like:
+Algorithms and data are the two essential parts of any parametric design solution, but writing algorithms is not trivial and requires a skill that does not come easy to intuitive designers. The algorithmic design process is highly logical and requires explicit statement of the design intention and the steps to achieve them. This chapter introduces a methodology to help creative designers develop new algorithmic solutions. All algorithms involve manipulating data and hence Algorithms and Data are tightly connected. We will introduce the basic concepts of data types and processes.
 
-\$$\mathbf{\vec v}  = <a_1, a_2, a_3>$$
+## 1.1 Algorithmic design
 
-{% include youtube_player.html id="NU34_aCoN3E" %}
+We can define algorithmic design as a design method where the **output** is achieved through **well-defined steps**. In that sense, many human activities are algorithmic. Take, for example, baking a **cake**. You get the cake (output) by using a **recipe** (well-defined steps). Any change in the **ingredients** (input) or the baking process results in a different cake. We will analyze the parts of typical algorithms, and identify a strategy to build algorithmic solutions from scratch.
 
-## 1.1 Vector representation
-
-In this document, lower case bold letters with arrow on top will notate vectors. Vector components are also enclosed in angle brackets. Upper case letters will notate points. Point coordinates will always be enclosed by parentheses.
-
-Using a coordinate system and any set of anchor points in that system, we can represent or visualize these vectors using a line-segment representation. An arrowhead shows the vector direction.
-
-For example, if we have a vector that has a direction parallel to the x-axis of a given 3D coordinate system and a length of 5 units, we can write the vector as follows:
-
-\$$\mathbf{\vec v} = <5, 0, 0>$$  
-
-To represent that vector, we need an anchor point in the coordinate system. For example, all of the arrows in the following figure are equal representations of the same vector despite the fact that they are anchored at different locations.  
+Regardless of its complexity, all algorithmic solutions have 3 building blocks: **input**, **key process**, and **output**. Note that the key process may require additional input and processes.  
 
 <figure>
    <img src="{{ site.baseurl }}/images/math-image169.png">
