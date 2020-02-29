@@ -256,7 +256,19 @@ div.video-player {
   padding-top: 5px;
   padding-bottom: 5px;
   margin-left: auto;
-  margin-right: auto
+  margin-right: auto;
+}
+
+/* Draws a box around the image for example problems */
+.img-example {
+  text-align:center;
+  display:block;
+  padding-right: 25px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-left: auto;
+  margin-right: auto;
+  border: 4px;  
 }
 
 .clear-img {
@@ -354,6 +366,73 @@ tbody.index_table tr td{
 */
 
 .note p{
+	width: 80%;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: DarkRed;
+	padding: 5px;
+}
+
+/*
+##############################################################################
+##  Essential Algorithm 4 step Table 
+##  Start a markdown section with:
+##  <table class="step-4">
+##############################################################################
+*/
+
+.step-4 table {
+	width: 100%;
+	margin: auto;
+	margin-bottom: 20px;
+	margin-top: 20px;
+	padding: 5px;
+	border-collapse: collapse;
+}
+
+.step-4 table, tbody, tr, td {
+	border:1px solid black;
+}
+
+.step-one td {
+	bgcolor: #cfe2f3;
+}
+
+.step-two td {
+	bgcolor: #f4cccc;
+}
+
+.step-three td {
+	bgcolor: #d9d2e9;
+}
+
+.step-four td {
+	bgcolor: #d8eec5;
+}
+ 
+
+/*
+##############################################################################
+##  Essential Algorithms div element for word wrapped solutions
+##  Start a markdown section with:
+##  <details class="solution" markdown="1">
+##############################################################################
+*/
+
+.solution details{
+  display: block;
+  border-color: Black;
+  border-width:1px;
+}
+
+.solution summary{
+	background: #f8f8f8;
+}
+
+.solution p{
 	width: 80%;
 	margin: auto;
 	margin-bottom: 20px;
