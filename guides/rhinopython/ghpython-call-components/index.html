@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Node in Code from Python. with Python</title>
+  <meta name="description" content="It is possible to call a Grasshopper component from inside a Python script.  Using Python">
+
+  <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/guides/rhinopython/ghpython-call-components/" />
+  <meta property="og:title" content="Node in Code from Python." />
+  <meta property="og:description" content="It is possible to call a Grasshopper component from inside a Python script." />
+  <meta property=”og:site_name” content="developer.rhino3d.com"/>
+  <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
+
+  <!-- twitter card tags additive with the og: tags -->
+  <meta name="twitter:domain" value="developer.rhino3d.com" />
+  <meta name="twitter:title" value="Node in Code from Python." />
+  <meta name="twitter:description" value="It is possible to call a Grasshopper component from inside a Python script." />
+  
+    <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
+  
+  <meta name="twitter:url" value="http://developer.rhino3d.com" />
+  
+  <meta name="twitter:label1" value="Platform(s)" />
+  <meta name="twitter:data1" value="Windows, Mac, Grasshopper" />
+  
+  
+  <meta name="twitter:label2" value="Language(s)" />
+  <meta name="twitter:data2" value="Python" />
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/vbnet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="/node_modules/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>hljs.initLineNumbersOnLoad();</script>
+
+  <!-- Overridden theme -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+  <!-- Bootstrap override -->
+  <link rel="stylesheet" href="/css/bootstrap-override.css">
+
+  <link rel="canonical" href="http://developer.rhino3d.com/guides/rhinopython/ghpython-call-components/">
+  <link rel="alternate" type="application/rss+xml" title="Rhino Developer Docs" href="http://developer.rhino3d.com/feed.xml" />
+
+  <link rel="shortcut icon" href="https://developer.rhino3d.com/favicon.ico?v=2" />
+  <!-- Saving bookmarks to mobile devices -->
+  <!-- For non-Retina (@1× display) iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png"><!-- 57×57px -->
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
+  <!-- For iPhone 6 Plus with @3× display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/apple-touch-icon-180x180-precomposed.png">
+  <!-- For Chrome for Android: -->
+  <link rel="icon" sizes="192x192" href="/images/touch-icon-192x192.png">
+
+  <!-- Diable crawling until this version is the stable version -->
+  <meta name="robots" content="noindex" />
+</head>
+
+
+  <body>
+
+    <!-- Google Tag Manager **This belongs right after the <body> tag**-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MWMDKN"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MWMDKN');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    
+
+<!-- The following are "casts" from the string to number using math filters... -->
+
+
+
+<!-- ...but we need to check to see if the original branches were numbers or not... -->
+
+
+
+
+
+
+
+
+
+  <div class="version-banner">
+
+    
+      
+        
+        
+          <!-- <strong>NEW:</strong> Welcome to the <strong>Rhino 7</strong> version of this page! <a href="/6/guides/rhinopython/ghpython-call-components/">Looking for the older Rhino 6 version?</a> -->
+          Welcome to the <strong>Rhino 7</strong> version of this page!
+          <a href="/wip/guides/rhinopython/ghpython-call-components/">Looking for the newer Rhino 8 WIP version?</a>
+        
+        
+      
+    
+</div>
+
+<!-- Check the version banner for broken links and remove the link if found -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- <script>
+$(document).ready(function()
+{
+  var splitPath = window.location.pathname.split("/");
+  var linkURL = "/" + splitPath.splice(2,splitPath.length-2).join("/");
+
+  $.get(linkURL).fail(function ()
+  {
+    var $aTag = $("div.version-banner > a");
+    $aTag.text("View the current site instead.");
+    $aTag.attr("href", "/");
+  });
+});
+</script> -->
+
+
+    <div class="container">
+
+      <header class="site-header">
+
+
+    <a class="site-title" href="/"><img src="/images/rhinodevlogo148x128.png" alt="Rhino Developer Docs" height="48" width="56"></a><a class="site-title" href="/">Rhino Developer Docs</a>
+
+    <nav class="site-nav">
+      <img class="menu-icon" src="/images/gi.svg">
+      
+      <div class="trigger">
+      	<!--<a class="page-link" href="/">Welcome</a>-->
+        <!-- get current page title and "collection" to figure out which nav
+             link should be "active" -->
+        
+        
+        
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+        
+          
+            
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link active" href="/guides/">Guides</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/api/">API</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/samples/">Samples</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/videos/">Videos</a>
+                    
+                  
+              
+            
+          
+        
+        <a class="page-link" href="https://discourse.mcneel.com/c/rhino-developer">Forums</a>
+        <!-- Google Search Engine -->
+        <!-- TODO Move to this site back into the Mcneel search, or use a simple site only search for results -->
+        <div id="sitesearch">
+            <!-- CSE Search Box Begins  -->
+            <form id="search-box" name="search-box" onsubmit="sitesearchFunction()" action="/search-results.html">
+                <input id="searchtext" type="search" name="q" size="24" value="" placeholder="Search" />
+                <input class="searchBox" type="submit" size="2" value=" " />
+            </form>
+			<script type="text/javascript">
+			function sitesearchFunction(){
+				var form_id = document.getElementById("search-box");
+				var form_action = form_id.action;
+                var form_sb = document.getElementById("searchtext");
+				var query_src = form_sb.value + " site:developer.rhino3d.com";
+				form_sb.value = query_src.toString();
+			}
+			</script>
+<!-- Google CSE Search Box Ends -->
+        </div>
+        <!--End of Google Search Engine -->
+      </div>
+    </nav>
+
+</header>
+
+
+      <div class="page-content">
+        <!--div class="wrapper"-->
+          <div class="container-fluid">
+
+<div class="row-fluid">
+    <!--Nav Bar -->
+    <nav class="col-xs-0 col-md-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked fixed">
+        <!-- Find the h2 group and any h3 subgroups -->
+        
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#components-as-functions-from-ghpython">Components As functions f...</a>
+
+              
+                <ul class="nav nav-stacked">
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#configuring-inputs">Configuring inputs:</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#managing-outputs">Managing Outputs</a>
+                    </li>
+                  
+
+                </ul>
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#node-in-code-from-rhinopython">Node in code from rhino.P...</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#related-topics">Related Topics</a>
+
+              
+
+            </li>
+          
+
+        
+    </ul>
+</nav>
+
+
+    <!--Main Content -->
+    <div class="col-xs-12 col-md-9">
+      <!--<div class="post">-->
+
+        <article class="post-content">
+
+          <ol class="breadcrumb">
+              
+              
+              
+              
+              <li><a href="/guides/rhinopython">RhinoPython</a></li>
+
+              
+                
+                  <li class="active">GhPython</li>
+                
+              
+          </ol>
+
+          <h1>Node in Code from Python.</h1>
+
+          <p>
+  <span class="guide_byline">
+    
+      
+      by <a href="/authors/scott_davidson">Scott Davidson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/rhinopython/ghpython-call-components.md" target="_blank">06 Nov 2019</a>)
+    
+  </span>
+
+</p>
+
+          <p>It is possible to call a Grasshopper component from inside a Python script.</p>
+
+          <p><strong>Node-in-Code™</strong>: almost every Grasshopper component is now callable as a function in other places in Rhino.  Grasshopper components may be called in GhPython (on the Gh canvas) and from rhino.Python (off the canvas). This adds few thousand new functions accessible to GhPython. Functions are also available through 3rd party components.  Along with the new functionality that this provides, the technique can be used to simplify existing gh definition files by simply lumping together a bunch of related components into a single ‘scott_davidson’ script.</p>
+
+<p>There is a module in <code>ghpythonlib.components</code> which attempts to make every component available in Python in the form of an easy to call function.</p>
+
+<h2 id="components-as-functions-from-ghpython">Components As functions from GhPython</h2>
+
+<p>In this example we can make a new ghPhython component that combines the standard Grasshopper Voronoi component and the Grasshopper Area components.  Within one GhPython component the voronoi curves are created and the cell centroid points are output.</p>
+
+<p><img src="/images/node-in-code-voronoi.png" alt="/images/node-in-code-voronoi.png" class="img-center" width="25%" /></p>
+
+<p>Use a GhPython component with these inputs:</p>
+
+<p><img src="/images/nod-in-code-sample.png" alt="/images/nod-in-code-sample.png" class="img-center" width="95%" />
+Node in Code sample file</p>
+
+<p>Before entering code in the GhPython component it to review the input properties to make sure the correct Type hint is used.  In this case the points input has a Point3D hint and a List Access level set.  Do this by right clicking on the GhPython component input.</p>
+
+<p>Enter this code into the GhPython component:</p>
+
+<pre><code class="language-python">import ghpythonlib.components as ghcomp
+curves = ghcomp.Voronoi(points) # call the Grasshopper Voronoi component
+centroids = ghcomp.Area(curves).centroid # call Grasshopper Area component with curves from Voronoi
+</code></pre>
+
+<p>Of course you can mix in other Python to perform calculations on the results of the component function calls. I tweaked the above example to find the curve generated from Voronoi that has the largest area.</p>
+
+<pre><code class="language-python">import ghpythonlib.components as ghcomp
+
+curves = ghcomp.Voronoi(points)
+areas = ghcomp.Area(curves).area
+#find the biggest curve in the set
+max_area = -1
+max_curve = None
+for i, curve in enumerate(curves):
+    if areas[i] &gt; max_area:
+        max_area = areas[i]
+        max_curve = curve
+</code></pre>
+
+<p>Remember, this can be done for almost every component in Grasshopper (including every installed add-on component.) I use the term almost because there are cases where the function call doesn’t make sense. These cases are for things like Kangaroo or timers where the state of the component is important between iterations. Fortunately this is pretty rare.</p>
+
+<h3 id="configuring-inputs">Configuring inputs:</h3>
+
+<p>There are a few techniques that can make working with <code>ghpythonlib.components</code> easier.
+It is quite helpful and simplifies the code greatly if the proper <a href="/guides/rhinopython/ghpython-component/#advanced-input-properties">Type Hint</a> is set on the Input of the Python component. Setting the Type Hint to a specific data type will give the script direct access to the objects.   Without the Type Hint a lot more data checking and conversion may be necessary. For instance in a case where <code>points</code> are expected as input, set Type Hint &gt; Point3D.  This assures the GhPython components passes in actual point objects to Python. This is especially important for any inputs expecting geometry objects.</p>
+
+<p>Inputs also should be set properly for <a href="/guides/rhinopython/ghpython-component/#advanced-input-properties">Object Access, List Access, or Tree Access</a>.  Setting the Object vs List level access is important for make sure the GhPython code gets objects one at a time, or as a whole list of objects all at once.</p>
+
+<p>Working with multiple inputs and outputs from component methods is like working with any other Python functions.  Inputs can be passed to the function through a list of arguments.  For instance the Divide Curve component has multiple inputs (Curve, Number, Kinks)</p>
+
+<p><img src="/images/divide-comp.png" alt="/images/divide-comp.png" class="img-center" width="25%" /></p>
+
+<p>To pass these arguments, use a sequential list:</p>
+
+<pre><code class="language-python">results = ghcomp.DivideCurve(C, N, K)
+</code></pre>
+
+<p>Inputs may also are still optional and can be left off the end. Arguments left out will use their built in defaults:</p>
+
+<pre><code class="language-python">results  = ghcomp.DivideCurve(C, N)
+</code></pre>
+
+<p>Inputs may also be passed as Keyword arguments <code>(**kwargs)</code>.  In this way options do not need to be assigned sequentially and certain optional inputs can be skipped:</p>
+
+<pre><code class="language-python">results  = ghcomp.DivideCurve(Curves = C, Kinks = K)
+</code></pre>
+
+<p>In the case above the missing input Number of divisions the default value of (10) is used.  Be careful on relying on default values.  It is possible default values can change in the future.</p>
+
+<p>Help for details of specific Keyword Arguments names can be found in the help tab at the bottom the the GhPython editor while editing the arguments:</p>
+
+<p><img src="/images/node-in-code-help.png" alt="/images/node-in-code-help.png" class="img-center" width="50%" /></p>
+
+<p>At present, there is no way to switch components that have special settings to any alternative. For example the Bounding Box component has a special setting, Union Box:</p>
+
+<p><img src="/images/node-in-code-option.png" alt="/images/node-in-code-option.png" class="img-center" width="65%" /></p>
+
+<h3 id="managing-outputs">Managing Outputs</h3>
+
+<p>Components with multiple outputs will pass back a list or results corresponding to the sequential order of outputs for the component. Outputs come out of  ghpythonlib.components as sequential lists of lists.  In the case of (Points, Tangent Vectors, Parameters(t))</p>
+
+<pre><code class="language-Python">results  = ghcomp.DivideCurve(C, N, K)
+results[0] # List of points from Divide
+results[1] # List of Tangent Vectors
+Results[2] # List of Pameters on the curve
+</code></pre>
+
+<p>A nice Python trick can be used to separate the output into separate lists for each output return values:</p>
+
+<pre><code class="language-python">P, T, t  = ghcomp.DivideCurve(C, N, K)
+</code></pre>
+<p>Now each variable contains an already separate list of values that can be used in subsequent functions in the script.</p>
+
+<h2 id="node-in-code-from-rhinopython">Node in code from rhino.Python</h2>
+
+<p>In addition to <a href="#components-as-functions-from-ghpython">calling Grasshopper components as functions from the GhPython code</a>, the Grasshopper components are also outside of the Grasshopper canvas through rhino.python.</p>
+
+<p>While the Grasshopper canvas will not be visible during this operation, it is worth noting that Grasshopper will load up the first time you call into the <code>ghpythonlib</code> assembly.  This can take a couple seconds the first time you run the script in Rhino.</p>
+
+<p>As an example her is a script that calls into Grasshopper to use the Voronoi component to create voronoi cells around a few selected points.</p>
+
+<pre><code class="language-python">import rhinoscriptsyntax as rs
+import ghpythonlib.components as ghcomp
+import scriptcontext
+
+points = rs.GetPoints(True, True)
+if points:
+    curves = ghcomp.Voronoi(points)
+    for curve in curves:
+        scriptcontext.doc.Objects.AddCurve(curve)
+    for point in points:
+        scriptcontext.doc.Objects.AddPoint(point)
+    scriptcontext.doc.Views.Redraw()
+</code></pre>
+<p>The key is the ghpythonlib modules are available in the standard Python editor in Rhino. Behind the scenes things are running through Grasshopper code, but you don’t have to use a canvas to do your work.</p>
+
+<p>This also lets you work in a slightly different way where you can get points in Rhino using rhinoscriptsyntax “get input” type functions and pass those points (or curves or breps) into the Grasshopper component code.</p>
+
+<p><img src="/images/node-in-code-rhino-python.png" alt="/images/node-in-code-rhino-python.png" class="img-center" width="90%" /></p>
+
+<p>This opens up many more methods which are available to rhino.Python. Remember, this can be done for almost every component in Grasshopper (including every installed add-on component.) I use the term almost because there are cases where the function call doesn’t make sense. These cases are for things like Kangaroo or timers where the state of the component is important between iterations. Fortunately this is pretty rare.</p>
+
+<p>Help for specific component arguments and return values can be found in the help tab at the bottom the the rhino.Python editor while editing the arguments.</p>
+
+<p><img src="/images/node-in-code-help.png" alt="/images/node-in-code-help.png" class="img-center" width="50%" /></p>
+
+<hr />
+
+<h2 id="related-topics">Related Topics</h2>
+
+<ul>
+  <li><a href="/guides/rhinopython/what-are-python-rhinoscript">Your first script with Python in Grasshopper</a></li>
+  <li><a href="/guides/rhinopython/what-are-python-rhinoscript">What is Python and RhinoScript?</a></li>
+  <li><a href="/guides/rhinopython/python-loading-scripts">Editing Python in Grasshopper</a></li>
+  <li><a href="/guides/rhinopython/">Python Guide for Rhino</a></li>
+</ul>
+
+        </article>
+
+      <!--</div>-->
+
+    </div>
+</div>
+</div>
+
+        <!--/div-->
+      </div>
+
+      <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      
+        <div class="row">
+          <div class="col-md-4">
+
+            <p class="text">
+              
+                
+                Author: <a href="/authors/scott_davidson">Scott Davidson</a>
+              
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <span class="icon  icon--github">
+              <svg viewBox="0 0 16 16">
+                <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <a href="https://github.com/mcneel/developer-rhino3d-com/blob/7/_guide_topics/rhinopython/ghpython-call-components.md" target="_blank">Edit page on GitHub</a>
+          </div>
+            <div class="col-md-4">
+              <span class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>&nbsp;<a href="/admin">Admin</a>
+              </span>
+            </div>
+        </div>
+
+        <div class="row text-center">
+          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/authors">Contributions welcome</a>
+        </div>
+
+      
+
+    </div>
+
+  </div>
+
+  <script>
+    if (navigator.appVersion.indexOf("Win")!=-1)
+    {
+      var body = document.getElementsByTagName("body");
+      body[0].style.fontWeight = '400';
+    }
+  </script>
+
+</footer>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/javascript">
+    $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 150 /* fixed header is about 40px high */
+    });
+    </script>
+  </body>
+</html>

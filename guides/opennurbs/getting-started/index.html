@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Getting Started with C/C++</title>
+  <meta name="description" content="This guide explains how to use the openNURBS C++ toolkit in your project.  Using C/C++">
+
+  <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/guides/opennurbs/getting-started/" />
+  <meta property="og:title" content="Getting Started" />
+  <meta property="og:description" content="This guide explains how to use the openNURBS C++ toolkit in your project." />
+  <meta property=”og:site_name” content="developer.rhino3d.com"/>
+  <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
+
+  <!-- twitter card tags additive with the og: tags -->
+  <meta name="twitter:domain" value="developer.rhino3d.com" />
+  <meta name="twitter:title" value="Getting Started" />
+  <meta name="twitter:description" value="This guide explains how to use the openNURBS C++ toolkit in your project." />
+  
+    <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
+  
+  <meta name="twitter:url" value="http://developer.rhino3d.com" />
+  
+  <meta name="twitter:label1" value="Platform(s)" />
+  <meta name="twitter:data1" value="Windows, Mac" />
+  
+  
+  <meta name="twitter:label2" value="Language(s)" />
+  <meta name="twitter:data2" value="C/C++" />
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/vbnet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="/node_modules/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>hljs.initLineNumbersOnLoad();</script>
+
+  <!-- Overridden theme -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+  <!-- Bootstrap override -->
+  <link rel="stylesheet" href="/css/bootstrap-override.css">
+
+  <link rel="canonical" href="http://developer.rhino3d.com/guides/opennurbs/getting-started/">
+  <link rel="alternate" type="application/rss+xml" title="Rhino Developer Docs" href="http://developer.rhino3d.com/feed.xml" />
+
+  <link rel="shortcut icon" href="https://developer.rhino3d.com/favicon.ico?v=2" />
+  <!-- Saving bookmarks to mobile devices -->
+  <!-- For non-Retina (@1× display) iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png"><!-- 57×57px -->
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
+  <!-- For iPhone 6 Plus with @3× display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/apple-touch-icon-180x180-precomposed.png">
+  <!-- For Chrome for Android: -->
+  <link rel="icon" sizes="192x192" href="/images/touch-icon-192x192.png">
+
+  <!-- Diable crawling until this version is the stable version -->
+  <meta name="robots" content="noindex" />
+</head>
+
+
+  <body>
+
+    <!-- Google Tag Manager **This belongs right after the <body> tag**-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MWMDKN"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MWMDKN');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    
+
+<!-- The following are "casts" from the string to number using math filters... -->
+
+
+
+<!-- ...but we need to check to see if the original branches were numbers or not... -->
+
+
+
+
+
+
+
+
+
+  <div class="version-banner">
+
+    
+      
+        
+        
+          <!-- <strong>NEW:</strong> Welcome to the <strong>Rhino 7</strong> version of this page! <a href="/6/guides/opennurbs/getting-started/">Looking for the older Rhino 6 version?</a> -->
+          Welcome to the <strong>Rhino 7</strong> version of this page!
+          <a href="/wip/guides/opennurbs/getting-started/">Looking for the newer Rhino 8 WIP version?</a>
+        
+        
+      
+    
+</div>
+
+<!-- Check the version banner for broken links and remove the link if found -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- <script>
+$(document).ready(function()
+{
+  var splitPath = window.location.pathname.split("/");
+  var linkURL = "/" + splitPath.splice(2,splitPath.length-2).join("/");
+
+  $.get(linkURL).fail(function ()
+  {
+    var $aTag = $("div.version-banner > a");
+    $aTag.text("View the current site instead.");
+    $aTag.attr("href", "/");
+  });
+});
+</script> -->
+
+
+    <div class="container">
+
+      <header class="site-header">
+
+
+    <a class="site-title" href="/"><img src="/images/rhinodevlogo148x128.png" alt="Rhino Developer Docs" height="48" width="56"></a><a class="site-title" href="/">Rhino Developer Docs</a>
+
+    <nav class="site-nav">
+      <img class="menu-icon" src="/images/gi.svg">
+      
+      <div class="trigger">
+      	<!--<a class="page-link" href="/">Welcome</a>-->
+        <!-- get current page title and "collection" to figure out which nav
+             link should be "active" -->
+        
+        
+        
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+        
+          
+            
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link active" href="/guides/">Guides</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/api/">API</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/samples/">Samples</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/videos/">Videos</a>
+                    
+                  
+              
+            
+          
+        
+        <a class="page-link" href="https://discourse.mcneel.com/c/rhino-developer">Forums</a>
+        <!-- Google Search Engine -->
+        <!-- TODO Move to this site back into the Mcneel search, or use a simple site only search for results -->
+        <div id="sitesearch">
+            <!-- CSE Search Box Begins  -->
+            <form id="search-box" name="search-box" onsubmit="sitesearchFunction()" action="/search-results.html">
+                <input id="searchtext" type="search" name="q" size="24" value="" placeholder="Search" />
+                <input class="searchBox" type="submit" size="2" value=" " />
+            </form>
+			<script type="text/javascript">
+			function sitesearchFunction(){
+				var form_id = document.getElementById("search-box");
+				var form_action = form_id.action;
+                var form_sb = document.getElementById("searchtext");
+				var query_src = form_sb.value + " site:developer.rhino3d.com";
+				form_sb.value = query_src.toString();
+			}
+			</script>
+<!-- Google CSE Search Box Ends -->
+        </div>
+        <!--End of Google Search Engine -->
+      </div>
+    </nav>
+
+</header>
+
+
+      <div class="page-content">
+        <!--div class="wrapper"-->
+          <div class="container-fluid">
+
+<div class="row-fluid">
+    <!--Nav Bar -->
+    <nav class="col-xs-0 col-md-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked fixed">
+        <!-- Find the h2 group and any h3 subgroups -->
+        
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#prerequisites">Prerequisites</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#opennurbs-public-sdk">openNURBS public SDK</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#supported-c-compilers">Supported C++ Compilers</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#read-and-write">Read and Write</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#3dm-file-versions">3DM File Versions</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#examples">Examples</a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#answers-to-frequently-asked-questions">Answers to frequently ask...</a>
+
+              
+                <ul class="nav nav-stacked">
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#on_mesh">ON_Mesh</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#on_brep">ON_Brep</a>
+                    </li>
+                  
+
+                </ul>
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#related-topics">Related Topics</a>
+
+              
+
+            </li>
+          
+
+        
+    </ul>
+</nav>
+
+
+    <!--Main Content -->
+    <div class="col-xs-12 col-md-9">
+      <!--<div class="post">-->
+
+        <article class="post-content">
+
+          <ol class="breadcrumb">
+              
+              
+              
+              
+              <li><a href="/guides/opennurbs">openNURBS</a></li>
+
+              
+                
+                  <li class="active">Getting Started</li>
+                
+              
+          </ol>
+
+          <h1>Getting Started</h1>
+
+          <p>
+  <span class="guide_byline">
+    
+      
+      by <a href="/authors/dale_lear">Dale Lear</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/opennurbs/getting-started.md" target="_blank">05 Dec 2018</a>)
+    
+  </span>
+
+</p>
+
+          <p>This guide explains how to use the openNURBS C++ toolkit in your project.</p>
+
+          <h2 id="prerequisites">Prerequisites</h2>
+
+<p>openNURBS is intended for <em>skilled</em> C++ developers. Please read <a href="/guides/opennurbs/what-is-opennurbs">What is openNURBS?</a> if you have not already.  It is also presumed that you have an application that wishes to access <em>3dm</em> files outside of Rhinoceros.</p>
+
+<h2 id="opennurbs-public-sdk">openNURBS public SDK</h2>
+
+<p>To download the public C++ SDK, .NET SDK, or example 3DM files, visit https://www.rhino3d.com/opennurbs</p>
+
+<h2 id="supported-c-compilers">Supported C++ Compilers</h2>
+
+<p>The openNURBS C++ toolkit has been successfully used with the following compilers:</p>
+
+<ul>
+  <li><em>Microsoft Visual Studio 2017</em>: to build openNURBS and the examples with <em>Visual Studio 2017</em>, use the solution <em>opennurbs_public.sln</em>.</li>
+</ul>
+
+<p>To use C++ opennurbs in your Visual Studio project:</p>
+<ol>
+  <li>Open opennurbs_public.sln in VisualStudio, select the platform and configuration, and rebuild all.</li>
+  <li>In your project’s stdafx.h, put the following lines. This will include all the header files you need to call C++ opennurbs and automatically link in the correct libraries:
+    <pre><code>// defining OPENNURBS_PUBLIC_INSTALL_DIR enables automatic linking using pragmas
+#define OPENNURBS_PUBLIC_INSTALL_DIR "&lt;MY_INSTALLPATH&gt;"
+// uncomment the next line if you want to use opennurbs as a DLL
+//#define OPENNURBS_IMPORTS
+#include "&lt;MY_INSTALLPATH&gt;/opennurbs_public.h"
+</code></pre>
+  </li>
+</ol>
+
+<ul>
+  <li><em>Apple Xcode 9.2</em> (9C40b): To build openNURBS and the examples with <em>Xcode 9.2</em> (or later), use the workspace <em>opennurbs_public.xcworkspace</em>.</li>
+  <li><em>Other C++ compilers</em> The compiler must support the C++11 standard. A <em>makefile</em> is provided as a starting point. The openNURBS C++ source code is clean and simple. If you are using a C++ compiler that supports the C++11 standard and run into some toolkit code that causes problems, please <a href="http://discourse.mcneel.com/category/opennurbs">let us know</a>.  We’ll attempt to change the code to accommodate the compiler.</li>
+</ul>
+
+<h2 id="read-and-write">Read and Write</h2>
+
+<p>Use <code>ONX_Model::Read()</code> and <code>ONX_Model::Write()</code> to add support for reading and writing 3DM files to your application. See <em>example_read.cpp</em> and <em>example_write.cpp</em> for more details.</p>
+
+<ol>
+  <li>Compile the openNURBS Toolkit library.  To compile the example programs you must link with the openNURBS Toolkit library.</li>
+  <li>Study <em>example_read\example_read.cpp</em>. All the openNURBS geometry classes are derived from the <code>ON_Geometry</code> class.  If you need generic attribute information, there is probably an <code>ON_Geometry</code> member function that will answer your query.  See the <code>Dump()</code> function in <em>example_read.cpp</em> for code that demonstrates how to use the <code>Cast()</code> function to get at the actual class definitions.</li>
+  <li>Study <em>example_write\example_write.cpp</em>.  If you want to write points, meshes, NURBS curves, NURBS surfaces, or trimmed NURBS surfaces, you should be able to cut and paste most of what you need from the functions in <em>example_write.cpp</em>.  If you want to write trimmed surfaces or b-reps, then please study <em>example_brep.cpp</em>.</li>
+  <li>Study <em>example_brep\example_brep.cpp</em>.  If you want to write solid models or more general b-reps, then first work through <em>example_write.cpp</em> and then work through <em>example_brep.cpp</em>.</li>
+  <li>The comments in the openNURBS Toolkit header files are the primary source of documentation.  I suggest that you use a development environment that has high quality tags capabilities and a good class browser.</li>
+  <li>In the code you write include only <em>opennurbs.h</em>. The <em>opennurbs.h</em> header file includes the necessary openNURBS toolkit header files in the appropriate order.</li>
+  <li>Other items to note:
+    <ol>
+      <li><em>Strings</em> The <code>ON_wString</code> class has <code>wchar_t</code> elements. When using Microsoft Visual Studio on Windows, <code>sizeof(wchar_t)=2</code> and <code>ON_wString</code> content is UTF-16 encoded. When using Apple XCode on Mac OS, <code>sizeof(wchar_t)=4</code> and <code>ON_wString</code> content is UTF-32 encoded.</li>
+      <li>All memory allocations and frees are done through <code>onmalloc()</code>, <code>onfree()</code>, and <code>onrealloc()</code>.  The source that ships with openNURBS has <code>onmalloc()</code> call <code>malloc()</code> and <code>onfree()</code> call <code>free()</code>.
+     1. If you want to use Open GL to render openNURBS geometry, you may want to include <em>opennurbs_gl.h</em> after <em>opennurbs.h</em> and add <em>opennurbs_gl.cpp</em> to your openNURBS library.  See <em>example_gl.cpp</em> for details.
+     1. The openNURBS Toolkit works correctly on both big and little endian CPUs.</li>
+    </ol>
+  </li>
+</ol>
+
+<h2 id="3dm-file-versions">3DM File Versions</h2>
+
+<ol>
+  <li><em>Version 1 3DM files</em>. The openNURBS toolkit will read version 1 files.  Rhino 1 and other applications using the old Rhino I/O toolkit create version 1 files.</li>
+  <li><em>Version 2 3DM files</em>. The openNURBS toolkit will read and write version 2 files.  Rhino 2 and applications using an openNURBS toolkit released on or after December 2000 create version 2 files.  (Rhino 1 and the old Rhino I/O toolkit will not read version 2 files.)</li>
+  <li><em>Version 3 3DM files</em>. The openNURBS toolkit will read and write version 3 files.  Rhino 3 and applications using an openNURBS toolkit released on or after October 2002 create version 3 files.  (Rhino 1 and Rhino 2 will not read version 2 files.)</li>
+  <li><em>Version 4 3DM files</em>. The openNURBS toolkit will read and write version 4 files.  Rhino 4 and applications using an openNURBS toolkit released on or after September 2006 create version 4 files.  (Rhino 1, Rhino 2, and Rhino 3 will not read version 4 files.)</li>
+  <li><em>Version 5 3DM files</em>. The openNURBS toolkit will read and write version 5 files.  Rhino 5 and applications using an openNURBS toolkit released on or after September 2009 create version 5 files.  (Rhino 1, Rhino 2, Rhino 3 and Rhino 4 will not read version 5 files.)</li>
+  <li><em>Version 6 3DM files</em>. The openNURBS toolkit will read and write version 6 files.  Rhino 6 and applications using an openNURBS toolkit released on or after January 2018 create version 6 files.  (Rhino 1, Rhino 2, Rhino 3, Rhino 4 and Rhino 5 will not read version 6 files.)</li>
+</ol>
+
+<p>Sample 3DM files are availble from https://www.rhino3d.com/opennurbs</p>
+
+<h2 id="examples">Examples</h2>
+
+<p>This is an overview of the examples included with the openNURBS toolkit:</p>
+
+<ul>
+  <li><em>example_read\example_read.cpp</em>: Create a program by compiling <em>example_read.cpp</em> and statically linking with the openNURBS library.  The code in <em>example_read.cpp</em> illustrates how to read an openNURBS <em>.3dm</em> file.</li>
+  <li><em>example_write\example_write.cpp</em>: Create a program by compiling <em>example_write.cpp</em> and linking with the openNURBS library.  The code in <em>example_write.cpp</em> illustrates how to write layers, units system and tolerances, viewports, spotlights, points, meshes, NURBs curves, NURBs surfaces, trimmed NURBs surfaces, texture and bump map information, render material name, and material definitions to an openNURBS <em>.3dm</em> file. The bitmap <em>example_write\example_texture.bmp</em> is referenced by a rendering material texture in one of the 3DM files created by <em>example_write</em>.</li>
+  <li><em>example_test\example_test.cpp</em>: Create a program by compiling <em>example_test.cpp</em> and linking with the openNURBS library. The example_test program can be used to validate your opennurbs installation.</li>
+  <li><em>example_brep\example_brep.cpp</em>: Create a program by compiling <em>example_brep.cpp</em> and linking with the openNURBS library.  The code in <em>example_write.cpp</em> illustrates how to write a solid model.</li>
+  <li><em>example_userdata\example_userdata.cpp</em>: Create a program by compiling <em>example_userdata.cpp</em> and linking with the openNURBS library.  The code in <em>example_userdata</em> demonstrates how to create and manage arbitrary user defined information in <em>.3dm</em> files.</li>
+  <li><em>The Open GL example</em>: This code is a crude sketch of a starting point for using OpenGL to display opennurbs geometry. Start with simple mesh objects and work up. We do not provide support for using OpenGL.</li>
+</ul>
+
+<h2 id="answers-to-frequently-asked-questions">Answers to frequently asked questions:</h2>
+
+<h3 id="on_mesh">ON_Mesh</h3>
+
+<h4 id="vertex-ordering-in-on_mesh-faces">Vertex ordering in ON_Mesh faces</h4>
+
+<p>All faces in a <code>ON_Mesh</code> are stored with vertices listed in counter-clockwise order.  In particular, for quads the vertices are ordered as:</p>
+
+<p><img src="/images/opennurbs-getting-started-01.png" alt="Vertex Ordering" /></p>
+
+<p>The quads may be non-planar.</p>
+
+<p>The definition of <code>void ON_GL( const ON_Mesh&amp; )</code> in <em>opennurbs_gl.cpp</em> demonstrates how to go through an <code>ON_Mesh</code> and render all the quads as two triangles.</p>
+
+<h3 id="on_brep">ON_Brep</h3>
+
+<h4 id="orientation-of-on_brep-faces">Orientation of ON_Brep faces</h4>
+
+<p>The UV orientation of surfaces in a Brep is arbitrary.  If the <code>BOOL ON_BrepFace::m_bRev</code> member is <code>FALSE</code>, then the face’s orientation agrees with the surface’s natural \(Du \times Dv\) orientation.  When the member is <code>TRUE</code>, the face’s orientation is opposite the surface’s natural \(Du \times Dv\) orientation.</p>
+
+<p>If your application cannot handle <code>ON_BrepFaces</code> that have a <code>TRUE</code> <code>m_bRev</code> flag, then call <code>ON_Brep::FlipReversedSurfaces()</code>.  See the comments in <code>ON_Brep::FlipReversedSurfaces()</code> and <code>ON_Brep::SwapFaceParameters()</code> for details.</p>
+
+<h4 id="trimming-loop-order-and-nesting">Trimming loop order and nesting</h4>
+
+<p>The <code>ON_BrepLoop::m_type</code> member records the type of boundary (inner, outer, etc.).  A <code>ON_BrepFace</code> has exactly one outer loop and it is the first loop referenced in the <code>ON_BrepFace::m_li[]</code> array.  The inner loops all define “holes” in the <code>ON_BrepFace</code>.  All the inner holes lie inside of the outer loop.  A <code>ON_BrepFace</code> is always path connected.  In particular, inner loops are not “nested.”</p>
+
+<h4 id="surfaces-in-rhino-are-read-as-on_breps">Surfaces in Rhino are read as ON_Breps</h4>
+
+<p>Internally, Rhino stores all surfaces as some type of b-rep and the openNURBS toolkit reads these objects as b-reps. To see if an entire</p>
+
+<p><code>ON_Brep</code> is really just a surface, use:</p>
+
+<p><code>BOOL ON_Brep::IsSurface()</code></p>
+
+<p>If <code>ON_Brep::IsSurface()</code> returns <code>TRUE</code>, then the b-rep geometry is the same as the surface <code>ON_Brep::m_S[0]</code>.</p>
+
+<p>To see of a particular face in a b-rep is really just a surface, use:</p>
+
+<p><code>BOOL ON_Brep::FaceIsSurface( face_index )</code></p>
+
+<p>If <code>ON_Brep::FaceIsSurface( face_index )</code> returns <code>TRUE</code>, then the face’s geometry is the same as the surface <code>ON_Brep::m_S[face.m_si]</code>.</p>
+
+<hr />
+
+<h2 id="related-topics">Related Topics</h2>
+
+<ul>
+  <li><a href="/guides/opennurbs/what-is-opennurbs">What is openNURBS?</a></li>
+  <li><a href="/guides/opennurbs/what-is-rhino3dmio">What is Rhino3dmIO?</a></li>
+</ul>
+
+        </article>
+
+      <!--</div>-->
+
+    </div>
+</div>
+</div>
+
+        <!--/div-->
+      </div>
+
+      <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      
+        <div class="row">
+          <div class="col-md-4">
+
+            <p class="text">
+              
+                
+                Author: <a href="/authors/dale_lear">Dale Lear</a>
+              
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <span class="icon  icon--github">
+              <svg viewBox="0 0 16 16">
+                <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <a href="https://github.com/mcneel/developer-rhino3d-com/blob/7/_guide_topics/opennurbs/getting-started.md" target="_blank">Edit page on GitHub</a>
+          </div>
+            <div class="col-md-4">
+              <span class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>&nbsp;<a href="/admin">Admin</a>
+              </span>
+            </div>
+        </div>
+
+        <div class="row text-center">
+          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/authors">Contributions welcome</a>
+        </div>
+
+      
+
+    </div>
+
+  </div>
+
+  <script>
+    if (navigator.appVersion.indexOf("Win")!=-1)
+    {
+      var body = document.getElementsByTagName("body");
+      body[0].style.fontWeight = '400';
+    }
+  </script>
+
+</footer>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/javascript">
+    $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 150 /* fixed header is about 40px high */
+    });
+    </script>
+  </body>
+</html>
