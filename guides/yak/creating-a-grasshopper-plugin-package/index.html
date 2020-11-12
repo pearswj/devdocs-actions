@@ -444,7 +444,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/yak/creating-a-grasshopper-plugin-package.md" target="_blank">10 Nov 2020</a>)
+      by <a href="/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/yak/creating-a-grasshopper-plugin-package.md" target="_blank">12 Nov 2020</a>)
     
   </span>
 
@@ -457,7 +457,12 @@ $(document).ready(function()
 <div class="alert alert-info" role="alert">
 <strong>Note:</strong> The package manager is cross-platform. The examples below are for Windows.
 For Mac, replace the path to the Yak CLI tool with
-<code>/Applications/RhinoWIP.app/Contents/Resources/bin/yak</code>.
+<code>"/Applications/Rhino 7.app/Contents/Resources/bin/yak"</code>.
+</div>
+
+<!-- TODO: remove warning when 7.1 is released -->
+<div class="alert alert-warning" role="alert">
+    <strong>Warning!</strong> The <code>"/Applications/Rhino 7.app/Contents/Resources/bin/yak"</code> script is broken in Rhino 7.0 and will be fixed in Rhino 7.1 <u>Release Candidate 2</u>. <a href="https://discourse.mcneel.com/t/rhino-7-service-release-candidate-available/111989" class="alert-link">Check the forum</a> for updates.
 </div>
 
 <p>First, let’s assume you have a folder on your computer which contains all the
@@ -481,7 +486,7 @@ Prompt and navigate to the directory above.</p>
 the <a href="../the-package-manifest">Manifest Reference Guide</a>. Alternatively, you can use the <code>spec</code>
 command to generate a skeleton file. We’ll do the latter here.</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" spec
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7\System\Yak.exe" spec
 
 Inspecting content: Marmoset.gha
 
@@ -524,7 +529,7 @@ keywords:
 
 <p>Now that we have a manifest file, we can build the package!</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" build
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7\System\Yak.exe" build
 
 Building package from contents of C:\Users\Bozo\dist
 
