@@ -504,7 +504,7 @@ $(document).ready(function()
         
         <a href="/authors/will_pearson">Will Pearson</a>
         
-           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/compute/deploy.md" target="_blank">12 Nov 2020</a>)
+           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/compute/deploy.md" target="_blank">25 Nov 2020</a>)
     
   </span>
 
@@ -516,7 +516,7 @@ $(document).ready(function()
 
 <h2 id="1-set-up-core-hour-billing">1. Set up Core-Hour Billing</h2>
 
-<p>Read the <a href="../core-hour-billing">Core-Hour Billing Guide</a>.</p>
+<p>Follow the <a href="../core-hour-billing">“Core-Hour Billing” guide</a> to get set up.</p>
 
 <h2 id="2-prepare-windows-server">2. Prepare Windows Server</h2>
 
@@ -546,22 +546,26 @@ $(document).ready(function()
 
 <ul>
   <li><code>EmailAddress</code> - the Rhino download link requires a valid email address</li>
-  <li><code>ApiKey</code> - configures an API key to secure the server</li>
-  <li><code>RhinoToken</code> – the long token from your core-hour billing team</li>
+  <li><code>ApiKey</code> - the API Key that clients will use when communicating with Compute</li>
+  <li><code>RhinoToken</code> – the long token that links Rhino to your core-hour billing team</li>
 </ul>
 
 <pre><code class="language-powershell">iwr -useb https://raw.githubusercontent.com/mcneel/compute.rhino3d/master/script/bootstrap-server.ps1 -outfile bootstrap.ps1; .\bootstrap.ps1 -install
 </code></pre>
 <p>At the end of the installation process, Windows will restart to complete the setup. Wait a minute and log back in to check that the compute.geometry service is running.</p>
 
-<p>☞ <em><strong>Note:</strong> After the first restart (only) you may need to start the compute.geometry service manually. Every other time it will start automatically.</em></p>
+<!-- Compute won't start the first time because the .NET 4.8 install needs to finish up -->
+<!-- TODO: check if we can install the service with "delayed" start to make this work better -->
+<div class="alert alert-warning" role="alert">
+<strong>After the first restart</strong> you may need to start the compute.geometry service manually. <strong>Every other time it will start automatically.</strong>
+</div>
 
 <h2 id="4-verify-compute-and-license-usage">4. Verify Compute and license usage</h2>
 
 <ol>
-  <li>Open a browser and go to http://public-dns-or-ip/version. If Compute is working it will return its version and Rhino’s version.</li>
-  <li>Visit https://www.rhino3d.com/licenses</li>
-  <li>Under <strong>Team Licenses</strong> click your new team.</li>
+  <li>Open a browser and go to <em>http://public-dns-or-ip/version</em>. If Compute is working it will return its version and Rhino’s version.</li>
+  <li>Go to the <a href="https://www.rhino3d.com/licenses?_forceEmpty=true">Licenses Portal</a> (login to your Rhino account if prompted).</li>
+  <li>Under <em>Team Licenses</em> click your new team.</li>
   <li>Verify that Rhino is in use in your core-hour billing team.</li>
 </ol>
 
