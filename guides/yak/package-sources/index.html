@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Package Manager Guides</title>
-  <meta name="description" content="Guides to using the Rhino package manager, mostly from a developer's perspective.">
+  <title>Custom Package Repositories</title>
+  <meta name="description" content="This is a quick guide to configuring custom package repositories in Rhino.">
 
   <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
   <meta property="og:type" content="website" />
-  <meta property="og:url" content="/guides/yak/" />
-  <meta property="og:title" content="Package Manager Guides" />
-  <meta property="og:description" content="Guides to using the Rhino package manager, mostly from a developer's perspective." />
+  <meta property="og:url" content="/guides/yak/package-sources/" />
+  <meta property="og:title" content="Custom Package Repositories" />
+  <meta property="og:description" content="This is a quick guide to configuring custom package repositories in Rhino." />
   <meta property=”og:site_name” content="developer.rhino3d.com"/>
   <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
 
   <!-- twitter card tags additive with the og: tags -->
   <meta name="twitter:domain" value="developer.rhino3d.com" />
-  <meta name="twitter:title" value="Package Manager Guides" />
-  <meta name="twitter:description" value="Guides to using the Rhino package manager, mostly from a developer's perspective." />
+  <meta name="twitter:title" value="Custom Package Repositories" />
+  <meta name="twitter:description" value="This is a quick guide to configuring custom package repositories in Rhino." />
   
     <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
   
@@ -50,7 +50,7 @@
   <!-- Bootstrap override -->
   <link rel="stylesheet" href="/css/bootstrap-override.css">
 
-  <link rel="canonical" href="http://developer.rhino3d.com/guides/yak/">
+  <link rel="canonical" href="http://developer.rhino3d.com/guides/yak/package-sources/">
   <link rel="alternate" type="application/rss+xml" title="Rhino Developer Docs" href="http://developer.rhino3d.com/feed.xml" />
 
   <link rel="shortcut icon" href="https://developer.rhino3d.com/favicon.ico?v=2" />
@@ -118,9 +118,9 @@
       
         
         
-          <!-- <strong>NEW:</strong> Welcome to the <strong>Rhino 7</strong> version of this page! <a href="/6/guides/yak/">Looking for the older Rhino 6 version?</a> -->
+          <!-- <strong>NEW:</strong> Welcome to the <strong>Rhino 7</strong> version of this page! <a href="/6/guides/yak/package-sources/">Looking for the older Rhino 6 version?</a> -->
           Welcome to the <strong>Rhino 7</strong> version of this page!
-          <a href="/wip/guides/yak/">Looking for the newer Rhino 8 WIP version?</a>
+          <a href="/wip/guides/yak/package-sources/">Looking for the newer Rhino 8 WIP version?</a>
         
         
       
@@ -374,76 +374,72 @@ $(document).ready(function()
         <!--div class="wrapper"-->
           <div class="container-fluid">
 
-  <h1>Package Manager Guides
-  
-    <img src="/images/win-logo-small.png" alt="Windows" class="guide_icon">
-  
-  
-    <img src="/images/mac-logo-small.png" alt="macOS" class="guide_icon">
-  
-  
-  
-  </h1>
+<div class="row-fluid">
+    <!--Nav Bar -->
+    <nav class="col-xs-0 col-md-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked fixed">
+        <!-- Find the h2 group and any h3 subgroups -->
+        
 
-  <p>Guides to using the Rhino package manager, mostly from a developer's perspective.</p>
-  
+        
+    </ul>
+</nav>
 
-  <div class="row-fluid">
-    <div class="col-md-4">
-      <h3 id="overview">Overview</h3>
 
-<ul>
-  <li><a href="/guides/yak/what-is-yak">What is the Package Manager (a.k.a. Yak)?</a></li>
-  <li><a href="https://discourse.mcneel.com/c/serengeti/yak">Join the Discussion</a></li>
-</ul>
+    <!--Main Content -->
+    <div class="col-xs-12 col-md-9">
+      <!--<div class="post">-->
 
-<h3 id="fundamentals">Fundamentals</h3>
+        <article class="post-content">
 
-<ul>
+          <ol class="breadcrumb">
+              
+              
+              
+              
+              <li><a href="/guides/yak">Package Manager</a></li>
 
-  <li><a href="/guides/yak/the-anatomy-of-a-package/">The Anatomy of a Package</a></li>
+              
+                
+                  <li class="active">Getting Started</li>
+                
+              
+          </ol>
 
-  <li><a href="/guides/yak/the-package-manifest/">The Package Manifest</a></li>
+          <h1>Custom Package Repositories</h1>
 
-  <li><a href="/guides/yak/the-package-server/">The Package Server</a></li>
-
-  <li><a href="/guides/yak/yak-cli-reference/">Yak Command Line Tool Reference</a></li>
-
-</ul>
-
-<h3 id="getting-started">Getting Started</h3>
-
-<ul>
-
-  <li><a href="/guides/yak/creating-a-grasshopper-plugin-package/">Creating a Grasshopper Plug-In Package</a></li>
-
-  <li><a href="/guides/yak/creating-a-rhino-plugin-package/">Creating a Rhino Plug-In Package</a></li>
-
-  <li><a href="/guides/yak/package-sources/">Custom Package Repositories</a></li>
-
-  <li><a href="/guides/yak/pushing-a-package-to-the-server/">Pushing a Package to the Server</a></li>
-
-  <li><a href="/guides/yak/installing-and-managing-packages/">Installing and Managing Packages</a></li>
-
-</ul>
-
-<h3 id="features">Features</h3>
-
-<ul>
-  <li><a href="/guides/yak/package-restore-in-grasshopper">Package Restore in Grasshopper</a></li>
-</ul>
-
-    </div>
-
-    <div class="col-md-4">
+          <p>
+  <span class="guide_byline">
+    
       
-    </div>
+      by <a href="/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/yak/package-sources.md" target="_blank">26 Nov 2020</a>)
+    
+  </span>
 
-    <div class="col-md-4">
-      
-    </div>
+</p>
 
-  </div>
+          <p>This is a quick guide to configuring custom package repositories in Rhino.</p>
+
+          <div class="alert alert-warning" role="alert">
+⚠️ This feature requires modifying advanced settings in Rhino!
+</div>
+
+<p>By default Rhino uses the official McNeel package server - https://yak.rhino3d.com. In addition (or instead!), it’s possible to configure Rhino to use your own package repositories.</p>
+
+<p>A custom package repository is simply a folder that contains .yak package files. The folder can be on the local machine or on a shared file server. You can configure Rhino to include packages from this repository in the Package Manager by following the steps below.</p>
+
+<ol>
+  <li>Go to <em>Options &gt; Advanced</em> and look for the <code>Rhino.PackageManager.Sources</code> setting.</li>
+  <li>Add the full path to your package repository folder, separating it from the default package server with a semi-colon, e.g. <code>https://yak.rhino3d.com;C:\rhino_packages</code>.</li>
+  <li>Run the <code>_PackageManager</code> command and search for one of the packages that you added to the new package repository.</li>
+</ol>
+
+        </article>
+
+      <!--</div>-->
+
+    </div>
+</div>
 </div>
 
         <!--/div-->
@@ -456,27 +452,34 @@ $(document).ready(function()
     <div class="footer-col-wrapper">
 
       
-
         <div class="row">
-          <div class="col-md-3">
-              <span class="icon  icon--github">
-                <svg viewBox="0 0 16 16">
-                  <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
-                </svg>
-              </span>
-              <a href="https://github.com/mcneel/developer-rhino3d-com/blob/7/_guide_topics/yak.md" target="_blank">Edit on GitHub</a>
-          </div>
+          <div class="col-md-4">
 
-          <div class="col-md-6 text-center">
-            © 1997 - 2020 Robert McNeel &amp; Associates<br/>
-            <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/authors">Contributions welcome</a>
+            <p class="text">
+              
+                
+                Author: <a href="/authors/will_pearson">Will Pearson</a>
+              
+            </p>
           </div>
-
-          <div class="col-md-3">
-            <span class="pull-right">
-              <span class="glyphicon glyphicon-cog"></span>&nbsp;<a href="/admin">Admin</a>
+          <div class="col-md-4 text-center">
+            <span class="icon  icon--github">
+              <svg viewBox="0 0 16 16">
+                <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
             </span>
+            <a href="https://github.com/mcneel/developer-rhino3d-com/blob/7/_guide_topics/yak/package-sources.md" target="_blank">Edit page on GitHub</a>
           </div>
+            <div class="col-md-4">
+              <span class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>&nbsp;<a href="/admin">Admin</a>
+              </span>
+            </div>
+        </div>
+
+        <div class="row text-center">
+          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/authors">Contributions welcome</a>
         </div>
 
       
