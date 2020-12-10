@@ -505,7 +505,7 @@ $(document).ready(function()
 
           <h2 id="overview">Overview</h2>
 
-<p>The LAN Zoo allows third party plugin developers add licensing support for their products to the Zoo.</p>
+<p>The LAN Zoo allows third party plugin developers add licensing support for their products.</p>
 
 <p>When a customer attempts to add a product license to the LAN Zoo, the product’s plugin is called to validate the user’s request. Upon validation, the plugin will return the product’s licensing information back to the Zoo. In turn, the LAN Zoo will serialize, maintain, and distribute this license.</p>
 
@@ -530,7 +530,7 @@ $(document).ready(function()
   <li>Create a new <em>Class Library</em> project using either Visual C# or Visual Basic .NET.</li>
   <li>Add a reference to <em>ZooPlugin.dll</em>, which is found in the LAN Zoo installation folder. Make sure to set the reference’s <em>Copy Local</em> property to <code>False</code>.</li>
   <li>Create a new public class that inherits from the <code>IZooPlugin3</code> interface.</li>
-  <li>Implement the interface members.  (For detailed information about the interface members, see the sample Zoo plugin listed below.)</li>
+  <li>Implement the interface members.  (For detailed information about the interface members, see the sample LAN Zoo plugin listed below.)</li>
   <li>Build your plugin.</li>
   <li><a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally sign your plugin</a>.</li>
 </ol>
