@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Creating Zoo Plugins with C#</title>
-  <meta name="description" content="This guide discusses how to create plugins for Zoo.  Using C#">
+  <title>Creating LAN Zoo Plugins with C#</title>
+  <meta name="description" content="This guide discusses how to create plugins for the LAN Zoo.  Using C#">
 
   <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/guides/rhinocommon/creating-zoo-plugins/" />
-  <meta property="og:title" content="Creating Zoo Plugins" />
-  <meta property="og:description" content="This guide discusses how to create plugins for Zoo." />
+  <meta property="og:title" content="Creating LAN Zoo Plugins" />
+  <meta property="og:description" content="This guide discusses how to create plugins for the LAN Zoo." />
   <meta property=”og:site_name” content="developer.rhino3d.com"/>
   <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
 
   <!-- twitter card tags additive with the og: tags -->
   <meta name="twitter:domain" value="developer.rhino3d.com" />
-  <meta name="twitter:title" value="Creating Zoo Plugins" />
-  <meta name="twitter:description" value="This guide discusses how to create plugins for Zoo." />
+  <meta name="twitter:title" value="Creating LAN Zoo Plugins" />
+  <meta name="twitter:description" value="This guide discusses how to create plugins for the LAN Zoo." />
   
     <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
   
@@ -425,7 +425,7 @@ $(document).ready(function()
             
             
             <li>
-              <a href="#writing-a-zoo-plugin">Writing a Zoo Plugin</a>
+              <a href="#writing-a-lan-zoo-plugin">Writing a LAN Zoo Plugin</a>
 
               
 
@@ -441,7 +441,7 @@ $(document).ready(function()
             
             
             <li>
-              <a href="#installing-a-zoo-plugin">Installing a Zoo Plugin</a>
+              <a href="#installing-a-lan-zoo-plugin">Installing a LAN Zoo Plugin</a>
 
               
 
@@ -489,70 +489,70 @@ $(document).ready(function()
               
           </ol>
 
-          <h1>Creating Zoo Plugins</h1>
+          <h1>Creating LAN Zoo Plugins</h1>
 
           <p>
   <span class="guide_byline">
     
       
-      by <a href="/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/rhinocommon/creating-zoo-plugins.md" target="_blank">05 Dec 2018</a>)
+      by <a href="/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/rhinocommon/creating-zoo-plugins.md" target="_blank">10 Dec 2020</a>)
     
   </span>
 
 </p>
 
-          <p>This guide discusses how to create plugins for Zoo.</p>
+          <p>This guide discusses how to create plugins for the LAN Zoo.</p>
 
           <h2 id="overview">Overview</h2>
 
-<p>Zoo lets third party plugin developers add licensing support for their products to the Zoo.</p>
+<p>The LAN Zoo allows third party plugin developers add licensing support for their products to the Zoo.</p>
 
-<p>When a customer attempts to add a product license to the Zoo, the product’s plugin is called to validate the user’s request.  Upon validation, the plugin will return the product’s licensing information back to the Zoo.  In turn, the Zoo will serialize, maintain, and distribute this license.</p>
+<p>When a customer attempts to add a product license to the LAN Zoo, the product’s plugin is called to validate the user’s request. Upon validation, the plugin will return the product’s licensing information back to the Zoo. In turn, the LAN Zoo will serialize, maintain, and distribute this license.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
-<p>Zoo plugins are .NET Framework 4.5 assemblies.  To create a plugins for Zoo, you need one of the following development tools:</p>
+<p>LAN Zoo plugins are .NET Framework 4.5 assemblies. To create a plugins for the LAN Zoo, you need one of the following development tools:</p>
 
 <ol>
-  <li>Microsoft Visual C# 2017.</li>
-  <li>Microsoft Visual Basic .NET 2017.</li>
+  <li>Microsoft Visual C#.</li>
+  <li>Microsoft Visual Basic .NET.</li>
 </ol>
 
-<p>Also, all plugins that use the Zoo license system must be signed with an <em>Authenticode</em> certificate issued by <em>McNeel Plugin Security</em>.  These certificates are free, but must be requested by each developer.  Developers must agree to the <em>Terms of Use</em> before a certificate is issued.  For more information on plugin signing, see <a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for Zoo</a>.</p>
+<p>Also, all plugins that use the LAN Zoo license system must be signed with an <em>Authenticode</em> certificate issued by <em>McNeel Plugin Security</em>.  These certificates are free, but must be requested by each developer. Developers must agree to the <em>Terms of Use</em> before a certificate is issued. For more information on plugin signing, see <a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for LAN Zoo</a>.</p>
 
-<h2 id="writing-a-zoo-plugin">Writing a Zoo Plugin</h2>
+<h2 id="writing-a-lan-zoo-plugin">Writing a LAN Zoo Plugin</h2>
 
 <p>The general steps required to create a Zoo plugin are:</p>
 
 <ol>
-  <li>Make sure you have Zoo installed.</li>
+  <li>Make sure you have the LAN Zoo installed.</li>
   <li>Launch Microsoft Visual Studio.</li>
   <li>Create a new <em>Class Library</em> project using either Visual C# or Visual Basic .NET.</li>
-  <li>Add a reference to <em>ZooPlugin.dll</em>, which is found in the Zoo installation folder.  Make sure to set the reference’s <em>Copy Local</em> property to <code>False</code>.</li>
+  <li>Add a reference to <em>ZooPlugin.dll</em>, which is found in the LAN Zoo installation folder. Make sure to set the reference’s <em>Copy Local</em> property to <code>False</code>.</li>
   <li>Create a new public class that inherits from the <code>IZooPlugin3</code> interface.</li>
   <li>Implement the interface members.  (For detailed information about the interface members, see the sample Zoo plugin listed below.)</li>
   <li>Build your plugin.</li>
   <li><a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally sign your plugin</a>.</li>
 </ol>
 
-<h2 id="installing-a-zoo-plugin">Installing a Zoo Plugin</h2>
+<h2 id="installing-a-lan-zoo-plugin">Installing a LAN Zoo Plugin</h2>
 
-<p>Once you have built your Zoo plugin, you can install it and test it:</p>
+<p>Once you have built your LAN Zoo plugin, you can install it and test it:</p>
 
 <ol>
-  <li>Run <em>ZooAdmin.exe</em> and make sure the Zoo licensing service has stopped.</li>
-  <li>Copy your plugin assembly (<em>.dll</em>) and any dependent support libraries to the Zoo’s plugin folder (i.e. <em>C:\Program Files\Zoo 6\Plugins</em>).</li>
+  <li>Run <em>ZooAdmin.Wpf.exe</em> and make sure the LAN Zoo licensing service has stopped.</li>
+  <li>Copy your plugin assembly (<em>.dll</em>) and any dependent support libraries to the lan Zoo’s plugin folder (i.e. <em>C:\Program Files\Zoo 7\Plugins</em>).</li>
   <li>Restart the Zoo license service.</li>
-  <li>When the service has restarted, click the <em>Add License</em> button. Y our product should be one of the available products for which to add a license.</li>
+  <li>When the service has restarted, click the <em>Add License</em> button. Your product should be one of the available products for which to add a license.</li>
 </ol>
 
 <h2 id="related-topics">Related Topics</h2>
 
 <ul>
-  <li><a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for Zoo</a></li>
-  <li><a href="/guides/rhinocommon/rhinocommon-zoo-plugins">Creating Plugins that use the Zoo (RhinoCommon)</a></li>
-  <li><a href="/guides/cpp/creating-zoo-plugins">Creating Plugins that use the Zoo (C/C++)</a></li>
-  <li><a href="https://github.com/mcneel/rhino-developer-samples/tree/6/zoo">Sample Zoo Plugin Projects (on GitHub)</a></li>
+  <li><a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for LAN Zoo</a></li>
+  <li><a href="/guides/rhinocommon/rhinocommon-zoo-plugins">Creating Plugins that use the LAN Zoo (RhinoCommon)</a></li>
+  <li><a href="/guides/cpp/creating-zoo-plugins">Creating Plugins that use the LAN Zoo (C/C++)</a></li>
+  <li><a href="https://github.com/mcneel/rhino-developer-samples/tree/6/zoo">Sample LAN Zoo Plugin Projects (on GitHub)</a></li>
 </ul>
 
 
