@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Creating Plugins that use the Zoo with C#</title>
-  <meta name="description" content="This guide discusses how to create RhinoCommon plugins that can obtain licenses the Zoo.  Using C#">
+  <title>Creating Plugins that use the LAN Zoo with C#</title>
+  <meta name="description" content="This guide discusses how to create RhinoCommon plugins that can obtain licenses the LAN Zoo.  Using C#">
 
   <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/guides/rhinocommon/rhinocommon-zoo-plugins/" />
-  <meta property="og:title" content="Creating Plugins that use the Zoo" />
-  <meta property="og:description" content="This guide discusses how to create RhinoCommon plugins that can obtain licenses the Zoo." />
+  <meta property="og:title" content="Creating Plugins that use the LAN Zoo" />
+  <meta property="og:description" content="This guide discusses how to create RhinoCommon plugins that can obtain licenses the LAN Zoo." />
   <meta property=”og:site_name” content="developer.rhino3d.com"/>
   <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
 
   <!-- twitter card tags additive with the og: tags -->
   <meta name="twitter:domain" value="developer.rhino3d.com" />
-  <meta name="twitter:title" value="Creating Plugins that use the Zoo" />
-  <meta name="twitter:description" value="This guide discusses how to create RhinoCommon plugins that can obtain licenses the Zoo." />
+  <meta name="twitter:title" value="Creating Plugins that use the LAN Zoo" />
+  <meta name="twitter:description" value="This guide discusses how to create RhinoCommon plugins that can obtain licenses the LAN Zoo." />
   
     <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
   
@@ -473,31 +473,31 @@ $(document).ready(function()
               
           </ol>
 
-          <h1>Creating Plugins that use the Zoo</h1>
+          <h1>Creating Plugins that use the LAN Zoo</h1>
 
           <p>
   <span class="guide_byline">
     
       
-      by <a href="/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/rhinocommon/rhinocommon-zoo-plugins.md" target="_blank">05 Dec 2018</a>)
+      by <a href="/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/rhinocommon/rhinocommon-zoo-plugins.md" target="_blank">10 Dec 2020</a>)
     
   </span>
 
 </p>
 
-          <p>This guide discusses how to create RhinoCommon plugins that can obtain licenses the Zoo.</p>
+          <p>This guide discusses how to create RhinoCommon plugins that can obtain licenses the LAN Zoo.</p>
 
           <h2 id="overview">Overview</h2>
 
-<p>The Zoo supports 3rd party plugins. RhinoCommon allows developers to write plugins for Rhino that use the Rhino license manager and obtain licenses from Zoo servers.</p>
+<p>The LAN Zoo supports 3rd party plugins. RhinoCommon allows developers to write plugins for Rhino that use the Rhino license manager and obtain licenses from LAN Zoo servers.</p>
 
-<p>When a customer attempts to add a product license to the Zoo, the product’s plugin is called to validate the user’s request.  Upon validation, the plugin will return the product’s licensing information back to the Zoo.  In turn, the Zoo will serialize, maintain, and distribute this license.</p>
+<p>When a customer attempts to add a product license to the LAN Zoo, the product’s plugin is called to validate the user’s request. Upon validation, the plugin will return the product’s licensing information back to the LAN Zoo. In turn, the LAN Zoo will serialize, maintain, and distribute this license.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
 <p>It is presumed you already have the necessary tools installed and are ready to go.  If you are not there yet, see <a href="/guides/rhinocommon/installing-tools-windows">Installing Tools (Windows)</a>.</p>
 
-<p>Also, all plugins that use the Zoo license system must be signed with an Authenticode certificate issued by McNeel Plugin Security.  These certificates are free, but must be requested by each developer.  Developers must agree to the Terms of Use before a certificate is issued.  For more information on plugin signing, see <a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for Zoo</a>.</p>
+<p>Also, all plugins that use the LAN Zoo license system must be signed with an Authenticode certificate issued by McNeel Plugin Security.  These certificates are free, but must be requested by each developer.  Developers must agree to the Terms of Use before a certificate is issued.  For more information on plugin signing, see <a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for LAN Zoo</a>.</p>
 
 <p>It is also presumed you have a RhinoCommon plugin you wish to add license support to.  See the <a href="/guides/rhinocommon/your-first-plugin-windows/">Your First Plugin (Windows)</a> guide for instructions.</p>
 
@@ -507,7 +507,7 @@ $(document).ready(function()
 
 <h4 id="step-by-step">Step-by-Step</h4>
 <ol>
-  <li>In your plugin’s <code>Rhino.PlugIns.PlugIn</code> inherited class, create a new method with the same signature as the <code>Rhino.PlugIns.ValidateProductKeyDelegate</code> delegate.  Rhino will call into this function whenever it needs your plugin to validate a license that is entered by a user, returned by the Rhino license manager (standalone node), or returned from a Zoo server (network node).</li>
+  <li>In your plugin’s <code>Rhino.PlugIns.PlugIn</code> inherited class, create a new method with the same signature as the <code>Rhino.PlugIns.ValidateProductKeyDelegate</code> delegate.  Rhino will call into this function whenever it needs your plugin to validate a license that is entered by a user, returned by the Rhino license manager (standalone node), or returned from a LAN Zoo server (network node).</li>
   <li>In your plugin’s <code>Rhino.PlugIns.PlugIn</code> inherited class, create a new method with the same signature as the <code>Rhino.PlugIns.OnLeaseChangedDelegate</code> delegate.  Rhino will call into this function if your product supports Rhino Accounts. When Rhino Accounts gets a new lease, this function is called.</li>
   <li>In your plugin’s <code>Rhino.PlugIns.PlugIn.OnLoad</code> override, call <code>Rhino.PlugIns.GetLicense</code> and pass it your licenses’s capabilities (enum), a text mask to assist the user in entering a license, and your two delegate functions.</li>
   <li>Build your plugin.</li>
@@ -518,8 +518,8 @@ $(document).ready(function()
 <h2 id="related-topics">Related Topics</h2>
 
 <ul>
-  <li><a href="/guides/rhinocommon/creating-zoo-plugins">Creating Zoo Plugins</a></li>
-  <li><a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for Zoo</a></li>
+  <li><a href="/guides/rhinocommon/creating-zoo-plugins">Creating LAN Zoo Plugins</a></li>
+  <li><a href="/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for LAN Zoo</a></li>
   <li><a href="https://github.com/mcneel/rhino-developer-samples/tree/6/rhinocommon/cs/SampleCsWithLicense">Sample RhinoCommon plugin project (GitHub)</a></li>
 </ul>
 
