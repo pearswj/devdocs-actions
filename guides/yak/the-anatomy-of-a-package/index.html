@@ -524,7 +524,7 @@ so that Rhino and Grasshopper can find and load them</li>
   <li><code>any-any</code> - anything goes! (existing behaviour)</li>
 </ul>
 
-<p>When installing packages, the server will check the version of Rhino<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and determine whether a compatible distribution exists for the requested version.</p>
+<p>When installing packages, the package manager checks whether a compatible distribution exists for the requested version. Only package versions that have at least one compatible distribution will show up when the <code>_PackageManager</code> command is run in Rhino 7+.</p>
 
 <p>The updated server works seamlessly with existing packages and old versions of Rhino. Pre-existing versions on the server (without distributions) will be treated as <code>any-any</code> when installing. New package versions that do not include a distribution tag, e.g. those created by previous versions of the CLI, will also be treated as <code>any-any</code> when publishing.</p>
 
@@ -538,16 +538,6 @@ so that Rhino and Grasshopper can find and load them</li>
   <li><a href="../pushing-a-package-to-the-server">Create a Grasshopper package</a> of your plugin.</li>
   <li><a href="../pushing-a-package-to-the-server">Create a Rhino package</a> for everyone.</li>
 </ul>
-
-<hr />
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>Each installation of Rhino comes with it’s own version of the package manager. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 
         </article>
 
