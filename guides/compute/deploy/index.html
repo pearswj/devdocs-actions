@@ -504,7 +504,7 @@ $(document).ready(function()
         
         <a href="/authors/will_pearson">Will Pearson</a>
         
-           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/compute/deploy.md" target="_blank">25 Nov 2020</a>)
+           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/compute/deploy.md" target="_blank">07 Jan 2021</a>)
     
   </span>
 
@@ -513,6 +513,10 @@ $(document).ready(function()
           <p>Deploy Compute for Production</p>
 
           <p>How to deploy Compute to production server environment. To run Compute locally for development and testing, read <a href="../development">Running and Debugging Compute Locally</a>.</p>
+
+<div class="alert alert-info" role="alert">
+Running Compute locally uses your existing Rhino license. This is the best option for development and testing. Licensing works differently when running Rhino (i.e. via Compute) in a server-setting and you will be charged at a rate of <strong>$0.10 per core per hour</strong> if you follow this guide. 
+</div>
 
 <h2 id="1-set-up-core-hour-billing">1. Set up Core-Hour Billing</h2>
 
@@ -542,22 +546,28 @@ $(document).ready(function()
 
 <h2 id="3-install-rhino-and-compute">3. Install Rhino and Compute</h2>
 
-<p>On the virtual machine, copy and paste the command below into a powershell window and hit Enter. You will be asked to enter a few things…</p>
+<ol>
+  <li>Connect to the server or virtual machine (usually using RDP) and open a PowerShell window.</li>
+  <li>
+    <p>Copy and paste the command below and hit Enter.</p>
 
-<ul>
-  <li><code>EmailAddress</code> - the Rhino download link requires a valid email address</li>
-  <li><code>ApiKey</code> - the API Key that clients will use when communicating with Compute</li>
-  <li><code>RhinoToken</code> – the long token that links Rhino to your core-hour billing team</li>
-</ul>
-
-<pre><code class="language-powershell">iwr -useb https://raw.githubusercontent.com/mcneel/compute.rhino3d/master/script/bootstrap-server.ps1 -outfile bootstrap.ps1; .\bootstrap.ps1 -install
+    <pre><code class="language-powershell"> iwr -useb https://raw.githubusercontent.com/mcneel/compute.rhino3d/master/script/bootstrap-server.ps1 -outfile bootstrap.ps1; .\bootstrap.ps1 -install
 </code></pre>
-<p>At the end of the installation process, Windows will restart to complete the setup. Wait a minute and log back in to check that the compute.geometry service is running.</p>
+
+    <p>This <a href="https://github.com/mcneel/compute.rhino3d/blob/master/script/bootstrap-server.ps1">script</a> will install Rhino and the latest build of Compute as well as ensuring that clients can communicate with Compute. Compute will be installed as a Windows service (named “compute.geometry”) so that it starts automatically when the server or virtual machine starts. You will be asked to enter a few things…</p>
+    <ul>
+      <li><code>EmailAddress</code> - the Rhino download link requires a valid email address</li>
+      <li><code>ApiKey</code> - the API Key that clients will use when communicating with Compute</li>
+      <li><code>RhinoToken</code> – the long token that links Rhino to your core-hour billing team</li>
+    </ul>
+  </li>
+  <li>At the end of the installation process, Windows will restart to complete the setup. Wait a minute and log back in to check that the “compute.geometry” service is running.</li>
+</ol>
 
 <!-- Compute won't start the first time because the .NET 4.8 install needs to finish up -->
 <!-- TODO: check if we can install the service with "delayed" start to make this work better -->
 <div class="alert alert-warning" role="alert">
-<strong>After the first restart</strong> you may need to start the compute.geometry service manually. <strong>Every other time it will start automatically.</strong>
+<strong>After the first restart</strong> you may need to start the "compute.geometry" service manually. <strong>Every other time it will start automatically.</strong>
 </div>
 
 <h2 id="4-verify-compute-and-license-usage">4. Verify Compute and license usage</h2>
@@ -568,6 +578,10 @@ $(document).ready(function()
   <li>Under <em>Team Licenses</em> click your new team.</li>
   <li>Verify that Rhino is in use in your core-hour billing team.</li>
 </ol>
+
+<div class="alert alert-info" role="alert">
+You are now being charged via <a href="../core-hour-billing" class="alert-link">Core-Hour Billing</a>. To stop the billing, either stop the "compute.geometry" service or shutdown the server or virtual machine.
+</div>
 
 <h2 id="5-next-steps">5. Next steps</h2>
 
