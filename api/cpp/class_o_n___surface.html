@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__surface_8h_source.html">opennurbs_surface.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_surface.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_Surface:</div>
 <div class="dyncontent">
@@ -255,7 +255,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a540c9be4e61afd522ced8ee37cb0a47f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a540c9be4e61afd522ced8ee37cb0a47f">PointAt</a> (double, double) const</td></tr>
 <tr class="memdesc:a540c9be4e61afd522ced8ee37cb0a47f"><td class="mdescLeft">&#160;</td><td class="mdescRight">simple evaluation interface - no error handling  <a href="class_o_n___surface.html#a540c9be4e61afd522ced8ee37cb0a47f">More...</a><br /></td></tr>
 <tr class="separator:a540c9be4e61afd522ced8ee37cb0a47f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6a18b844ec679dd1f1a42afb6a9d50dc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a6a18b844ec679dd1f1a42afb6a9d50dc">Pullback</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve_3d, double tolerance, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curve_3d_subdomain=nullptr, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_uv=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_uv=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga07b06d9e1e6e2628fff11b0c5bcb9d87">ON_FitResult</a> *rc=0) const</td></tr>
+<tr class="memitem:a6a18b844ec679dd1f1a42afb6a9d50dc"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a6a18b844ec679dd1f1a42afb6a9d50dc">Pullback</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve_3d, double tolerance, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curve_3d_subdomain=nullptr, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_uv=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_uv=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga07b06d9e1e6e2628fff11b0c5bcb9d87">ON_FitResult</a> *rc=0) const</td></tr>
 <tr class="separator:a6a18b844ec679dd1f1a42afb6a9d50dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8a30c98f407b9971a7699df969fd1c4"><td class="memItemLeft" align="right" valign="top">virtual <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#ae8a30c98f407b9971a7699df969fd1c4">Pushup</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve_2d, double tolerance, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curve_2d_subdomain=nullptr, <a class="el" href="group__open_n_u_r_b_s.html#ga07b06d9e1e6e2628fff11b0c5bcb9d87">ON_FitResult</a> *rc=0) const</td></tr>
 <tr class="separator:ae8a30c98f407b9971a7699df969fd1c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -280,7 +280,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a6c02248d5c3280246e2732a14d84ca58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab88b3c29cccf29717a83ee349e2d85d7"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#ab88b3c29cccf29717a83ee349e2d85d7">Trim</a> (int dir, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> &amp;domain)</td></tr>
 <tr class="separator:ab88b3c29cccf29717a83ee349e2d85d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8080ef0b385224c17df0f035a697814e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a8080ef0b385224c17df0f035a697814e">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
+<tr class="memitem:a8080ef0b385224c17df0f035a697814e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___surface.html#a8080ef0b385224c17df0f035a697814e">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
 <tr class="separator:a8080ef0b385224c17df0f035a697814e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_class_o_n___geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_class_o_n___geometry')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="class_o_n___geometry.html">ON_Geometry</a></td></tr>
 <tr class="memitem:a65226d33b1c8c1e8289e37073566c953 inherit pub_methods_class_o_n___geometry"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___geometry.html#a65226d33b1c8c1e8289e37073566c953">ON_Geometry</a> ()=default</td></tr>
@@ -3297,13 +3297,13 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>start_uv</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
+          <td class="paramname"><em>start_uv</em> = <code><a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>end_uv</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
+          <td class="paramname"><em>end_uv</em> = <code><a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -3963,7 +3963,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -4117,7 +4117,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:57 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:41 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rhino_sdk_instance_8h_source.html">rhinoSdkInstance.h</a>&gt;</code></p>
+<p><code>#include &lt;rhinoSdkInstance.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhinoInstanceObject:</div>
 <div class="dyncontent">
@@ -225,6 +225,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f3e098e3d46e2743cd438d326c1c009 inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9068d2a92257698e1d24ac990381170e inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a9068d2a92257698e1d24ac990381170e">BrepReferenceCounterExists</a> () const</td></tr>
 <tr class="separator:a9068d2a92257698e1d24ac990381170e inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b386e5ee532cbbdd8fec847496b5b0a inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a8b386e5ee532cbbdd8fec847496b5b0a">CopyHistoryOnReplace</a> () const</td></tr>
+<tr class="separator:a8b386e5ee532cbbdd8fec847496b5b0a inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8485a65682644206383c2a6e80ad6db inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#ae8485a65682644206383c2a6e80ad6db">DeleteAttributeUserData</a> (<a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> userdata_uuid)</td></tr>
 <tr class="separator:ae8485a65682644206383c2a6e80ad6db inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d66fe8233c01fe6400ccbfae5df2f4d inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a4d66fe8233c01fe6400ccbfae5df2f4d">DeleteDynamicTransform</a> ()</td></tr>
@@ -401,6 +403,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a90bf560c0deb91044eb80c15ffc835ca inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe22f3afdec3cac88f1d7a29998eebb0 inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#abe22f3afdec3cac88f1d7a29998eebb0">Select</a> (bool bSelect=true, bool bSynchHighlight=true, bool bPersistentSelect=true, bool bIgnoreGripsState=false) const</td></tr>
 <tr class="separator:abe22f3afdec3cac88f1d7a29998eebb0 inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8917b23b924626d49dcd44adc041164e inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a8917b23b924626d49dcd44adc041164e">SetCopyHistoryOnReplace</a> (bool bCopy) const</td></tr>
+<tr class="separator:a8917b23b924626d49dcd44adc041164e inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f97d34cb42c94073d82737e19ff2ceb inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a3f97d34cb42c94073d82737e19ff2ceb">SetDynamicTransform</a> (const <a class="el" href="class_o_n___xform.html">ON_Xform</a> &amp;dynamic_xform)</td></tr>
 <tr class="separator:a3f97d34cb42c94073d82737e19ff2ceb inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaedaa78284d5274a01b2f2b21a517e70 inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#aaedaa78284d5274a01b2f2b21a517e70">SetHistory</a> (class <a class="el" href="class_c_rhino_history.html">CRhinoHistory</a> &amp;history)</td></tr>
@@ -2258,7 +2262,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:29 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:11 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

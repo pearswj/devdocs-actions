@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__string_8h_source.html">opennurbs_string.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_string.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -95,6 +95,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a1793e06209b018bb48e06331d588bcec"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8e7b5923cf2ab1d5302d1861fd8f5ae0"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#a8e7b5923cf2ab1d5302d1861fd8f5ae0">MetersPerUnit</a> () const</td></tr>
 <tr class="separator:a8e7b5923cf2ab1d5302d1861fd8f5ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a37af40e5f1320ffbb575180b3d6e33c4"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#a37af40e5f1320ffbb575180b3d6e33c4">MetersPerUnit</a> (double unset_return_value) const</td></tr>
+<tr class="separator:a37af40e5f1320ffbb575180b3d6e33c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a22d32001bb74a6d00b3933eb9e61fbb7"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#a22d32001bb74a6d00b3933eb9e61fbb7">MillimetersPerUnit</a> (double unset_return_value) const</td></tr>
+<tr class="separator:a22d32001bb74a6d00b3933eb9e61fbb7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab0fb5b9e9717d2d421ef6478f92de141"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#ab0fb5b9e9717d2d421ef6478f92de141">operator!=</a> (const <a class="el" href="class_o_n___unit_system.html">ON_UnitSystem</a> &amp;) const</td></tr>
 <tr class="separator:ab0fb5b9e9717d2d421ef6478f92de141"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a585fc50a8441f626d0900439ce951edd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___unit_system.html">ON_UnitSystem</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#a585fc50a8441f626d0900439ce951edd">operator=</a> (const <a class="el" href="class_o_n___unit_system.html">ON_UnitSystem</a> &amp;)=default</td></tr>
@@ -113,6 +117,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa59866152e9074ec4815c9342be7057"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2eb2f7126832640ee389e3baabb03f39"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#a2eb2f7126832640ee389e3baabb03f39">SetUnitSystem</a> (<a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a> us)</td></tr>
 <tr class="separator:a2eb2f7126832640ee389e3baabb03f39"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa4815d8a4a8163099d89dc1802e6a133"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#aa4815d8a4a8163099d89dc1802e6a133">ToString</a> () const</td></tr>
+<tr class="separator:aa4815d8a4a8163099d89dc1802e6a133"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c0f2b3f1754cc0d7508e579579b4226"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem</a> () const</td></tr>
 <tr class="separator:a9c0f2b3f1754cc0d7508e579579b4226"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75d88dfb6d8d15af61d41d66d79920c1"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___unit_system.html#a75d88dfb6d8d15af61d41d66d79920c1">UnitSystemName</a> () const</td></tr>
@@ -371,7 +377,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true If the unit system is valid and set to something beside ON::no_unit_systm; </p>
+<p>Returns True if <a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is neither <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aac9f88e098f6fe4e4e112eeb05ccb9671">ON::LengthUnitSystem::Unset</a> nor <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa6adf97f83acf6453d4a6a4b1070f3754">ON::LengthUnitSystem::None</a> and <a class="el" href="class_o_n___unit_system.html#a1793e06209b018bb48e06331d588bcec">IsValid()</a> is true. See Also: <a class="el" href="class_o_n___unit_system.html#a1793e06209b018bb48e06331d588bcec">IsValid()</a> </p>
 
 </div>
 </div>
@@ -389,12 +395,12 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns true if m_unit_system is a valid <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a" title="ON::LengthUnitSystem identifies a length unit system United States customary length units references:...">ON::LengthUnitSystem</a> enum value, which may be <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa6adf97f83acf6453d4a6a4b1070f3754">ON::LengthUnitSystem::None</a>. If m_unit_system is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa273791eac02a2dec9555523427d254b3">ON::LengthUnitSystem::CustomUnits</a>, then <a class="el" href="class_o_n___unit_system.html#a1793e06209b018bb48e06331d588bcec">IsValid()</a> returns true if m_custom_unit_scale &gt; 0.0 and false otherwise. The value of m_custom_unit_name is not tested. See Also: <a class="el" href="class_o_n___unit_system.html#a515e3667fddcc6691a051520c237238a">IsSet()</a> </p>
+<p>Returns False if <a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aac9f88e098f6fe4e4e112eeb05ccb9671">ON::LengthUnitSystem::Unset</a>. False if <a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa273791eac02a2dec9555523427d254b3">ON::LengthUnitSystem::CustomUnits</a> and MetersPerUnits() is not positive. True if <a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa6adf97f83acf6453d4a6a4b1070f3754">ON::LengthUnitSystem::None</a>. True otherwise. See Also: <a class="el" href="class_o_n___unit_system.html#a515e3667fddcc6691a051520c237238a">IsSet()</a> </p>
 
 </div>
 </div>
 <a id="a8e7b5923cf2ab1d5302d1861fd8f5ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8e7b5923cf2ab1d5302d1861fd8f5ae0">&#9670;&nbsp;</a></span>MetersPerUnit()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a8e7b5923cf2ab1d5302d1861fd8f5ae0">&#9670;&nbsp;</a></span>MetersPerUnit() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -407,6 +413,45 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>NOTE WELL: For standard units, <a class="el" href="class_o_n___unit_system.html#a8e7b5923cf2ab1d5302d1861fd8f5ae0">ON_UnitSystem::MetersPerUnit()</a> returns the inverse of the correct value. The reason is the VRay plug-in for Rhino 6 assumes the incorrect value is returned and does not work correctly in Rhino 7 if the correct value is returned. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000071">Deprecated:</a></b></dt><dd><a class="el" href="class_o_n___unit_system.html#a8e7b5923cf2ab1d5302d1861fd8f5ae0">MetersPerUnit()</a> returns the wrong value. Use this-&gt;MetersPerUnit(ON_DBL_QNAN) </dd></dl>
+
+</div>
+</div>
+<a id="a37af40e5f1320ffbb575180b3d6e33c4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a37af40e5f1320ffbb575180b3d6e33c4">&#9670;&nbsp;</a></span>MetersPerUnit() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ON_UnitSystem::MetersPerUnit </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>unset_return_value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: unset_return_value - [in] Value to return when this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aac9f88e098f6fe4e4e112eeb05ccb9671">ON::LengthUnitSystem::Unset</a>. When in doubt, use ON_DBL_QNAN. Returns: If this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa273791eac02a2dec9555523427d254b3">ON::LengthUnitSystem::CustomUnits</a>, then the value set by <a class="el" href="class_o_n___unit_system.html#aaa59866152e9074ec4815c9342be7057">SetCustomUnitSystemScale()</a> is returned. If this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aac9f88e098f6fe4e4e112eeb05ccb9671">ON::LengthUnitSystem::Unset</a>, then unset_return_value is returned. If this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa6adf97f83acf6453d4a6a4b1070f3754">ON::LengthUnitSystem::None</a>, then 1.0 is returned. Otherwise, <a class="el" href="class_o_n.html#afd98109651029c94b24205812506998f">ON::UnitScale</a>(this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a>, <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa80b4a3eed88aed8a1c7d8a4418b7f469">ON::LengthUnitSystem::Meters</a>) is returned. </p>
+
+</div>
+</div>
+<a id="a22d32001bb74a6d00b3933eb9e61fbb7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a22d32001bb74a6d00b3933eb9e61fbb7">&#9670;&nbsp;</a></span>MillimetersPerUnit()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ON_UnitSystem::MillimetersPerUnit </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>unset_return_value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: unset_return_value - [in] Value to return when this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aac9f88e098f6fe4e4e112eeb05ccb9671">ON::LengthUnitSystem::Unset</a>. When in doubt, use ON_DBL_QNAN. Returns: If this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa273791eac02a2dec9555523427d254b3">ON::LengthUnitSystem::CustomUnits</a>, then the 1000 times the value set by <a class="el" href="class_o_n___unit_system.html#aaa59866152e9074ec4815c9342be7057">SetCustomUnitSystemScale()</a> is returned. If this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aac9f88e098f6fe4e4e112eeb05ccb9671">ON::LengthUnitSystem::Unset</a>, then unset_return_value is returned. If this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a> is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa6adf97f83acf6453d4a6a4b1070f3754">ON::LengthUnitSystem::None</a>, then 1.0 is returned. Otherwise, <a class="el" href="class_o_n.html#afd98109651029c94b24205812506998f">ON::UnitScale</a>(this-&gt;<a class="el" href="class_o_n___unit_system.html#a9c0f2b3f1754cc0d7508e579579b4226">UnitSystem()</a>, <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa3be6521a73bcafce5b38459ec548bd11">ON::LengthUnitSystem::Millimeters</a>) is returned. </p>
 
 </div>
 </div>
@@ -552,7 +597,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Changes the unit system to custom units and sets the custom unit scale. Remarks: Avoid using this function. Use <a class="el" href="class_o_n___unit_system.html#a1d707a421810b4d196acb25ef94d56d5">SetCustomUnitSystem()</a> or <a class="el" href="class_o_n___unit_system.html#a2eb2f7126832640ee389e3baabb03f39">SetUnitSystem()</a> instead. </p>
+<p>Description: Changes the unit system to custom units and sets the custom unit scale. Remarks: Avoid using this function. Use <a class="el" href="class_o_n___unit_system.html#a1d707a421810b4d196acb25ef94d56d5">SetCustomUnitSystem()</a> or <a class="el" href="class_o_n___unit_system.html#a2eb2f7126832640ee389e3baabb03f39">SetUnitSystem()</a> instead. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000069">Deprecated:</a></b></dt><dd>Use <a class="el" href="class_o_n___unit_system.html#a1d707a421810b4d196acb25ef94d56d5">SetCustomUnitSystem()</a> </dd></dl>
 
 </div>
 </div>
@@ -571,7 +616,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Changes the unit system to custom units and sets the custom unit scale. Remarks: Avoid using this function. Use <a class="el" href="class_o_n___unit_system.html#a1d707a421810b4d196acb25ef94d56d5">SetCustomUnitSystem()</a> or <a class="el" href="class_o_n___unit_system.html#a2eb2f7126832640ee389e3baabb03f39">SetUnitSystem()</a> instead. </p>
+<p>Description: Changes the unit system to custom units and sets the custom unit scale. Parameters: meters_per_custom_unit - [in] a positive number Remarks: Avoid using this function. Use <a class="el" href="class_o_n___unit_system.html#a1d707a421810b4d196acb25ef94d56d5">SetCustomUnitSystem()</a> or <a class="el" href="class_o_n___unit_system.html#a2eb2f7126832640ee389e3baabb03f39">SetUnitSystem()</a> instead. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000070">Deprecated:</a></b></dt><dd>Use <a class="el" href="class_o_n___unit_system.html#a1d707a421810b4d196acb25ef94d56d5">SetCustomUnitSystem()</a> </dd></dl>
 
 </div>
 </div>
@@ -587,6 +632,23 @@ Static Public Attributes</h2></td></tr>
           <td class="paramtype"><a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a>&#160;</td>
           <td class="paramname"><em>us</em></td><td>)</td>
           <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aa4815d8a4a8163099d89dc1802e6a133"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa4815d8a4a8163099d89dc1802e6a133">&#9670;&nbsp;</a></span>ToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n__w_string.html">ON_wString</a> ON_UnitSystem::ToString </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -624,6 +686,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<p>Returns: US English lower case plural unit system name (meters, inches, etc.). </p>
 
 </div>
 </div>
@@ -1233,7 +1296,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:42 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__pointcloud_8h_source.html">opennurbs_pointcloud.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_pointcloud.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_PointCloud:</div>
 <div class="dyncontent">
@@ -324,7 +324,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:afb9ab6358ffdd028e93ddd90d6fbe318"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a71362920fa5fc1ce3b3c9082141781ff"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a71362920fa5fc1ce3b3c9082141781ff">m_N</a></td></tr>
 <tr class="separator:a71362920fa5fc1ce3b3c9082141781ff"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a256cabd81dbd085e233d8433ecbd43e0"><td class="memItemLeft" align="right" valign="top">ON_3dPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a256cabd81dbd085e233d8433ecbd43e0">m_P</a></td></tr>
+<tr class="memitem:a256cabd81dbd085e233d8433ecbd43e0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#a256cabd81dbd085e233d8433ecbd43e0">m_P</a></td></tr>
 <tr class="memdesc:a256cabd81dbd085e233d8433ecbd43e0"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation.  <a href="class_o_n___point_cloud.html#a256cabd81dbd085e233d8433ecbd43e0">More...</a><br /></td></tr>
 <tr class="separator:a256cabd81dbd085e233d8433ecbd43e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aba31ed459ba176b4efbe5e490b9be511"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___plane.html">ON_Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___point_cloud.html#aba31ed459ba176b4efbe5e490b9be511">m_plane</a></td></tr>
@@ -1199,7 +1199,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Get a point cloud point from an <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>. Parameters: ci - [in] a component index with m_typ set to <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1aba63a4ea5783667ee147e2c63551eddc">ON_COMPONENT_INDEX::pointcloud_point</a> and 0 &lt;= m_index and m_index &lt; m_P.Count(). Returns: Point at [ci.m_index] or <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> if ci is not valid. </p>
+<p>Description: Get a point cloud point from an <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>. Parameters: ci - [in] a component index with m_typ set to <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1aba63a4ea5783667ee147e2c63551eddc">ON_COMPONENT_INDEX::pointcloud_point</a> and 0 &lt;= m_index and m_index &lt; m_P.Count(). Returns: Point at [ci.m_index] or <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> if ci is not valid. </p>
 
 </div>
 </div>
@@ -1534,7 +1534,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_3dPointArray ON_PointCloud::m_P</td>
+          <td class="memname"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> ON_PointCloud::m_P</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1575,7 +1575,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:54 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:37 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

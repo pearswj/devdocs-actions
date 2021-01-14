@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__sha1_8h_source.html">opennurbs_sha1.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_sha1.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -98,6 +98,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a793874ee68ed4dd4306c7d1e858c3568"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a52efc7214e48d9005fd19a8e7a9b2ad9"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___s_h_a1___hash.html#a52efc7214e48d9005fd19a8e7a9b2ad9">ToString</a> (bool bUpperCaseHexadecimalDigits) const</td></tr>
 <tr class="separator:a52efc7214e48d9005fd19a8e7a9b2ad9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adba9700ee6888b98ced2a223bd5720e5"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___s_h_a1___hash.html#adba9700ee6888b98ced2a223bd5720e5">ToStringEx</a> (bool bUpperCaseHexadecimalDigits) const</td></tr>
+<tr class="separator:adba9700ee6888b98ced2a223bd5720e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac1558bfc71a86af6725d58e2dc0b47aa"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___string.html">ON_String</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___s_h_a1___hash.html#ac1558bfc71a86af6725d58e2dc0b47aa">ToUTF8String</a> (bool bUpperCaseHexadecimalDigits) const</td></tr>
 <tr class="separator:ac1558bfc71a86af6725d58e2dc0b47aa"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01e9899ac55ffc34e7651ae47b0b1320"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___s_h_a1___hash.html#a01e9899ac55ffc34e7651ae47b0b1320">Write</a> (class <a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;archive) const</td></tr>
@@ -881,6 +883,25 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="adba9700ee6888b98ced2a223bd5720e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adba9700ee6888b98ced2a223bd5720e5">&#9670;&nbsp;</a></span>ToStringEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n__w_string.html">ON_wString</a> ON_SHA1_Hash::ToStringEx </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bUpperCaseHexadecimalDigits</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Same as ToString but prints EmptyContentSHA1 or ZeroSHA1 for those two special cases. </p>
+
+</div>
+</div>
 <a id="ac1558bfc71a86af6725d58e2dc0b47aa"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ac1558bfc71a86af6725d58e2dc0b47aa">&#9670;&nbsp;</a></span>ToUTF8String()</h2>
 
@@ -984,7 +1005,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:55 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:38 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

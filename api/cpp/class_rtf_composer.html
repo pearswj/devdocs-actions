@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__textiterator_8h_source.html">opennurbs_textiterator.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_textiterator.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -84,10 +84,18 @@ Static Public Member Functions</h2></td></tr>
 <tr class="separator:a598b3300e53438ba2f5199eeed25bdb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5eaa8eecdf16b4869b29e03425935898"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rtf_composer.html#a5eaa8eecdf16b4869b29e03425935898">ComposeAppleRTF</a> (const <a class="el" href="class_o_n___text_content.html">ON_TextContent</a> *text)</td></tr>
 <tr class="separator:a5eaa8eecdf16b4869b29e03425935898"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ace5604734c13de59655abcb83229fef6"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rtf_composer.html#ace5604734c13de59655abcb83229fef6">ComposeFS</a> ()</td></tr>
+<tr class="separator:ace5604734c13de59655abcb83229fef6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4c85b9f4cc41b4b9305085a8d0a2a6b7"><td class="memItemLeft" align="right" valign="top">static bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rtf_composer.html#a4c85b9f4cc41b4b9305085a8d0a2a6b7">RecomposeRTF</a> ()</td></tr>
 <tr class="separator:a4c85b9f4cc41b4b9305085a8d0a2a6b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afd30e5df8120ee3b00f1c7ebc75ec826"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rtf_composer.html#afd30e5df8120ee3b00f1c7ebc75ec826">SetComposeFS</a> (bool b)</td></tr>
+<tr class="separator:afd30e5df8120ee3b00f1c7ebc75ec826"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada93c848fdaea833cb00fd4e21dbeb6d"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rtf_composer.html#ada93c848fdaea833cb00fd4e21dbeb6d">SetRecomposeRTF</a> (bool b)</td></tr>
 <tr class="separator:ada93c848fdaea833cb00fd4e21dbeb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2d4cab65a87774729bed16b9fbaa03a2"><td class="memItemLeft" align="right" valign="top">static void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rtf_composer.html#a2d4cab65a87774729bed16b9fbaa03a2">SetTextEditorFontSize</a> (unsigned int size)</td></tr>
+<tr class="separator:a2d4cab65a87774729bed16b9fbaa03a2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0759c24d831336f61f50885a6b27b175"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rtf_composer.html#a0759c24d831336f61f50885a6b27b175">TextEditorFontSize</a> ()</td></tr>
+<tr class="separator:a0759c24d831336f61f50885a6b27b175"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a598b3300e53438ba2f5199eeed25bdb9"></a>
@@ -158,6 +166,31 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="ace5604734c13de59655abcb83229fef6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ace5604734c13de59655abcb83229fef6">&#9670;&nbsp;</a></span>ComposeFS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static bool RtfComposer::ComposeFS </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a4c85b9f4cc41b4b9305085a8d0a2a6b7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4c85b9f4cc41b4b9305085a8d0a2a6b7">&#9670;&nbsp;</a></span>RecomposeRTF()</h2>
 
@@ -171,6 +204,32 @@ Static Public Member Functions</h2></td></tr>
           <td class="memname">static bool RtfComposer::RecomposeRTF </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="afd30e5df8120ee3b00f1c7ebc75ec826"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afd30e5df8120ee3b00f1c7ebc75ec826">&#9670;&nbsp;</a></span>SetComposeFS()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void RtfComposer::SetComposeFS </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>b</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -209,10 +268,61 @@ Static Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a2d4cab65a87774729bed16b9fbaa03a2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2d4cab65a87774729bed16b9fbaa03a2">&#9670;&nbsp;</a></span>SetTextEditorFontSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static void RtfComposer::SetTextEditorFontSize </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>size</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a0759c24d831336f61f50885a6b27b175"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0759c24d831336f61f50885a6b27b175">&#9670;&nbsp;</a></span>TextEditorFontSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static int RtfComposer::TextEditorFontSize </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:56:00 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:44 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

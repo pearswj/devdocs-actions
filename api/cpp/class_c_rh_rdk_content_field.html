@@ -66,6 +66,7 @@ $(function() {
 <a href="#nested-classes">Classes</a> &#124;
 <a href="#pub-types">Public Types</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#friends">Friends</a> &#124;
 <a href="class_c_rh_rdk_content_field-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -73,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_rh_rdk_content_field_8h_source.html">RhRdkContentField.h</a>&gt;</code></p>
+<p><code>#include &lt;RhRdkContentField.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhRdkContentField:</div>
 <div class="dyncontent">
@@ -94,12 +95,12 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a0882984ca0c8d5fde74f6d1ede88adf1"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_c_rh_rdk_content_field.html#a0882984ca0c8d5fde74f6d1ede88adf1a3dedc1f905dec865614f8ee0f443955b">conv_none</a> = 0x0000, 
-<a class="el" href="class_c_rh_rdk_content_field.html#a0882984ca0c8d5fde74f6d1ede88adf1ad33c71cdccddb67f3b2882ac31964229">conv_percentile</a> = 0x0001, 
-<a class="el" href="class_c_rh_rdk_content_field.html#a0882984ca0c8d5fde74f6d1ede88adf1a35d8ebacd43ddfff56f2de995130fd69">conv_one_minus</a> = 0x0002, 
-<a class="el" href="class_c_rh_rdk_content_field.html#a0882984ca0c8d5fde74f6d1ede88adf1ae822e5ead5c93d587655240504b23523">conv_radians</a> = 0x0004
+<tr class="memitem:a904b4f24e68b9bfc32b5ccf11a9cc95c"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_c_rh_rdk_content_field.html#a904b4f24e68b9bfc32b5ccf11a9cc95ca3dedc1f905dec865614f8ee0f443955b">conv_none</a> = 0x0000, 
+<a class="el" href="class_c_rh_rdk_content_field.html#a904b4f24e68b9bfc32b5ccf11a9cc95cad33c71cdccddb67f3b2882ac31964229">conv_percentile</a> = 0x0001, 
+<a class="el" href="class_c_rh_rdk_content_field.html#a904b4f24e68b9bfc32b5ccf11a9cc95ca35d8ebacd43ddfff56f2de995130fd69">conv_one_minus</a> = 0x0002, 
+<a class="el" href="class_c_rh_rdk_content_field.html#a904b4f24e68b9bfc32b5ccf11a9cc95cae822e5ead5c93d587655240504b23523">conv_radians</a> = 0x0004
  }</td></tr>
-<tr class="separator:a0882984ca0c8d5fde74f6d1ede88adf1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a904b4f24e68b9bfc32b5ccf11a9cc95c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1ece40bb3aa2b624afd6406f77c14c03"><td class="memItemLeft" align="right" valign="top">typedef <a class="el" href="class_c_rh_rdk_content_field.html#a0252c19a6d1a9e246e5b021aded37027">Filter</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_field.html#a1ece40bb3aa2b624afd6406f77c14c03">eFilter</a></td></tr>
 <tr class="separator:a1ece40bb3aa2b624afd6406f77c14c03"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0252c19a6d1a9e246e5b021aded37027"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_field.html#a0252c19a6d1a9e246e5b021aded37027">Filter</a> : unsigned int { <br />
@@ -242,6 +243,11 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ab786ac6316bcbca47823c37341ab4e5e"><td class="memItemLeft" align="right" valign="top">virtual const <a class="el" href="class_c_rh_rdk_variant.html">CRhRdkVariant</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_field.html#ab786ac6316bcbca47823c37341ab4e5e">Value</a> (void) const</td></tr>
 <tr class="separator:ab786ac6316bcbca47823c37341ab4e5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:ad6cec795abd841ceb5fbd979eaf14911"><td class="memItemLeft" align="right" valign="top">CImpl &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_field.html#ad6cec795abd841ceb5fbd979eaf14911">Impl</a> (void) const</td></tr>
+<tr class="separator:ad6cec795abd841ceb5fbd979eaf14911"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
 <tr class="memitem:ab9637e9f068dcef453e919210ad96bec"><td class="memItemLeft" align="right" valign="top">class&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rh_rdk_content_field.html#ab9637e9f068dcef453e919210ad96bec">CRhRdkContentFields</a></td></tr>
@@ -276,8 +282,8 @@ Friends</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a0882984ca0c8d5fde74f6d1ede88adf1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a0882984ca0c8d5fde74f6d1ede88adf1">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a904b4f24e68b9bfc32b5ccf11a9cc95c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a904b4f24e68b9bfc32b5ccf11a9cc95c">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -288,10 +294,10 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a0882984ca0c8d5fde74f6d1ede88adf1a3dedc1f905dec865614f8ee0f443955b"></a>conv_none&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0882984ca0c8d5fde74f6d1ede88adf1ad33c71cdccddb67f3b2882ac31964229"></a>conv_percentile&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0882984ca0c8d5fde74f6d1ede88adf1a35d8ebacd43ddfff56f2de995130fd69"></a>conv_one_minus&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="a0882984ca0c8d5fde74f6d1ede88adf1ae822e5ead5c93d587655240504b23523"></a>conv_radians&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a904b4f24e68b9bfc32b5ccf11a9cc95ca3dedc1f905dec865614f8ee0f443955b"></a>conv_none&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a904b4f24e68b9bfc32b5ccf11a9cc95cad33c71cdccddb67f3b2882ac31964229"></a>conv_percentile&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a904b4f24e68b9bfc32b5ccf11a9cc95ca35d8ebacd43ddfff56f2de995130fd69"></a>conv_one_minus&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a904b4f24e68b9bfc32b5ccf11a9cc95cae822e5ead5c93d587655240504b23523"></a>conv_radians&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -820,6 +826,32 @@ Friends</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Get a value from a section into the field if the value, as specified by the field's internal name, is in the section. Does not create an undo record or call <a class="el" href="class_c_rh_rdk_content.html#a528bf04c4baba41d686b9e8e33c807f8">CRhRdkContent::Changed()</a>. </p>
+
+</div>
+</div>
+<a id="ad6cec795abd841ceb5fbd979eaf14911"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad6cec795abd841ceb5fbd979eaf14911">&#9670;&nbsp;</a></span>Impl()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">CImpl&amp; CRhRdkContentField::Impl </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -1896,7 +1928,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:37 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:20 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

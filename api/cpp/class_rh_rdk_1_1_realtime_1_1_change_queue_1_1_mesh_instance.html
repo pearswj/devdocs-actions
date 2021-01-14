@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_rh_rdk___r_c_e___queue_8h_source.html">RhRdk_RCE_Queue.h</a>&gt;</code></p>
+<p><code>#include &lt;RhRdk_RCE_Queue.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -107,8 +107,12 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af71c50d1c6eb2c7a343664fe72cc788a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4848f2012c2910c4dce0a55fcb7d4e60"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_mesh_instance.html">MeshInstance</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_mesh_instance.html#a4848f2012c2910c4dce0a55fcb7d4e60">operator=</a> (const <a class="el" href="class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_mesh_instance.html">MeshInstance</a> &amp;)=delete</td></tr>
 <tr class="separator:a4848f2012c2910c4dce0a55fcb7d4e60"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc8a562448596f6724608b321c26185c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_mesh_instance.html#abc8a562448596f6724608b321c26185c">ParentId</a> (void) const</td></tr>
+<tr class="separator:abc8a562448596f6724608b321c26185c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace6da2605cbb29b3c6afff47715c23ad"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_mesh_instance.html#ace6da2605cbb29b3c6afff47715c23ad">ReceiveShadows</a> (void) const</td></tr>
 <tr class="separator:ace6da2605cbb29b3c6afff47715c23ad"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a619aa56a0f81bef622fd81c5b8ad8774"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_mesh_instance.html#a619aa56a0f81bef622fd81c5b8ad8774">RootId</a> (void) const</td></tr>
+<tr class="separator:a619aa56a0f81bef622fd81c5b8ad8774"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="friends"></a>
 Friends</h2></td></tr>
@@ -479,6 +483,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="abc8a562448596f6724608b321c26185c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc8a562448596f6724608b321c26185c">&#9670;&nbsp;</a></span>ParentId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> RhRdk::Realtime::ChangeQueue::MeshInstance::ParentId </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns ON_UUID of the parent of this mesh instance if it has one. Or ON_nil_uuid if this item is the first in its ancestry. </p>
+
+</div>
+</div>
 <a id="ace6da2605cbb29b3c6afff47715c23ad"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ace6da2605cbb29b3c6afff47715c23ad">&#9670;&nbsp;</a></span>ReceiveShadows()</h2>
 
@@ -495,6 +518,25 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns true if the object should receive shadows. </p>
+
+</div>
+</div>
+<a id="a619aa56a0f81bef622fd81c5b8ad8774"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a619aa56a0f81bef622fd81c5b8ad8774">&#9670;&nbsp;</a></span>RootId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> RhRdk::Realtime::ChangeQueue::MeshInstance::RootId </td>
+          <td>(</td>
+          <td class="paramtype">void&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns ON_UUID of the root of this mesh instance if it has one. Or ON_nil_uuid if this item is the first in its ancestry. </p>
 
 </div>
 </div>
@@ -524,7 +566,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:56:01 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:44 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

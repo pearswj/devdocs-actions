@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__subd_8h_source.html">opennurbs_subd.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_subd.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -122,6 +122,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2fe02d7ff7da92746f366aa0392db95d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a564269e98541de1805102d1022b9009e"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___sub_d_face_ptr.html">ON_SubDFacePtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#a564269e98541de1805102d1022b9009e">FacePtr</a> () const</td></tr>
 <tr class="separator:a564269e98541de1805102d1022b9009e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4d2af69a88bc982f260429d46e4c4ae6"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#a4d2af69a88bc982f260429d46e4c4ae6">GroupId</a> (unsigned int null_component_value) const</td></tr>
+<tr class="separator:a4d2af69a88bc982f260429d46e4c4ae6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa86047611faa550c794e4bfb945999c3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#ga5e466b0525d08412a4fc62b352f60685">ON__UINT16</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#aa86047611faa550c794e4bfb945999c3">Hash16FromTypeAndId</a> () const</td></tr>
 <tr class="separator:aa86047611faa550c794e4bfb945999c3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acab38bb7ee1ea81f077e531b8e45703f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#acab38bb7ee1ea81f077e531b8e45703f">Hash32FromPointer</a> () const</td></tr>
@@ -142,6 +144,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abe9e9eb496c079f186b44cacde528614"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa072da280ecfdafdfb33bbabba6de26c"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___sub_d_component_ptr.html">ON_SubDComponentPtr</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#aa072da280ecfdafdfb33bbabba6de26c">SetComponentDirection</a> (ON__UINT_PTR dir) const</td></tr>
 <tr class="separator:aa072da280ecfdafdfb33bbabba6de26c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a522eb94afa2d658f277c7fe6f84f7a02"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#a522eb94afa2d658f277c7fe6f84f7a02">SetGroupId</a> (unsigned int group_id)</td></tr>
+<tr class="separator:a522eb94afa2d658f277c7fe6f84f7a02"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee15f9b3aad4bea2fa37d0a2b3f8928d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#aee15f9b3aad4bea2fa37d0a2b3f8928d">SetMark</a> () const</td></tr>
 <tr class="separator:aee15f9b3aad4bea2fa37d0a2b3f8928d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1002787a5a2e046031d62c92a6e859fd"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___sub_d_component_ptr.html#a1002787a5a2e046031d62c92a6e859fd">SetMark</a> (bool bMark) const</td></tr>
@@ -1018,6 +1022,25 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4d2af69a88bc982f260429d46e4c4ae6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4d2af69a88bc982f260429d46e4c4ae6">&#9670;&nbsp;</a></span>GroupId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_SubDComponentPtr::GroupId </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>null_component_value</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: null_component_value - [in] Value to return if the component is null. Returns: If this is not null, the group id of the component is returned. Otherwise null_component_value is returned. </p>
+
+</div>
+</div>
 <a id="aa86047611faa550c794e4bfb945999c3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa86047611faa550c794e4bfb945999c3">&#9670;&nbsp;</a></span>Hash16FromTypeAndId()</h2>
 
@@ -1195,6 +1218,25 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns: An <a class="el" href="class_o_n___sub_d_component_ptr.html">ON_SubDComponentPtr</a> referencing the same <a class="el" href="class_o_n___sub_d_component_base.html">ON_SubDComponentBase</a> with <a class="el" href="class_o_n___sub_d_component_ptr.html#a96a15b9a48cf439a0643aea83a4da039">ON_SubDComponentPtr.ComponentDirection()</a> = 1. </p>
+
+</div>
+</div>
+<a id="a522eb94afa2d658f277c7fe6f84f7a02"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a522eb94afa2d658f277c7fe6f84f7a02">&#9670;&nbsp;</a></span>SetGroupId()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_SubDComponentPtr::SetGroupId </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>group_id</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Sets <a class="el" href="class_o_n___sub_d_component_base.html#ab9a58d48e62de3d5cee831f89adedee0">ON_SubDComponentBase.m_group_id</a>. Parameters: group_id - [in] Value to return if the component is null. Returns: True if the component is not null and the group id was set. False if the component is null. </p>
 
 </div>
 </div>
@@ -1430,7 +1472,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:56 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:39 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

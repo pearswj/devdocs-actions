@@ -80,7 +80,7 @@ $(function() {
 <p>Base class for all runtime Rhino objects.  
  <a href="class_c_rhino_object.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="rhino_sdk_object_8h_source.html">rhinoSdkObject.h</a>&gt;</code></p>
+<p><code>#include &lt;rhinoSdkObject.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhinoObject:</div>
 <div class="dyncontent">
@@ -196,6 +196,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f3e098e3d46e2743cd438d326c1c009"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9068d2a92257698e1d24ac990381170e"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a9068d2a92257698e1d24ac990381170e">BrepReferenceCounterExists</a> () const</td></tr>
 <tr class="separator:a9068d2a92257698e1d24ac990381170e"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b386e5ee532cbbdd8fec847496b5b0a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a8b386e5ee532cbbdd8fec847496b5b0a">CopyHistoryOnReplace</a> () const</td></tr>
+<tr class="separator:a8b386e5ee532cbbdd8fec847496b5b0a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0c28e15f5e3d9e8c82ed867c4e417b93"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a0c28e15f5e3d9e8c82ed867c4e417b93">CreateMeshes</a> (<a class="el" href="class_o_n.html#a7a4479b49f4b13f6a1112c87cf106e5e">ON::mesh_type</a> mesh_type, const <a class="el" href="class_o_n___mesh_parameters.html">ON_MeshParameters</a> &amp;mp, bool bIgnoreCustom=false)</td></tr>
 <tr class="separator:a0c28e15f5e3d9e8c82ed867c4e417b93"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8485a65682644206383c2a6e80ad6db"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#ae8485a65682644206383c2a6e80ad6db">DeleteAttributeUserData</a> (<a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> userdata_uuid)</td></tr>
@@ -422,6 +424,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:abe22f3afdec3cac88f1d7a29998eebb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af6e3cbe82bde413f02b26de51e0f56f4"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#af6e3cbe82bde413f02b26de51e0f56f4">SelectSubObject</a> (<a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> component_index, bool bSelect=true, bool bSynchHighlight=true, bool bPersistentSelect=false) const</td></tr>
 <tr class="separator:af6e3cbe82bde413f02b26de51e0f56f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8917b23b924626d49dcd44adc041164e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a8917b23b924626d49dcd44adc041164e">SetCopyHistoryOnReplace</a> (bool bCopy) const</td></tr>
+<tr class="separator:a8917b23b924626d49dcd44adc041164e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f97d34cb42c94073d82737e19ff2ceb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a3f97d34cb42c94073d82737e19ff2ceb">SetDynamicTransform</a> (const <a class="el" href="class_o_n___xform.html">ON_Xform</a> &amp;dynamic_xform)</td></tr>
 <tr class="separator:a3f97d34cb42c94073d82737e19ff2ceb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaedaa78284d5274a01b2f2b21a517e70"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#aaedaa78284d5274a01b2f2b21a517e70">SetHistory</a> (class <a class="el" href="class_c_rhino_history.html">CRhinoHistory</a> &amp;history)</td></tr>
@@ -1059,6 +1063,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a8b386e5ee532cbbdd8fec847496b5b0a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8b386e5ee532cbbdd8fec847496b5b0a">&#9670;&nbsp;</a></span>CopyHistoryOnReplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoObject::CopyHistoryOnReplace </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Returns whether the CopyHistoryOnReplace flag is set. Returns: true if the object has history and the flag is set false if there's no history or the flag is clear </p>
+
+</div>
+</div>
 <a id="a0c28e15f5e3d9e8c82ed867c4e417b93"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0c28e15f5e3d9e8c82ed867c4e417b93">&#9670;&nbsp;</a></span>CreateMeshes()</h2>
 
@@ -1367,6 +1389,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000135">Deprecated:</a></b></dt><dd>use Draw function that takes a display pipeline </dd></dl>
 
 </div>
 </div>
@@ -1492,8 +1515,8 @@ Friends</h2></td></tr>
 <p>Rhino V6 object drawing function.</p>
 <p>Ideally, <a class="el" href="class_c_rhino_object.html#af341df017509d80f2c56700c10599421">DrawV6()</a> will replace all the drawing functions below. The single parameter will indicate what should be drawn, where it is being drawn, and how it should appear. If that happens, then this function will be renamed "Draw".</p>
 <p>For now it is called <a class="el" href="class_c_rhino_object.html#af341df017509d80f2c56700c10599421">DrawV6()</a> so it is easy to search for it.</p>
-<p>The class <a class="el" href="class_c_rhino_object_draw_context.html">CRhinoObjectDrawContext</a> is defined in <a class="el" href="rhino_sdk_draw_8h_source.html">rhinoSdkDraw.h</a>.</p>
-<p>For now, you must include <a class="el" href="rhino_sdk_draw_8h_source.html">rhinoSdkDraw.h</a> by hand. Once the header file <a class="el" href="rhino_sdk_draw_8h_source.html">rhinoSdkDraw.h</a> is being changed less than once a day, it will be included by <a class="el" href="rhino_sdk_8h_source.html">rhinoSdk.h</a>. </p>
+<p>The class <a class="el" href="class_c_rhino_object_draw_context.html">CRhinoObjectDrawContext</a> is defined in rhinoSdkDraw.h.</p>
+<p>For now, you must include rhinoSdkDraw.h by hand. Once the header file rhinoSdkDraw.h is being changed less than once a day, it will be included by rhinoSdk.h. </p>
 
 <p>Reimplemented in <a class="el" href="class_c_rhino_brep_object.html#aacd9ea1ef62e5444b481255de1ea8aec">CRhinoBrepObject</a>, <a class="el" href="class_c_rhino_point_cloud_object.html#aa137cfb19e1c7e6c3f590a3eed775bc3">CRhinoPointCloudObject</a>, <a class="el" href="class_c_rhino_mesh_object.html#a42d8708d336b2afcf7b6e518753fb544">CRhinoMeshObject</a>, <a class="el" href="class_c_rhino_curve_object.html#a939b2890bb2156feeb4b1875f0f2cfa6">CRhinoCurveObject</a>, <a class="el" href="class_c_rhino_point_object.html#ad95581fd3d0c00e71755451bfe594754">CRhinoPointObject</a>, and <a class="el" href="class_c_rhino_extrusion_object.html#a3a2466f299eba0e1eba2cd56187c47e3">CRhinoExtrusionObject</a>.</p>
 
@@ -3347,8 +3370,7 @@ Friends</h2></td></tr>
 <p>Example: Change the layer of an object. </p><pre class="fragment">  int new_layer_index = ...;
   CRhinoObject&amp; obj = ...;
 </pre><p> / copy attributes <a class="el" href="class_c_rhino_object_attributes.html">CRhinoObjectAttributes</a> a = obj.Attributes(); / change attribute settings a.SetLayerIndex( new_layer_index ); / modify object's attributes obj.ModifyAttributes( a );</p>
-<p>Returns: true if successful. false if the layer index, material index, or any of the group indices are invalid.</p>
-<p>Remarks: <a class="el" href="class_c_rhino_object.html#adf25600ed5ca57ca58eecf7acb947e27">ModifyAttributes()</a> will not change the object's UUID. If doc.m_layer_table[new_attributes.LayerIndex()].<a class="el" href="class_c_rhino_object.html#afe9ddcdbe28f7ced527a9cb802cf8c6b">IsDeleted()</a> is true, the layer is automatically undeleted. If doc.m_material_table[new_attributes.RenderMaterialIndex()].<a class="el" href="class_c_rhino_object.html#afe9ddcdbe28f7ced527a9cb802cf8c6b">IsDeleted()</a> is true, the material is automatically undeleted. </p>
+<p>Returns: true if successful. false if the layer index, material index, or any of the group indices are invalid. Remarks: <a class="el" href="class_c_rhino_object.html#adf25600ed5ca57ca58eecf7acb947e27">ModifyAttributes()</a> will not change the object's UUID. If doc.m_layer_table[new_attributes.LayerIndex()].<a class="el" href="class_c_rhino_object.html#afe9ddcdbe28f7ced527a9cb802cf8c6b">IsDeleted()</a> is true, the layer is automatically undeleted. If doc.m_material_table[new_attributes.RenderMaterialIndex()].<a class="el" href="class_c_rhino_object.html#afe9ddcdbe28f7ced527a9cb802cf8c6b">IsDeleted()</a> is true, the material is automatically undeleted. </p>
 
 <p>Reimplemented in <a class="el" href="class_c_rhino_grip_object.html#a9b49bb24855a10de07778aba91ccd994">CRhinoGripObject</a>.</p>
 
@@ -4158,6 +4180,25 @@ Friends</h2></td></tr>
 <p>Description: Reports if an object can be selected. Parameters: component_index - [in] index of subobject to check bSelect - [in] (default=true) bSynchHighlight - [in] (default=true) If true, then the object is highlighted if it is selected and not highlighted if is is not selected. bPersistentSelect - [in] (default=false) Subobjects that are persistently selected stay selected when a command terminates. Returns: 0: object is not selected 1: object is selected 2: object is selected persistently Remarks: Objects that are locked, hidden, or on locked or hidden layers cannot be selected. If <a class="el" href="class_c_rhino_object.html#a44159228766275081eb384b8409220cc" title="true if can be selected while grips are on">IsSelectableWithGripsOn()</a> returns false, then an that object is not selectable if it has grips turned on. See Also: <a class="el" href="class_c_rhino_doc.html#af95dbf07f3ffb67965a1a99d8d34414d">CRhinoDoc::UnselectAll</a> CRhinoView::UnselectAllSubObjects </p>
 
 <p>Reimplemented in <a class="el" href="class_c_rhino_point_cloud_object.html#aac9c9504beb1c1a76587f967d8b7886b">CRhinoPointCloudObject</a>, <a class="el" href="class_c_rhino_brep_object.html#aa799b3199e9ecfd81cc93ac26e9208b4">CRhinoBrepObject</a>, <a class="el" href="class_c_rhino_instance_object.html#ae4101de84c5aac63cc603dadacc50f6b">CRhinoInstanceObject</a>, <a class="el" href="class_c_rhino_sub_d_object.html#a96624299ec3a45bcee1b8205b61da403">CRhinoSubDObject</a>, <a class="el" href="class_c_rhino_curve_object.html#a0cd8985a44f67506d8d6e32710a74e5c">CRhinoCurveObject</a>, <a class="el" href="class_c_rhino_mesh_object.html#adfb5a00ede7ee581002ec467a79cf680">CRhinoMeshObject</a>, <a class="el" href="class_c_rhino_group_object.html#ace6e32c76fe4d095169d4c62b202768d">CRhinoGroupObject</a>, and <a class="el" href="class_c_rhino_extrusion_object.html#a33d293e2f99af1496499c4dd916bf1ff">CRhinoExtrusionObject</a>.</p>
+
+</div>
+</div>
+<a id="a8917b23b924626d49dcd44adc041164e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a8917b23b924626d49dcd44adc041164e">&#9670;&nbsp;</a></span>SetCopyHistoryOnReplace()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoObject::SetCopyHistoryOnReplace </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCopy</em></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Sets a flag on the object's history record (if one exists) that causes the history record to be copied and the copy applied to the new object when this object is replaced in the document. That allows some changes to be made to objects with history without breaking the history. </p>
 
 </div>
 </div>
@@ -5292,7 +5333,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:29 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:12 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

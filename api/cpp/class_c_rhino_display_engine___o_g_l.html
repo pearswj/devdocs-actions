@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_rhino_sdk_display_engine___o_g_l_8h_source.html">RhinoSdkDisplayEngine_OGL.h</a>&gt;</code></p>
+<p><code>#include &lt;RhinoSdkDisplayEngine_OGL.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhinoDisplayEngine_OGL:</div>
 <div class="dyncontent">
@@ -189,6 +189,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad52f9768be4c19897884367a2c1388d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#ad52f9768be4c19897884367a2c1388d3">EnableMultiSample</a> (bool bEnable=true) override</td></tr>
 <tr class="memdesc:ad52f9768be4c19897884367a2c1388d3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Enables / disables multisampling.  <a href="class_c_rhino_display_engine___o_g_l.html#ad52f9768be4c19897884367a2c1388d3">More...</a><br /></td></tr>
 <tr class="separator:ad52f9768be4c19897884367a2c1388d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7249eed95357736d8b2e0a52f177eb56"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#a7249eed95357736d8b2e0a52f177eb56">EnableShadowMap</a> (bool bEnable=true)</td></tr>
+<tr class="separator:a7249eed95357736d8b2e0a52f177eb56"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a26835c9af6c91060a7da466248267520"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#a26835c9af6c91060a7da466248267520">ExecutionLevel</a> () const</td></tr>
 <tr class="separator:a26835c9af6c91060a7da466248267520"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb6296305da9162cf6433c2851a0457f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#adb6296305da9162cf6433c2851a0457f">FlushAll</a> () override</td></tr>
@@ -241,6 +243,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a49e52719a50a476a8bbb79f03fcbb84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:afed2947f38c80ef75e987d9f80782cda"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#afed2947f38c80ef75e987d9f80782cda">IsPreview</a> (void) const</td></tr>
 <tr class="separator:afed2947f38c80ef75e987d9f80782cda"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4dec3f01bebad12d21d3f2d77a912962"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#a4dec3f01bebad12d21d3f2d77a912962">IsShadowMapEnabled</a> ()</td></tr>
+<tr class="separator:a4dec3f01bebad12d21d3f2d77a912962"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8f853f9980a6c57e634a898bacde9d96"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_display_pipeline_attributes_1_1_linear_workflow.html">CDisplayPipelineAttributes::LinearWorkflow</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#a8f853f9980a6c57e634a898bacde9d96">LinearWorkflow</a> () const</td></tr>
 <tr class="separator:a8f853f9980a6c57e634a898bacde9d96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ace0c4083d2e5df41e1d62f76dca52bb2"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine___o_g_l.html#ace0c4083d2e5df41e1d62f76dca52bb2">MaxClipPlanesSupported</a> () const override</td></tr>
@@ -363,6 +367,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a720fda5de006be6246b2bc66ae3f76b3 inherit pub_methods_class_c_rhino_display_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af99a66a9e10d95f6b370280bae7b3e85 inherit pub_methods_class_c_rhino_display_engine"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#af99a66a9e10d95f6b370280bae7b3e85">DrawLine</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;from, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;to, const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;color, int thickness, UINT pattern=0xFFFFFFFF)</td></tr>
 <tr class="separator:af99a66a9e10d95f6b370280bae7b3e85 inherit pub_methods_class_c_rhino_display_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5159a2ff88e1d139e97f1909291bc4c inherit pub_methods_class_c_rhino_display_engine"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#ab5159a2ff88e1d139e97f1909291bc4c">DrawLineNoClip</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;from, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;to, const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;color, float thickness)</td></tr>
+<tr class="separator:ab5159a2ff88e1d139e97f1909291bc4c inherit pub_methods_class_c_rhino_display_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae3c1705e9403644e0d9de08f2c56199 inherit pub_methods_class_c_rhino_display_engine"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#aae3c1705e9403644e0d9de08f2c56199">DrawMesh</a> (const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> &amp;mesh, bool wires, bool shaded, const class <a class="el" href="class_c_display_pipeline_attributes.html">CDisplayPipelineAttributes</a> *da, <a class="el" href="class_c_rhino_cache_handle.html">CRhinoCacheHandle</a> *cacheHandle)</td></tr>
 <tr class="separator:aae3c1705e9403644e0d9de08f2c56199 inherit pub_methods_class_c_rhino_display_engine"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8ac91c764d6d98c0981ab3810914cdc5 inherit pub_methods_class_c_rhino_display_engine"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#a8ac91c764d6d98c0981ab3810914cdc5">DrawMeshes</a> (const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> **meshes, int count, bool wires, bool shaded, const class <a class="el" href="class_c_display_pipeline_attributes.html">CDisplayPipelineAttributes</a> *da, <a class="el" href="class_c_rhino_cache_handle.html">CRhinoCacheHandle</a> *cacheHandle)</td></tr>
@@ -2937,6 +2943,24 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a7249eed95357736d8b2e0a52f177eb56"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7249eed95357736d8b2e0a52f177eb56">&#9670;&nbsp;</a></span>EnableShadowMap()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoDisplayEngine_OGL::EnableShadowMap </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bEnable</em> = <code>true</code></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ae3db1c1a79c216a961f704afcca622d4"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae3db1c1a79c216a961f704afcca622d4">&#9670;&nbsp;</a></span>EnumMultiSampleModes()</h2>
 
@@ -3348,6 +3372,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000110">Deprecated:</a></b></dt><dd>Do not use </dd></dl>
 
 </div>
 </div>
@@ -3822,6 +3847,23 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramtype">void&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4dec3f01bebad12d21d3f2d77a912962"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4dec3f01bebad12d21d3f2d77a912962">&#9670;&nbsp;</a></span>IsShadowMapEnabled()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoDisplayEngine_OGL::IsShadowMapEnabled </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -5230,7 +5272,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:09 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

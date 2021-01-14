@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__subd_8h_source.html">opennurbs_subd.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_subd.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_SubDFace:</div>
 <div class="dyncontent">
@@ -88,9 +88,9 @@ Inheritance diagram for ON_SubDFace:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:a59929c83643ff6d47704161f959a2856"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_o_n___sub_d_face.html#a59929c83643ff6d47704161f959a2856ad5039979a63cecc5861399707529a370">MaximumEdgeCount</a> = 0xFFF0U
+<tr class="memitem:a599c23598a7fba68dc4e4b17752f1e98"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_o_n___sub_d_face.html#a599c23598a7fba68dc4e4b17752f1e98ad5039979a63cecc5861399707529a370">MaximumEdgeCount</a> = 0xFFF0U
  }</td></tr>
-<tr class="separator:a59929c83643ff6d47704161f959a2856"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a599c23598a7fba68dc4e4b17752f1e98"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -448,8 +448,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_o_n___sub_d_face.html">ON_SubDFace</a> </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a59929c83643ff6d47704161f959a2856"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a59929c83643ff6d47704161f959a2856">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a599c23598a7fba68dc4e4b17752f1e98"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a599c23598a7fba68dc4e4b17752f1e98">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -464,7 +464,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The value of <a class="el" href="class_o_n___sub_d_edge_ptr.html#a0d29364e2f086ec1252dca6cf20932cd">ON_SubDEdgePtr.EdgeDirection()</a> is 0 if the edge's natural orientation from m_vertex[0] to m_vertex[1] agrees with the face's boundary orientation.</p>
 <p>The value of <a class="el" href="class_o_n___sub_d_edge_ptr.html#a0d29364e2f086ec1252dca6cf20932cd">ON_SubDEdgePtr.EdgeDirection()</a> is 1 if the edge's natural orientation from m_vertex[0] to m_vertex[1] is opposited the face's boundary orientation. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a59929c83643ff6d47704161f959a2856ad5039979a63cecc5861399707529a370"></a>MaximumEdgeCount&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a599c23598a7fba68dc4e4b17752f1e98ad5039979a63cecc5861399707529a370"></a>MaximumEdgeCount&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -1180,7 +1180,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Calculate how a packing rectangle assigned to an <a class="el" href="class_o_n___sub_d_face.html">ON_SubDFace</a> will be subdivided into n sub packing rectanges for an ngon when n &gt;= 5. Parameters: ngon_edge_count - [in] &gt;= 5. ngon_face_pack_rect_size - [in] ngon_face_pack_rect_size.x &gt; 0 and ngon_face_pack_rect_size.y &gt; 0 The width and height of the sizeof the ngon's entire packing rectangle. This is typically ON_SubD_Face::PackRectSize() once that property is coorectly set. ngon_sub_pack_rect_size - [out] The size of sub pack rects. If input is not valid, then <a class="el" href="group__open_n_u_r_b_s.html#ga2f9dd18fe13c0bd3e85cde1db1eee97b" title="(0.0,0.0)">ON_2dVector::ZeroVector</a> is returned. ngon_sub_pack_rect_delta - [out] The delta from one sub pack rect to the next. If input is not valid, then <a class="el" href="group__open_n_u_r_b_s.html#ga2f9dd18fe13c0bd3e85cde1db1eee97b" title="(0.0,0.0)">ON_2dVector::ZeroVector</a> is returned. Returns: When the input is valid, <a class="el" href="class_o_n__2udex.html">ON_2udex(i,j)</a> is returned and specifies the face's packing rectangle should be divided into i X j sub packing rectangles. Otherwise, <a class="el" href="class_o_n__2udex.html">ON_2udex(0,0)</a> is returned and </p>
+<p>Description: Calculate how a packing rectangle assigned to an <a class="el" href="class_o_n___sub_d_face.html">ON_SubDFace</a> will be subdivided into n sub packing rectanges for an ngon when n &gt;= 5. Parameters: ngon_edge_count - [in] &gt;= 5. ngon_face_pack_rect_size - [in] ngon_face_pack_rect_size.x &gt; 0 and ngon_face_pack_rect_size.y &gt; 0 The width and height of the sizeof the ngon's entire packing rectangle. This is typically ON_SubD_Face::PackRectSize() once that property is coorectly set. ngon_sub_pack_rect_size - [out] The size of sub pack rects. If input is not valid, then <a class="el" href="class_o_n__2d_vector.html#a2f9dd18fe13c0bd3e85cde1db1eee97b" title="(0.0,0.0)">ON_2dVector::ZeroVector</a> is returned. ngon_sub_pack_rect_delta - [out] The delta from one sub pack rect to the next. If input is not valid, then <a class="el" href="class_o_n__2d_vector.html#a2f9dd18fe13c0bd3e85cde1db1eee97b" title="(0.0,0.0)">ON_2dVector::ZeroVector</a> is returned. Returns: When the input is valid, <a class="el" href="class_o_n__2udex.html">ON_2udex(i,j)</a> is returned and specifies the face's packing rectangle should be divided into i X j sub packing rectangles. Otherwise, <a class="el" href="class_o_n__2udex.html">ON_2udex(0,0)</a> is returned and </p>
 
 </div>
 </div>
@@ -1299,7 +1299,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Get the limit surface point location and normal at the center of the face. Parameters: P - [out] P = limit surface location or <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="group__open_n_u_r_b_s.html#ga2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. </p>
+<p>Description: Get the limit surface point location and normal at the center of the face. Parameters: P - [out] P = limit surface location or <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="class_o_n__3d_vector.html#a2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. </p>
 
 </div>
 </div>
@@ -1657,7 +1657,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Parameters: pack_rect_distance_in_pixels - [in] A (normalized pack rect distance) * <a class="el" href="class_o_n___sub_d.html#a83ea37e18f9fc40eb39a045925ec199eab72d6681c2028801f5b78c651928692d" title="ON_SUbDFace packing rectangle information is calculated so that there is at least one unused pixel be...">ON_SubD::TextureImageSuggestedMinimumSize</a> Returns: Suggested gap between adjacent pack rects for a texture images with width and height &gt;= <a class="el" href="class_o_n___sub_d.html#a83ea37e18f9fc40eb39a045925ec199eab72d6681c2028801f5b78c651928692d" title="ON_SUbDFace packing rectangle information is calculated so that there is at least one unused pixel be...">ON_SubD::TextureImageSuggestedMinimumSize</a>. This value will be 0.0 when pack_rect_distance_in_pixels is too small to permit a gap of 1 or more pixels without visibly adverse effects in a texture map clarity. </p>
+<p>Parameters: pack_rect_distance_in_pixels - [in] A (normalized pack rect distance) * <a class="el" href="class_o_n___sub_d.html#a76f35817157fa8e5cb79ad8e01f3d5bbab72d6681c2028801f5b78c651928692d" title="ON_SUbDFace packing rectangle information is calculated so that there is at least one unused pixel be...">ON_SubD::TextureImageSuggestedMinimumSize</a> Returns: Suggested gap between adjacent pack rects for a texture images with width and height &gt;= <a class="el" href="class_o_n___sub_d.html#a76f35817157fa8e5cb79ad8e01f3d5bbab72d6681c2028801f5b78c651928692d" title="ON_SUbDFace packing rectangle information is calculated so that there is at least one unused pixel be...">ON_SubD::TextureImageSuggestedMinimumSize</a>. This value will be 0.0 when pack_rect_distance_in_pixels is too small to permit a gap of 1 or more pixels without visibly adverse effects in a texture map clarity. </p>
 
 </div>
 </div>
@@ -2040,7 +2040,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Set the per face rendering material channel index.</p>
-<p>Parameters: material_channel_index - [in] A value between 0 and <a class="el" href="class_o_n___material.html#accab4bc5928dbc8348fb171d9f5c8f46a684a9e08389b63846cc189e1fd68da99">ON_Material::MaximumMaterialChannelIndex</a>, inclusive. This value is typically 0 or the value returned from <a class="el" href="class_o_n___material.html#a243b805270b49320865b8b997310723e">ON_Material::MaterialChannelIndexFromId()</a>.</p>
+<p>Parameters: material_channel_index - [in] A value between 0 and <a class="el" href="class_o_n___material.html#a93720ecce65c5e2844a9735f96e0e5e5a684a9e08389b63846cc189e1fd68da99">ON_Material::MaximumMaterialChannelIndex</a>, inclusive. This value is typically 0 or the value returned from <a class="el" href="class_o_n___material.html#a243b805270b49320865b8b997310723e">ON_Material::MaterialChannelIndexFromId()</a>.</p>
 <p>Remarks: If base_material is the <a class="el" href="class_o_n___material.html">ON_Material</a> assigned to render this subd and ON_UUID face_material_id = base_material.MaterialChannelIdFromIndex( material_channel_index ) is not nil, then face_material_id identifies an override rendering material for this face. Otherwise base_material is used to reneder this face. </p>
 
 </div>
@@ -2691,7 +2691,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:56 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:40 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -71,7 +71,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rhino_sdk_extrusion_object_8h_source.html">rhinoSdkExtrusionObject.h</a>&gt;</code></p>
+<p><code>#include &lt;rhinoSdkExtrusionObject.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhinoExtrusionObject:</div>
 <div class="dyncontent">
@@ -217,6 +217,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a2f3e098e3d46e2743cd438d326c1c009 inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9068d2a92257698e1d24ac990381170e inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a9068d2a92257698e1d24ac990381170e">BrepReferenceCounterExists</a> () const</td></tr>
 <tr class="separator:a9068d2a92257698e1d24ac990381170e inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8b386e5ee532cbbdd8fec847496b5b0a inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a8b386e5ee532cbbdd8fec847496b5b0a">CopyHistoryOnReplace</a> () const</td></tr>
+<tr class="separator:a8b386e5ee532cbbdd8fec847496b5b0a inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae8485a65682644206383c2a6e80ad6db inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#ae8485a65682644206383c2a6e80ad6db">DeleteAttributeUserData</a> (<a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> userdata_uuid)</td></tr>
 <tr class="separator:ae8485a65682644206383c2a6e80ad6db inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4d66fe8233c01fe6400ccbfae5df2f4d inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a4d66fe8233c01fe6400ccbfae5df2f4d">DeleteDynamicTransform</a> ()</td></tr>
@@ -393,6 +395,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a90bf560c0deb91044eb80c15ffc835ca inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abe22f3afdec3cac88f1d7a29998eebb0 inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#abe22f3afdec3cac88f1d7a29998eebb0">Select</a> (bool bSelect=true, bool bSynchHighlight=true, bool bPersistentSelect=true, bool bIgnoreGripsState=false) const</td></tr>
 <tr class="separator:abe22f3afdec3cac88f1d7a29998eebb0 inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a8917b23b924626d49dcd44adc041164e inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a8917b23b924626d49dcd44adc041164e">SetCopyHistoryOnReplace</a> (bool bCopy) const</td></tr>
+<tr class="separator:a8917b23b924626d49dcd44adc041164e inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3f97d34cb42c94073d82737e19ff2ceb inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#a3f97d34cb42c94073d82737e19ff2ceb">SetDynamicTransform</a> (const <a class="el" href="class_o_n___xform.html">ON_Xform</a> &amp;dynamic_xform)</td></tr>
 <tr class="separator:a3f97d34cb42c94073d82737e19ff2ceb inherit pub_methods_class_c_rhino_object"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaedaa78284d5274a01b2f2b21a517e70 inherit pub_methods_class_c_rhino_object"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_object.html#aaedaa78284d5274a01b2f2b21a517e70">SetHistory</a> (class <a class="el" href="class_c_rhino_history.html">CRhinoHistory</a> &amp;history)</td></tr>
@@ -714,6 +718,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000124">Deprecated:</a></b></dt><dd>use BrepReferenceCounter </dd></dl>
 
 </div>
 </div>
@@ -973,8 +978,8 @@ Additional Inherited Members</h2></td></tr>
 <p>Rhino V6 object drawing function.</p>
 <p>Ideally, <a class="el" href="class_c_rhino_extrusion_object.html#a3a2466f299eba0e1eba2cd56187c47e3">DrawV6()</a> will replace all the drawing functions below. The single parameter will indicate what should be drawn, where it is being drawn, and how it should appear. If that happens, then this function will be renamed "Draw".</p>
 <p>For now it is called <a class="el" href="class_c_rhino_extrusion_object.html#a3a2466f299eba0e1eba2cd56187c47e3">DrawV6()</a> so it is easy to search for it.</p>
-<p>The class <a class="el" href="class_c_rhino_object_draw_context.html">CRhinoObjectDrawContext</a> is defined in <a class="el" href="rhino_sdk_draw_8h_source.html">rhinoSdkDraw.h</a>.</p>
-<p>For now, you must include <a class="el" href="rhino_sdk_draw_8h_source.html">rhinoSdkDraw.h</a> by hand. Once the header file <a class="el" href="rhino_sdk_draw_8h_source.html">rhinoSdkDraw.h</a> is being changed less than once a day, it will be included by <a class="el" href="rhino_sdk_8h_source.html">rhinoSdk.h</a>. </p>
+<p>The class <a class="el" href="class_c_rhino_object_draw_context.html">CRhinoObjectDrawContext</a> is defined in rhinoSdkDraw.h.</p>
+<p>For now, you must include rhinoSdkDraw.h by hand. Once the header file rhinoSdkDraw.h is being changed less than once a day, it will be included by rhinoSdk.h. </p>
 
 <p>Reimplemented from <a class="el" href="class_c_rhino_object.html#af341df017509d80f2c56700c10599421">CRhinoObject</a>.</p>
 
@@ -1959,7 +1964,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:10 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

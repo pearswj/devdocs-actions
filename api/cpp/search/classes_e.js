@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['scalablereporter_28518',['ScalableReporter',['../class_m_x_1_1_scalable_reporter.html',1,'MX']]],
-  ['skylight_28519',['Skylight',['../class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_skylight.html',1,'RhRdk::Realtime::ChangeQueue']]],
-  ['sn_5felement_28520',['SN_ELEMENT',['../struct_o_n___serial_number_map_1_1_s_n___e_l_e_m_e_n_t.html',1,'ON_SerialNumberMap']]]
+  ['unique_5fptr_28399',['unique_ptr',['../class_c_rh_rdk_content_1_1unique__ptr.html',1,'CRhRdkContent']]],
+  ['unique_5fptr_3c_20crhrdkcontent_20_3e_28400',['unique_ptr&lt; CRhRdkContent &gt;',['../classstd_1_1unique__ptr_3_01_c_rh_rdk_content_01_4.html',1,'std']]],
+  ['unique_5fptr_3c_20crhrdkenvironment_20_3e_28401',['unique_ptr&lt; CRhRdkEnvironment &gt;',['../classstd_1_1unique__ptr_3_01_c_rh_rdk_environment_01_4.html',1,'std']]],
+  ['unique_5fptr_3c_20crhrdkmaterial_20_3e_28402',['unique_ptr&lt; CRhRdkMaterial &gt;',['../classstd_1_1unique__ptr_3_01_c_rh_rdk_material_01_4.html',1,'std']]],
+  ['unique_5fptr_3c_20crhrdktexture_20_3e_28403',['unique_ptr&lt; CRhRdkTexture &gt;',['../classstd_1_1unique__ptr_3_01_c_rh_rdk_texture_01_4.html',1,'std']]]
 ];

@@ -74,7 +74,7 @@ $(function() {
 <p>OpenNurbs enums.  
  <a href="class_o_n.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="opennurbs__defines_8h_source.html">opennurbs_defines.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_defines.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -4519,7 +4519,7 @@ at the end parameter of a curve rather than twice.
 <p>Description: Scale factor for changing unit "standard" systems. Parameters: us_from - [in] us_to - [in] For example: </p><pre class="fragment">    100.0 = ON::UnitScale( ON::LengthUnitSystem::Meters, ON::LengthUnitSystem::Centimeters ) 
     2.54  = ON::UnitScale( ON::LengthUnitSystem::Inches, ON::LengthUnitSystem::Centimeters ) 
     12.0  = ON::UnitScale( ON::LengthUnitSystem::Feet,   ON::LengthUnitSystem::Inches ) 
-</pre><p>Remarks: If you are using custom unit systems, use the version that takes <a class="el" href="class_o_n___unit_system.html">ON_UnitSystem</a> or <a class="el" href="class_o_n__3dm_units_and_tolerances.html">ON_3dmUnitsAndTolerances</a> parameters. </p>
+</pre><p>Remarks: If you are using custom unit systems, use the version that takes <a class="el" href="class_o_n___unit_system.html">ON_UnitSystem</a> or <a class="el" href="class_o_n__3dm_units_and_tolerances.html">ON_3dmUnitsAndTolerances</a> parameters. If either parameter is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aac9f88e098f6fe4e4e112eeb05ccb9671">ON::LengthUnitSystem::Unset</a>, then ON_DBL_QNAN is returned. If either parameter is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa6adf97f83acf6453d4a6a4b1070f3754">ON::LengthUnitSystem::None</a>, then 1.0 is returned. If either parameter is <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050aa273791eac02a2dec9555523427d254b3">ON::LengthUnitSystem::CustomUnits</a>, then 1.0 is returned. </p>
 
 </div>
 </div>
@@ -4573,7 +4573,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_NUMBER, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a>. Remarks: The high bit of this number is set. Do not cast the result as an int. </p>
+<p>Returns: The value of OPENNURBS_VERSION_NUMBER, which is defined in opennurbs_version.h. Remarks: The high bit of this number is set. Do not cast the result as an int. </p>
 
 </div>
 </div>
@@ -4599,7 +4599,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_BRANCH, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> 0: developer build 1: Windows Commercial build 2: Mac Commercial build 3: Windows BETA build 4: Mac Beta build 5: Windows WIP build 6: Mac WIP build </p>
+<p>Returns: The value of OPENNURBS_VERSION_BRANCH, which is defined in opennurbs_version.h 0: developer build 1: Windows Commercial build 2: Mac Commercial build 3: Windows BETA build 4: Mac Beta build 5: Windows WIP build 6: Mac WIP build </p>
 
 </div>
 </div>
@@ -4625,7 +4625,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_DAY_OF_MONTH, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> (1 to 31). </p>
+<p>Returns: The value of OPENNURBS_VERSION_DAY_OF_MONTH, which is defined in opennurbs_version.h (1 to 31). </p>
 
 </div>
 </div>
@@ -4652,7 +4652,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Get the opennurbs version number as a quartet of values. Parameters: version_quartet - [out] version_quartet[0] = <a class="el" href="class_o_n.html#a69b96777512f70afd3b37296c646e52c">ON::VersionMajor()</a> version_quartet[1] = <a class="el" href="class_o_n.html#abc1867e2d7e10d67f6bb4323544f1b29">ON::VersionMinor()</a> version_quartet[2] = (year - 2000)*1000 + day_of_year version_quartet[3] = (hour*1000 + minute*10 + OPENNURBS_VERSION_BRANCH) Returns: The value of OPENNURBS_VERSION_NUMBER, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a>. Remarks: The high bit of the returned value is set. Do not cast the result as an int. </p>
+<p>Description: Get the opennurbs version number as a quartet of values. Parameters: version_quartet - [out] version_quartet[0] = <a class="el" href="class_o_n.html#a69b96777512f70afd3b37296c646e52c">ON::VersionMajor()</a> version_quartet[1] = <a class="el" href="class_o_n.html#abc1867e2d7e10d67f6bb4323544f1b29">ON::VersionMinor()</a> version_quartet[2] = (year - 2000)*1000 + day_of_year version_quartet[3] = (hour*1000 + minute*10 + OPENNURBS_VERSION_BRANCH) Returns: The value of OPENNURBS_VERSION_NUMBER, which is defined in opennurbs_version.h. Remarks: The high bit of the returned value is set. Do not cast the result as an int. </p>
 
 </div>
 </div>
@@ -4678,7 +4678,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_HOUR, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> (0 to 23). </p>
+<p>Returns: The value of OPENNURBS_VERSION_HOUR, which is defined in opennurbs_version.h (0 to 23). </p>
 
 </div>
 </div>
@@ -4704,7 +4704,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_MAJOR, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> (0 to 63). </p>
+<p>Returns: The value of OPENNURBS_VERSION_MAJOR, which is defined in opennurbs_version.h (0 to 63). </p>
 
 </div>
 </div>
@@ -4756,7 +4756,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_MINOR, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> (0 to 127). </p>
+<p>Returns: The value of OPENNURBS_VERSION_MINOR, which is defined in opennurbs_version.h (0 to 127). </p>
 
 </div>
 </div>
@@ -4808,7 +4808,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_MINUTE, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> (0 to 59). </p>
+<p>Returns: The value of OPENNURBS_VERSION_MINUTE, which is defined in opennurbs_version.h (0 to 59). </p>
 
 </div>
 </div>
@@ -4834,7 +4834,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_MONTH, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> 1 to 12. </p>
+<p>Returns: The value of OPENNURBS_VERSION_MONTH, which is defined in opennurbs_version.h 1 to 12. </p>
 
 </div>
 </div>
@@ -4860,7 +4860,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_QUARTET_STRING, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a>. Remarks: The high bit of this number is set. Do not cast the result as an int. </p>
+<p>Returns: The value of OPENNURBS_VERSION_QUARTET_STRING, which is defined in opennurbs_version.h. Remarks: The high bit of this number is set. Do not cast the result as an int. </p>
 
 </div>
 </div>
@@ -4886,7 +4886,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_QUARTET_WSTRING, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a>. Remarks: The high bit of this number is set. Do not cast the result as an int. </p>
+<p>Returns: The value of OPENNURBS_VERSION_QUARTET_WSTRING, which is defined in opennurbs_version.h. Remarks: The high bit of this number is set. Do not cast the result as an int. </p>
 
 </div>
 </div>
@@ -4912,7 +4912,7 @@ at the end parameter of a curve rather than twice.
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Returns: The value of OPENNURBS_VERSION_YEAR, which is defined in <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a> </p><blockquote class="doxtable">
+<p>Returns: The value of OPENNURBS_VERSION_YEAR, which is defined in opennurbs_version.h </p><blockquote class="doxtable">
 <p>2014. </p>
 </blockquote>
 
@@ -4976,7 +4976,7 @@ at the end parameter of a curve rather than twice.
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:45 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:28 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

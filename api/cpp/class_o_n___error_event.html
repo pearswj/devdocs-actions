@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__error_8h_source.html">opennurbs_error.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_error.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -86,7 +86,8 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="class_o_n___error_event.html#a568f7644dae0683098a9f864e2319750a90589c47f06eb971d548591f23c285af">Type::Custom</a> = 4, 
 <a class="el" href="class_o_n___error_event.html#a568f7644dae0683098a9f864e2319750a6daa7672817ec9f07c81e78c51f79d21">Type::SubDError</a> = 5, 
-<a class="el" href="class_o_n___error_event.html#a568f7644dae0683098a9f864e2319750a04665ec171e86ef749cc563d7bdeec91">Type::NotValid</a> = 6
+<a class="el" href="class_o_n___error_event.html#a568f7644dae0683098a9f864e2319750a4ab24d335168cca6a78752174ff214b7">Type::BrepError</a> = 6, 
+<a class="el" href="class_o_n___error_event.html#a568f7644dae0683098a9f864e2319750a04665ec171e86ef749cc563d7bdeec91">Type::NotValid</a> = 7
 <br />
  }</td></tr>
 <tr class="separator:a568f7644dae0683098a9f864e2319750"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -165,6 +166,8 @@ Friends</h2></td></tr>
 </td></tr>
 <tr><td class="fieldname"><a id="a568f7644dae0683098a9f864e2319750a90589c47f06eb971d548591f23c285af"></a>Custom&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a568f7644dae0683098a9f864e2319750a6daa7672817ec9f07c81e78c51f79d21"></a>SubDError&#160;</td><td class="fielddoc"><p>call to ON_SubDIncrementErrorCount() </p>
+</td></tr>
+<tr><td class="fieldname"><a id="a568f7644dae0683098a9f864e2319750a4ab24d335168cca6a78752174ff214b7"></a>BrepError&#160;</td><td class="fielddoc"><p>call to ON_BrepIncrementErrorCount() </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a568f7644dae0683098a9f864e2319750a04665ec171e86ef749cc563d7bdeec91"></a>NotValid&#160;</td><td class="fielddoc"><p>call to <a class="el" href="group__open_n_u_r_b_s.html#ga5bc3f9347689cb701302ff4a6cdc53f3">ON_IsNotValid()</a> </p>
 </td></tr>
@@ -555,7 +558,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:33 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

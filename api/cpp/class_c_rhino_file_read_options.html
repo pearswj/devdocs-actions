@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rhino_sdk_file_options_8h_source.html">rhinoSdkFileOptions.h</a>&gt;</code></p>
+<p><code>#include &lt;rhinoSdkFileOptions.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -153,12 +153,18 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adf53569124f18a5dbb62b914ae4a1fa0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a62e119b86df0bda357acf48f55a61cb0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#a62e119b86df0bda357acf48f55a61cb0">ReaderId</a> () const</td></tr>
 <tr class="separator:a62e119b86df0bda357acf48f55a61cb0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab78fac4b7b054fa8468f3023792fb9db"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#ab78fac4b7b054fa8468f3023792fb9db">ReadingPrimaryFile</a> () const</td></tr>
+<tr class="separator:ab78fac4b7b054fa8468f3023792fb9db"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ada078260805a35cb0984d3ece6ffe1de"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#ada078260805a35cb0984d3ece6ffe1de">ReadingReferenceModel</a> () const</td></tr>
 <tr class="separator:ada078260805a35cb0984d3ece6ffe1de"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a474d02864938da1222f8669b3ecaa8c1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#a474d02864938da1222f8669b3ecaa8c1">ReadingRhinoModel</a> () const</td></tr>
 <tr class="separator:a474d02864938da1222f8669b3ecaa8c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a468b7e17d1fc156218d516116b946bc7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#a468b7e17d1fc156218d516116b946bc7">ReadingSecondaryFile</a> () const</td></tr>
+<tr class="separator:a468b7e17d1fc156218d516116b946bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9c21c478995d1f90bdf31b7cf18464b5"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#a9c21c478995d1f90bdf31b7cf18464b5">ReadingStatus</a> () const</td></tr>
 <tr class="separator:a9c21c478995d1f90bdf31b7cf18464b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af3a0617336e4dbb9261a7fa50643a4eb"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#af3a0617336e4dbb9261a7fa50643a4eb">ReadingTemplateFile</a> () const</td></tr>
+<tr class="separator:af3a0617336e4dbb9261a7fa50643a4eb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aee9040711c65a8639e56e682fe376c74"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#aee9040711c65a8639e56e682fe376c74">ReferanceModelComponentNamePrefix</a> (bool bAppendReferenceNameSeparator) const</td></tr>
 <tr class="separator:aee9040711c65a8639e56e682fe376c74"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac7d7dc541b9935b7090b7d498ac61ba9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_file_read_options.html#ac7d7dc541b9935b7090b7d498ac61ba9">ReferenceModelGrandParentLayerId</a> () const</td></tr>
@@ -651,7 +657,7 @@ else
       </table>
 </div><div class="memdoc">
 <p>Description: Check which modes are enabled for file reading. <br  />
- More than one mode can be enabled for a file read. Parameters: mode_to_check - [in] Example: bool bImportMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::ImportMode ); bool bOpenMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::OpenMode ); bool bNewMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::NewMode ); bool bBatchMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::BatchMode ); Returns: TRUE if mode_to_check is active. </p>
+ More than one mode can be enabled for a file read. Parameters: mode_to_check - [in] Example: bool bImportMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::ImportMode ); bool bOpenMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::OpenMode ); bool bNewMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::NewMode ); bool bBatchMode = file_options.Mode(CRhinoFileReadOptions::ModeFlag::BatchMode ); Returns: TRUE if mode_to_check is active. See Also: <a class="el" href="class_c_rhino_file_read_options.html#af3a0617336e4dbb9261a7fa50643a4eb">ReadingTemplateFile()</a>, <a class="el" href="class_c_rhino_file_read_options.html#ab78fac4b7b054fa8468f3023792fb9db">ReadingPrimaryFile()</a>, <a class="el" href="class_c_rhino_file_read_options.html#af3a0617336e4dbb9261a7fa50643a4eb">ReadingTemplateFile()</a> </p>
 
 </div>
 </div>
@@ -766,6 +772,24 @@ else
 
 </div>
 </div>
+<a id="ab78fac4b7b054fa8468f3023792fb9db"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab78fac4b7b054fa8468f3023792fb9db">&#9670;&nbsp;</a></span>ReadingPrimaryFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoFileReadOptions::ReadingPrimaryFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: True means an empty document is being filled with the contents of the file during something like an "Open" Remarks: Exactly one of <a class="el" href="class_c_rhino_file_read_options.html#af3a0617336e4dbb9261a7fa50643a4eb">ReadingTemplateFile()</a>, <a class="el" href="class_c_rhino_file_read_options.html#ab78fac4b7b054fa8468f3023792fb9db">ReadingPrimaryFile()</a>, or <a class="el" href="class_c_rhino_file_read_options.html#a468b7e17d1fc156218d516116b946bc7">ReadingSecondaryFile()</a> is true. </p>
+
+</div>
+</div>
 <a id="ada078260805a35cb0984d3ece6ffe1de"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ada078260805a35cb0984d3ece6ffe1de">&#9670;&nbsp;</a></span>ReadingReferenceModel()</h2>
 
@@ -802,6 +826,24 @@ else
 
 </div>
 </div>
+<a id="a468b7e17d1fc156218d516116b946bc7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a468b7e17d1fc156218d516116b946bc7">&#9670;&nbsp;</a></span>ReadingSecondaryFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoFileReadOptions::ReadingSecondaryFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: True means something like an import or insert or worksession reference file is being read into an existing docuemnt. Remarks: Exactly one of <a class="el" href="class_c_rhino_file_read_options.html#af3a0617336e4dbb9261a7fa50643a4eb">ReadingTemplateFile()</a>, <a class="el" href="class_c_rhino_file_read_options.html#ab78fac4b7b054fa8468f3023792fb9db">ReadingPrimaryFile()</a>, or <a class="el" href="class_c_rhino_file_read_options.html#a468b7e17d1fc156218d516116b946bc7">ReadingSecondaryFile()</a> is true. </p>
+
+</div>
+</div>
 <a id="a9c21c478995d1f90bdf31b7cf18464b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a9c21c478995d1f90bdf31b7cf18464b5">&#9670;&nbsp;</a></span>ReadingStatus()</h2>
 
@@ -817,6 +859,24 @@ else
       </table>
 </div><div class="memdoc">
 <p>Returns: 0: no stuatus 1: reading in progress 2: reading initial file successful 3: updating linked idefs found in this file 99: reading finished successfully 100: reading failed. </p>
+
+</div>
+</div>
+<a id="af3a0617336e4dbb9261a7fa50643a4eb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af3a0617336e4dbb9261a7fa50643a4eb">&#9670;&nbsp;</a></span>ReadingTemplateFile()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool CRhinoFileReadOptions::ReadingTemplateFile </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: True if a template file is being read during something like a "New" Remarks: Exactly one of <a class="el" href="class_c_rhino_file_read_options.html#af3a0617336e4dbb9261a7fa50643a4eb">ReadingTemplateFile()</a>, <a class="el" href="class_c_rhino_file_read_options.html#ab78fac4b7b054fa8468f3023792fb9db">ReadingPrimaryFile()</a>, or <a class="el" href="class_c_rhino_file_read_options.html#a468b7e17d1fc156218d516116b946bc7">ReadingSecondaryFile()</a> is true. </p>
 
 </div>
 </div>
@@ -1151,7 +1211,7 @@ else
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:10 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -76,7 +76,7 @@ $(function() {
 <p><a class="el" href="class_o_n___sub_d_mesh.html" title="ON_SubDMesh is used to store a traditional quad mesh of either a SubgD surface or SubD control net....">ON_SubDMesh</a> is used to store a traditional quad mesh of either a SubgD surface or SubD control net. It is typically used for rendering and user interface selection cacluations. It is a list of <a class="el" href="class_o_n___sub_d_mesh_fragment.html">ON_SubDMeshFragment</a> classes.  
  <a href="class_o_n___sub_d_mesh.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="opennurbs__subd_8h_source.html">opennurbs_subd.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_subd.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -575,7 +575,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Get the limit surface point location and normal for the edge's midpoint from the limit mesh grid. Parameters: edge - [in] edge_face_index - [in] Index of the face to use for the normal. If the edge is a crease, then each attached face may have a different normal. Pass 0 when in doubt. P - [out] P = limit surface location or <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="group__open_n_u_r_b_s.html#ga2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. </p>
+<p>Description: Get the limit surface point location and normal for the edge's midpoint from the limit mesh grid. Parameters: edge - [in] edge_face_index - [in] Index of the face to use for the normal. If the edge is a crease, then each attached face may have a different normal. Pass 0 when in doubt. P - [out] P = limit surface location or <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="class_o_n__3d_vector.html#a2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. </p>
 
 </div>
 </div>
@@ -610,7 +610,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Get the limit surface point location and normal for the face's center from the limit mesh grid. Parameters: face - [in] P - [out] P = limit surface location or <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="group__open_n_u_r_b_s.html#ga2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. </p>
+<p>Description: Get the limit surface point location and normal for the face's center from the limit mesh grid. Parameters: face - [in] P - [out] P = limit surface location or <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="class_o_n__3d_vector.html#a2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. </p>
 
 </div>
 </div>
@@ -973,7 +973,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:56 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:40 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['hitscollection_27566',['HitsCollection',['../class_m_x_1_1_hits_collection.html',1,'MX']]],
-  ['holds_27567',['Holds',['../class_rh_r_dk_1_1_realtime_1_1_change_queue_1_1_dynamic_object_1_1_holds.html',1,'']]]
+  ['light_27614',['Light',['../class_rh_rdk_1_1_realtime_1_1_change_queue_1_1_light.html',1,'RhRdk::Realtime::ChangeQueue']]],
+  ['linearworkflow_27615',['LinearWorkflow',['../class_c_display_pipeline_attributes_1_1_linear_workflow.html',1,'CDisplayPipelineAttributes']]]
 ];

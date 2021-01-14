@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__dimensionstyle_8h_source.html">opennurbs_dimensionstyle.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_dimensionstyle.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_DimStyle:</div>
 <div class="dyncontent">
@@ -95,9 +95,9 @@ Classes</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ac95622e6ab0fa6370b8856f1b7edcf02"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_o_n___dim_style.html#ac95622e6ab0fa6370b8856f1b7edcf02a1b8056edd03a0afc20f422c3f0c6a535">FieldCount</a> = (unsigned int)field::Count
+<tr class="memitem:a3b507e24420df648b492116bbe8797e5"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_o_n___dim_style.html#a3b507e24420df648b492116bbe8797e5a1b8056edd03a0afc20f422c3f0c6a535">FieldCount</a> = (unsigned int)field::Count
  }</td></tr>
-<tr class="separator:ac95622e6ab0fa6370b8856f1b7edcf02"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a3b507e24420df648b492116bbe8797e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab37fcb6f81e976b22b4175cabb031d7d"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ab37fcb6f81e976b22b4175cabb031d7d">angle_format</a> : unsigned char { <a class="el" href="class_o_n___dim_style.html#ab37fcb6f81e976b22b4175cabb031d7da0e68d5ba4c5d5665fd5c04cffba0730a">angle_format::DecimalDegrees</a> = 0, 
 <a class="el" href="class_o_n___dim_style.html#ab37fcb6f81e976b22b4175cabb031d7da8e0da8bcf4c7b519d67ef384738cd7ad">angle_format::DegMinSec</a> = 1, 
 <a class="el" href="class_o_n___dim_style.html#ab37fcb6f81e976b22b4175cabb031d7da682f5298cdcce11e567b7f833843d3be">angle_format::Radians</a> = 2, 
@@ -894,7 +894,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ac772ebb0fdebd79e6b4f5476918276b5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ac772ebb0fdebd79e6b4f5476918276b5">SetToleranceZeroSuppress</a> (<a class="el" href="class_o_n___dim_style.html#a837e18d965995041e841cf510e83cd44">ON_DimStyle::suppress_zero</a> s)</td></tr>
 <tr class="separator:ac772ebb0fdebd79e6b4f5476918276b5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a712caea68565605d5f2a41ccff37e440"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a712caea68565605d5f2a41ccff37e440">SetUnitSystem</a> (<a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a> us)</td></tr>
-<tr class="memdesc:a712caea68565605d5f2a41ccff37e440"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit system for dimension rendering sizes like TextHeight, TextGap, ArrowSize, ExtOffset, and dozens of other properties that control the appearance and placement of the components used to render a dimension. /summary&gt;  <a href="class_o_n___dim_style.html#a712caea68565605d5f2a41ccff37e440">More...</a><br /></td></tr>
+<tr class="memdesc:a712caea68565605d5f2a41ccff37e440"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. The idea was this would make it easier to figure out what text height/ arrow size, ... actually meant. Especially in situations where model space and page space have different unit systems, and in more complex cases like text in instance definitions and inserting annotation from models with mismatched unit systems. It is used internally to get some scales properly set and use in limited merging contexts.  <a href="class_o_n___dim_style.html#a712caea68565605d5f2a41ccff37e440">More...</a><br /></td></tr>
 <tr class="separator:a712caea68565605d5f2a41ccff37e440"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac9dee5aa429f7c2f9f740db8032e0d95"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ac9dee5aa429f7c2f9f740db8032e0d95">SetUnitSystemFromContext</a> (bool bUseName, <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a> source_unit_system, <a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a> destination_unit_system)</td></tr>
 <tr class="separator:ac9dee5aa429f7c2f9f740db8032e0d95"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -966,7 +966,7 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a46c4e2dff190f79f0c7c31dc9c354ac7"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___dim_style.html#a837e18d965995041e841cf510e83cd44">ON_DimStyle::suppress_zero</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a46c4e2dff190f79f0c7c31dc9c354ac7">ToleranceZeroSuppress</a> () const</td></tr>
 <tr class="separator:a46c4e2dff190f79f0c7c31dc9c354ac7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac655e611ecab628c54757a0656f8ff15"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ac655e611ecab628c54757a0656f8ff15">UnitSystem</a> () const</td></tr>
-<tr class="memdesc:ac655e611ecab628c54757a0656f8ff15"><td class="mdescLeft">&#160;</td><td class="mdescRight">Unit system for dimension rendering sizes like TextHeight, TextGap, ArrowSize, ExtOffset, and dozens of other properties that control the appearance and placement of the components used to render a dimension. /summary&gt;  <a href="class_o_n___dim_style.html#ac655e611ecab628c54757a0656f8ff15">More...</a><br /></td></tr>
+<tr class="memdesc:ac655e611ecab628c54757a0656f8ff15"><td class="mdescLeft">&#160;</td><td class="mdescRight">NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. The idea was this would make it easier to figure out what text height/ arrow size, ... actually meant. Especially in situations where model space and page space have different unit systems, and in more complex cases like text in instance definitions and inserting annotation from models with mismatched unit systems. It is used internally to get some scales properly set and use in limited merging contexts.  <a href="class_o_n___dim_style.html#ac655e611ecab628c54757a0656f8ff15">More...</a><br /></td></tr>
 <tr class="separator:ac655e611ecab628c54757a0656f8ff15"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0bc746df5ade5d80421af0d4aa6e640b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a0bc746df5ade5d80421af0d4aa6e640b">UnitSystemIsSet</a> () const</td></tr>
 <tr class="separator:a0bc746df5ade5d80421af0d4aa6e640b"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1414,6 +1414,12 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:ab2c45f736c09827545c6d216209110ed"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ab2c45f736c09827545c6d216209110ed">Default</a></td></tr>
 <tr class="memdesc:ab2c45f736c09827545c6d216209110ed"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -1, unique and persistent id.  <a href="class_o_n___dim_style.html#ab2c45f736c09827545c6d216209110ed">More...</a><br /></td></tr>
 <tr class="separator:ab2c45f736c09827545c6d216209110ed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a95d5a0fb8484cbca3c9736fca2551bb4"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a95d5a0fb8484cbca3c9736fca2551bb4">DefaultFeetDecimal</a></td></tr>
+<tr class="memdesc:a95d5a0fb8484cbca3c9736fca2551bb4"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -8, unique and persistent id.  <a href="class_o_n___dim_style.html#a95d5a0fb8484cbca3c9736fca2551bb4">More...</a><br /></td></tr>
+<tr class="separator:a95d5a0fb8484cbca3c9736fca2551bb4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0dd58d65cc8591bf975a7bdbf351648f"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a0dd58d65cc8591bf975a7bdbf351648f">DefaultFeetEngrave</a></td></tr>
+<tr class="memdesc:a0dd58d65cc8591bf975a7bdbf351648f"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -9, unique and persistent id.  <a href="class_o_n___dim_style.html#a0dd58d65cc8591bf975a7bdbf351648f">More...</a><br /></td></tr>
+<tr class="separator:a0dd58d65cc8591bf975a7bdbf351648f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae74bb0802ae5104d783f5de91f9af431"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ae74bb0802ae5104d783f5de91f9af431">DefaultFootInchArchitecture</a></td></tr>
 <tr class="memdesc:ae74bb0802ae5104d783f5de91f9af431"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -4, unique and persistent id.  <a href="class_o_n___dim_style.html#ae74bb0802ae5104d783f5de91f9af431">More...</a><br /></td></tr>
 <tr class="separator:ae74bb0802ae5104d783f5de91f9af431"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1426,12 +1432,21 @@ Static Public Attributes</h2></td></tr>
 <tr class="memitem:a139f88312f49ea6ca2c40962575d3ed5"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a139f88312f49ea6ca2c40962575d3ed5">DefaultMillimeterArchitecture</a></td></tr>
 <tr class="memdesc:a139f88312f49ea6ca2c40962575d3ed5"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -7, unique and persistent id.  <a href="class_o_n___dim_style.html#a139f88312f49ea6ca2c40962575d3ed5">More...</a><br /></td></tr>
 <tr class="separator:a139f88312f49ea6ca2c40962575d3ed5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a096bb2d14b49b1a0cbfe815130666812"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a096bb2d14b49b1a0cbfe815130666812">DefaultMillimeterEngrave</a></td></tr>
+<tr class="memdesc:a096bb2d14b49b1a0cbfe815130666812"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -10, unique and persistent id.  <a href="class_o_n___dim_style.html#a096bb2d14b49b1a0cbfe815130666812">More...</a><br /></td></tr>
+<tr class="separator:a096bb2d14b49b1a0cbfe815130666812"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab7bca642de213733e9e20a6bef1ef6c7"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ab7bca642de213733e9e20a6bef1ef6c7">DefaultMillimeterLarge</a></td></tr>
 <tr class="memdesc:ab7bca642de213733e9e20a6bef1ef6c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -6, unique and persistent id.  <a href="class_o_n___dim_style.html#ab7bca642de213733e9e20a6bef1ef6c7">More...</a><br /></td></tr>
 <tr class="separator:ab7bca642de213733e9e20a6bef1ef6c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af47c9d5ea42849521a45c83117e92a66"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#af47c9d5ea42849521a45c83117e92a66">DefaultMillimeterSmall</a></td></tr>
 <tr class="memdesc:af47c9d5ea42849521a45c83117e92a66"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -5, unique and persistent id.  <a href="class_o_n___dim_style.html#af47c9d5ea42849521a45c83117e92a66">More...</a><br /></td></tr>
 <tr class="separator:af47c9d5ea42849521a45c83117e92a66"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a730f8ebb1e663ff0997f56c5dff682df"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a730f8ebb1e663ff0997f56c5dff682df">DefaultModelUnitsDecimal</a></td></tr>
+<tr class="memdesc:a730f8ebb1e663ff0997f56c5dff682df"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -11, unique and persistent id.  <a href="class_o_n___dim_style.html#a730f8ebb1e663ff0997f56c5dff682df">More...</a><br /></td></tr>
+<tr class="separator:a730f8ebb1e663ff0997f56c5dff682df"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad0033a511716acd5420d2e98ad8784e5"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#ad0033a511716acd5420d2e98ad8784e5">DefaultModelUnitsEngrave</a></td></tr>
+<tr class="memdesc:ad0033a511716acd5420d2e98ad8784e5"><td class="mdescLeft">&#160;</td><td class="mdescRight">index = -12, unique and persistent id.  <a href="class_o_n___dim_style.html#ad0033a511716acd5420d2e98ad8784e5">More...</a><br /></td></tr>
+<tr class="separator:ad0033a511716acd5420d2e98ad8784e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8b2634f60b547622c8c8f23c1283f76d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dim_style.html#a8b2634f60b547622c8c8f23c1283f76d">Unset</a></td></tr>
 <tr class="memdesc:a8b2634f60b547622c8c8f23c1283f76d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Predefined default dimension styles always available.  <a href="class_o_n___dim_style.html#a8b2634f60b547622c8c8f23c1283f76d">More...</a><br /></td></tr>
 <tr class="separator:a8b2634f60b547622c8c8f23c1283f76d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1459,8 +1474,8 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:a7f6f2f7fe63a3db314c6456f63d7d728 inherit pro_methods_class_o_n___model_component"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="ac95622e6ab0fa6370b8856f1b7edcf02"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac95622e6ab0fa6370b8856f1b7edcf02">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a3b507e24420df648b492116bbe8797e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a3b507e24420df648b492116bbe8797e5">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -1471,7 +1486,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ac95622e6ab0fa6370b8856f1b7edcf02a1b8056edd03a0afc20f422c3f0c6a535"></a>FieldCount&#160;</td><td class="fielddoc"><p>must be 1 + the maximum value of an <a class="el" href="class_o_n___dim_style.html#a21c2db7d069250b9932240ca61d65fea" title="Field identifiers used for file i/o and getting/setting values">ON_DimStyle::field</a> enum value. </p>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a3b507e24420df648b492116bbe8797e5a1b8056edd03a0afc20f422c3f0c6a535"></a>FieldCount&#160;</td><td class="fielddoc"><p>must be 1 + the maximum value of an <a class="el" href="class_o_n___dim_style.html#a21c2db7d069250b9932240ca61d65fea" title="Field identifiers used for file i/o and getting/setting values">ON_DimStyle::field</a> enum value. </p>
 </td></tr>
 </table>
 
@@ -3059,7 +3074,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Get an <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> with the specified properties. Parameters: parent_dim_style - [in] If you are getting ready to modify and existing annotation object, a good options for this paramter is the dimstyle returned by ON_Annotation.DimStyle(); If you are getting ready to create a new annotation object, then get an <a class="el" href="class_o_n___dim_style_context.html">ON_DimStyleContext</a> class and pass <a class="el" href="class_o_n___dim_style_context.html#a25af46a2a1cee0716704b019b6e7e70b">ON_DimStyleContext.CurrentDimStyle()</a>. In Rhino, use <a class="el" href="class_c_rhino_doc.html#a7a83634ebcfceffee7c60d79e0b5532b">CRhinoDoc.DimStyleContext()</a> to get an <a class="el" href="class_o_n___dim_style_context.html">ON_DimStyleContext</a>. In an <a class="el" href="class_o_n_x___model.html">ONX_Model</a>, use ONX_Model.DimStyleContext() to get an <a class="el" href="class_o_n___dim_style_context.html">ON_DimStyleContext</a>. In other situations, you can pass on of the system dimstyles like <a class="el" href="class_o_n___dim_style.html#af47c9d5ea42849521a45c83117e92a66" title="index = -5, unique and persistent id.">ON_DimStyle::DefaultMillimeterSmall</a> or <a class="el" href="class_o_n___dim_style.html#a139f88312f49ea6ca2c40962575d3ed5" title="index = -7, unique and persistent id.">ON_DimStyle::DefaultMillimeterArchitecture</a>. The worst possible choices are <a class="el" href="class_o_n___dim_style.html#ab2c45f736c09827545c6d216209110ed" title="index = -1, unique and persistent id.">ON_DimStyle::Default</a> or <a class="el" href="class_o_n___dim_style.html#a8b2634f60b547622c8c8f23c1283f76d" title="Predefined default dimension styles always available.">ON_DimStyle::Unset</a>. annotation_type - [in] <a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684ac9f88e098f6fe4e4e112eeb05ccb9671">ON::AnnotationType::Unset</a> if style will be used for multiple types of annotation or a specific type. For example, if you are making a text object, pass <a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684a9dffbf69ffba8bc38bc4e01abf4b1675">ON::AnnotationType::Text</a>; if you are making a leader, pass <a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684a5158a250e30f1fb4415d86ded2c8e0c5">ON::AnnotationType::Leader</a>, and so on. font - [in] nullptr for current default or specify the font you want. When in doubt, pass nullptr model_space_text_scale - [in] If &gt; 0, then <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">ON_DimStyle.DimScale()</a> is set, otherwise current default is used. When in doubt, pass ON_UNSET_VALUE. text_height - [in] text_height_unit_system - [in] If text_height &gt; 0, then <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">ON_DimStyle.TextHeight()</a> is set, otherwise current default is used. When in doubt, pass ON_UNSET_VALUE. valign - [in] halign - [in] valign and halign control placement of text in text objects and leaders. The value of the annotation_type parameter determines which objects use the valign and halign settings. text_orientation - [in] dim_text_location - [in] Controls placement of text in linear, angular, radial and ordinate dimensions. When in doubt, pass parent_dim_style.DimTextLocation(). Returns: A dimstyle with the specified text properties. Remarks: This is a useful tool for creating the dimension style parameters to <a class="el" href="class_c_rhino_doc.html#a806d0b7b66fb3172260fa0e1aea82be3">CRhinoDoc.AddTextObject()</a> and <a class="el" href="class_c_rhino_doc.html#a9251498afead4cb50e81d5e284ed222c">CRhinoDoc.AddLeaderObject()</a>. </p>
+<p>Description: Get an <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> with the specified properties. Parameters: parent_dim_style - [in] If you are getting ready to modify and existing annotation object, a good options for this paramter is the dimstyle returned by ON_Annotation.DimStyle(); If you are getting ready to create a new annotation object, then get an <a class="el" href="class_o_n___dim_style_context.html">ON_DimStyleContext</a> class and pass <a class="el" href="class_o_n___dim_style_context.html#a25af46a2a1cee0716704b019b6e7e70b">ON_DimStyleContext.CurrentDimStyle()</a>. In Rhino, use <a class="el" href="class_c_rhino_doc.html#a7a83634ebcfceffee7c60d79e0b5532b">CRhinoDoc.DimStyleContext()</a> to get an <a class="el" href="class_o_n___dim_style_context.html">ON_DimStyleContext</a>. In an <a class="el" href="class_o_n_x___model.html">ONX_Model</a>, use ONX_Model.DimStyleContext() to get an <a class="el" href="class_o_n___dim_style_context.html">ON_DimStyleContext</a>. In other situations, you can pass on of the system dimstyles like <a class="el" href="class_o_n___dim_style.html#af47c9d5ea42849521a45c83117e92a66" title="index = -5, unique and persistent id.">ON_DimStyle::DefaultMillimeterSmall</a> or ON_DimStyle::DefaultMillimeterArchitectural. The worst possible choices are <a class="el" href="class_o_n___dim_style.html#ab2c45f736c09827545c6d216209110ed" title="index = -1, unique and persistent id.">ON_DimStyle::Default</a> or <a class="el" href="class_o_n___dim_style.html#a8b2634f60b547622c8c8f23c1283f76d" title="Predefined default dimension styles always available.">ON_DimStyle::Unset</a>. annotation_type - [in] <a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684ac9f88e098f6fe4e4e112eeb05ccb9671">ON::AnnotationType::Unset</a> if style will be used for multiple types of annotation or a specific type. For example, if you are making a text object, pass <a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684a9dffbf69ffba8bc38bc4e01abf4b1675">ON::AnnotationType::Text</a>; if you are making a leader, pass <a class="el" href="class_o_n.html#a21f538b91118a107f517692f59287684a5158a250e30f1fb4415d86ded2c8e0c5">ON::AnnotationType::Leader</a>, and so on. font - [in] nullptr for current default or specify the font you want. When in doubt, pass nullptr model_space_text_scale - [in] If &gt; 0, then <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">ON_DimStyle.DimScale()</a> is set, otherwise current default is used. When in doubt, pass ON_UNSET_VALUE. text_height - [in] text_height_unit_system - [in] If text_height &gt; 0, then <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">ON_DimStyle.TextHeight()</a> is set, otherwise current default is used. When in doubt, pass ON_UNSET_VALUE. valign - [in] halign - [in] valign and halign control placement of text in text objects and leaders. The value of the annotation_type parameter determines which objects use the valign and halign settings. text_orientation - [in] dim_text_location - [in] Controls placement of text in linear, angular, radial and ordinate dimensions. When in doubt, pass parent_dim_style.DimTextLocation(). Returns: A dimstyle with the specified text properties. Remarks: This is a useful tool for creating the dimension style parameters to <a class="el" href="class_c_rhino_doc.html#a806d0b7b66fb3172260fa0e1aea82be3">CRhinoDoc.AddTextObject()</a> and <a class="el" href="class_c_rhino_doc.html#a9251498afead4cb50e81d5e284ed222c">CRhinoDoc.AddLeaderObject()</a>. </p>
 
 </div>
 </div>
@@ -7055,7 +7070,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unit system for dimension rendering sizes like TextHeight, TextGap, ArrowSize, ExtOffset, and dozens of other properties that control the appearance and placement of the components used to render a dimension. /summary&gt; </p>
+<p>NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. The idea was this would make it easier to figure out what text height/ arrow size, ... actually meant. Especially in situations where model space and page space have different unit systems, and in more complex cases like text in instance definitions and inserting annotation from models with mismatched unit systems. It is used internally to get some scales properly set and use in limited merging contexts. </p>
+<p>From a user's perspective, in Rhino 6 and Rhino 7 <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> lengths like <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">TextHeight()</a>, <a class="el" href="class_o_n___dim_style.html#a5377368654098b48b7e2b7314b1d3e33" title="Arrow size.">ArrowSize()</a>, ... are with respect to the context the annotation resides in. For example, if <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">TextHeight()</a> = 3.5, model units = meters, page units = millimters, and <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">DimScale()</a> = 1, then text created in model space will be 3.5 meters high and text created in page space will be 3.5 millimeters high.</p>
+<p>Ideally, <a class="el" href="class_o_n___dim_style.html#ac655e611ecab628c54757a0656f8ff15" title="NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. The idea was this w...">ON_DimStyle::UnitSystem()</a> would specify the text height units and <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">ON_DimStyle::DimScale()</a> cound be adjusted as model space extents require. Text in instance definitions would have a well defined height and references to those instance defintions would display predictably in both model space and page space. /summary&gt; </p>
 
 </div>
 </div>
@@ -7090,7 +7107,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: When a dimension style unit system is not set, this function examines the context the dimension style is being used in and sets the unit system. Parameters: bUseName - [in] Consider the name when assinging a unit system. For example, a dimension style name "Millimters Small" would be assinged a unit system of millimeters. source_unit_system - [in] unit system in the model or file where the dimension style originated. destination_unit_system - [in] unit system in the model or file where the dimension style will be used. </p>
+<p>Description: When a dimension style unit system is not set, this function examines the context the dimension style is being used in and sets the unit system. Ideally, both source_unit_system and destination_unit_system are page space units. Less ideally, both source_unit_system and destination_unit_system are model space units. Parameters: bUseName - [in] Consider the name when assinging a unit system. For example, a dimension style name "Millimters Small" would be assinged a unit system of millimeters. source_unit_system - [in] unit system in the context where the dimension style originated. destination_unit_system - [in] unit system in the context where the dimension style will be used. </p>
 
 </div>
 </div>
@@ -7862,7 +7879,9 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Unit system for dimension rendering sizes like TextHeight, TextGap, ArrowSize, ExtOffset, and dozens of other properties that control the appearance and placement of the components used to render a dimension. /summary&gt; </p>
+<p>NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. The idea was this would make it easier to figure out what text height/ arrow size, ... actually meant. Especially in situations where model space and page space have different unit systems, and in more complex cases like text in instance definitions and inserting annotation from models with mismatched unit systems. It is used internally to get some scales properly set and use in limited merging contexts. </p>
+<p>From a user's perspective, in Rhino 6 and Rhino 7 <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> lengths like <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">TextHeight()</a>, <a class="el" href="class_o_n___dim_style.html#a5377368654098b48b7e2b7314b1d3e33" title="Arrow size.">ArrowSize()</a>, ... are with respect to the context the annotation resides in. For example, if <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">TextHeight()</a> = 3.5, model units = meters, page units = millimters, and <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">DimScale()</a> = 1, then text created in model space will be 3.5 meters high and text created in page space will be 3.5 millimeters high.</p>
+<p>Ideally, <a class="el" href="class_o_n___dim_style.html#ac655e611ecab628c54757a0656f8ff15" title="NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. The idea was this w...">ON_DimStyle::UnitSystem()</a> would specify the text height units and <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">ON_DimStyle::DimScale()</a> cound be adjusted as model space extents require. Text in instance definitions would have a well defined height and references to those instance defintions would display predictably in both model space and page space. /summary&gt; </p>
 
 </div>
 </div>
@@ -7880,7 +7899,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns: true if the unit system is set to an explicit valid length unit. </p>
+<p>/ NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. / The idea was this would make it easier to figure out what text height/ arrow size, / ... actually meant. Especially in situations where model space and page space have / different unit systems, and in more complex cases like text in instance definitions / and inserting annotation from models with mismatched unit systems. / It is used internally to get some scales properly set and use in limited / merging contexts. / / From a user's perspective, in Rhino 6 and Rhino 7 <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> lengths like <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">TextHeight()</a>, <a class="el" href="class_o_n___dim_style.html#a5377368654098b48b7e2b7314b1d3e33" title="Arrow size.">ArrowSize()</a>, ... / are with respect to the context the annotation resides in. For example, if <a class="el" href="class_o_n___dim_style.html#a6ad10c10357cd6a6165e9bad31a2e449" title="Height of dimension text.">TextHeight()</a> = 3.5, / model units = meters, page units = millimters, and <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">DimScale()</a> = 1, then / text created in model space will be 3.5 meters high and / text created in page space will be 3.5 millimeters high. / / Ideally, <a class="el" href="class_o_n___dim_style.html#ac655e611ecab628c54757a0656f8ff15" title="NOTE WELL: A dimstyle unit system was added in V6, but has never been fully used. The idea was this w...">ON_DimStyle::UnitSystem()</a> would specify the text height units / and <a class="el" href="class_o_n___dim_style.html#a3b6f45584afbdabb2b40a0ba06e8c201">ON_DimStyle::DimScale()</a> cound be adjusted as model space extents require. / Text in instance definitions would have a well defined height and references / to those instance defintions would display predictably in both model space and page space. Returns: true if the unit system is set to an explicit valid length unit. </p>
 
 </div>
 </div>
@@ -8305,6 +8324,54 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a95d5a0fb8484cbca3c9736fca2551bb4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a95d5a0fb8484cbca3c9736fca2551bb4">&#9670;&nbsp;</a></span>DefaultFeetDecimal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> ON_DimStyle::DefaultFeetDecimal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>index = -8, unique and persistent id. </p>
+
+</div>
+</div>
+<a id="a0dd58d65cc8591bf975a7bdbf351648f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0dd58d65cc8591bf975a7bdbf351648f">&#9670;&nbsp;</a></span>DefaultFeetEngrave</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> ON_DimStyle::DefaultFeetEngrave</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>index = -9, unique and persistent id. </p>
+
+</div>
+</div>
 <a id="ae74bb0802ae5104d783f5de91f9af431"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae74bb0802ae5104d783f5de91f9af431">&#9670;&nbsp;</a></span>DefaultFootInchArchitecture</h2>
 
@@ -8401,6 +8468,30 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a096bb2d14b49b1a0cbfe815130666812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a096bb2d14b49b1a0cbfe815130666812">&#9670;&nbsp;</a></span>DefaultMillimeterEngrave</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> ON_DimStyle::DefaultMillimeterEngrave</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>index = -10, unique and persistent id. </p>
+
+</div>
+</div>
 <a id="ab7bca642de213733e9e20a6bef1ef6c7"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ab7bca642de213733e9e20a6bef1ef6c7">&#9670;&nbsp;</a></span>DefaultMillimeterLarge</h2>
 
@@ -8449,6 +8540,54 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a730f8ebb1e663ff0997f56c5dff682df"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a730f8ebb1e663ff0997f56c5dff682df">&#9670;&nbsp;</a></span>DefaultModelUnitsDecimal</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> ON_DimStyle::DefaultModelUnitsDecimal</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>index = -11, unique and persistent id. </p>
+
+</div>
+</div>
+<a id="ad0033a511716acd5420d2e98ad8784e5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad0033a511716acd5420d2e98ad8784e5">&#9670;&nbsp;</a></span>DefaultModelUnitsEngrave</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> ON_DimStyle::DefaultModelUnitsEngrave</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>index = -12, unique and persistent id. </p>
+
+</div>
+</div>
 <a id="a8b2634f60b547622c8c8f23c1283f76d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a8b2634f60b547622c8c8f23c1283f76d">&#9670;&nbsp;</a></span>Unset</h2>
 
@@ -8477,7 +8616,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:33 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

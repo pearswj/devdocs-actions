@@ -66,6 +66,7 @@ $(function() {
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pub-static-methods">Static Public Member Functions</a> &#124;
 <a href="#pub-attribs">Public Attributes</a> &#124;
+<a href="#pub-static-attribs">Static Public Attributes</a> &#124;
 <a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-static-methods">Static Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
@@ -76,7 +77,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__brep_8h_source.html">opennurbs_brep.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_brep.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_Brep:</div>
 <div class="dyncontent">
@@ -465,8 +466,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7053bac2951282366b5627f3e074e767"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae525c494c02d8111a2666dfc2554f90e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#ae525c494c02d8111a2666dfc2554f90e">operator=</a> (const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;)</td></tr>
 <tr class="separator:ae525c494c02d8111a2666dfc2554f90e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aac21e11cf1af48365c4fe5daee6c8ea7"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#aac21e11cf1af48365c4fe5daee6c8ea7">PackFaces</a> ()</td></tr>
-<tr class="separator:aac21e11cf1af48365c4fe5daee6c8ea7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a601525c0b1f0ae996673346ea17cf3e1"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#a601525c0b1f0ae996673346ea17cf3e1">PackFaces</a> (bool from_subd=true)</td></tr>
+<tr class="separator:a601525c0b1f0ae996673346ea17cf3e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a365813ea93518ba8bbddbecd8953453b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#a365813ea93518ba8bbddbecd8953453b">PrevEdge</a> (int current_edge_index, int endi, int *prev_endi=nullptr) const</td></tr>
 <tr class="separator:a365813ea93518ba8bbddbecd8953453b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aea7d834eee697407bdcdc6d6c08dcb4e"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#aea7d834eee697407bdcdc6d6c08dcb4e">PrevNonsingularTrim</a> (int) const</td></tr>
@@ -517,6 +518,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a9eacb9c1f2ae20243959d0a52782c635"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1457c9114a276970ca9ba40d4536b9a5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#a1457c9114a276970ca9ba40d4536b9a5">SetEdgeTolerances</a> (bool bLazy=false)</td></tr>
 <tr class="separator:a1457c9114a276970ca9ba40d4536b9a5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af7fa5cb7e4a98b08603280192fac60e1"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#af7fa5cb7e4a98b08603280192fac60e1">SetSolidOrientationForExperts</a> (int solid_orientation)</td></tr>
+<tr class="separator:af7fa5cb7e4a98b08603280192fac60e1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1a58111694f9bf33ddf03e2803049224"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#a1a58111694f9bf33ddf03e2803049224">SetTolerancesBoxesAndFlags</a> (bool bLazy=false, bool bSetVertexTolerances=true, bool bSetEdgeTolerances=true, bool bSetTrimTolerances=true, bool bSetTrimIsoFlags=true, bool bSetTrimTypeFlags=true, bool bSetLoopTypeFlags=true, bool bSetTrimBoxes=true)</td></tr>
 <tr class="separator:a1a58111694f9bf33ddf03e2803049224"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adca2bac17d3be3b3f6e4e712502f94fd"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#adca2bac17d3be3b3f6e4e712502f94fd">SetTrimBoundingBox</a> (<a class="el" href="class_o_n___brep_trim.html">ON_BrepTrim</a> &amp;trim, bool bLazy=false)</td></tr>
@@ -627,7 +630,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad2c27966fc5d9ed8c65a93be16174072"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ff25599b1eb3529b372eada07754030"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___brep_vertex.html">ON_BrepVertex</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#a3ff25599b1eb3529b372eada07754030">Vertex</a> (<a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> vertex_index) const</td></tr>
 <tr class="separator:a3ff25599b1eb3529b372eada07754030"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac7c690274c55cad396b5898f8211279c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#ac7c690274c55cad396b5898f8211279c">VolumeMassProperties</a> (<a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
+<tr class="memitem:ac7c690274c55cad396b5898f8211279c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#ac7c690274c55cad396b5898f8211279c">VolumeMassProperties</a> (<a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>, double rel_tol=1.0e-6, double abs_tol=1.0e-6) const</td></tr>
 <tr class="separator:ac7c690274c55cad396b5898f8211279c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aad0786db5f64f6c921b8ab4e595fc34a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#aad0786db5f64f6c921b8ab4e595fc34a">Write</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;) const override</td></tr>
 <tr class="memdesc:aad0786db5f64f6c921b8ab4e595fc34a"><td class="mdescLeft">&#160;</td><td class="mdescRight">virtual ON_Objet::Write() override  <a href="class_o_n___brep.html#aad0786db5f64f6c921b8ab4e595fc34a">More...</a><br /></td></tr>
@@ -753,6 +756,14 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a8352d430cecfd2db707728dd0d81eaac"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___brep_vertex_array.html">ON_BrepVertexArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#a8352d430cecfd2db707728dd0d81eaac">m_V</a></td></tr>
 <tr class="memdesc:a8352d430cecfd2db707728dd0d81eaac"><td class="mdescLeft">&#160;</td><td class="mdescRight">vertices  <a href="class_o_n___brep.html#a8352d430cecfd2db707728dd0d81eaac">More...</a><br /></td></tr>
 <tr class="separator:a8352d430cecfd2db707728dd0d81eaac"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
+Static Public Attributes</h2></td></tr>
+<tr class="memitem:a39a39dd648b3c6759f8fdb709a4b8c97"><td class="memItemLeft" align="right" valign="top">static unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___brep.html#a39a39dd648b3c6759f8fdb709a4b8c97">ErrorCount</a></td></tr>
+<tr class="separator:a39a39dd648b3c6759f8fdb709a4b8c97"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_static_attribs_class_o_n___geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_o_n___geometry')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_o_n___geometry.html">ON_Geometry</a></td></tr>
+<tr class="memitem:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memItemLeft" align="right" valign="top">const static <a class="el" href="class_o_n___geometry.html">ON_Geometry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___geometry.html#a03dcd2409adc639499e0ca07944dfd0c">Unset</a></td></tr>
+<tr class="separator:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
 Protected Member Functions</h2></td></tr>
@@ -901,9 +912,6 @@ Additional Inherited Members</h2></td></tr>
 <br />
  }</td></tr>
 <tr class="separator:a7f520e987ffa14e71b06493340f9956c inherit pub_types_class_o_n___object"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="inherit_header pub_static_attribs_class_o_n___geometry"><td colspan="2" onclick="javascript:toggleInherit('pub_static_attribs_class_o_n___geometry')"><img src="closed.png" alt="-"/>&#160;Static Public Attributes inherited from <a class="el" href="class_o_n___geometry.html">ON_Geometry</a></td></tr>
-<tr class="memitem:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memItemLeft" align="right" valign="top">const static <a class="el" href="class_o_n___geometry.html">ON_Geometry</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___geometry.html#a03dcd2409adc639499e0ca07944dfd0c">Unset</a></td></tr>
-<tr class="separator:a03dcd2409adc639499e0ca07944dfd0c inherit pub_static_attribs_class_o_n___geometry"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a10524dbce7f6ead309590b5c4689d273"></a>
@@ -3586,7 +3594,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Does nothing. Will be deleted in next version. </p>
+<p>Description: Does nothing. Will be deleted in next version. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000015">Deprecated:</a></b></dt><dd>Does nothing. Delete call. </dd></dl>
 
 </div>
 </div>
@@ -6005,8 +6013,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="aac21e11cf1af48365c4fe5daee6c8ea7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aac21e11cf1af48365c4fe5daee6c8ea7">&#9670;&nbsp;</a></span>PackFaces()</h2>
+<a id="a601525c0b1f0ae996673346ea17cf3e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a601525c0b1f0ae996673346ea17cf3e1">&#9670;&nbsp;</a></span>PackFaces()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -6014,12 +6022,13 @@ Additional Inherited Members</h2></td></tr>
         <tr>
           <td class="memname">unsigned int ON_Brep::PackFaces </td>
           <td>(</td>
-          <td class="paramname"></td><td>)</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>from_subd</em> = <code>true</code></td><td>)</td>
           <td></td>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Convert brep face grid packs into single faces. Returns: Number of brep face grid packs converted to single faces. Remarks: PackId values assigned to brep faces are inheritied from the PackId values assigned to subd faces when a subd is converted into a brep. These faces are "trivially trimmed" which means the boundary of the face is identical to the boundary of the underlying surface. There are two types of face packs in a subd, quad grid packs and singleton packs. A subd quad grid pack is a set of subd quads that form a rectangular grid. A subd singleton pack is a single face, quad or n-gon, that is not part of a quad grid pack. There are three types of face packs in a brep created from a subd, grid packs, star packs and singleton packs. A brep "grid pack" comes from a rectangular grid of subd quads. A grid pack of brep faces can be converted into a single larger trivially trimmed brep face. A brep "star pack" of brep faces comes from a singel subd n-gon (n = 3, 5 or more). The star pack will have n faces with a star center vertex and shared edges radiating from the star center. A brep "singleton" pack comes from a single subd quad that could not be grouped into a larger subd quad grid pack. </p>
+<p>Description: Convert brep face grid packs into single faces. Parameters: from_subd - [in] true if the Brep to pack comes from a SubD to NURBS conversion and has PackIds set on all its faces. Returns: Number of brep face grid packs converted to single faces. Remarks: PackId values assigned to brep faces are inheritied from the PackId values assigned to subd faces when a subd is converted into a brep. These faces are "trivially trimmed" which means the boundary of the face is identical to the boundary of the underlying surface. There are two types of face packs in a subd, quad grid packs and singleton packs. A subd quad grid pack is a set of subd quads that form a rectangular grid. A subd singleton pack is a single face, quad or n-gon, that is not part of a quad grid pack. There are three types of face packs in a brep created from a subd, grid packs, star packs and singleton packs. A brep "grid pack" comes from a rectangular grid of subd quads. A grid pack of brep faces can be converted into a single larger trivially trimmed brep face. A brep "star pack" of brep faces comes from a singel subd n-gon (n = 3, 5 or more). The star pack will have n faces with a star center vertex and shared edges radiating from the star center. A brep "singleton" pack comes from a single subd quad that could not be grouped into a larger subd quad grid pack. </p>
 
 </div>
 </div>
@@ -7044,6 +7053,25 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="af7fa5cb7e4a98b08603280192fac60e1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af7fa5cb7e4a98b08603280192fac60e1">&#9670;&nbsp;</a></span>SetSolidOrientationForExperts()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_Brep::SetSolidOrientationForExperts </td>
+          <td>(</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>solid_orientation</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: When an expert is 100% certain of a brep's solid orientation, this function can be used to set the <a class="el" href="class_o_n___brep.html#adb58a14210acd8c3e851770a465a9faa">SolidOrientation()</a> property. Parameters: solid_orientation - [in] 0: not solid, 1: oriented manifold solid (no boundary) with outward facing normals. -1: oriented manifold solid (no boundary) with inward facing normals. </p>
 
 </div>
 </div>
@@ -8682,7 +8710,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -8927,6 +8955,29 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a39a39dd648b3c6759f8fdb709a4b8c97"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a39a39dd648b3c6759f8fdb709a4b8c97">&#9670;&nbsp;</a></span>ErrorCount</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">unsigned int ON_Brep::ErrorCount</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+<p>The <a class="el" href="class_o_n___brep.html">ON_Brep</a> code increments <a class="el" href="class_o_n___brep.html#a39a39dd648b3c6759f8fdb709a4b8c97">ON_Brep::ErrorCount</a> everytime something unexpected happens. This is useful for debugging. </p>
+
+</div>
+</div>
 <a id="ae0e14779704c652b1b25f4a9ccdf3899"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ae0e14779704c652b1b25f4a9ccdf3899">&#9670;&nbsp;</a></span>m_aggregate_status</h2>
 
@@ -9171,7 +9222,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:47 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:31 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

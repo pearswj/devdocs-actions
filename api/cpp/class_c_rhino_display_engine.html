@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_rhino_sdk_display_engine_8h_source.html">RhinoSdkDisplayEngine.h</a>&gt;</code></p>
+<p><code>#include &lt;RhinoSdkDisplayEngine.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhinoDisplayEngine:</div>
 <div class="dyncontent">
@@ -183,6 +183,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa298244ddab44dcb392fb232b618d3ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af99a66a9e10d95f6b370280bae7b3e85"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#af99a66a9e10d95f6b370280bae7b3e85">DrawLine</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;from, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;to, const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;color, int thickness, UINT pattern=0xFFFFFFFF)</td></tr>
 <tr class="separator:af99a66a9e10d95f6b370280bae7b3e85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab5159a2ff88e1d139e97f1909291bc4c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#ab5159a2ff88e1d139e97f1909291bc4c">DrawLineNoClip</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;from, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;to, const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;color, float thickness)</td></tr>
+<tr class="separator:ab5159a2ff88e1d139e97f1909291bc4c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7354c09af5007171a7bd07ed80f88a26"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#a7354c09af5007171a7bd07ed80f88a26">DrawLines</a> (const class <a class="el" href="class_c_lines_descriptor.html">CLinesDescriptor</a> &amp;ld)</td></tr>
 <tr class="separator:a7354c09af5007171a7bd07ed80f88a26"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a8908c0ef3abef7414d22fa759a933876"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_display_engine.html#a8908c0ef3abef7414d22fa759a933876">DrawLines</a> (<a class="el" href="class_o_n___color.html">ON_Color</a> color, int line_count, float thickness, const float *vertices, const <a class="el" href="class_o_n___xform.html">ON_Xform</a> *model_xform)</td></tr>
@@ -2501,6 +2503,47 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <p>Description: Draws a line at specified locations, using specified thickness, color and pattern. Parameters: from: [in] start point of line to: [in] end point of line color: [in] color to draw line thickness: [in] thickness in screen pixels pattern: [in] bit pattern to use for drawing. All bits set to 1 means draw a solid line </p>
+
+</div>
+</div>
+<a id="ab5159a2ff88e1d139e97f1909291bc4c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab5159a2ff88e1d139e97f1909291bc4c">&#9670;&nbsp;</a></span>DrawLineNoClip()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoDisplayEngine::DrawLineNoClip </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>from</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>to</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const <a class="el" href="class_o_n___color.html">ON_Color</a> &amp;&#160;</td>
+          <td class="paramname"><em>color</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">float&#160;</td>
+          <td class="paramname"><em>thickness</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Draws a line at specified locations, using specified thickness and color. This version of line drawing will draw the segments of the line that extend beyond the near and far planes of the view frustum with depths on those planes Parameters: from: [in] start point of line to: [in] end point of line color: [in] color to draw line thickness: [in] thickness in screen pixels </p>
 
 </div>
 </div>
@@ -7569,7 +7612,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:09 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

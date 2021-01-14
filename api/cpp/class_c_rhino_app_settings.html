@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rhino_sdk_app_settings_8h_source.html">rhinoSdkAppSettings.h</a>&gt;</code></p>
+<p><code>#include &lt;rhinoSdkAppSettings.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -217,6 +217,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab62a75153569529b0e9394ce41bbd629"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae052d3eba859dfef1990317b59e37cc7"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_c_rhino_app_general_settings.html">CRhinoAppGeneralSettings</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_settings.html#ae052d3eba859dfef1990317b59e37cc7">GeneralSettings</a> () const</td></tr>
 <tr class="separator:ae052d3eba859dfef1990317b59e37cc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abeee9ff06692d11295ae0c74a0066b7c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_settings.html#abeee9ff06692d11295ae0c74a0066b7c">GetPackageManagerSources</a> () const</td></tr>
+<tr class="separator:abeee9ff06692d11295ae0c74a0066b7c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aff215e71ae7f8054c39ca0fcfb5d08d2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_settings.html#aff215e71ae7f8054c39ca0fcfb5d08d2">GetRenderedViewSettingsFromDoc</a> () const</td></tr>
 <tr class="memdesc:aff215e71ae7f8054c39ca0fcfb5d08d2"><td class="mdescLeft">&#160;</td><td class="mdescRight">rendered views options  <a href="class_c_rhino_app_settings.html#aff215e71ae7f8054c39ca0fcfb5d08d2">More...</a><br /></td></tr>
 <tr class="separator:aff215e71ae7f8054c39ca0fcfb5d08d2"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -367,6 +369,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a5ee7a121488bae38f6d7b841e9e4ee6a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3ee07abd43da0ceb69e3ad793ca97d87"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_settings.html#a3ee07abd43da0ceb69e3ad793ca97d87">SetOsnapMode</a> (<a class="el" href="class_c_rhino_app_settings.html#aae52e49d8dde091f3927ef6b18b26d88">osnap_mode</a> mode, bool b)</td></tr>
 <tr class="separator:a3ee07abd43da0ceb69e3ad793ca97d87"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0853ce63ea1d1ed3e014c164ba217158"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_settings.html#a0853ce63ea1d1ed3e014c164ba217158">SetPackageManagerSources</a> (const wchar_t *s)</td></tr>
+<tr class="separator:a0853ce63ea1d1ed3e014c164ba217158"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abbd6d10902c9a528560d0f6b743f13d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_settings.html#abbd6d10902c9a528560d0f6b743f13d3">SetProjectOsnaps</a> (bool bEnable=true)</td></tr>
 <tr class="separator:abbd6d10902c9a528560d0f6b743f13d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adddca1baf24a7e49bbdb46b1a0d615f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_app_settings.html#adddca1baf24a7e49bbdb46b1a0d615f9">SetProjectOsnapsInPlanParallelViews</a> (bool bEnable=true)</td></tr>
@@ -830,6 +834,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000095">Deprecated:</a></b></dt><dd>use <a class="el" href="class_c_rhino_material_table.html#abf9714681368875c6d54fbd65f07727a" title="default material for unlocked objects.">CRhinoMaterialTable::DefaultMaterial</a> </dd></dl>
 
 </div>
 </div>
@@ -1345,6 +1350,23 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="abeee9ff06692d11295ae0c74a0066b7c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abeee9ff06692d11295ae0c74a0066b7c">&#9670;&nbsp;</a></span>GetPackageManagerSources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="class_o_n__w_string.html">ON_wString</a> CRhinoAppSettings::GetPackageManagerSources </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aff215e71ae7f8054c39ca0fcfb5d08d2"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aff215e71ae7f8054c39ca0fcfb5d08d2">&#9670;&nbsp;</a></span>GetRenderedViewSettingsFromDoc()</h2>
 
@@ -1613,6 +1635,7 @@ Friends</h2></td></tr>
 </div><div class="memdoc">
 
 <p>for RenderPreview </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000096">Deprecated:</a></b></dt><dd>use <a class="el" href="class_c_rhino_material_table.html#a330828ae018f6fca6b556ca83a9b5b60" title="default material for locked objects.">CRhinoMaterialTable::DefaultLockedMaterial</a> </dd></dl>
 
 </div>
 </div>
@@ -2601,6 +2624,24 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a0853ce63ea1d1ed3e014c164ba217158"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0853ce63ea1d1ed3e014c164ba217158">&#9670;&nbsp;</a></span>SetPackageManagerSources()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void CRhinoAppSettings::SetPackageManagerSources </td>
+          <td>(</td>
+          <td class="paramtype">const wchar_t *&#160;</td>
+          <td class="paramname"><em>s</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="abbd6d10902c9a528560d0f6b743f13d3"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#abbd6d10902c9a528560d0f6b743f13d3">&#9670;&nbsp;</a></span>SetProjectOsnaps()</h2>
 
@@ -3305,7 +3346,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:24 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:07 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

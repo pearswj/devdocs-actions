@@ -70,7 +70,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rhino_sdk_view_8h_source.html">rhinoSdkView.h</a>&gt;</code></p>
+<p><code>#include &lt;rhinoSdkView.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhinoDrawCallback:</div>
 <div class="dyncontent">
@@ -330,7 +330,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Called when a view is regenerated and can be used to specify a box you want to make sure is included in the view frustum. This is a good way to make sure temporary geometry drawn by DrawBackground, DrawMiddleground, and DrawForeground is inside of the near and far clipping planes. Parameters: vp - [in] The active viewport doc - [in] - The active document Returns: A bounding box </p>
+<p>Description: Called when a view is regenerated and can be used to specify a box you want to make sure is included in the view frustum. This is a good way to make sure temporary geometry drawn by DrawBackground, DrawMiddleground, and DrawForeground is inside of the near and far clipping planes. Parameters: vp - [in] The active viewport doc - [in] - The active document Returns: A bounding box </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000169">Deprecated:</a></b></dt><dd>use a custom <a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a> </dd></dl>
 
 </div>
 </div>
@@ -367,7 +367,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Called when a view is regenerated and should be used for things like drawing background images into the "back" buffer. Parameters: vp - [in] The active viewport doc - [in] - The active document </p>
+<p>Description: Called when a view is regenerated and should be used for things like drawing background images into the "back" buffer. Parameters: vp - [in] The active viewport doc - [in] - The active document </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000170">Deprecated:</a></b></dt><dd>use a custom <a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a> </dd></dl>
 
 </div>
 </div>
@@ -416,7 +416,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Called right after the "back" buffer is blitted to the screen and should be used for drawing things like tracking lines or rubber bands. Parameters: vp - [in] The active viewport doc - [in] - The active document </p>
+<p>Description: Called right after the "back" buffer is blitted to the screen and should be used for drawing things like tracking lines or rubber bands. Parameters: vp - [in] The active viewport doc - [in] - The active document </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000173">Deprecated:</a></b></dt><dd>use a custom <a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a> </dd></dl>
 
 </div>
 </div>
@@ -473,6 +473,7 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Obsolete. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000174">Deprecated:</a></b></dt><dd>use a custom <a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a> </dd></dl>
 
 </div>
 </div>
@@ -509,7 +510,7 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Called when a view is regenerated and should be used for drawing "decorations" like the world axis icon into the "back" buffer. Wireframe objects drawn in DrawForeground are not depth clipped or depth buffered. Parameters: vp - [in] The active viewport doc - [in] - The active document Remarks: DrawMiddleground is a good place to draw shaded objects. If you want to draw wireframe objects, then you should do it in a DrawForeground override. </p>
+<p>Description: Called when a view is regenerated and should be used for drawing "decorations" like the world axis icon into the "back" buffer. Wireframe objects drawn in DrawForeground are not depth clipped or depth buffered. Parameters: vp - [in] The active viewport doc - [in] - The active document Remarks: DrawMiddleground is a good place to draw shaded objects. If you want to draw wireframe objects, then you should do it in a DrawForeground override. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000172">Deprecated:</a></b></dt><dd>use a custom <a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a> </dd></dl>
 
 </div>
 </div>
@@ -546,14 +547,14 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
-<p>Description: Called when a view is regenerated and should be used for things like drawing temporary geometry into the "back" buffer. Objects drawn in DrawMiddleground are depth clipped and depth buffered. If your objects are getting clipped and you don't want them to be clipped, the draw them in DrawForeground. Parameters: vp - [in] The active viewport doc - [in] - The active document Remarks: DrawMiddleground is a good place to draw shaded objects. If you want to draw wireframe objects, then you should do it in a DrawForeground override. </p>
+<p>Description: Called when a view is regenerated and should be used for things like drawing temporary geometry into the "back" buffer. Objects drawn in DrawMiddleground are depth clipped and depth buffered. If your objects are getting clipped and you don't want them to be clipped, the draw them in DrawForeground. Parameters: vp - [in] The active viewport doc - [in] - The active document Remarks: DrawMiddleground is a good place to draw shaded objects. If you want to draw wireframe objects, then you should do it in a DrawForeground override. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000171">Deprecated:</a></b></dt><dd>use a custom <a class="el" href="class_c_rhino_display_conduit.html">CRhinoDisplayConduit</a> </dd></dl>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:26 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:09 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

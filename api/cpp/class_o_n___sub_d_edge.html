@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__subd_8h_source.html">opennurbs_subd.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_subd.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_SubDEdge:</div>
 <div class="dyncontent">
@@ -88,9 +88,9 @@ Inheritance diagram for ON_SubDEdge:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
-<tr class="memitem:ad844c671865d214fe3a88085e2fff382"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_o_n___sub_d_edge.html#ad844c671865d214fe3a88085e2fff382ab14a1da83370eeb51e6fec74230b4a74">MaximumFaceCount</a> = 0xFFF0U
+<tr class="memitem:a77b9a72ad5b9b764ed758721fcb79302"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <a class="el" href="class_o_n___sub_d_edge.html#a77b9a72ad5b9b764ed758721fcb79302ab14a1da83370eeb51e6fec74230b4a74">MaximumFaceCount</a> = 0xFFF0U
  }</td></tr>
-<tr class="separator:ad844c671865d214fe3a88085e2fff382"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a77b9a72ad5b9b764ed758721fcb79302"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -413,8 +413,8 @@ Additional Inherited Members</h2></td></tr>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p><a class="el" href="class_o_n___sub_d_edge.html">ON_SubDEdge</a> </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="ad844c671865d214fe3a88085e2fff382"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad844c671865d214fe3a88085e2fff382">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a77b9a72ad5b9b764ed758721fcb79302"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b9a72ad5b9b764ed758721fcb79302">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -429,7 +429,7 @@ Additional Inherited Members</h2></td></tr>
 <p>The value of <a class="el" href="class_o_n___sub_d_face_ptr.html#ac6b466b3d9a31c95f507aea9eb7ded8c">ON_SubDFacePtr.FaceDirection()</a> is 0 if the edge's natural orientation from m_vertex[0] to m_vertex[1] agrees with the face's boundary orientation.</p>
 <p>The value of <a class="el" href="class_o_n___sub_d_face_ptr.html#ac6b466b3d9a31c95f507aea9eb7ded8c">ON_SubDFacePtr.FaceDirection()</a> is 1 if the edge's natural orientation from m_vertex[0] to m_vertex[1] is opposited the face's boundary orientation. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ad844c671865d214fe3a88085e2fff382ab14a1da83370eeb51e6fec74230b4a74"></a>MaximumFaceCount&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a77b9a72ad5b9b764ed758721fcb79302ab14a1da83370eeb51e6fec74230b4a74"></a>MaximumFaceCount&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -798,7 +798,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns: If vertices are set, then the vector from m_vertex[0]-&gt;<a class="el" href="class_o_n___sub_d_edge.html#a458b89a882d495ce10a621a1d5f0d135">ControlNetPoint()</a> to m_vertex[1]-&gt;<a class="el" href="class_o_n___sub_d_edge.html#a458b89a882d495ce10a621a1d5f0d135">ControlNetPoint()</a> is returned. Otherwise <a class="el" href="group__open_n_u_r_b_s.html#ga2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> is returned. </p>
+<p>Returns: If vertices are set, then the vector from m_vertex[0]-&gt;<a class="el" href="class_o_n___sub_d_edge.html#a458b89a882d495ce10a621a1d5f0d135">ControlNetPoint()</a> to m_vertex[1]-&gt;<a class="el" href="class_o_n___sub_d_edge.html#a458b89a882d495ce10a621a1d5f0d135">ControlNetPoint()</a> is returned. Otherwise <a class="el" href="class_o_n__3d_vector.html#a2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> is returned. </p>
 
 </div>
 </div>
@@ -817,7 +817,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Returns: If vertices are set and v is an end of the edge, then the vector from v to OtherEndVertex(v) is returned. Otherwise <a class="el" href="group__open_n_u_r_b_s.html#ga2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> is returned. </p>
+<p>Returns: If vertices are set and v is an end of the edge, then the vector from v to OtherEndVertex(v) is returned. Otherwise <a class="el" href="class_o_n__3d_vector.html#a2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> is returned. </p>
 
 </div>
 </div>
@@ -853,7 +853,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Parameters: i - [in] 0 or 1. Returns: If i is 0 or 1 and vertex[i] is set, then vertex[i]-&gt;<a class="el" href="class_o_n___sub_d_edge.html#a458b89a882d495ce10a621a1d5f0d135">ControlNetPoint()</a> is returned. Otherwise <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> is returned. </p>
+<p>Parameters: i - [in] 0 or 1. Returns: If i is 0 or 1 and vertex[i] is set, then vertex[i]-&gt;<a class="el" href="class_o_n___sub_d_edge.html#a458b89a882d495ce10a621a1d5f0d135">ControlNetPoint()</a> is returned. Otherwise <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> is returned. </p>
 
 </div>
 </div>
@@ -1332,7 +1332,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Get the limit surface point location and normal for the edge's midpoint from the limit mesh grid. Parameters: edge - [in] An edge in this SubD. edge_face_index - [in] Index of the face to use for the normal. If the edge is a crease, then each attached face may have a different normal. Pass 0 when in doubt. P - [out] P = limit surface location or <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="group__open_n_u_r_b_s.html#ga2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. Remarks: Requires information created by <a class="el" href="class_o_n___sub_d.html#a6abc8cfa298276013a6a7b80bd911dd6">ON_SubD::UpdateSurfaceMeshCache()</a> </p>
+<p>Description: Get the limit surface point location and normal for the edge's midpoint from the limit mesh grid. Parameters: edge - [in] An edge in this SubD. edge_face_index - [in] Index of the face to use for the normal. If the edge is a crease, then each attached face may have a different normal. Pass 0 when in doubt. P - [out] P = limit surface location or <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a> if not available. N - [out] N = limit surface unit normal or <a class="el" href="class_o_n__3d_vector.html#a2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if not available. Returns: True if the point and normal were set from the limit mesh frament. False if the limit mesh fragment was not found and nan values were returned. Remarks: Requires information created by <a class="el" href="class_o_n___sub_d.html#a6abc8cfa298276013a6a7b80bd911dd6">ON_SubD::UpdateSurfaceMeshCache()</a> </p>
 
 </div>
 </div>
@@ -1847,7 +1847,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Get the limit surface point location and normal for the edge's midpoint from the limit mesh grid. Parameters: edge - [in] An edge in this SubD. edge_face_index - [in] Index of the face to use for the normal. If the edge is a crease, then each attached face may have a different normal. Pass 0 when in doubt. Returns: A unit normal or <a class="el" href="group__open_n_u_r_b_s.html#ga2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if information is not available. Remarks: Requires information created by <a class="el" href="class_o_n___sub_d.html#a6abc8cfa298276013a6a7b80bd911dd6">ON_SubD::UpdateSurfaceMeshCache()</a> </p>
+<p>Description: Get the limit surface point location and normal for the edge's midpoint from the limit mesh grid. Parameters: edge - [in] An edge in this SubD. edge_face_index - [in] Index of the face to use for the normal. If the edge is a crease, then each attached face may have a different normal. Pass 0 when in doubt. Returns: A unit normal or <a class="el" href="class_o_n__3d_vector.html#a2bb705b5d7458947109344fe28460228" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dVector::NanVector</a> if information is not available. Remarks: Requires information created by <a class="el" href="class_o_n___sub_d.html#a6abc8cfa298276013a6a7b80bd911dd6">ON_SubD::UpdateSurfaceMeshCache()</a> </p>
 
 </div>
 </div>
@@ -2352,7 +2352,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:56 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:39 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

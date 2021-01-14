@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__texture_8h_source.html">opennurbs_texture.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_texture.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_Texture:</div>
 <div class="dyncontent">
@@ -153,6 +153,7 @@ Public Types</h2></td></tr>
 <br />
 &#160;&#160;<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558abd6e5bed160ec975c01106c946f68863">TYPE::pbr_displacement_texture</a> = 28U, 
 <a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a441b2f47a228334110b4624fad453adf">TYPE::pbr_clearcoat_bump_texture</a> = 29U, 
+<a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558a4ec0110f921c2bc04d9f0fa4d57b627f">TYPE::pbr_alpha_texture</a> = 30U, 
 <a class="el" href="class_o_n___texture.html#a1e73ed16dda764adcb0618dbf8097558aa2c78836b230eda463be3f14b207345a">TYPE::emap_texture</a> = 86U
 <br />
  }</td></tr>
@@ -345,7 +346,7 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a16a2594836fac4d3358b012d2cf6bb14"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3669df954e8032dbc39f1cd0038cbe8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#ab3669df954e8032dbc39f1cd0038cbe8">m_bTreatAsLinear</a> = false</td></tr>
 <tr class="separator:ab3669df954e8032dbc39f1cd0038cbe8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae75d2b3d5de103380bb1c017f754df68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#ae75d2b3d5de103380bb1c017f754df68">m_bump_scale</a> = <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td></tr>
+<tr class="memitem:ae75d2b3d5de103380bb1c017f754df68"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#ae75d2b3d5de103380bb1c017f754df68">m_bump_scale</a> = <a class="el" href="class_o_n___interval.html#a737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td></tr>
 <tr class="separator:ae75d2b3d5de103380bb1c017f754df68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2faf89d33eec5fbf8d8d1b273b8837d3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___file_reference.html">ON_FileReference</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___texture.html#a2faf89d33eec5fbf8d8d1b273b8837d3">m_image_file_reference</a> = <a class="el" href="class_o_n___file_reference.html#a06f1799b2ed593bd0f8c9270a9719ec2">ON_FileReference::Unset</a></td></tr>
 <tr class="separator:a2faf89d33eec5fbf8d8d1b273b8837d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -550,6 +551,7 @@ Static Public Attributes</h2></td></tr>
 <tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558abd6e5bed160ec975c01106c946f68863"></a>pbr_displacement_texture&#160;</td><td class="fielddoc"><p>pbr_smudge_texture = 27U, </p>
 </td></tr>
 <tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a441b2f47a228334110b4624fad453adf"></a>pbr_clearcoat_bump_texture&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558a4ec0110f921c2bc04d9f0fa4d57b627f"></a>pbr_alpha_texture&#160;</td><td class="fielddoc"></td></tr>
 <tr><td class="fieldname"><a id="a1e73ed16dda764adcb0618dbf8097558aa2c78836b230eda463be3f14b207345a"></a>emap_texture&#160;</td><td class="fielddoc"><p>emap_texture is OBSOLETE - set m_mapping_channel_id = ON_MappingChannel::emap_mapping </p>
 <p>spherical environment mapping. </p>
 </td></tr>
@@ -1626,7 +1628,7 @@ Static Public Attributes</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n___interval.html">ON_Interval</a> ON_Texture::m_bump_scale = <a class="el" href="group__open_n_u_r_b_s.html#ga737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td>
+          <td class="memname"><a class="el" href="class_o_n___interval.html">ON_Interval</a> ON_Texture::m_bump_scale = <a class="el" href="class_o_n___interval.html#a737857e2200ea8d9731ca40c5fa21196">ON_Interval::ZeroToOne</a></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -1858,7 +1860,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:41 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

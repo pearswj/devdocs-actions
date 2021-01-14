@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__dimension_8h_source.html">opennurbs_dimension.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_dimension.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_Dimension:</div>
 <div class="dyncontent">
@@ -141,7 +141,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a4e1beb5d3a2c8bf77c41a93fb07a5d5b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a4e1beb5d3a2c8bf77c41a93fb07a5d5b">FlipArrow</a> (int i, bool flip) const</td></tr>
 <tr class="separator:a4e1beb5d3a2c8bf77c41a93fb07a5d5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a51da3d637aa95fad0522e9cee8de662b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___dimension.html#aaf71a5ff7330fd5eccd1ff42609f60b4">ON_Dimension::ForceArrow</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a51da3d637aa95fad0522e9cee8de662b">ForceArrowPosition</a> () const</td></tr>
-<tr class="memdesc:a51da3d637aa95fad0522e9cee8de662b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Obsolete.  <a href="class_o_n___dimension.html#a51da3d637aa95fad0522e9cee8de662b">More...</a><br /></td></tr>
 <tr class="separator:a51da3d637aa95fad0522e9cee8de662b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a169ab8455e911843dcf82a242c668be4"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a169ab8455e911843dcf82a242c668be4">ForceDimLine</a> (const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> *parent_style) const</td></tr>
 <tr class="separator:a169ab8455e911843dcf82a242c668be4"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -156,11 +155,6 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a339af071aa08e7e4434187ebf9bd6409"><td class="memItemLeft" align="right" valign="top">virtual double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a339af071aa08e7e4434187ebf9bd6409">Measurement</a> () const =0</td></tr>
 <tr class="memdesc:a339af071aa08e7e4434187ebf9bd6409"><td class="mdescLeft">&#160;</td><td class="mdescRight">Computes measurement value as a number.  <a href="class_o_n___dimension.html#a339af071aa08e7e4434187ebf9bd6409">More...</a><br /></td></tr>
 <tr class="separator:a339af071aa08e7e4434187ebf9bd6409"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a72631246748ea7057c4f7bdad7da96ae"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a72631246748ea7057c4f7bdad7da96ae">ON_DEPRECATED_MSG</a> (&quot;ON_Dimension::SetTextRotation() is a mistake. Use <a class="el" href="class_o_n___annotation.html#aae8965f1d3ae544403a7f22296611de7">ON_Annotation::SetTextRotationRadians</a>().&quot;) void SetTextRotation(double rotation_radians)</td></tr>
-<tr class="separator:a72631246748ea7057c4f7bdad7da96ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9959645d6589bcda4958fec877b94c9f"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a9959645d6589bcda4958fec877b94c9f">ON_DEPRECATED_MSG</a> (&quot;ON_Dimension::TextRotation() is a mistake. Use <a class="el" href="class_o_n___annotation.html#a72cab754ad293f4e974cf83c1c2878db">ON_Annotation::TextRotationRadians</a>().&quot;) double TextRotation() const</td></tr>
-<tr class="memdesc:a9959645d6589bcda4958fec877b94c9f"><td class="mdescLeft">&#160;</td><td class="mdescRight">Add to natural rotation.  <a href="class_o_n___dimension.html#a9959645d6589bcda4958fec877b94c9f">More...</a><br /></td></tr>
-<tr class="separator:a9959645d6589bcda4958fec877b94c9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a37ccfabf0d90736f658eae84cf87f025"><td class="memItemLeft" align="right" valign="top">const wchar_t *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a37ccfabf0d90736f658eae84cf87f025">PlainUserText</a> () const</td></tr>
 <tr class="separator:a37ccfabf0d90736f658eae84cf87f025"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a74667bbfa9d9c573bf115eedb7703633"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___text_content.html">ON_TextContent</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a74667bbfa9d9c573bf115eedb7703633">RebuildDimensionText</a> (<a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a> units_in, const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> *dimstyle, bool expandanglebrackets) const</td></tr>
@@ -182,6 +176,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a07e4febf22becbcc91d2a8aab7779377"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a7221c825d189d9dc5cae59bb7b74b9a8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a7221c825d189d9dc5cae59bb7b74b9a8">SetTextFit</a> (const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> *parent_style, <a class="el" href="class_o_n___dim_style.html#a55665b232fe704c3b43959e6bdb26cfc">ON_DimStyle::text_fit</a> textfit)</td></tr>
 <tr class="separator:a7221c825d189d9dc5cae59bb7b74b9a8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac5a862a23a115ff7160b15391f0d4852"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#ac5a862a23a115ff7160b15391f0d4852">SetTextRotation</a> (double rotation_radians)</td></tr>
+<tr class="separator:ac5a862a23a115ff7160b15391f0d4852"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2e01c18c5a99a37c0854c1f3826f05f9"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a2e01c18c5a99a37c0854c1f3826f05f9">SetUseDefaultTextPoint</a> (bool usedefault)</td></tr>
 <tr class="separator:a2e01c18c5a99a37c0854c1f3826f05f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a66ecf43371ac5454b1c9a8ede60375d4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a66ecf43371ac5454b1c9a8ede60375d4">SetUserText</a> (const wchar_t *text)</td></tr>
@@ -191,6 +187,8 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:a2e09ae36a6f93889bf33f93b7d452d8b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a2e09ae36a6f93889bf33f93b7d452d8b">TextPoint</a> () const</td></tr>
 <tr class="memdesc:a2e09ae36a6f93889bf33f93b7d452d8b"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text center-midpoint in dimension plane.  <a href="class_o_n___dimension.html#a2e09ae36a6f93889bf33f93b7d452d8b">More...</a><br /></td></tr>
 <tr class="separator:a2e09ae36a6f93889bf33f93b7d452d8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a41eebb02c6b0f4d593f9cc855ed0c47a"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a41eebb02c6b0f4d593f9cc855ed0c47a">TextRotation</a> () const</td></tr>
+<tr class="separator:a41eebb02c6b0f4d593f9cc855ed0c47a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77b09c1e53ad33bb36ae2dbd19e900de"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#a77b09c1e53ad33bb36ae2dbd19e900de">UpdateDimensionText</a> (<a class="el" href="class_o_n.html#aef46d8c5bfb7e3ebca29c979c7d1050a">ON::LengthUnitSystem</a> units_in, const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> *dimstyle) const</td></tr>
 <tr class="memdesc:a77b09c1e53ad33bb36ae2dbd19e900de"><td class="mdescLeft">&#160;</td><td class="mdescRight">Remakes dimension text geometry object and sets it on the dimension.  <a href="class_o_n___dimension.html#a77b09c1e53ad33bb36ae2dbd19e900de">More...</a><br /></td></tr>
 <tr class="separator:a77b09c1e53ad33bb36ae2dbd19e900de"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -425,6 +423,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ab5b8a3d0a105fe5ee7a956ee47e6dc80 inherit pub_methods_class_o_n___annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aedbf8b43951aae0af45fb42a25e9d4cb inherit pub_methods_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#aedbf8b43951aae0af45fb42a25e9d4cb">RunReplaceString</a> (const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> *dimstyle, const wchar_t *str, int start_run_idx, int start_run_pos, int end_run_idx, int end_run_pos)</td></tr>
 <tr class="separator:aedbf8b43951aae0af45fb42a25e9d4cb inherit pub_methods_class_o_n___annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abfeab1c7daaaa01afe680936ff77d579 inherit pub_methods_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#abfeab1c7daaaa01afe680936ff77d579">ScaleOverrideDimstyle</a> (const <a class="el" href="class_o_n___dim_style.html">ON_DimStyle</a> *parent_dimstyle, double scale)</td></tr>
+<tr class="separator:abfeab1c7daaaa01afe680936ff77d579 inherit pub_methods_class_o_n___annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad9a4e256beb9b711400c2a4786a89480 inherit pub_methods_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#ad9a4e256beb9b711400c2a4786a89480">SetAlignment</a> (<a class="el" href="class_o_n.html#a0ecbf4c0cfa728f369714752fae40573">ON::TextHorizontalAlignment</a> horz, <a class="el" href="class_o_n.html#aba3fe70d4361c458432bd6e5a690e6d3">ON::TextVerticalAlignment</a> vert)</td></tr>
 <tr class="separator:ad9a4e256beb9b711400c2a4786a89480 inherit pub_methods_class_o_n___annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a00e76ed05358ffa7ccaa3497e8ee8995 inherit pub_methods_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#a00e76ed05358ffa7ccaa3497e8ee8995">SetAllowTextScaling</a> (bool scale)</td></tr>
@@ -925,7 +925,7 @@ Protected Attributes</h2></td></tr>
 <tr class="memitem:ae61a22d20beb7960c2920f47576e72f4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#ae61a22d20beb7960c2920f47576e72f4">m_user_text</a> = L&quot;&lt;&gt;&quot;</td></tr>
 <tr class="memdesc:ae61a22d20beb7960c2920f47576e72f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">If user overridden, or "&lt;&gt;" to use default.  <a href="class_o_n___dimension.html#ae61a22d20beb7960c2920f47576e72f4">More...</a><br /></td></tr>
 <tr class="separator:ae61a22d20beb7960c2920f47576e72f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aec6829d56fa882418eb8c1e275d5dbd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#aec6829d56fa882418eb8c1e275d5dbd1">m_user_text_point</a> = <a class="el" href="group__open_n_u_r_b_s.html#gac8e9b6e9de32dd39bd13f8cc56896709">ON_2dPoint::UnsetPoint</a></td></tr>
+<tr class="memitem:aec6829d56fa882418eb8c1e275d5dbd1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___dimension.html#aec6829d56fa882418eb8c1e275d5dbd1">m_user_text_point</a> = <a class="el" href="class_o_n__2d_point.html#ac8e9b6e9de32dd39bd13f8cc56896709">ON_2dPoint::UnsetPoint</a></td></tr>
 <tr class="memdesc:aec6829d56fa882418eb8c1e275d5dbd1"><td class="mdescLeft">&#160;</td><td class="mdescRight">Text point if default isn't used.  <a href="class_o_n___dimension.html#aec6829d56fa882418eb8c1e275d5dbd1">More...</a><br /></td></tr>
 <tr class="separator:aec6829d56fa882418eb8c1e275d5dbd1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_attribs_class_o_n___annotation"><td colspan="2" onclick="javascript:toggleInherit('pro_attribs_class_o_n___annotation')"><img src="closed.png" alt="-"/>&#160;Protected Attributes inherited from <a class="el" href="class_o_n___annotation.html">ON_Annotation</a></td></tr>
@@ -935,7 +935,7 @@ Protected Attributes</h2></td></tr>
 <tr class="separator:a99088ef6f8800d3b1069f87add494004 inherit pro_attribs_class_o_n___annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a75b7767ccfa00a37c11277ffecfb6a6a inherit pro_attribs_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#a75b7767ccfa00a37c11277ffecfb6a6a">m_dimstyle_id</a> = ON_DimStyle::Default.Id()</td></tr>
 <tr class="separator:a75b7767ccfa00a37c11277ffecfb6a6a inherit pro_attribs_class_o_n___annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aab93dd9c6a880270111e0e2ce4b0f388 inherit pro_attribs_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2d_vector.html">ON_2dVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#aab93dd9c6a880270111e0e2ce4b0f388">m_horizontal_direction</a> = <a class="el" href="group__open_n_u_r_b_s.html#ga9e42cf2a0540f701ff52dffce6ed1038">ON_2dVector::XAxis</a></td></tr>
+<tr class="memitem:aab93dd9c6a880270111e0e2ce4b0f388 inherit pro_attribs_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2d_vector.html">ON_2dVector</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#aab93dd9c6a880270111e0e2ce4b0f388">m_horizontal_direction</a> = <a class="el" href="class_o_n__2d_vector.html#a9e42cf2a0540f701ff52dffce6ed1038">ON_2dVector::XAxis</a></td></tr>
 <tr class="memdesc:aab93dd9c6a880270111e0e2ce4b0f388 inherit pro_attribs_class_o_n___annotation"><td class="mdescLeft">&#160;</td><td class="mdescRight">direction used as horizontal to draw annotation, especially text  <a href="class_o_n___annotation.html#aab93dd9c6a880270111e0e2ce4b0f388">More...</a><br /></td></tr>
 <tr class="separator:aab93dd9c6a880270111e0e2ce4b0f388 inherit pro_attribs_class_o_n___annotation"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aaa64eea9e7187a03ee51763c2bbebcb0 inherit pro_attribs_class_o_n___annotation"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___plane.html">ON_Plane</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___annotation.html#aaa64eea9e7187a03ee51763c2bbebcb0">m_plane</a> = <a class="el" href="class_o_n___plane.html#a57b1c7064afd3f0d0b1ec02478482087">ON_Plane::World_xy</a></td></tr>
@@ -1271,8 +1271,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Obsolete. </p>
+<p>Obsolete </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000018">Deprecated:</a></b></dt><dd>ON_Dimension::ArrowFit(const ON_DimStyle* parent_style) </dd></dl>
 
 </div>
 </div>
@@ -1334,6 +1333,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000020">Deprecated:</a></b></dt><dd>ON_Dimension::TextFit(const ON_DimStyle* parent_style) </dd></dl>
 
 </div>
 </div>
@@ -1656,44 +1656,6 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a72631246748ea7057c4f7bdad7da96ae"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a72631246748ea7057c4f7bdad7da96ae">&#9670;&nbsp;</a></span>ON_DEPRECATED_MSG() <span class="overload">[1/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ON_Dimension::ON_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;ON_Dimension::SetTextRotation() is a mistake. Use <a class="el" href="class_o_n___annotation.html#aae8965f1d3ae544403a7f22296611de7">ON_Annotation::SetTextRotationRadians</a>().&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a9959645d6589bcda4958fec877b94c9f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9959645d6589bcda4958fec877b94c9f">&#9670;&nbsp;</a></span>ON_DEPRECATED_MSG() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ON_Dimension::ON_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;ON_Dimension::TextRotation() is a mistake. Use <a class="el" href="class_o_n___annotation.html#a72cab754ad293f4e974cf83c1c2878db">ON_Annotation::TextRotationRadians</a>().&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td> const</td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>Add to natural rotation. </p>
-
-</div>
-</div>
 <a id="a4788659dcb59055c86e405fceeedee7c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a4788659dcb59055c86e405fceeedee7c">&#9670;&nbsp;</a></span>operator=()</h2>
 
@@ -1876,6 +1838,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000019">Deprecated:</a></b></dt><dd><a class="el" href="class_o_n___dimension.html#aea95ab0d96ade3661b2ef64a12da68a5">ON_Dimension::SetArrowFit(const ON_DimStyle* parent_style,ON_DimStyle::arrow_fit arrowfit)</a> </dd></dl>
 
 </div>
 </div>
@@ -1922,6 +1885,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000021">Deprecated:</a></b></dt><dd><a class="el" href="class_o_n___dimension.html#a7221c825d189d9dc5cae59bb7b74b9a8">ON_Dimension::SetTextFit(const ON_DimStyle* parent_style,ON_DimStyle::text_fit textfit)</a> </dd></dl>
 
 </div>
 </div>
@@ -1950,6 +1914,25 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac5a862a23a115ff7160b15391f0d4852"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac5a862a23a115ff7160b15391f0d4852">&#9670;&nbsp;</a></span>SetTextRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_Dimension::SetTextRotation </td>
+          <td>(</td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>rotation_radians</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000017">Deprecated:</a></b></dt><dd><a class="el" href="class_o_n___dimension.html#ac5a862a23a115ff7160b15391f0d4852">ON_Dimension::SetTextRotation()</a> is a mistake. Use <a class="el" href="class_o_n___annotation.html#aae8965f1d3ae544403a7f22296611de7">ON_Annotation::SetTextRotationRadians()</a>. </dd></dl>
 
 </div>
 </div>
@@ -2031,6 +2014,24 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Text center-midpoint in dimension plane. </p>
+
+</div>
+</div>
+<a id="a41eebb02c6b0f4d593f9cc855ed0c47a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a41eebb02c6b0f4d593f9cc855ed0c47a">&#9670;&nbsp;</a></span>TextRotation()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">double ON_Dimension::TextRotation </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Add to natural rotation </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000016">Deprecated:</a></b></dt><dd><a class="el" href="class_o_n___dimension.html#a41eebb02c6b0f4d593f9cc855ed0c47a">ON_Dimension::TextRotation()</a> is a mistake. Use <a class="el" href="class_o_n___annotation.html#a72cab754ad293f4e974cf83c1c2878db" title="return angle in radians between text plane and object plane">ON_Annotation::TextRotationRadians()</a>. </dd></dl>
 
 </div>
 </div>
@@ -2375,7 +2376,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a> ON_Dimension::m_user_text_point = <a class="el" href="group__open_n_u_r_b_s.html#gac8e9b6e9de32dd39bd13f8cc56896709">ON_2dPoint::UnsetPoint</a></td>
+          <td class="memname"><a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a> ON_Dimension::m_user_text_point = <a class="el" href="class_o_n__2d_point.html#ac8e9b6e9de32dd39bd13f8cc56896709">ON_2dPoint::UnsetPoint</a></td>
         </tr>
       </table>
   </td>
@@ -2392,7 +2393,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:49 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:33 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

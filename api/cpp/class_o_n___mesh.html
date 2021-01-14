@@ -74,7 +74,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__mesh_8h_source.html">opennurbs_mesh.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_mesh.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_Mesh:</div>
 <div class="dyncontent">
@@ -223,10 +223,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa029aafe4a524b31a986fa46374d6c5b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac4e376f80851554edae4fa183347124a"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ac4e376f80851554edae4fa183347124a">DissolveOrDelete</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> &gt; &amp;ci_list)</td></tr>
 <tr class="separator:ac4e376f80851554edae4fa183347124a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a1b101813d31f261ef0a6ca950cfcf14a"><td class="memItemLeft" align="right" valign="top">ON_3dPointArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a">DoublePrecisionVertices</a> ()</td></tr>
+<tr class="memitem:a1b101813d31f261ef0a6ca950cfcf14a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a">DoublePrecisionVertices</a> ()</td></tr>
 <tr class="memdesc:a1b101813d31f261ef0a6ca950cfcf14a"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - mesh geometry.  <a href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a">More...</a><br /></td></tr>
 <tr class="separator:a1b101813d31f261ef0a6ca950cfcf14a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afce02d0446f6a17f2c4eddbd15b4d636"><td class="memItemLeft" align="right" valign="top">const ON_3dPointArray &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#afce02d0446f6a17f2c4eddbd15b4d636">DoublePrecisionVertices</a> () const</td></tr>
+<tr class="memitem:afce02d0446f6a17f2c4eddbd15b4d636"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#afce02d0446f6a17f2c4eddbd15b4d636">DoublePrecisionVertices</a> () const</td></tr>
 <tr class="separator:afce02d0446f6a17f2c4eddbd15b4d636"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9621f32fa9123a6feae820085d14a02d"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a9621f32fa9123a6feae820085d14a02d">Dump</a> (<a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;) const override</td></tr>
 <tr class="memdesc:a9621f32fa9123a6feae820085d14a02d"><td class="mdescLeft">&#160;</td><td class="mdescRight">for debugging  <a href="class_o_n___mesh.html#a9621f32fa9123a6feae820085d14a02d">More...</a><br /></td></tr>
@@ -277,6 +277,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a46b297eb77352e4c82d664ee2ea3cb2a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a692b6ca07ffdcd0ed8b32e4b270d0ce1"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a692b6ca07ffdcd0ed8b32e4b270d0ce1">GetCurvatureStats</a> (<a class="el" href="class_o_n.html#a86bff53cc45eaeb4b4dcd0268b9e1e8f">ON::curvature_style</a>, <a class="el" href="class_o_n___mesh_curvature_stats.html">ON_MeshCurvatureStats</a> &amp;) const</td></tr>
 <tr class="separator:a692b6ca07ffdcd0ed8b32e4b270d0ce1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4f2bef19d6d37f651c611b75a80b4a8b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a4f2bef19d6d37f651c611b75a80b4a8b">GetIntersections</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;withTheseOtherMeshes, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *perforatingResults, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *overlapResults, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *overlapMeshResult, <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *log, <a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *cancel, <a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *reporter) const</td></tr>
+<tr class="separator:a4f2bef19d6d37f651c611b75a80b4a8b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4c90cb307e886840900b63e91cb74a79"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a4c90cb307e886840900b63e91cb74a79">GetIntersections</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;withTheseOtherMeshes, <a class="el" href="class_o_n___mesh_intersection_cache.html">ON_MeshIntersectionCache</a> *cacheForOtherMeshes, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *perforatingResults, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *overlapResults, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *overlapMeshResult, <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *log, <a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *cancel, <a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *reporter) const</td></tr>
+<tr class="separator:a4c90cb307e886840900b63e91cb74a79"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a973789f53a04031d403389b952cb6154"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a973789f53a04031d403389b952cb6154">GetMeshEdgeList</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__2dex.html">ON_2dex</a> &gt; &amp;edge_list, bool bLookForNgonInteriorEdges, bool bOmitHiddenEdges, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;ci_meshtop_edge_map, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;ci_meshtop_vertex_map, unsigned int edge_type_partition[6]) const</td></tr>
 <tr class="separator:a973789f53a04031d403389b952cb6154"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a662c3c3cbbd3a669ac3651413fb2b303"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a662c3c3cbbd3a669ac3651413fb2b303">GetMeshEdgeList</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__2dex.html">ON_2dex</a> &gt; &amp;edge_list, bool bLookForNgonInteriorEdges, bool bOmitHiddenEdges, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;ci_meshtop_edge_map, unsigned int edge_type_partition[6]) const</td></tr>
@@ -499,6 +503,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ae11133fd5bae412081e6eaf21769c86f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecf36e17605dc94bf12c7eb0de2e82c4"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___texture_coordinates.html">ON_TextureCoordinates</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aecf36e17605dc94bf12c7eb0de2e82c4">SetCachedTextureCoordinates</a> (const class <a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;mapping, const class <a class="el" href="class_o_n___xform.html">ON_Xform</a> *mesh_xform=0, bool bLazy=true)</td></tr>
 <tr class="separator:aecf36e17605dc94bf12c7eb0de2e82c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a82f7f797aea84ffd659211c8eab42f87"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___texture_coordinates.html">ON_TextureCoordinates</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a82f7f797aea84ffd659211c8eab42f87">SetCachedTextureCoordinatesEx</a> (const class <a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;mapping, const class <a class="el" href="class_o_n___xform.html">ON_Xform</a> *mesh_xform=0, bool bLazy=true, bool bSeamCheck=true)</td></tr>
+<tr class="separator:a82f7f797aea84ffd659211c8eab42f87"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad5929a47378ca44d6703e59b32afd5e5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ad5929a47378ca44d6703e59b32afd5e5">SetClosed</a> (int closed)</td></tr>
 <tr class="separator:ad5929a47378ca44d6703e59b32afd5e5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a734a124c91c1a3d3b36b0c85e6924e79"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a734a124c91c1a3d3b36b0c85e6924e79">SetMeshParameters</a> (const <a class="el" href="class_o_n___mesh_parameters.html">ON_MeshParameters</a> &amp;)</td></tr>
@@ -517,6 +523,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:ad8afa3775940a5bc48600d5f4d205a5a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac63b1a95fe549071b2500ba9ea2c8319"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ac63b1a95fe549071b2500ba9ea2c8319">SetTextureCoordinates</a> (const class <a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;mapping, const class <a class="el" href="class_o_n___xform.html">ON_Xform</a> *mesh_xform=0, bool bLazy=true)</td></tr>
 <tr class="separator:ac63b1a95fe549071b2500ba9ea2c8319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2b3e29046b35bb62806d6b50c3c9da57"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a2b3e29046b35bb62806d6b50c3c9da57">SetTextureCoordinatesEx</a> (const class <a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;mapping, const class <a class="el" href="class_o_n___xform.html">ON_Xform</a> *mesh_xform=0, bool bLazy=true, bool bSeamCheck=true)</td></tr>
+<tr class="separator:a2b3e29046b35bb62806d6b50c3c9da57"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a12c59eade1b16f97315c819a6cdb050a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a12c59eade1b16f97315c819a6cdb050a">SetTriangle</a> (int, int, int, int)</td></tr>
 <tr class="separator:a12c59eade1b16f97315c819a6cdb050a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af734006dba8a02b93a63362f79b33687"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af734006dba8a02b93a63362f79b33687">SetVertex</a> (int, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;)</td></tr>
@@ -577,11 +585,11 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a30d559932d255011e1c3389e4d0dd29e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a570150a61ae34746d3ef1ef02c8d7612"><td class="memItemLeft" align="right" valign="top">unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a570150a61ae34746d3ef1ef02c8d7612">VertexUnsignedCount</a> () const</td></tr>
 <tr class="separator:a570150a61ae34746d3ef1ef02c8d7612"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af7c016b38cda75a98a1648c1001c1d6c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af7c016b38cda75a98a1648c1001c1d6c">Volume</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *error_estimate=nullptr) const</td></tr>
+<tr class="memitem:af7c016b38cda75a98a1648c1001c1d6c"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af7c016b38cda75a98a1648c1001c1d6c">Volume</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *error_estimate=nullptr) const</td></tr>
 <tr class="separator:af7c016b38cda75a98a1648c1001c1d6c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa607ea044e3e95c8404019416e5dfdfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa607ea044e3e95c8404019416e5dfdfe">VolumeCentroid</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *volume=nullptr) const</td></tr>
+<tr class="memitem:aa607ea044e3e95c8404019416e5dfdfe"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa607ea044e3e95c8404019416e5dfdfe">VolumeCentroid</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a>, double *volume=nullptr) const</td></tr>
 <tr class="separator:aa607ea044e3e95c8404019416e5dfdfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa6a1b4435044cb9bd612ca013faed17b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>) const</td></tr>
+<tr class="memitem:aa6a1b4435044cb9bd612ca013faed17b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties</a> (class <a class="el" href="class_o_n___mass_properties.html">ON_MassProperties</a> &amp;mp, bool bVolume=true, bool bFirstMoments=true, bool bSecondMoments=true, bool bProductMoments=true, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> base_point=<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a>) const</td></tr>
 <tr class="separator:aa6a1b4435044cb9bd612ca013faed17b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad4d8ee57465bcf4458dc5fbb55628423"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ad4d8ee57465bcf4458dc5fbb55628423">Write</a> (<a class="el" href="class_o_n___binary_archive.html">ON_BinaryArchive</a> &amp;) const override</td></tr>
 <tr class="separator:ad4d8ee57465bcf4458dc5fbb55628423"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -712,22 +720,22 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a9caa1b55e23568cd492840c0290f56f3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mapping_tag.html">ON_MappingTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a9caa1b55e23568cd492840c0290f56f3">m_Ctag</a></td></tr>
 <tr class="memdesc:a9caa1b55e23568cd492840c0290f56f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - false color.  <a href="class_o_n___mesh.html#a9caa1b55e23568cd492840c0290f56f3">More...</a><br /></td></tr>
 <tr class="separator:a9caa1b55e23568cd492840c0290f56f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7496a0e3ba5f171adb216a482ce057ae"><td class="memItemLeft" align="right" valign="top">ON_3dPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a7496a0e3ba5f171adb216a482ce057ae">m_dV</a></td></tr>
+<tr class="memitem:a7496a0e3ba5f171adb216a482ce057ae"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a7496a0e3ba5f171adb216a482ce057ae">m_dV</a></td></tr>
 <tr class="separator:a7496a0e3ba5f171adb216a482ce057ae"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a005e7e4b0f04014c289264e06e496450"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh_face.html">ON_MeshFace</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450">m_F</a></td></tr>
 <tr class="memdesc:a005e7e4b0f04014c289264e06e496450"><td class="mdescLeft">&#160;</td><td class="mdescRight">m_F[] facets (triangles or quads)  <a href="class_o_n___mesh.html#a005e7e4b0f04014c289264e06e496450">More...</a><br /></td></tr>
 <tr class="separator:a005e7e4b0f04014c289264e06e496450"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a61b4408beb9cd28c90ddb4ec8492f499"><td class="memItemLeft" align="right" valign="top">ON_3fVectorArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a61b4408beb9cd28c90ddb4ec8492f499">m_FN</a></td></tr>
+<tr class="memitem:a61b4408beb9cd28c90ddb4ec8492f499"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a61b4408beb9cd28c90ddb4ec8492f499">m_FN</a></td></tr>
 <tr class="separator:a61b4408beb9cd28c90ddb4ec8492f499"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2a166eabbd9f7f0e141e30325f6783f8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; bool &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a2a166eabbd9f7f0e141e30325f6783f8">m_H</a></td></tr>
 <tr class="memdesc:a2a166eabbd9f7f0e141e30325f6783f8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - runtime vertex visibility - not saved in 3dm files.  <a href="class_o_n___mesh.html#a2a166eabbd9f7f0e141e30325f6783f8">More...</a><br /></td></tr>
 <tr class="separator:a2a166eabbd9f7f0e141e30325f6783f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a532418e6af843813ecc81246a8da7eef"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a532418e6af843813ecc81246a8da7eef">m_hidden_count</a></td></tr>
 <tr class="separator:a532418e6af843813ecc81246a8da7eef"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; ON_SurfaceCurvature &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8">m_K</a></td></tr>
+<tr class="memitem:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8">m_K</a></td></tr>
 <tr class="memdesc:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - curvature.  <a href="class_o_n___mesh.html#a8f353770ff5fcc259d21e8a162d3e9d8">More...</a><br /></td></tr>
 <tr class="separator:a8f353770ff5fcc259d21e8a162d3e9d8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af5c95b35080197efd6f43ab5830efe9f"><td class="memItemLeft" align="right" valign="top">ON_3fVectorArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af5c95b35080197efd6f43ab5830efe9f">m_N</a></td></tr>
+<tr class="memitem:af5c95b35080197efd6f43ab5830efe9f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af5c95b35080197efd6f43ab5830efe9f">m_N</a></td></tr>
 <tr class="separator:af5c95b35080197efd6f43ab5830efe9f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab91153bed501502cd587b18884c48d22"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mesh_ngon.html">ON_MeshNgon</a> * &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#ab91153bed501502cd587b18884c48d22">m_Ngon</a></td></tr>
 <tr class="separator:ab91153bed501502cd587b18884c48d22"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -744,14 +752,14 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a77c5f065e1c3ae6a160e6931601ccdc8"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="class_o_n___object.html">ON_Object</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a77c5f065e1c3ae6a160e6931601ccdc8">m_parent</a></td></tr>
 <tr class="memdesc:a77c5f065e1c3ae6a160e6931601ccdc8"><td class="mdescLeft">&#160;</td><td class="mdescRight">Implementation - runtime UI information.  <a href="class_o_n___mesh.html#a77c5f065e1c3ae6a160e6931601ccdc8">More...</a><br /></td></tr>
 <tr class="separator:a77c5f065e1c3ae6a160e6931601ccdc8"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:acbf195fbe55da435006a2ba9c66e71e4"><td class="memItemLeft" align="right" valign="top">ON_2dPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#acbf195fbe55da435006a2ba9c66e71e4">m_S</a></td></tr>
+<tr class="memitem:acbf195fbe55da435006a2ba9c66e71e4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2d_point_array.html">ON_2dPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#acbf195fbe55da435006a2ba9c66e71e4">m_S</a></td></tr>
 <tr class="separator:acbf195fbe55da435006a2ba9c66e71e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a48d982115e07a7a0209d7b35b83a96bb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___interval.html">ON_Interval</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a48d982115e07a7a0209d7b35b83a96bb">m_srf_domain</a> [2]</td></tr>
 <tr class="memdesc:a48d982115e07a7a0209d7b35b83a96bb"><td class="mdescLeft">&#160;</td><td class="mdescRight">surface evaluation domain.  <a href="class_o_n___mesh.html#a48d982115e07a7a0209d7b35b83a96bb">More...</a><br /></td></tr>
 <tr class="separator:a48d982115e07a7a0209d7b35b83a96bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abfec38c9115fc2045b8d2105dd634ff2"><td class="memItemLeft" align="right" valign="top">double&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#abfec38c9115fc2045b8d2105dd634ff2">m_srf_scale</a> [2]</td></tr>
 <tr class="separator:abfec38c9115fc2045b8d2105dd634ff2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af8813d0559c1834e30af2b86da7d64c9"><td class="memItemLeft" align="right" valign="top">ON_2fPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9">m_T</a></td></tr>
+<tr class="memitem:af8813d0559c1834e30af2b86da7d64c9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__2f_point_array.html">ON_2fPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9">m_T</a></td></tr>
 <tr class="memdesc:af8813d0559c1834e30af2b86da7d64c9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPTIONAL texture coordinates for each vertex.  <a href="class_o_n___mesh.html#af8813d0559c1834e30af2b86da7d64c9">More...</a><br /></td></tr>
 <tr class="separator:af8813d0559c1834e30af2b86da7d64c9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a28e3c1473d1817f3606ebc30c7b05bf0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___class_array.html">ON_ClassArray</a>&lt; <a class="el" href="class_o_n___texture_coordinates.html">ON_TextureCoordinates</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a28e3c1473d1817f3606ebc30c7b05bf0">m_TC</a></td></tr>
@@ -759,7 +767,7 @@ Public Attributes</h2></td></tr>
 <tr class="memitem:a5a5f8175918c06ea9b632113e29786b9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___mapping_tag.html">ON_MappingTag</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a5a5f8175918c06ea9b632113e29786b9">m_Ttag</a></td></tr>
 <tr class="memdesc:a5a5f8175918c06ea9b632113e29786b9"><td class="mdescLeft">&#160;</td><td class="mdescRight">OPTIONAL tag for values in m_T[].  <a href="class_o_n___mesh.html#a5a5f8175918c06ea9b632113e29786b9">More...</a><br /></td></tr>
 <tr class="separator:a5a5f8175918c06ea9b632113e29786b9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a6cc720e646b5fb26e5285b1838f71c7d"><td class="memItemLeft" align="right" valign="top">ON_3fPointArray&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">m_V</a></td></tr>
+<tr class="memitem:a6cc720e646b5fb26e5285b1838f71c7d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3f_point_array.html">ON_3fPointArray</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___mesh.html#a6cc720e646b5fb26e5285b1838f71c7d">m_V</a></td></tr>
 <tr class="separator:a6cc720e646b5fb26e5285b1838f71c7d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
@@ -2454,7 +2462,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_3dPointArray&amp; ON_Mesh::DoublePrecisionVertices </td>
+          <td class="memname"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&amp; ON_Mesh::DoublePrecisionVertices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -2464,7 +2472,7 @@ Additional Inherited Members</h2></td></tr>
 
 <p>Implementation - mesh geometry. </p>
 <p>Vertex locations In a case where adjacent facets share a vertex location but have distinct normals or texture coordinates at that location, the vertex must be duplicated. Description: Get double precision vertices. If they do not exist, they will be created and match the existing single precision vertices. Returns: Array of double precision vertices. If you modify the values in this array, you must make the same modifications to the single precision vertices, or call UpdateSinglePrecisonVertices(). Example:</p>
-<p>/ add a bunch of double precision information ON_3dPointArray&amp; dv = mesh.DoublePrecisionVertices(); for ( i = 0; i &lt; lots; i++ ) { dv[i] = ... } / This call updates the single precison values / in m_V[] and sets all the counts and CRCs that / are used in validity checking. mesh.UpdateSinglePrecisonVertices();</p>
+<p>/ add a bunch of double precision information <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&amp; dv = mesh.DoublePrecisionVertices(); for ( i = 0; i &lt; lots; i++ ) { dv[i] = ... } / This call updates the single precison values / in m_V[] and sets all the counts and CRCs that / are used in validity checking. mesh.UpdateSinglePrecisonVertices();</p>
 <p>Remarks: Avoid mulitple calls to <a class="el" href="class_o_n___mesh.html#a1b101813d31f261ef0a6ca950cfcf14a" title="Implementation - mesh geometry.">DoublePrecisionVertices()</a>. It is most efficient to make one call, save a local reference, and use the local reference as needed. </p>
 
 </div>
@@ -2476,7 +2484,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">const ON_3dPointArray&amp; ON_Mesh::DoublePrecisionVertices </td>
+          <td class="memname">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a>&amp; ON_Mesh::DoublePrecisionVertices </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td> const</td>
@@ -3139,6 +3147,143 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a4f2bef19d6d37f651c611b75a80b4a8b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4f2bef19d6d37f651c611b75a80b4a8b">&#9670;&nbsp;</a></span>GetIntersections() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::GetIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>withTheseOtherMeshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>perforatingResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>overlapResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td>
+          <td class="paramname"><em>overlapMeshResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *&#160;</td>
+          <td class="paramname"><em>log</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *&#160;</td>
+          <td class="paramname"><em>cancel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get intersections with the current mesh. Intersections between other meshes are ignored. See the parameter description in the function above. </p>
+
+</div>
+</div>
+<a id="a4c90cb307e886840900b63e91cb74a79"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4c90cb307e886840900b63e91cb74a79">&#9670;&nbsp;</a></span>GetIntersections() <span class="overload">[2/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::GetIntersections </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;&#160;</td>
+          <td class="paramname"><em>withTheseOtherMeshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___mesh_intersection_cache.html">ON_MeshIntersectionCache</a> *&#160;</td>
+          <td class="paramname"><em>cacheForOtherMeshes</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>perforatingResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___polyline.html">ON_Polyline</a> * &gt; *&#160;</td>
+          <td class="paramname"><em>overlapResults</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *&#160;</td>
+          <td class="paramname"><em>overlapMeshResult</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___text_log.html">ON_TextLog</a> *&#160;</td>
+          <td class="paramname"><em>log</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___terminator.html">ON_Terminator</a> *&#160;</td>
+          <td class="paramname"><em>cancel</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___progress_reporter.html">ON_ProgressReporter</a> *&#160;</td>
+          <td class="paramname"><em>reporter</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Get intersections with the current mesh. Intersections between other meshes are ignored. See the parameter description in the function above.</p>
+<p>cacheForOtherMeshes [in/out] - Users of this class can provide nullptr, or call this method with a default-initialized instance of <a class="el" href="class_o_n___mesh_intersection_cache.html" title="Provides a mechanism for lazily evaluating mesh data. The implementation is private and subject to ch...">ON_MeshIntersectionCache</a>. In this case, the cache can be used with other calls of this function that include exactly withTheseOtherMeshes. </p>
 
 </div>
 </div>
@@ -5068,7 +5213,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Parameters: bCreateIfNoneExists - [in] If a mesh tree is not cached on this mesh and bCreateIfNoneExists is true, then a new one will be created and cached. If a mesh tree is not cached on this mesh and bCreateIfNoneExists is false, then null is returned. Returns: An pointer <a class="el" href="class_o_n___mesh_tree.html">ON_MeshTree</a> for this mesh. The pointer may be null and the caller must check it before dereferencing. </p>
+<p>Parameters: bCreateIfNoneExists - [in] If a mesh tree is not cached on this mesh and bCreateIfNoneExists is true, then a new one will be created and cached. If a mesh tree is not cached on this mesh and bCreateIfNoneExists is false, then null is returned. Returns: An pointer <a class="el" href="class_o_n___mesh_tree.html">ON_MeshTree</a> for this mesh. The pointer may be null and the caller must check it before dereferencing. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000055">Deprecated:</a></b></dt><dd>Call MeshTree(true) </dd></dl>
 
 </div>
 </div>
@@ -5518,7 +5663,7 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Mesh offset Description: Offsets a mesh by the input distance</p>
-<p>distance - [in] Distance to offset direction - [in] If this parameter is <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a>, offset each vertex in the normal direction orherwise, offset every vertex in the input direction Returns: New mesh that is an offset of a duplicate of this mesh Or nullptr if the input was invalid or the mesh could not be duplicated or offset Caller manages memory of new mesh </p>
+<p>distance - [in] Distance to offset direction - [in] If this parameter is <a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a>, offset each vertex in the normal direction orherwise, offset every vertex in the input direction Returns: New mesh that is an offset of a duplicate of this mesh Or nullptr if the input was invalid or the mesh could not be duplicated or offset Caller manages memory of new mesh </p>
 
 </div>
 </div>
@@ -5955,6 +6100,46 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
+<a id="a82f7f797aea84ffd659211c8eab42f87"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a82f7f797aea84ffd659211c8eab42f87">&#9670;&nbsp;</a></span>SetCachedTextureCoordinatesEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">const <a class="el" href="class_o_n___texture_coordinates.html">ON_TextureCoordinates</a>* ON_Mesh::SetCachedTextureCoordinatesEx </td>
+          <td>(</td>
+          <td class="paramtype">const class <a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;&#160;</td>
+          <td class="paramname"><em>mapping</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const class <a class="el" href="class_o_n___xform.html">ON_Xform</a> *&#160;</td>
+          <td class="paramname"><em>mesh_xform</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bLazy</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bSeamCheck</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="ad5929a47378ca44d6703e59b32afd5e5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ad5929a47378ca44d6703e59b32afd5e5">&#9670;&nbsp;</a></span>SetClosed()</h2>
 
@@ -6192,6 +6377,47 @@ Additional Inherited Members</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Use a texture mapping function to set the m_T[] values. Parameters: mapping - [in] mesh_xform - [in] If not nullptr, the mapping calculation is performed as if the mesh were transformed by mesh_xform; the location of the mesh is not changed. bLazy - [in] If true and the m_T[] values were set using the same mapping parameters, then no calculation is performed. Returns: True if successful. See Also: <a class="el" href="class_o_n___texture_mapping.html#a8465fda24c41092aec22bbf01172e4a0">ON_TextureMapping::GetTextureCoordinates</a> </p>
+
+</div>
+</div>
+<a id="a2b3e29046b35bb62806d6b50c3c9da57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2b3e29046b35bb62806d6b50c3c9da57">&#9670;&nbsp;</a></span>SetTextureCoordinatesEx()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Mesh::SetTextureCoordinatesEx </td>
+          <td>(</td>
+          <td class="paramtype">const class <a class="el" href="class_o_n___texture_mapping.html">ON_TextureMapping</a> &amp;&#160;</td>
+          <td class="paramname"><em>mapping</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const class <a class="el" href="class_o_n___xform.html">ON_Xform</a> *&#160;</td>
+          <td class="paramname"><em>mesh_xform</em> = <code>0</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bLazy</em> = <code>true</code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bSeamCheck</em> = <code>true</code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Use a texture mapping function to set the m_T[] values. Parameters: mapping - [in] mesh_xform - [in] If not nullptr, the mapping calculation is performed as if the mesh were transformed by mesh_xform; the location of the mesh is not changed. bLazy - [in] If true and the m_T[] values were set using the same mapping parameters, then no calculation is performed. bSeamCheck - [in] If true then some mesh edges might be unwelded to better represent UV discontinuities in the texture mapping. This only happens for the following mappings: Box, Sphere, Cylinder. Returns: True if successful. See Also: <a class="el" href="class_o_n___texture_mapping.html#a8465fda24c41092aec22bbf01172e4a0">ON_TextureMapping::GetTextureCoordinates</a> </p>
 
 </div>
 </div>
@@ -6982,7 +7208,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname">double ON_Mesh::Volume </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7012,7 +7238,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="memname"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> ON_Mesh::VolumeCentroid </td>
           <td>(</td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5">ON_3dPoint::Origin</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -7071,7 +7297,7 @@ Additional Inherited Members</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td>
-          <td class="paramname"><em>base_point</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>&#160;</td>
+          <td class="paramname"><em>base_point</em> = <code><a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d">ON_3dPoint::UnsetPoint</a></code>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -7080,7 +7306,7 @@ Additional Inherited Members</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Calculate volume mass properties of the mesh. Parameters: base_point - [in] When computing the volume mass properties of a solid volume defined by several meshes, pass the same base_point to each call to <a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties()</a> and add the answers. When computing the volume mass properties of a solid defined by a single mesh, the center of the bounding box is a good choice for base_point. If the mesh is closed, you can pass <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> and the center of the bounding box will be used. mp - [out] bVolume - [in] true to calculate volume bFirstMoments - [in] true to calculate volume first moments, volume, and volume centroid. bSecondMoments - [in] true to calculate volume second moments. bProductMoments - [in] true to calculate volume product moments. base_point - [in] If the surface is closed, then pass ON_UNSET_VALUE.</p>
+<p>Description: Calculate volume mass properties of the mesh. Parameters: base_point - [in] When computing the volume mass properties of a solid volume defined by several meshes, pass the same base_point to each call to <a class="el" href="class_o_n___mesh.html#aa6a1b4435044cb9bd612ca013faed17b">VolumeMassProperties()</a> and add the answers. When computing the volume mass properties of a solid defined by a single mesh, the center of the bounding box is a good choice for base_point. If the mesh is closed, you can pass <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> and the center of the bounding box will be used. mp - [out] bVolume - [in] true to calculate volume bFirstMoments - [in] true to calculate volume first moments, volume, and volume centroid. bSecondMoments - [in] true to calculate volume second moments. bProductMoments - [in] true to calculate volume product moments. base_point - [in] If the surface is closed, then pass ON_UNSET_VALUE.</p>
 <p>This parameter is for expert users who are computing a volume whose boundary is defined by several non-closed breps, surfaces, and meshes.</p>
 <p>When computing the volume, volume centroid, or volume first moments of a volume whose boundary is defined by several breps, surfaces, and meshes, pass the same base_point to each call to VolumeMassProperties. <br  />
 </p>
@@ -7181,7 +7407,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_3dPointArray ON_Mesh::m_dV</td>
+          <td class="memname"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> ON_Mesh::m_dV</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7215,7 +7441,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_3fVectorArray ON_Mesh::m_FN</td>
+          <td class="memname"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a> ON_Mesh::m_FN</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7284,7 +7510,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt;ON_SurfaceCurvature&gt; ON_Mesh::m_K</td>
+          <td class="memname"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt;<a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a>&gt; ON_Mesh::m_K</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7348,7 +7574,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_3fVectorArray ON_Mesh::m_N</td>
+          <td class="memname"><a class="el" href="class_o_n__3f_vector_array.html">ON_3fVectorArray</a> ON_Mesh::m_N</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7531,7 +7757,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_2dPointArray ON_Mesh::m_S</td>
+          <td class="memname"><a class="el" href="class_o_n__2d_point_array.html">ON_2dPointArray</a> ON_Mesh::m_S</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7582,7 +7808,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_2fPointArray ON_Mesh::m_T</td>
+          <td class="memname"><a class="el" href="class_o_n__2f_point_array.html">ON_2fPointArray</a> ON_Mesh::m_T</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7701,7 +7927,7 @@ Additional Inherited Members</h2></td></tr>
 <div class="memproto">
       <table class="memname">
         <tr>
-          <td class="memname">ON_3fPointArray ON_Mesh::m_V</td>
+          <td class="memname"><a class="el" href="class_o_n__3f_point_array.html">ON_3fPointArray</a> ON_Mesh::m_V</td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -7711,7 +7937,7 @@ Additional Inherited Members</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:52 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:35 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

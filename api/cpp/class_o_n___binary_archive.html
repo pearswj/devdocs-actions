@@ -77,7 +77,7 @@ $(function() {
 <p>&lt; use for generic serialization of binary data  
  <a href="class_o_n___binary_archive.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="opennurbs__archive_8h_source.html">opennurbs_archive.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_archive.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ON_BinaryArchive:</div>
 <div class="dyncontent">
@@ -239,6 +239,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a153fc3b2fb0417fefa9360522f21b909"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f5d0c4118c1b2e48fe0c09cb690bd3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a67f5d0c4118c1b2e48fe0c09cb690bd3">BeginWriteDictionaryEntry</a> (int de_type, const wchar_t *entry_name)</td></tr>
 <tr class="separator:a67f5d0c4118c1b2e48fe0c09cb690bd3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4e841ed6fa174e41a30baaec9f62128c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a4e841ed6fa174e41a30baaec9f62128c">CheckForRemappedIds</a> () const</td></tr>
+<tr class="separator:a4e841ed6fa174e41a30baaec9f62128c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5197f50415534be9086a1e3ce5a9034c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a5197f50415534be9086a1e3ce5a9034c">ChunkBoundaryCheck</a> () const</td></tr>
 <tr class="separator:a5197f50415534be9086a1e3ce5a9034c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aabe5204c19083125325592e0804deacc"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#aabe5204c19083125325592e0804deacc">ClearModelSerialNumber</a> ()</td></tr>
@@ -353,8 +355,6 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:adb482785ac0997a17c3a88f3dbeeccce"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aae44fc26d79bbe14b9feed54f09d4bc5"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#aae44fc26d79bbe14b9feed54f09d4bc5">ObjectHasUserDataToWrite</a> (const class <a class="el" href="class_o_n___object.html">ON_Object</a> *object) const</td></tr>
 <tr class="separator:aae44fc26d79bbe14b9feed54f09d4bc5"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a065db2b96f5fbe8a8b54a45b453fc84e"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a065db2b96f5fbe8a8b54a45b453fc84e">ON_DEPRECATED_MSG</a> (&quot;Use either <a class="el" href="class_o_n___binary_archive.html#a31378a73104dab716db033d008d47035">ReadStringUTF8ElementCount</a>() or <a class="el" href="class_o_n___binary_archive.html#a1e7713da57b2db375c0cad65d055779d">ReadStringUTF16ElementCount</a>()&quot;) bool ReadStringSize(size_t *str_array_count)</td></tr>
-<tr class="separator:a065db2b96f5fbe8a8b54a45b453fc84e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac56159ec84bcab9f4754ad320bccf3b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#ac56159ec84bcab9f4754ad320bccf3b0">PeekAt3dmBigChunkType</a> (<a class="el" href="group__open_n_u_r_b_s.html#gaea03c6f4bab106103ada72c766f7fe5c">ON__UINT32</a> *typecode, <a class="el" href="group__open_n_u_r_b_s.html#ga090dc337a02411b8168f75fd318b99ed">ON__INT64</a> *big_value)</td></tr>
 <tr class="separator:ac56159ec84bcab9f4754ad320bccf3b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa94c98780dcc8d8af2ab47554a5c93a9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#aa94c98780dcc8d8af2ab47554a5c93a9">PeekAt3dmChunkType</a> (unsigned int *, int *)</td></tr>
@@ -472,7 +472,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a4e663cad498dc4399d456d6a852c815a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77fce114b57781223eeef79f23ff7d4d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a77fce114b57781223eeef79f23ff7d4d">ReadArray</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mapping_channel.html">ON_MappingChannel</a> &gt; &amp;)</td></tr>
 <tr class="separator:a77fce114b57781223eeef79f23ff7d4d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ab15b37a0f0f312c7e4273e6450b89fca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#ab15b37a0f0f312c7e4273e6450b89fca">ReadArray</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; ON_SurfaceCurvature &gt; &amp;)</td></tr>
+<tr class="memitem:ab15b37a0f0f312c7e4273e6450b89fca"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#ab15b37a0f0f312c7e4273e6450b89fca">ReadArray</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a> &gt; &amp;)</td></tr>
 <tr class="separator:ab15b37a0f0f312c7e4273e6450b89fca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af8e01b5419dc4d83b156433d9013804c"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#af8e01b5419dc4d83b156433d9013804c">ReadArray</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> &gt; &amp;)</td></tr>
 <tr class="separator:af8e01b5419dc4d83b156433d9013804c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -605,6 +605,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a37f414be58e36fc9a3061e83c787356e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a991e5a4554643340856305d23a3b407d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a991e5a4554643340856305d23a3b407d">ReadString</a> (size_t str_array_count, unsigned short *str_array)</td></tr>
 <tr class="separator:a991e5a4554643340856305d23a3b407d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a605ffb622b633bba0ee93498f213a9f9"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a605ffb622b633bba0ee93498f213a9f9">ReadStringSize</a> (size_t *str_array_count)</td></tr>
+<tr class="separator:a605ffb622b633bba0ee93498f213a9f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1e7713da57b2db375c0cad65d055779d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a1e7713da57b2db375c0cad65d055779d">ReadStringUTF16ElementCount</a> (size_t *string_utf16_element_count)</td></tr>
 <tr class="separator:a1e7713da57b2db375c0cad65d055779d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a31378a73104dab716db033d008d47035"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a31378a73104dab716db033d008d47035">ReadStringUTF8ElementCount</a> (size_t *string_utf8_element_count)</td></tr>
@@ -672,6 +674,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a7f11ec7155789fcdf6c2579b9ad0b26f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2f5e94e35a7eda77078aaa0b9d3dc581"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a2f5e94e35a7eda77078aaa0b9d3dc581">SetArchiveFullPath</a> (const wchar_t *archive_full_path)</td></tr>
 <tr class="separator:a2f5e94e35a7eda77078aaa0b9d3dc581"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d5424f6607cb8d22e7eb34a72a34a6b"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a9d5424f6607cb8d22e7eb34a72a34a6b">SetCheckForRemappedIds</a> (bool bCheckForRemappedIds)</td></tr>
+<tr class="separator:a9d5424f6607cb8d22e7eb34a72a34a6b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:acb5a4f9a27831722a5ee2c2f79b6e841"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#acb5a4f9a27831722a5ee2c2f79b6e841">SetChunkBoundaryCheck</a> (bool bChunkBoundaryCheck)</td></tr>
 <tr class="separator:acb5a4f9a27831722a5ee2c2f79b6e841"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a49015733466df204a3f351bcc64174e6"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a49015733466df204a3f351bcc64174e6">SetModelSerialNumber</a> (unsigned int model_serial_number, unsigned int reference_model_serial_number, unsigned int instance_definition_model_serial_number)</td></tr>
@@ -867,7 +871,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a55a1e65d1230a75a577f9eef0910bb95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a4f0b491437430894d4e12c727ffd65e0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a4f0b491437430894d4e12c727ffd65e0">WriteArray</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___mapping_channel.html">ON_MappingChannel</a> &gt; &amp;)</td></tr>
 <tr class="separator:a4f0b491437430894d4e12c727ffd65e0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:adfb453601561b982aa73b1b3c8789618"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#adfb453601561b982aa73b1b3c8789618">WriteArray</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; ON_SurfaceCurvature &gt; &amp;)</td></tr>
+<tr class="memitem:adfb453601561b982aa73b1b3c8789618"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#adfb453601561b982aa73b1b3c8789618">WriteArray</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a> &gt; &amp;)</td></tr>
 <tr class="separator:adfb453601561b982aa73b1b3c8789618"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a9d36e5ec7c0ce8567924c396d7cb1d86"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___binary_archive.html#a9d36e5ec7c0ce8567924c396d7cb1d86">WriteArray</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="group__open_n_u_r_b_s.html#gadb9844468b1cef57a0f269d1302792bb">ON_UUID</a> &gt; &amp;)</td></tr>
 <tr class="separator:a9d36e5ec7c0ce8567924c396d7cb1d86"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1740,7 +1744,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>ON_DEPRECATED_MSG("use BeginRead3dmBigChunk") bool BeginRead3dmChunk( unsigned int*, ///&lt; typecode from <a class="el" href="opennurbs__3dm_8h_source.html">opennurbs_3dm.h</a> int* ///&lt; value ); When the end of the 3dm file is reached, BeginReadChunk() will return true with a typecode of TCODE_ENDOFFILE. </p>
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000008">Deprecated:</a></b></dt><dd>use BeginRead3dmBigChunk bool BeginRead3dmChunk( unsigned int*, ///&lt; typecode from opennurbs_3dm.h int* ///&lt; value ); </dd></dl>
+<p>When the end of the 3dm file is reached, BeginReadChunk() will return true with a typecode of TCODE_ENDOFFILE. </p>
 
 </div>
 </div>
@@ -1792,7 +1797,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Begins reading a chunk that must be in the archive at this location. Parameters: expected_tcode - [in] chunk's typecode from <a class="el" href="opennurbs__3dm_8h_source.html">opennurbs_3dm.h</a> major_version - [out] minor_version - [out] Returns: True if beginning of the chunk was read. In this case You must call <a class="el" href="class_o_n___binary_archive.html#a9ee7a23abd63afd06c38ee20dc6205dc">EndRead3dmChunk()</a>, even if something goes wrong while you attempt to read the interior of the chunk. False if the chunk did not exist at the current location in the file. </p>
+<p>Description: Begins reading a chunk that must be in the archive at this location. Parameters: expected_tcode - [in] chunk's typecode from opennurbs_3dm.h major_version - [out] minor_version - [out] Returns: True if beginning of the chunk was read. In this case You must call <a class="el" href="class_o_n___binary_archive.html#a9ee7a23abd63afd06c38ee20dc6205dc">EndRead3dmChunk()</a>, even if something goes wrong while you attempt to read the interior of the chunk. False if the chunk did not exist at the current location in the file. </p>
 
 </div>
 </div>
@@ -2185,7 +2190,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Begins writing a chunk. Parameters: tcode - [in] chunk's typecode from <a class="el" href="opennurbs__3dm_8h_source.html">opennurbs_3dm.h</a>. This cannot be a short tcode. major_version - [in] ( &gt;= 1) minor_version - [in] ( &gt;= 0 ) Returns: True if input was valid and chunk was started. In this case You must call <a class="el" href="class_o_n___binary_archive.html#aee8a0c998dcb33190c21773eb5c84a22" title="updates length in chunk header">EndWrite3dmChunk()</a>, even if something goes wrong while you attempt to write the contents of the chunk. False if input was not valid or the write failed. </p>
+<p>Description: Begins writing a chunk. Parameters: tcode - [in] chunk's typecode from opennurbs_3dm.h. This cannot be a short tcode. major_version - [in] ( &gt;= 1) minor_version - [in] ( &gt;= 0 ) Returns: True if input was valid and chunk was started. In this case You must call <a class="el" href="class_o_n___binary_archive.html#aee8a0c998dcb33190c21773eb5c84a22" title="updates length in chunk header">EndWrite3dmChunk()</a>, even if something goes wrong while you attempt to write the contents of the chunk. False if input was not valid or the write failed. </p>
 
 </div>
 </div>
@@ -2214,8 +2219,8 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Low level tools to Write/Read chunks. See <a class="el" href="opennurbs__3dm_8h_source.html">opennurbs_3dm.h</a> for details about the structure of chunks. Every chunk must begin with a call to BeginWrite/ReadChunk(). If BeginWriteChunk()/BeginReadChunk() returns true, then you must call EndWrite/ReadChunk() or cease using the archive. Description: Writes a chunk header containing 4 byte typecode and value.</p>
-<p>Parameters: typecode - [in] a TCODE_* number from <a class="el" href="opennurbs__3dm_8h_source.html">opennurbs_3dm.h</a> value - [in] if (typecode&amp;TCODE_SHORT) is nonzero, then this is the value to be saved. Othewise, pass a zero and the <a class="el" href="class_o_n___binary_archive.html#aee8a0c998dcb33190c21773eb5c84a22" title="updates length in chunk header">EndWrite3dmChunk()</a> call will store the length of the chunk.</p>
+<p>Low level tools to Write/Read chunks. See opennurbs_3dm.h for details about the structure of chunks. Every chunk must begin with a call to BeginWrite/ReadChunk(). If BeginWriteChunk()/BeginReadChunk() returns true, then you must call EndWrite/ReadChunk() or cease using the archive. Description: Writes a chunk header containing 4 byte typecode and value.</p>
+<p>Parameters: typecode - [in] a TCODE_* number from opennurbs_3dm.h value - [in] if (typecode&amp;TCODE_SHORT) is nonzero, then this is the value to be saved. Othewise, pass a zero and the <a class="el" href="class_o_n___binary_archive.html#aee8a0c998dcb33190c21773eb5c84a22" title="updates length in chunk header">EndWrite3dmChunk()</a> call will store the length of the chunk.</p>
 <p>Returns: true if write was successful. </p>
 
 </div>
@@ -2433,6 +2438,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000006">Deprecated:</a></b></dt><dd>use BeginWrite3dmUserTable(plugin_id, bSavingGoo, 3dm_version, opennurbs_version) </dd></dl>
 
 </div>
 </div>
@@ -2538,6 +2544,24 @@ Friends</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Begins writing a dictionary entry. Parameters: de_type - [in] entry_name - [in] Returns: true Entry header was written and you must call <a class="el" href="class_o_n___binary_archive.html#a904563c87b1643fddd706f43ed2d72cd">EndWriteDictionary()</a> after writing the entry data. false Failed to write entry header. Do not call <a class="el" href="class_o_n___binary_archive.html#a904563c87b1643fddd706f43ed2d72cd">EndWriteDictionary()</a>. Remarks: Begins a new chunk with tcode TCODE_DICTIONARY_ENTRY, then writes the int, and then writes the string. </p>
+
+</div>
+</div>
+<a id="a4e841ed6fa174e41a30baaec9f62128c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4e841ed6fa174e41a30baaec9f62128c">&#9670;&nbsp;</a></span>CheckForRemappedIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_BinaryArchive::CheckForRemappedIds </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Returns: True if the archive is reading in a situation where component ids may get remapped. </p>
 
 </div>
 </div>
@@ -3881,25 +3905,6 @@ Friends</h2></td></tr>
 
 </div>
 </div>
-<a id="a065db2b96f5fbe8a8b54a45b453fc84e"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a065db2b96f5fbe8a8b54a45b453fc84e">&#9670;&nbsp;</a></span>ON_DEPRECATED_MSG()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">ON_BinaryArchive::ON_DEPRECATED_MSG </td>
-          <td>(</td>
-          <td class="paramtype">&quot;Use either <a class="el" href="class_o_n___binary_archive.html#a31378a73104dab716db033d008d47035">ReadStringUTF8ElementCount</a>() or <a class="el" href="class_o_n___binary_archive.html#a1e7713da57b2db375c0cad65d055779d">ReadStringUTF16ElementCount</a>()&quot;&#160;</td>
-          <td class="paramname"></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Parameters: str_array_count - [out] Number of elements in the string array. All <a class="el" href="class_o_n___binary_archive.html" title="&lt; use for generic serialization of binary data">ON_BinaryArchive</a> string <a class="el" href="class_o_n___binary_archive.html#a60a87d06cf4062d65f053ca073c703fa">WriteString()</a> functions write a null terminator to the file and the null terminator is included in the count. This means that if a string has a non-zero element, then str_array_count &gt;= 2. Remarks: Modify your code to use <a class="el" href="class_o_n___binary_archive.html#a31378a73104dab716db033d008d47035">ReadStringUTF8ElementCount()</a> when reading UTF-8 encoded strings and <a class="el" href="class_o_n___binary_archive.html#a1e7713da57b2db375c0cad65d055779d">ReadStringUTF16ElementCount()</a> when reading UTF-16 encoded strings. </p>
-
-</div>
-</div>
 <a id="acabb9ea8c53b5c40372cc664f6353e8c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acabb9ea8c53b5c40372cc664f6353e8c">&#9670;&nbsp;</a></span>ON_TypecodeParse()</h2>
 
@@ -4001,6 +4006,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000009">Deprecated:</a></b></dt><dd>use PeekAt3dmBigChunkType </dd></dl>
 
 </div>
 </div>
@@ -5190,7 +5196,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">bool ON_BinaryArchive::ReadArray </td>
           <td>(</td>
-          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; ON_SurfaceCurvature &gt; &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a> &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -6573,6 +6579,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a605ffb622b633bba0ee93498f213a9f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a605ffb622b633bba0ee93498f213a9f9">&#9670;&nbsp;</a></span>ReadStringSize()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_BinaryArchive::ReadStringSize </td>
+          <td>(</td>
+          <td class="paramtype">size_t *&#160;</td>
+          <td class="paramname"><em>str_array_count</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: str_array_count - [out] Number of elements in the string array. All <a class="el" href="class_o_n___binary_archive.html" title="&lt; use for generic serialization of binary data">ON_BinaryArchive</a> string <a class="el" href="class_o_n___binary_archive.html#a60a87d06cf4062d65f053ca073c703fa">WriteString()</a> functions write a null terminator to the file and the null terminator is included in the count. This means that if a string has a non-zero element, then str_array_count &gt;= 2. Remarks: Modify your code to use <a class="el" href="class_o_n___binary_archive.html#a31378a73104dab716db033d008d47035">ReadStringUTF8ElementCount()</a> when reading UTF-8 encoded strings and <a class="el" href="class_o_n___binary_archive.html#a1e7713da57b2db375c0cad65d055779d">ReadStringUTF16ElementCount()</a> when reading UTF-16 encoded strings. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000005">Deprecated:</a></b></dt><dd>Use either <a class="el" href="class_o_n___binary_archive.html#a31378a73104dab716db033d008d47035">ReadStringUTF8ElementCount()</a> or <a class="el" href="class_o_n___binary_archive.html#a1e7713da57b2db375c0cad65d055779d">ReadStringUTF16ElementCount()</a> </dd></dl>
+
+</div>
+</div>
 <a id="a1e7713da57b2db375c0cad65d055779d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1e7713da57b2db375c0cad65d055779d">&#9670;&nbsp;</a></span>ReadStringUTF16ElementCount()</h2>
 
@@ -7285,6 +7310,25 @@ Friends</h2></td></tr>
 
 </div>
 </div>
+<a id="a9d5424f6607cb8d22e7eb34a72a34a6b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d5424f6607cb8d22e7eb34a72a34a6b">&#9670;&nbsp;</a></span>SetCheckForRemappedIds()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ON_BinaryArchive::SetCheckForRemappedIds </td>
+          <td>(</td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>bCheckForRemappedIds</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Parameters: bCheckForRemappedIds - [in] true if the archive is reading in a situation where component ids may get remapped. </p>
+
+</div>
+</div>
 <a id="acb5a4f9a27831722a5ee2c2f79b6e841"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#acb5a4f9a27831722a5ee2c2f79b6e841">&#9670;&nbsp;</a></span>SetChunkBoundaryCheck()</h2>
 
@@ -7876,6 +7920,7 @@ Friends</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000007">Deprecated:</a></b></dt><dd>use Write3dmAnonymousUserTableRecord(plugin_id, ..., goo) </dd></dl>
 
 </div>
 </div>
@@ -9345,7 +9390,7 @@ Friends</h2></td></tr>
         <tr>
           <td class="memname">bool ON_BinaryArchive::WriteArray </td>
           <td>(</td>
-          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; ON_SurfaceCurvature &gt; &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___surface_curvature.html">ON_SurfaceCurvature</a> &gt; &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
         </tr>
@@ -10931,7 +10976,7 @@ Friends</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:47 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

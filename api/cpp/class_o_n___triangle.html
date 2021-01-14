@@ -72,13 +72,15 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__line_8h_source.html">opennurbs_line.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_line.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a9a77c2e07cdb02f796e5da04a6d81dfe"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#a9a77c2e07cdb02f796e5da04a6d81dfe">ON_Triangle</a> ()=default</td></tr>
 <tr class="memdesc:a9a77c2e07cdb02f796e5da04a6d81dfe"><td class="mdescLeft">&#160;</td><td class="mdescRight">Default constructor is uninitialized.  <a href="class_o_n___triangle.html#a9a77c2e07cdb02f796e5da04a6d81dfe">More...</a><br /></td></tr>
 <tr class="separator:a9a77c2e07cdb02f796e5da04a6d81dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab8bb0704975d6f11729e8ac3843c0caf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#ab8bb0704975d6f11729e8ac3843c0caf">ON_Triangle</a> (const double vertices[9])</td></tr>
+<tr class="separator:ab8bb0704975d6f11729e8ac3843c0caf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adb2dcf67be0f3e77c610d6d7401bd7e7"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#adb2dcf67be0f3e77c610d6d7401bd7e7">ON_Triangle</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;a, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;b, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;c)</td></tr>
 <tr class="separator:adb2dcf67be0f3e77c610d6d7401bd7e7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6ebcdb38e84d37f8a34b3733a4718be9"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#a6ebcdb38e84d37f8a34b3733a4718be9">ON_Triangle</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> vertices[3])</td></tr>
@@ -108,6 +110,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:af6a41e85de44778aa1ec1003e7ee449f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab56b749e26fc64643a0721d1d4b735de"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n___line.html">ON_Line</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#ab56b749e26fc64643a0721d1d4b735de">Edge</a> (int i) const</td></tr>
 <tr class="separator:ab56b749e26fc64643a0721d1d4b735de"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4affce24e104dedc4b7b78db3449e6e2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#a4affce24e104dedc4b7b78db3449e6e2">GetBarycentricCoordinates</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;test_point, bool constrainInside, double *s1, double *s2) const</td></tr>
+<tr class="separator:a4affce24e104dedc4b7b78db3449e6e2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa281fbcbb5b2ce87abc5a4637ab1c489"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#aa281fbcbb5b2ce87abc5a4637ab1c489">GetBoundingBox</a> (<a class="el" href="class_o_n___bounding_box.html">ON_BoundingBox</a> &amp;bbox, int bGrowBox=false) const</td></tr>
 <tr class="separator:aa281fbcbb5b2ce87abc5a4637ab1c489"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa09cc39e375358195e2bd5a9858336f2"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#aa09cc39e375358195e2bd5a9858336f2">GetTightBoundingBox</a> (<a class="el" href="class_o_n___bounding_box.html">ON_BoundingBox</a> &amp;tight_bbox, bool bGrowBox=false, const <a class="el" href="class_o_n___xform.html">ON_Xform</a> *xform=nullptr) const</td></tr>
@@ -156,18 +160,18 @@ Public Attributes</h2></td></tr>
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
 <tr class="memitem:a3493f70880a69e59ef3785baec1b1443"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___triangle.html">ON_Triangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#a3493f70880a69e59ef3785baec1b1443">NanTriangle</a></td></tr>
-<tr class="memdesc:a3493f70880a69e59ef3785baec1b1443"><td class="mdescLeft">&#160;</td><td class="mdescRight">{<a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>}  <a href="class_o_n___triangle.html#a3493f70880a69e59ef3785baec1b1443">More...</a><br /></td></tr>
+<tr class="memdesc:a3493f70880a69e59ef3785baec1b1443"><td class="mdescLeft">&#160;</td><td class="mdescRight">{<a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>}  <a href="class_o_n___triangle.html#a3493f70880a69e59ef3785baec1b1443">More...</a><br /></td></tr>
 <tr class="separator:a3493f70880a69e59ef3785baec1b1443"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab4245632c9b586075706cfcdc851f86d"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___triangle.html">ON_Triangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#ab4245632c9b586075706cfcdc851f86d">UnsetTriangle</a></td></tr>
-<tr class="memdesc:ab4245632c9b586075706cfcdc851f86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">{<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>}  <a href="class_o_n___triangle.html#ab4245632c9b586075706cfcdc851f86d">More...</a><br /></td></tr>
+<tr class="memdesc:ab4245632c9b586075706cfcdc851f86d"><td class="mdescLeft">&#160;</td><td class="mdescRight">{<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>}  <a href="class_o_n___triangle.html#ab4245632c9b586075706cfcdc851f86d">More...</a><br /></td></tr>
 <tr class="separator:ab4245632c9b586075706cfcdc851f86d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a539b325f064f60664ca7250035b99c68"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n___triangle.html">ON_Triangle</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___triangle.html#a539b325f064f60664ca7250035b99c68">ZeroTriangle</a></td></tr>
-<tr class="memdesc:a539b325f064f60664ca7250035b99c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">{<a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>}  <a href="class_o_n___triangle.html#a539b325f064f60664ca7250035b99c68">More...</a><br /></td></tr>
+<tr class="memdesc:a539b325f064f60664ca7250035b99c68"><td class="mdescLeft">&#160;</td><td class="mdescRight">{<a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>}  <a href="class_o_n___triangle.html#a539b325f064f60664ca7250035b99c68">More...</a><br /></td></tr>
 <tr class="separator:a539b325f064f60664ca7250035b99c68"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a9a77c2e07cdb02f796e5da04a6d81dfe"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9a77c2e07cdb02f796e5da04a6d81dfe">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[1/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a9a77c2e07cdb02f796e5da04a6d81dfe">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[1/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -194,7 +198,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a6ebcdb38e84d37f8a34b3733a4718be9"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ebcdb38e84d37f8a34b3733a4718be9">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[2/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ebcdb38e84d37f8a34b3733a4718be9">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[2/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -212,7 +216,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="adb2dcf67be0f3e77c610d6d7401bd7e7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#adb2dcf67be0f3e77c610d6d7401bd7e7">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[3/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#adb2dcf67be0f3e77c610d6d7401bd7e7">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[3/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -246,7 +250,7 @@ Static Public Attributes</h2></td></tr>
 </div>
 </div>
 <a id="a6ef0712cfa97cf142c5466d914854fc2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a6ef0712cfa97cf142c5466d914854fc2">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[4/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a6ef0712cfa97cf142c5466d914854fc2">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[4/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -265,8 +269,26 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="ab8bb0704975d6f11729e8ac3843c0caf"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab8bb0704975d6f11729e8ac3843c0caf">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[5/6]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ON_Triangle::ON_Triangle </td>
+          <td>(</td>
+          <td class="paramtype">const double&#160;</td>
+          <td class="paramname"><em>vertices</em>[9]</td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="af1e3519793194518cf535755aa1ccee6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af1e3519793194518cf535755aa1ccee6">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[5/5]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#af1e3519793194518cf535755aa1ccee6">&#9670;&nbsp;</a></span>ON_Triangle() <span class="overload">[6/6]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -494,7 +516,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Find the point on the triangle that is closest to the test_point. Parameters: test_point -[in] Returns: distance from the point on triangle that is closest to test_point. See Also: <a class="el" href="group__open_n_u_r_b_s.html#ga645aae8223672bebfdda756671763e01">ON_3dPoint::DistanceTo</a> <a class="el" href="class_o_n___line.html#ac2cea825235da9735f589c31601e0824">ON_Line::ClosestPointTo</a> </p>
+<p>Description: Find the point on the triangle that is closest to the test_point. Parameters: test_point -[in] Returns: distance from the point on triangle that is closest to test_point. See Also: <a class="el" href="class_o_n__3d_point.html#a645aae8223672bebfdda756671763e01">ON_3dPoint::DistanceTo</a> <a class="el" href="class_o_n___line.html#ac2cea825235da9735f589c31601e0824">ON_Line::ClosestPointTo</a> </p>
 
 </div>
 </div>
@@ -514,6 +536,48 @@ Static Public Attributes</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Returns: Edge opposite m_V[i] Specifically, <a class="el" href="class_o_n___line.html">ON_Line</a>( m_V[(i+1)%3 ], m_V[(i+2)%3 ] ) </p>
+
+</div>
+</div>
+<a id="a4affce24e104dedc4b7b78db3449e6e2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4affce24e104dedc4b7b78db3449e6e2">&#9670;&nbsp;</a></span>GetBarycentricCoordinates()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_Triangle::GetBarycentricCoordinates </td>
+          <td>(</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;&#160;</td>
+          <td class="paramname"><em>test_point</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">bool&#160;</td>
+          <td class="paramname"><em>constrainInside</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>s1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double *&#160;</td>
+          <td class="paramname"><em>s2</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td> const</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Find the point that is closest to the test_point. Parameters: test_point - [in] constrainInside[in] - if true, variable are inside triangle s1, s2 - [out] PointAt( *s1, *s2) is the point on the triangle closest to test_point.</p>
+<p>Returns: true if successful. </p>
 
 </div>
 </div>
@@ -967,7 +1031,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>{<a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#ga431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>} </p>
+<p>{<a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>, <a class="el" href="class_o_n__3d_point.html#a431f63a983b61e62251c3ebb37d851ff" title="(ON_DBL_QNAN,ON_DBL_QNAN,ON_DBL_QNAN)">ON_3dPoint::NanPoint</a>} </p>
 
 </div>
 </div>
@@ -991,7 +1055,7 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>{<a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>} </p>
+<p>{<a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>, <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a>} </p>
 
 </div>
 </div>
@@ -1015,14 +1079,14 @@ Static Public Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>{<a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>} </p>
+<p>{<a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>, <a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a>} </p>
 
 </div>
 </div>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:58 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:42 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

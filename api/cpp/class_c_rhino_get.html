@@ -75,7 +75,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="rhino_sdk_get_8h_source.html">rhinoSdkGet.h</a>&gt;</code></p>
+<p><code>#include &lt;rhinoSdkGet.h&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for CRhinoGet:</div>
 <div class="dyncontent">
@@ -796,11 +796,11 @@ Protected Attributes</h2></td></tr>
 <p>Description: Add a command line option. If you are adding an option to get a number, string, toggle, or list value, then use the tools listed in the see also section. Parameters: option_name - [in] option_value - [in] optional description of current value (not automaically localized - use RHSTR() when appropriate.) bHiddenOption - [in] if true, the option is not displayed on the command line and the full option name must be typed in order to activate the option. <br  />
  Returns: option index value (&gt;0) or 0 if option cannot be added. Example: </p><pre class="fragment">    CRhinoGetPoint gp;
     int grain_option_index = gp.AddCommandOption( 
-                  RHCMDOPTNAME(L"Grain"), 
-                  RHCMDOPTVALUE(L"rice") );
+                  RhLocalizeCommandOptionName( L"Grain", 43545), 
+                  RhLocalizeCommandOptionValue( L"rice", 43546) );
     int fruit_option_index = gp.AddCommandOption( 
-                  RHCMDOPTNAME(L"Fruit"), 
-                  RHCMDOPTVALUE(L"banana") 
+                  RhLocalizeCommandOptionName( L"Fruit", 43547), 
+                  RhLocalizeCommandOptionValue( L"banana", 43548) 
                   );
     gp.GetPoint();
     if ( gp.Result() == CRhinoGet::option ) 
@@ -849,8 +849,8 @@ Protected Attributes</h2></td></tr>
     for(;;)
     {
       CRhinoGetPoint gp;
-      gp.SetCommandPrompt(RHSTR(L"Center point"));
-      int radius_option_index = gp.AddCommandOption( RHCMDOPTNAME(L"Radius"), r );
+      gp.SetCommandPrompt(RhLocalizeString( L"Center point", 43549));
+      int radius_option_index = gp.AddCommandOption( RhLocalizeCommandOptionName( L"Radius", 43550), r );
       gp.GetPoint();
       if ( gp.Result() == CRhinoGet::option ) 
       {
@@ -926,9 +926,9 @@ Protected Attributes</h2></td></tr>
  ...
  ON_Color favorite_color(0,0,0);
  gp.AddCommandOptionColor(
-     RHCMDOPTNAME(L"FavoriteColor"),
+     RhLocalizeCommandOptionName( L"FavoriteColor", 43556),
      &amp;favorite_color,
-     RHSTR(L"What is your favorite color?")
+     RhLocalizeString( L"What is your favorite color?", 43557)
      );
  ...
 </pre><p>Returns: option index value (&gt;0) or 0 if option cannot be added. See Also: <a class="el" href="class_c_rhino_get.html#a06c36605d005ce46a1783a1b57f79421">CRhinoGet::AddCommandOption</a> </p>
@@ -983,9 +983,9 @@ Protected Attributes</h2></td></tr>
  ...
  int favorite_integer = 8;
  gp.AddCommandOptionInteger(
-     RHCMDOPTNAME(L"FavoriteInteger"),
+     RhLocalizeCommandOptionName( L"FavoriteInteger", 43554),
      &amp;favorite_integer,
-     RHSTR(L"What is your favorite integer?")
+     RhLocalizeString( L"What is your favorite integer?", 43555)
      );
  ...
 </pre><p>Remarks: If you need to explicitly react to a changed number, then use override of <a class="el" href="class_c_rhino_get.html#a06c36605d005ce46a1783a1b57f79421">CRhinoGet::AddCommandOption</a> that takes a number as an option value. See the <a class="el" href="class_c_rhino_get.html#a06c36605d005ce46a1783a1b57f79421">CRhinoGet::AddCommandOption</a> examples. See Also: <a class="el" href="class_c_rhino_get.html#a06c36605d005ce46a1783a1b57f79421">CRhinoGet::AddCommandOption</a> </p>
@@ -1117,13 +1117,13 @@ Protected Attributes</h2></td></tr>
     for(;;)
     {
       CRhinoGetPoint gp;
-      gp.SetCommandPrompt(RHSTR(L"Center point"));
+      gp.SetCommandPrompt(RhLocalizeString( L"Center point", 43567));
       int fruit_option_index = gp.AddCommandOptionList(
-                                    RHCMDOPTNAME(L"Fruit"),
+                                    RhLocalizeCommandOptionName( L"Fruit", 43568),
                                     fruit_index,
-                                    RHCMDOPTVALUE(L"banana"),
-                                    RHCMDOPTVALUE(L"apple"),
-                                    RHCMDOPTVALUE(L"orange")
+                                    RhLocalizeCommandOptionValue( L"banana", 43569),
+                                    RhLocalizeCommandOptionValue( L"apple", 43570),
+                                    RhLocalizeCommandOptionValue( L"orange", 43571)
                                     );
       gp.GetPoint();
       if ( gp.Result() == CRhinoGet::option ) 
@@ -1185,14 +1185,14 @@ Protected Attributes</h2></td></tr>
 <p>Description: Add a command line list option Parameters: option_name - [in] english option description automatic localization uses command option string table list_values_count - [in] number of values option_values[] array list_values - [in] array of english option values automatic localization uses command option string table list_current_index - [in] zero based index of current option Returns: option index value (&gt;0) or 0 if option cannot be added. Example: </p><pre class="fragment">    ON_3dPoint center;
     int fruit_index = 0;
     CRhinoCommandOptionValue fruits[3];
-    fruits[0] = RHCMDOPTVALUE(L"banana");
-    fruits[1] = RHCMDOPTVALUE(L"apple");
-    fruits[2] = RHCMDOPTVALUE(L"orange");
+    fruits[0] = RhLocalizeCommandOptionValue( L"banana", 43562);
+    fruits[1] = RhLocalizeCommandOptionValue( L"apple", 43563);
+    fruits[2] = RhLocalizeCommandOptionValue( L"orange", 43564);
     for(;;)
     {
       CRhinoGetPoint gp;
-      gp.SetCommandPrompt(RHSTR(L"Center point"));
-      int fruit_option_index = gp.AddCommandOptionList( RHCMDOPTNAME(L"Fruit"), 3, fruits, fruit_index );
+      gp.SetCommandPrompt(RhLocalizeString( L"Center point", 43565));
+      int fruit_option_index = gp.AddCommandOptionList( RhLocalizeCommandOptionName( L"Fruit", 43566), 3, fruits, fruit_index );
       gp.GetPoint();
       if ( gp.Result() == CRhinoGet::option ) 
       {
@@ -1266,11 +1266,11 @@ Protected Attributes</h2></td></tr>
     for(;;)
     {
       CRhinoGetPoint gp;
-      gp.SetCommandPrompt(RHSTR(L"Center point"));
+      gp.SetCommandPrompt(RhLocalizeString( L"Center point", 43551));
       int radius_option_index = gp.AddCommandOptionNumber( 
-                                        RHCMDOPTNAME(L"Radius"), 
+                                        RhLocalizeCommandOptionName( L"Radius", 43552), 
                                         &amp;r, 
-                                        RHSTR(L"New radius"), 
+                                        RhLocalizeString( L"New radius", 43553), 
                                         false, 
                                         min_radius 
                                         );
@@ -1338,11 +1338,11 @@ Protected Attributes</h2></td></tr>
     for(;;)
     {
       CRhinoGetPoint gp;
-      gp.SetCommandPrompt(RHSTR(L"Center point"));
+      gp.SetCommandPrompt(RhLocalizeString( L"Center point", 43558));
       int togglelights_option_index = gp.AddCommandOptionToggle( 
-                                          RHCMDOPTNAME(L"Lights"), 
-                                          RHCMDOPTVALUE(L"Off"), 
-                                          RHCMDOPTVALUE(L"On"), 
+                                          RhLocalizeCommandOptionName( L"Lights", 43559), 
+                                          RhLocalizeCommandOptionValue( L"Off", 43560), 
+                                          RhLocalizeCommandOptionValue( L"On", 43561), 
                                           bLights, 
                                           &amp;bLights );
       gp.GetPoint();
@@ -2326,7 +2326,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>STEP 1: specify optional command prompt and command options Description: Set prompt message that appears in the command prompt window. Parameters: prompt - [in] command prompt message. Use the RHSTR macro if you want the message to be automatically localized. Example: <a class="el" href="class_c_rhino_get_point.html">CRhinoGetPoint</a> gp; gp.SetCommandPrompt( RHSTR(L"Center point") ); </p>
+<p>STEP 1: specify optional command prompt and command options Description: Set prompt message that appears in the command prompt window. Parameters: prompt - [in] command prompt message. Use the RHSTR macro if you want the message to be automatically localized. Example: <a class="el" href="class_c_rhino_get_point.html">CRhinoGetPoint</a> gp; gp.SetCommandPrompt( RhLocalizeString( L"Center point", 43543) ); </p>
 
 </div>
 </div>
@@ -2345,7 +2345,7 @@ Protected Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Set message that describes what default value will be used if the user presses enter. This description appears in angle brackets &lt;&gt; in the command prompt window. You do not need to provide a default value description unless you explicity enable AcceptNothing. Parameters: default_value - [in] description of default value. Example: <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> default_center(2,3,4); <a class="el" href="class_c_rhino_get_point.html">CRhinoGetPoint</a> gp; gp.SetCommandPrompt( RHSTR(L"Center point") ); gp.SetCommandPromptDefault( L"(2,3,4)" ); gp.AcceptNothing(true); gp.GetPoint(); if ( gp.Result() == <a class="el" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886a1c573dfab7385ea501b4e5b28022ad24" title="user pressed enter - typically used to accpt defaults">CRhinoGet::nothing</a> ) point = default_center; Remarks: If you have a simple default point, number, or string, it is easier to use SetDefaultPoint, SetDefaultNumber, or SetDefaultString. SetCommandPromptDefault and AcceptNothing can be used for providing more advanced UI behavior. See Also: <a class="el" href="class_c_rhino_get.html#a16fd8eb398ef69e81f14d77614f28585">CRhinoGet::SetDefaultPoint</a> <a class="el" href="class_c_rhino_get.html#a58b1446fc9f9f24b07c54309c66ee977">CRhinoGet::SetDefaultString</a> <a class="el" href="class_c_rhino_get.html#a935fb133ed8fc617e1898fb30c577998">CRhinoGet::SetDefaultNumber</a> <a class="el" href="class_c_rhino_get.html#a26b28d5dd2ee6795124c1d9c9906806e">CRhinoGet::ClearDefault</a> <a class="el" href="class_c_rhino_get.html#afdf31cdba05f2bc3593f1c358915a02a">CRhinoGet::AcceptNothing</a> <a class="el" href="class_c_rhino_get.html#ac8ed042b93d1e13b8dbbe2bb6ad99e49">CRhinoGet::SetCommandPrompt</a> </p>
+<p>Description: Set message that describes what default value will be used if the user presses enter. This description appears in angle brackets &lt;&gt; in the command prompt window. You do not need to provide a default value description unless you explicity enable AcceptNothing. Parameters: default_value - [in] description of default value. Example: <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> default_center(2,3,4); <a class="el" href="class_c_rhino_get_point.html">CRhinoGetPoint</a> gp; gp.SetCommandPrompt( RhLocalizeString( L"Center point", 43544) ); gp.SetCommandPromptDefault( L"(2,3,4)" ); gp.AcceptNothing(true); gp.GetPoint(); if ( gp.Result() == <a class="el" href="class_c_rhino_get.html#afbb1d0091ccb1306d0fe606405f6b886a1c573dfab7385ea501b4e5b28022ad24" title="user pressed enter - typically used to accpt defaults">CRhinoGet::nothing</a> ) point = default_center; Remarks: If you have a simple default point, number, or string, it is easier to use SetDefaultPoint, SetDefaultNumber, or SetDefaultString. SetCommandPromptDefault and AcceptNothing can be used for providing more advanced UI behavior. See Also: <a class="el" href="class_c_rhino_get.html#a16fd8eb398ef69e81f14d77614f28585">CRhinoGet::SetDefaultPoint</a> <a class="el" href="class_c_rhino_get.html#a58b1446fc9f9f24b07c54309c66ee977">CRhinoGet::SetDefaultString</a> <a class="el" href="class_c_rhino_get.html#a935fb133ed8fc617e1898fb30c577998">CRhinoGet::SetDefaultNumber</a> <a class="el" href="class_c_rhino_get.html#a26b28d5dd2ee6795124c1d9c9906806e">CRhinoGet::ClearDefault</a> <a class="el" href="class_c_rhino_get.html#afdf31cdba05f2bc3593f1c358915a02a">CRhinoGet::AcceptNothing</a> <a class="el" href="class_c_rhino_get.html#ac8ed042b93d1e13b8dbbe2bb6ad99e49">CRhinoGet::SetCommandPrompt</a> </p>
 
 </div>
 </div>
@@ -3505,7 +3505,7 @@ Protected Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:27 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:10 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

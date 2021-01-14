@@ -73,7 +73,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__font_8h_source.html">opennurbs_font.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_font.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-types"></a>
 Public Types</h2></td></tr>
@@ -143,6 +143,10 @@ Public Member Functions</h2></td></tr>
 Static Public Member Functions</h2></td></tr>
 <tr class="memitem:a0f6ae3edf1a83c3442bc846bf9962913"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___font_face_quartet.html#a0f6ae3edf1a83c3442bc846bf9962913">CompareQuartetName</a> (const <a class="el" href="class_o_n___font_face_quartet.html">ON_FontFaceQuartet</a> *lhs, const <a class="el" href="class_o_n___font_face_quartet.html">ON_FontFaceQuartet</a> *rhs)</td></tr>
 <tr class="separator:a0f6ae3edf1a83c3442bc846bf9962913"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4721aaaeefdadc241e493530b301f8bd"><td class="memItemLeft" align="right" valign="top">static <a class="el" href="class_o_n___font_face_quartet.html#a2976911b04f10e392daee169aa7bf9a0">ON_FontFaceQuartet::Member</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___font_face_quartet.html#a4721aaaeefdadc241e493530b301f8bd">MemberFromUnsigned</a> (unsigned int member_as_unsigned)</td></tr>
+<tr class="separator:a4721aaaeefdadc241e493530b301f8bd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3c3584cde034911fc7e37a0e056c7f8"><td class="memItemLeft" align="right" valign="top">static const <a class="el" href="class_o_n__w_string.html">ON_wString</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___font_face_quartet.html#ad3c3584cde034911fc7e37a0e056c7f8">MemberToString</a> (<a class="el" href="class_o_n___font_face_quartet.html#a2976911b04f10e392daee169aa7bf9a0">ON_FontFaceQuartet::Member</a> member)</td></tr>
+<tr class="separator:ad3c3584cde034911fc7e37a0e056c7f8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-static-attribs"></a>
 Static Public Attributes</h2></td></tr>
@@ -622,6 +626,58 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a4721aaaeefdadc241e493530b301f8bd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4721aaaeefdadc241e493530b301f8bd">&#9670;&nbsp;</a></span>MemberFromUnsigned()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static <a class="el" href="class_o_n___font_face_quartet.html#a2976911b04f10e392daee169aa7bf9a0">ON_FontFaceQuartet::Member</a> ON_FontFaceQuartet::MemberFromUnsigned </td>
+          <td>(</td>
+          <td class="paramtype">unsigned int&#160;</td>
+          <td class="paramname"><em>member_as_unsigned</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3c3584cde034911fc7e37a0e056c7f8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3c3584cde034911fc7e37a0e056c7f8">&#9670;&nbsp;</a></span>MemberToString()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">static const <a class="el" href="class_o_n__w_string.html">ON_wString</a> ON_FontFaceQuartet::MemberToString </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___font_face_quartet.html#a2976911b04f10e392daee169aa7bf9a0">ON_FontFaceQuartet::Member</a>&#160;</td>
+          <td class="paramname"><em>member</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">static</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a0a6b1e72e255157bf1668604dd6423bb"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a0a6b1e72e255157bf1668604dd6423bb">&#9670;&nbsp;</a></span>operator=()</h2>
 
@@ -746,7 +802,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:50 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:33 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

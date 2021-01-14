@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="_rhino_sdk_render_overlays_8h_source.html">RhinoSdkRenderOverlays.h</a>&gt;</code></p>
+<p><code>#include &lt;RhinoSdkRenderOverlays.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -123,6 +123,7 @@ Protected Member Functions</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000145">Deprecated:</a></b></dt><dd>use <a class="el" href="class_c_rhino_render_overlays.html#aa8f73b464e79c7b37f09aa3cb3efc52f">CRhinoRenderOverlays::CRhinoRenderOverlays(const CRhinoDoc&amp;)</a> </dd></dl>
 
 </div>
 </div>
@@ -310,8 +311,8 @@ Protected Member Functions</h2></td></tr>
 <p>Example:</p>
 <p>unsigned int nSupportedFeatures = ROF_CURVES|ROF_ISOS|ROF_EDGES|ROF_POINTS;</p>
 <p><a class="el" href="class_c_rhino_render_overlays.html">CRhinoRenderOverlays</a> PostRender;</p>
-<p>if ( PostRender.CreateOverlays( view, attrs, 1024, 768, nSupportedFeatures, false ) ) { unsigned int nUsedFeatures = 0; /// <br  />
- if ( bShowCurves ) nUsedFeatures |= ROF_CURVES; if ( bShowIsos ) nUsedFeatures |= ROF_ISOS; if ( bShowEdges ) nUsedFeatures |= ROF_EDGES; if ( bShowPoints ) nUsedFeatures |= ROF_POINTS;</p>
+<p>if ( PostRender.CreateOverlays( view, attrs, 1024, 768, nSupportedFeatures, false ) ) { unsigned int nUsedFeatures = 0;</p>
+<p>if ( bShowCurves ) nUsedFeatures |= ROF_CURVES; if ( bShowIsos ) nUsedFeatures |= ROF_ISOS; if ( bShowEdges ) nUsedFeatures |= ROF_EDGES; if ( bShowPoints ) nUsedFeatures |= ROF_POINTS;</p>
 <p><a class="el" href="class_c_rhino_dib.html">CRhinoDib</a> overlay;</p>
 <p>if ( PostRender.GetOverlay( overlay, nUsedFeatures ) ) { PostRender.CombineOverlay( overlay, SOME_FINAL_RENDERING_IMAGE ); } } </p>
 
@@ -486,7 +487,7 @@ Protected Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:31 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:14 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

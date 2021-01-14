@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__bounding__box_8h_source.html">opennurbs_bounding_box.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_bounding_box.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -101,6 +101,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aaa4056cb0a993e2dddc3f98b9871e3ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a083bdd210339a218b0c67392d8cc9f5f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bounding_box.html#a083bdd210339a218b0c67392d8cc9f5f">Dump</a> (class <a class="el" href="class_o_n___text_log.html">ON_TextLog</a> &amp;) const</td></tr>
 <tr class="separator:a083bdd210339a218b0c67392d8cc9f5f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6fdbc7a40831e709d5ad8e87757cfb39"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bounding_box.html#a6fdbc7a40831e709d5ad8e87757cfb39">Expand</a> (<a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> delta)</td></tr>
+<tr class="separator:a6fdbc7a40831e709d5ad8e87757cfb39"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a537d8c43bae404e57a09628e732c1117"><td class="memItemLeft" align="right" valign="top"><a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bounding_box.html#a537d8c43bae404e57a09628e732c1117">FarPoint</a> (const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;) const</td></tr>
 <tr class="memdesc:a537d8c43bae404e57a09628e732c1117"><td class="mdescLeft">&#160;</td><td class="mdescRight">Point on the box that is farthest from the test_point.  <a href="class_o_n___bounding_box.html#a537d8c43bae404e57a09628e732c1117">More...</a><br /></td></tr>
 <tr class="separator:a537d8c43bae404e57a09628e732c1117"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,7 +112,7 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a98595bc41d4ddfb5e4686361867176a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a1580801d3750811f63bfadda60a053d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bounding_box.html#a1580801d3750811f63bfadda60a053d3">GetCorners</a> (<a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> box_corners[8]) const</td></tr>
 <tr class="separator:a1580801d3750811f63bfadda60a053d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7cc31dead7d9e39165377b31d46bb001"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bounding_box.html#a7cc31dead7d9e39165377b31d46bb001">GetCorners</a> (ON_3dPointArray &amp;box_corners) const</td></tr>
+<tr class="memitem:a7cc31dead7d9e39165377b31d46bb001"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bounding_box.html#a7cc31dead7d9e39165377b31d46bb001">GetCorners</a> (<a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;box_corners) const</td></tr>
 <tr class="separator:a7cc31dead7d9e39165377b31d46bb001"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aecb71139c603e9aa02f446f21c36901d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_o_n___bounding_box.html#aecb71139c603e9aa02f446f21c36901d">GetEdges</a> (<a class="el" href="class_o_n___line.html">ON_Line</a> edges[12]) const</td></tr>
 <tr class="separator:aecb71139c603e9aa02f446f21c36901d"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -510,6 +512,26 @@ Static Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a6fdbc7a40831e709d5ad8e87757cfb39"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6fdbc7a40831e709d5ad8e87757cfb39">&#9670;&nbsp;</a></span>Expand()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ON_BoundingBox::Expand </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a>&#160;</td>
+          <td class="paramname"><em>delta</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Expand the box by adding delta to m_max and subtracting it from m_min. So, when delta is positive and the interval is increasing this function expands the box on each side. Returns: true if the result is Valid. <br  />
+ </p>
+
+</div>
+</div>
 <a id="a537d8c43bae404e57a09628e732c1117"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a537d8c43bae404e57a09628e732c1117">&#9670;&nbsp;</a></span>FarPoint()</h2>
 
@@ -639,7 +661,7 @@ Static Public Attributes</h2></td></tr>
         <tr>
           <td class="memname">bool ON_BoundingBox::GetCorners </td>
           <td>(</td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>box_corners</em></td><td>)</td>
           <td> const</td>
         </tr>
@@ -669,7 +691,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Parameters: edges[] - out 12 edge lines. If the bounding box has no height, width or depth, then the corresponding edges will have the same "from" and "to" points. Returns: If the bounding box is valid, then true is returned and 12 line segments, some possibly a single point, are returned. Otherwise false is returned and 12 line segments with "from" and "to" points set to <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> are returned. </p>
+<p>Parameters: edges[] - out 12 edge lines. If the bounding box has no height, width or depth, then the corresponding edges will have the same "from" and "to" points. Returns: If the bounding box is valid, then true is returned and 12 line segments, some possibly a single point, are returned. Otherwise false is returned and 12 line segments with "from" and "to" points set to <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> are returned. </p>
 <dl class="params"><dt>Parameters</dt><dd>
   <table class="params">
     <tr><td class="paramname">edges</td><td>returns list of 12 edge segments </td></tr>
@@ -1311,7 +1333,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Quickly find a tight upper bound on the distance between the plane and this bounding box. Parameters: plane - [in] Returns: A distance that is equal to the longest distance from the plane to this bounding box. Put another way, if Q is any point on the plane and P is any point in this bounding box, then P.DistanceTo(Q) &lt;= MaximumDistanceTo(bbox) and there is at least one point on the bounding box where the distance is equal to the returned value. See Also: <a class="el" href="group__open_n_u_r_b_s.html#gaccee2c91d3d3ce63936f527c70ddde11">ON_PlaneEquation::MaximumValueAt</a> </p>
+<p>Description: Quickly find a tight upper bound on the distance between the plane and this bounding box. Parameters: plane - [in] Returns: A distance that is equal to the longest distance from the plane to this bounding box. Put another way, if Q is any point on the plane and P is any point in this bounding box, then P.DistanceTo(Q) &lt;= MaximumDistanceTo(bbox) and there is at least one point on the bounding box where the distance is equal to the returned value. See Also: <a class="el" href="class_o_n___plane_equation.html#accee2c91d3d3ce63936f527c70ddde11">ON_PlaneEquation::MaximumValueAt</a> </p>
 
 </div>
 </div>
@@ -1422,7 +1444,7 @@ Static Public Attributes</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Quickly find a tight lower bound on the distance between the plane and this bounding box. Parameters: plane - [in] Returns: The minimum distance between a point on the plane and a point on the bounding box. See Also: ON_PlaneEquation::MimimumValueAt <a class="el" href="group__open_n_u_r_b_s.html#gaccee2c91d3d3ce63936f527c70ddde11">ON_PlaneEquation::MaximumValueAt</a> </p>
+<p>Description: Quickly find a tight lower bound on the distance between the plane and this bounding box. Parameters: plane - [in] Returns: The minimum distance between a point on the plane and a point on the bounding box. See Also: ON_PlaneEquation::MimimumValueAt <a class="el" href="class_o_n___plane_equation.html#accee2c91d3d3ce63936f527c70ddde11">ON_PlaneEquation::MaximumValueAt</a> </p>
 
 </div>
 </div>
@@ -2126,7 +2148,7 @@ Static Public Attributes</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:47 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:30 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

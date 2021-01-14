@@ -72,7 +72,7 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
-<p><code>#include &lt;<a class="el" href="opennurbs__plus__particle_8h_source.html">opennurbs_plus_particle.h</a>&gt;</code></p>
+<p><code>#include &lt;opennurbs_plus_particle.h&gt;</code></p>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="nested-classes"></a>
 Classes</h2></td></tr>
@@ -342,7 +342,7 @@ Static Public Member Functions</h2></td></tr>
 <p>Description: A N-ary force acts on a fixed set of particles.</p>
 <p>Parameters: force_function - [in] A function that calculates the force on the particles listed in the particles[] array parameter. If force_function() returns false, the solver will stop.</p>
 <p>context - [in] First parameter passed to force_function. <br  />
- If the information in your context consists of up to 4 doubles, then you may use the <a class="el" href="class_o_n___particle_system_1_1_o_n___force.html#ae1a663a4f22bf7a468cb202c3863852d">ON_Force.m_context</a> member as shown in the example.</p>
+ If the information in your context consists of up to 4 doubles, then you may use the <a class="el" href="class_o_n___particle_system_1_1_o_n___force.html#adc7c5994ccceada948f91d2ba8ed5560">ON_Force.m_context</a> member as shown in the example.</p>
 <p>particle_count - [in] Number of particles in particles[] array.</p>
 <p>particles[] - [in] List of particles this force acts on.</p>
 <p>Example: / Hook's law spring / This example if for illustration purposes. / In practice it is more efficient to call <a class="el" href="class_o_n___particle_system.html#afe89fde616e2e554b7b9926e37b66ede">ON_ParticleSystem::AddHooksSpringForce()</a>. </p><pre class="fragment">      struct HooksSpringForceContext
@@ -527,7 +527,7 @@ Static Public Member Functions</h2></td></tr>
   ON_3dVector* SolarGravityForce
   )
 {
-</pre><p> / masses in kilograms and distances in meters const double solar_mass = 1.9891e30; ///&lt; kilograms const double g = 6.67384e-11; ///&lt; meters^3/(kilogram seconds^2) <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> V = <a class="el" href="group__open_n_u_r_b_s.html#gae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a> - planet-&gt;m_position; double r = V.Length(); <br  />
+</pre><p> / masses in kilograms and distances in meters const double solar_mass = 1.9891e30; ///&lt; kilograms const double g = 6.67384e-11; ///&lt; meters^3/(kilogram seconds^2) <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> V = <a class="el" href="class_o_n__3d_point.html#ae5dcca5dde698b25a7ec98b3868285b5" title="(0.0,0.0,0.0)">ON_3dPoint::Origin</a> - planet-&gt;m_position; double r = V.Length(); <br  />
  if ( !(r &gt; 6.955e8) ) { / Planet crashed into the sun! / The sun's radius is 6.955e8 meters. This calculation / ignores planets melting as they get too close to the sun. return false; } SolarGravityForce = (g*planet-&gt;m_mass*solar_mass/(r*r*r))*V; ///&lt; r^3 because input V is not unitized return true; }</p>
 <p>.... AddUnaryForce(0,GetSolarGravity);</p>
 <p>Remarks: To add a global "gravity", it is more efficent to use <a class="el" href="class_o_n___particle_system.html#a4568ec2217afe1dcf61741f1eaf6bb68">SetGlobalGravityForce()</a>. To add a global "drag" force, it is more efficient to use <a class="el" href="class_o_n___particle_system.html#a69cfebda0b0481a5eb54391a1aac7dcc">SetGlobalDragForce()</a>. </p>
@@ -994,7 +994,7 @@ Static Public Member Functions</h2></td></tr>
 </div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:53 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:36 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>

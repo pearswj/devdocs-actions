@@ -89,8 +89,6 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_loft.html">CArgsRhinoLoft</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_loft_ex.html">CArgsRhinoLoftEx</a></td></tr>
-<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_match.html">CArgsRhinoMatch</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_args_rhino_print_export_dlg.html">CArgsRhinoPrintExportDlg</a></td></tr>
@@ -408,6 +406,8 @@ Classes</h2></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_hatch_pattern_table.html">CRhinoHatchPatternTable</a></td></tr>
 <tr class="memdesc:"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="class_c_rhino_hatch_pattern_table.html" title="CRhinoHatchPatternTable class - A list of Hatch Pattern definitions.">CRhinoHatchPatternTable</a> class - A list of Hatch Pattern definitions.  <a href="class_c_rhino_hatch_pattern_table.html#details">More...</a><br /></td></tr>
+<tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_hidden_command.html">CRhinoHiddenCommand</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:"><td class="memItemLeft" align="right" valign="top">class &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="class_c_rhino_history.html">CRhinoHistory</a></td></tr>
 <tr class="separator:"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -976,7 +976,7 @@ Macros</h2></td></tr>
 <tr class="memitem:ga006194df79b09cb6cbf0829c63235bc3"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga006194df79b09cb6cbf0829c63235bc3">RHINO_VERSION_HOUR</a>&#160;&#160;&#160;<a class="el" href="group__open_n_u_r_b_s.html#gacbb3d0cba0663ae8f4d0d3c6d9b36582">OPENNURBS_VERSION_HOUR</a></td></tr>
 <tr class="separator:ga006194df79b09cb6cbf0829c63235bc3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab6b0a7b274df8eb25fc1072fa47267ba"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gab6b0a7b274df8eb25fc1072fa47267ba">RHINO_VERSION_MAJOR</a>&#160;&#160;&#160;<a class="el" href="group__open_n_u_r_b_s.html#ga05959af6babb0128092e0b2427669228">OPENNURBS_VERSION_MAJOR</a></td></tr>
-<tr class="memdesc:gab6b0a7b274df8eb25fc1072fa47267ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public SDK path to <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a>.  <a href="group___rhino.html#gab6b0a7b274df8eb25fc1072fa47267ba">More...</a><br /></td></tr>
+<tr class="memdesc:gab6b0a7b274df8eb25fc1072fa47267ba"><td class="mdescLeft">&#160;</td><td class="mdescRight">Public SDK path to opennurbs_version.h.  <a href="group___rhino.html#gab6b0a7b274df8eb25fc1072fa47267ba">More...</a><br /></td></tr>
 <tr class="separator:gab6b0a7b274df8eb25fc1072fa47267ba"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga42bde70db0fd4628e079b7d7060903de"><td class="memItemLeft" align="right" valign="top">#define&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga42bde70db0fd4628e079b7d7060903de">RHINO_VERSION_MINOR</a>&#160;&#160;&#160;<a class="el" href="group__open_n_u_r_b_s.html#ga733d61a507e34b506e3a6a9527eb9295">OPENNURBS_VERSION_MINOR</a></td></tr>
 <tr class="memdesc:ga42bde70db0fd4628e079b7d7060903de"><td class="mdescLeft">&#160;</td><td class="mdescRight">"minor" corresponds to the Rhinoceros 6 service release number  <a href="group___rhino.html#ga42bde70db0fd4628e079b7d7060903de">More...</a><br /></td></tr>
@@ -1046,17 +1046,17 @@ Typedefs</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="enum-members"></a>
 Enumerations</h2></td></tr>
-<tr class="memitem:gad87d118aceda0b3632297355311336cf"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <br />
-&#160;&#160;<a class="el" href="group___rhino.html#ggad87d118aceda0b3632297355311336cfa25abd432840a2ed691b970605d836ff9">COMBINE_ADD</a> = 1, 
-<a class="el" href="group___rhino.html#ggad87d118aceda0b3632297355311336cfaf491e0bc0a98b82ccc987ae6a0d91367">COMBINE_MULTIPLY</a> = 2, 
-<a class="el" href="group___rhino.html#ggad87d118aceda0b3632297355311336cfa0cd466084755bf78c5309c0d1ecaf189">COMBINE_BLEND</a> = 3, 
-<a class="el" href="group___rhino.html#ggad87d118aceda0b3632297355311336cfa5890e31f4939fa66d7e770f838a6d14f">COMBINE_HATCHED</a> = 4, 
+<tr class="memitem:ga81bed731bfc3feb503ae46847f8a0560"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">: unsigned int { <br />
+&#160;&#160;<a class="el" href="group___rhino.html#gga81bed731bfc3feb503ae46847f8a0560a25abd432840a2ed691b970605d836ff9">COMBINE_ADD</a> = 1, 
+<a class="el" href="group___rhino.html#gga81bed731bfc3feb503ae46847f8a0560af491e0bc0a98b82ccc987ae6a0d91367">COMBINE_MULTIPLY</a> = 2, 
+<a class="el" href="group___rhino.html#gga81bed731bfc3feb503ae46847f8a0560a0cd466084755bf78c5309c0d1ecaf189">COMBINE_BLEND</a> = 3, 
+<a class="el" href="group___rhino.html#gga81bed731bfc3feb503ae46847f8a0560a5890e31f4939fa66d7e770f838a6d14f">COMBINE_HATCHED</a> = 4, 
 <br />
-&#160;&#160;<a class="el" href="group___rhino.html#ggad87d118aceda0b3632297355311336cfae5684b026324e729d41ac4a24b433513">COMBINE_MULTIPLY_WITH_COLOR</a> = 5
+&#160;&#160;<a class="el" href="group___rhino.html#gga81bed731bfc3feb503ae46847f8a0560ae5684b026324e729d41ac4a24b433513">COMBINE_MULTIPLY_WITH_COLOR</a> = 5
 <br />
  }</td></tr>
-<tr class="memdesc:gad87d118aceda0b3632297355311336cf"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture combiner constants used in DrawCombinedTextures() method...  <a href="group___rhino.html#gad87d118aceda0b3632297355311336cf">More...</a><br /></td></tr>
-<tr class="separator:gad87d118aceda0b3632297355311336cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memdesc:ga81bed731bfc3feb503ae46847f8a0560"><td class="mdescLeft">&#160;</td><td class="mdescRight">Texture combiner constants used in DrawCombinedTextures() method...  <a href="group___rhino.html#ga81bed731bfc3feb503ae46847f8a0560">More...</a><br /></td></tr>
+<tr class="separator:ga81bed731bfc3feb503ae46847f8a0560"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5ae70bd9d1931dac828fec21e6d2a643"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga5ae70bd9d1931dac828fec21e6d2a643">CRhinoDocStatus</a> { <br />
 &#160;&#160;<a class="el" href="group___rhino.html#gga5ae70bd9d1931dac828fec21e6d2a643a99afc7be69341cefcd5ce606004d990f">doc_status_first</a> = 0, 
 <a class="el" href="group___rhino.html#gga5ae70bd9d1931dac828fec21e6d2a643a550a2ec24c297ef42ee42b2186b55e4c">create_before_construct</a>, 
@@ -1517,7 +1517,7 @@ Functions</h2></td></tr>
 <tr class="separator:ga0d1dce13835b98c4e087320e397f27d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga9976764c54cdc99710cbe800f815ee77"><td class="memItemLeft" align="right" valign="top">const <a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___class_id.html">ON_ClassId</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga9976764c54cdc99710cbe800f815ee77">RegisterOpenGLEngine</a> (const <a class="el" href="class_o_n___class_id.html">ON_ClassId</a> *)</td></tr>
 <tr class="separator:ga9976764c54cdc99710cbe800f815ee77"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaec8e2bca414dcf2cda64ae90e648bb6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaec8e2bca414dcf2cda64ae90e648bb6d">Rh1RailSweepSegmented</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;output_surfaces, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *pRailCurve, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; shapes, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point, int frame_type=0, <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> roadlike_normal=<a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a>, bool bClosed=false, int blend_type=0, int miter_type=0, double tolerance=0.01, int rebuild_mode=0, int rebuild_points=0, double refit_tolerance=0.0)</td></tr>
+<tr class="memitem:gaec8e2bca414dcf2cda64ae90e648bb6d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaec8e2bca414dcf2cda64ae90e648bb6d">Rh1RailSweepSegmented</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;output_surfaces, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *pRailCurve, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; shapes, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point, int frame_type=0, <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> roadlike_normal=<a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a>, bool bClosed=false, int blend_type=0, int miter_type=0, double tolerance=0.01, int rebuild_mode=0, int rebuild_points=0, double refit_tolerance=0.0)</td></tr>
 <tr class="separator:gaec8e2bca414dcf2cda64ae90e648bb6d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga137abe458652b342d223c19ef79b545a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga137abe458652b342d223c19ef79b545a">RhCheckObjectSnapPoints</a> (<a class="el" href="group___rhino.html#gacde13cd4c64f2c3f01f312231386a22c">eRhSnapGeom</a> sng, const <a class="el" href="class_c_rhino_snap_context.html">CRhinoSnapContext</a> &amp;sc, <a class="el" href="class_c_rhino_snap_event.html">CRhinoSnapEvent</a> &amp;se, const <a class="el" href="class_o_n___xform.html">ON_Xform</a> &amp;xform)</td></tr>
 <tr class="separator:ga137abe458652b342d223c19ef79b545a"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1528,19 +1528,19 @@ Functions</h2></td></tr>
 <tr class="memitem:gaec7c1050d12b1e39edf97cb23bbd338d"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaec7c1050d12b1e39edf97cb23bbd338d">RhFormatNumber</a> (double x, const <a class="el" href="class_o_n__3dm_units_and_tolerances.html">ON_3dmUnitsAndTolerances</a> &amp;input_units, const <a class="el" href="class_o_n__3dm_units_and_tolerances.html">ON_3dmUnitsAndTolerances</a> &amp;output_units, <a class="el" href="class_o_n__w_string.html">ON_wString</a> &amp;string, bool bAppendUnitSystemName, bool bBracketFractions)</td></tr>
 <tr class="memdesc:gaec7c1050d12b1e39edf97cb23bbd338d"><td class="mdescLeft">&#160;</td><td class="mdescRight">Returns true if formatting worked without fallbacks - no invalid input, overruns, etc.  <a href="group___rhino.html#gaec7c1050d12b1e39edf97cb23bbd338d">More...</a><br /></td></tr>
 <tr class="separator:gaec7c1050d12b1e39edf97cb23bbd338d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga9b12de2f38d1bf7549994385514c30f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga9b12de2f38d1bf7549994385514c30f9">RhGetGripPoints_Box</a> (ON_3dPointArray &amp;aOut)</td></tr>
+<tr class="memitem:ga9b12de2f38d1bf7549994385514c30f9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga9b12de2f38d1bf7549994385514c30f9">RhGetGripPoints_Box</a> (<a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;aOut)</td></tr>
 <tr class="separator:ga9b12de2f38d1bf7549994385514c30f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gacca58b9864a767539783618492048029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gacca58b9864a767539783618492048029">RhGetGripPoints_Cylinder</a> (ON_3dPointArray &amp;aOut)</td></tr>
+<tr class="memitem:gacca58b9864a767539783618492048029"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gacca58b9864a767539783618492048029">RhGetGripPoints_Cylinder</a> (<a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;aOut)</td></tr>
 <tr class="separator:gacca58b9864a767539783618492048029"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga6eef1ef67243b3fa79f33e3393162f94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga6eef1ef67243b3fa79f33e3393162f94">RhGetGripPoints_Plane_UV</a> (ON_3dPointArray &amp;aOut)</td></tr>
+<tr class="memitem:ga6eef1ef67243b3fa79f33e3393162f94"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga6eef1ef67243b3fa79f33e3393162f94">RhGetGripPoints_Plane_UV</a> (<a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;aOut)</td></tr>
 <tr class="separator:ga6eef1ef67243b3fa79f33e3393162f94"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf7bf8d5e1d5662edf82b9e531096d0df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaf7bf8d5e1d5662edf82b9e531096d0df">RhGetGripPoints_Plane_UVW</a> (ON_3dPointArray &amp;aOut)</td></tr>
+<tr class="memitem:gaf7bf8d5e1d5662edf82b9e531096d0df"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaf7bf8d5e1d5662edf82b9e531096d0df">RhGetGripPoints_Plane_UVW</a> (<a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;aOut)</td></tr>
 <tr class="separator:gaf7bf8d5e1d5662edf82b9e531096d0df"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaf91eb0068da7d7a93797a937b4a4a591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaf91eb0068da7d7a93797a937b4a4a591">RhGetGripPoints_Sphere</a> (ON_3dPointArray &amp;aOut)</td></tr>
+<tr class="memitem:gaf91eb0068da7d7a93797a937b4a4a591"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaf91eb0068da7d7a93797a937b4a4a591">RhGetGripPoints_Sphere</a> (<a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;aOut)</td></tr>
 <tr class="separator:gaf91eb0068da7d7a93797a937b4a4a591"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaf8a72270f5f6a8ed147e5ad9211402e3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaf8a72270f5f6a8ed147e5ad9211402e3">Rhino1RailSweep</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;output_surfaces, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *pRail, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; shapes, bool bClosed=false, double tolerance=0.01)</td></tr>
 <tr class="separator:gaf8a72270f5f6a8ed147e5ad9211402e3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga57d2d71e3af32323628a597618f2e64f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga57d2d71e3af32323628a597618f2e64f">Rhino1RailSweep</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;output_surfaces, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *pRailCurve, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; shapes, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point, int frame_type=0, <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> roadlike_normal=<a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a>, bool bClosed=false, int blend_type=0, int miter_type=0, double tolerance=0.01, int rebuild_mode=0, int rebuild_points=0, double refit_tolerance=0.0)</td></tr>
+<tr class="memitem:ga57d2d71e3af32323628a597618f2e64f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga57d2d71e3af32323628a597618f2e64f">Rhino1RailSweep</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;output_surfaces, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *pRailCurve, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; shapes, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> start_point, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> end_point, int frame_type=0, <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> roadlike_normal=<a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a>, bool bClosed=false, int blend_type=0, int miter_type=0, double tolerance=0.01, int rebuild_mode=0, int rebuild_points=0, double refit_tolerance=0.0)</td></tr>
 <tr class="separator:ga57d2d71e3af32323628a597618f2e64f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4ee6db5d792508f88a5e40860cd637a0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga4ee6db5d792508f88a5e40860cd637a0">Rhino1RailSweepSegmented</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;output_surfaces, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *pRail, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; shapes, bool bClosed=false, double tolerance=0.01)</td></tr>
 <tr class="separator:ga4ee6db5d792508f88a5e40860cd637a0"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1731,13 +1731,13 @@ Functions</h2></td></tr>
 <tr class="separator:ga307e11b62bb67bb7db487b00338d5221"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga3f3502fabaa8e864f280c99713ed1719"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga3f3502fabaa8e864f280c99713ed1719">RhinoCurveBooleanUnion</a> (const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;InCurves, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;OutCurves)</td></tr>
 <tr class="separator:ga3f3502fabaa8e864f280c99713ed1719"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gae63c38a234b77344ce200d184ba6eb05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gae63c38a234b77344ce200d184ba6eb05">RhinoCurveBrepIntersect</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;crv, const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;brep, double tol, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, ON_3dPointArray &amp;points)</td></tr>
+<tr class="memitem:gae63c38a234b77344ce200d184ba6eb05"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gae63c38a234b77344ce200d184ba6eb05">RhinoCurveBrepIntersect</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;crv, const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;brep, double tol, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;points)</td></tr>
 <tr class="separator:gae63c38a234b77344ce200d184ba6eb05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga6ffecdaeb8ce1f0a7a118fb0be5ae202"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga6ffecdaeb8ce1f0a7a118fb0be5ae202">RhinoCurveCurveIntersect</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curveA, const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curveB, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_c_rhino_c_c_x_event.html">CRhinoCCXEvent</a> &gt; &amp;x, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curveA_domain=NULL, const <a class="el" href="class_o_n___interval.html">ON_Interval</a> *curveB_domain=NULL)</td></tr>
 <tr class="separator:ga6ffecdaeb8ce1f0a7a118fb0be5ae202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac5df650041a36ea3e6d8c85878a3e2d6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gac5df650041a36ea3e6d8c85878a3e2d6">RhinoCurveExtremeParameters</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;dir, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; double &gt; &amp;out_parameters)</td></tr>
 <tr class="separator:gac5df650041a36ea3e6d8c85878a3e2d6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gaa15955ddf5da90145c836d6fa97d9e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaa15955ddf5da90145c836d6fa97d9e3f">RhinoCurveFaceIntersect</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;crv, const <a class="el" href="class_o_n___brep_face.html">ON_BrepFace</a> &amp;face, double tol, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, ON_3dPointArray &amp;points)</td></tr>
+<tr class="memitem:gaa15955ddf5da90145c836d6fa97d9e3f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaa15955ddf5da90145c836d6fa97d9e3f">RhinoCurveFaceIntersect</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;crv, const <a class="el" href="class_o_n___brep_face.html">ON_BrepFace</a> &amp;face, double tol, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;points)</td></tr>
 <tr class="separator:gaa15955ddf5da90145c836d6fa97d9e3f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga72d3e878c00407dfb5609a09052e464f"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga72d3e878c00407dfb5609a09052e464f">RhinoCurveInflectionPoints</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> &amp;curve, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &gt; &amp;points)</td></tr>
 <tr class="separator:ga72d3e878c00407dfb5609a09052e464f"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1963,9 +1963,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga19e70e33a520bbd92659a38f49786c31"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga33620ea2748aaabca27ea5d97dcb58d1"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> class <a class="el" href="class_c_rhino_history_manager.html">CRhinoHistoryManager</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga33620ea2748aaabca27ea5d97dcb58d1">RhinoHistoryManager</a> (class <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> *doc)</td></tr>
 <tr class="separator:ga33620ea2748aaabca27ea5d97dcb58d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga22b95ed53690882880d13656342a4930"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga22b95ed53690882880d13656342a4930">RhinoInsetMeshFace</a> (double d, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *pMesh, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1">ON_COMPONENT_INDEX::TYPE</a> ci_type, int ci_index, bool bModify, ON_3dPointArray &amp;basepoints, ON_3dPointArray &amp;corners)</td></tr>
+<tr class="memitem:ga22b95ed53690882880d13656342a4930"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga22b95ed53690882880d13656342a4930">RhinoInsetMeshFace</a> (double d, <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *pMesh, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1">ON_COMPONENT_INDEX::TYPE</a> ci_type, int ci_index, bool bModify, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;basepoints, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;corners)</td></tr>
 <tr class="separator:ga22b95ed53690882880d13656342a4930"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab9d9305ec093c348fbbbd53b0917f22b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gab9d9305ec093c348fbbbd53b0917f22b">RhinoInsetSubDFace</a> (double d, <a class="el" href="class_o_n___sub_d.html">ON_SubD</a> *pSubD, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1">ON_COMPONENT_INDEX::TYPE</a> ci_type, int ci_index, bool bModify, ON_3dPointArray &amp;basepoints, ON_3dPointArray &amp;corners)</td></tr>
+<tr class="memitem:gab9d9305ec093c348fbbbd53b0917f22b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gab9d9305ec093c348fbbbd53b0917f22b">RhinoInsetSubDFace</a> (double d, <a class="el" href="class_o_n___sub_d.html">ON_SubD</a> *pSubD, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html#a62d45db62efab7150c8a3415feb1bff1">ON_COMPONENT_INDEX::TYPE</a> ci_type, int ci_index, bool bModify, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;basepoints, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;corners)</td></tr>
 <tr class="separator:gab9d9305ec093c348fbbbd53b0917f22b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga486d595753a1c47e252b81c9b95620cf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="group___rhino.html#ga5343207395b08616cf301e3eafd7b0c8">RHINO_IDEF_STATUS</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga486d595753a1c47e252b81c9b95620cf">RhinoInstanceArchiveFileStatus</a> (const <a class="el" href="class_c_rhino_instance_definition.html">CRhinoInstanceDefinition</a> *idef)</td></tr>
 <tr class="separator:ga486d595753a1c47e252b81c9b95620cf"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -1973,9 +1973,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga871ace31fd393b89b30c56e5b9f489bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga91c4b70a4f81be37ac199c6550b5251b"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___curve.html">ON_Curve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga91c4b70a4f81be37ac199c6550b5251b">RhinoInterpolatePointsOnSurface</a> (const <a class="el" href="class_o_n___surface.html">ON_Surface</a> &amp;srf, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a> &gt; PtIn, int is_closed, double tol, int ClosedSrfHandling)</td></tr>
 <tr class="separator:ga91c4b70a4f81be37ac199c6550b5251b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga1807365b093f821ee0a931c8b66db9cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga1807365b093f821ee0a931c8b66db9cd">RhinoIntersectBreps</a> (const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;brep0, const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;brep1, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, ON_3dPointArray *points=nullptr)</td></tr>
+<tr class="memitem:ga1807365b093f821ee0a931c8b66db9cd"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga1807365b093f821ee0a931c8b66db9cd">RhinoIntersectBreps</a> (const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;brep0, const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;brep1, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> *points=nullptr)</td></tr>
 <tr class="separator:ga1807365b093f821ee0a931c8b66db9cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga185f41962d29a58a8d2fd12a98bf811a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga185f41962d29a58a8d2fd12a98bf811a">RhinoIntersectSurfaces</a> (const <a class="el" href="class_o_n___surface.html">ON_Surface</a> &amp;srf0, const <a class="el" href="class_o_n___surface.html">ON_Surface</a> &amp;srf1, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, ON_3dPointArray *points=nullptr)</td></tr>
+<tr class="memitem:ga185f41962d29a58a8d2fd12a98bf811a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga185f41962d29a58a8d2fd12a98bf811a">RhinoIntersectSurfaces</a> (const <a class="el" href="class_o_n___surface.html">ON_Surface</a> &amp;srf0, const <a class="el" href="class_o_n___surface.html">ON_Surface</a> &amp;srf1, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;curves, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> *points=nullptr)</td></tr>
 <tr class="separator:ga185f41962d29a58a8d2fd12a98bf811a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1714fcc719023fd42ca2cca4cbf64292"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="group___rhino.html#ga1a8a31c978b382b16ef899c75e0486d4">RhinoConicSectionType</a>&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga1714fcc719023fd42ca2cca4cbf64292">RhinoIsCurveConicSection</a> (const <a class="el" href="class_o_n___curve.html">ON_Curve</a> *curve, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *focus1, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *focus2, <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *center)</td></tr>
 <tr class="separator:ga1714fcc719023fd42ca2cca4cbf64292"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2052,6 +2052,12 @@ Functions</h2></td></tr>
 <tr class="separator:ga93c80ed2beac1fe39b5041b9b619f3ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5dc3ab97df14deb73b689746c06282c8"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga5dc3ab97df14deb73b689746c06282c8">RhinoMergeCoplanarFaces</a> (<a class="el" href="class_o_n___brep.html">ON_Brep</a> *brep, double tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a>, double angle_tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a>)</td></tr>
 <tr class="separator:ga5dc3ab97df14deb73b689746c06282c8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gab1861224ff2ab7af46e8aebf7ec705a9"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gab1861224ff2ab7af46e8aebf7ec705a9">RhinoMergeCoplanarFaces</a> (<a class="el" href="class_o_n___geometry.html">ON_Geometry</a> *geometry, double tolerance, double angle_tolerance)</td></tr>
+<tr class="separator:gab1861224ff2ab7af46e8aebf7ec705a9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:gad21aa2409e3ab82bfbc7880c1a480d57"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gad21aa2409e3ab82bfbc7880c1a480d57">RhinoMergeCoplanarFaces</a> (<a class="el" href="class_o_n___geometry.html">ON_Geometry</a> *geometry, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> face_index, double tolerance, double angle_tolerance)</td></tr>
+<tr class="separator:gad21aa2409e3ab82bfbc7880c1a480d57"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ga32056d6aad353ba6694d8d7bd6f016b0"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga32056d6aad353ba6694d8d7bd6f016b0">RhinoMergeCoplanarFaces</a> (<a class="el" href="class_o_n___geometry.html">ON_Geometry</a> *geometry, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> face_index1, <a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a> face_index2, double tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a>, double angle_tolerance=<a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a>)</td></tr>
+<tr class="separator:ga32056d6aad353ba6694d8d7bd6f016b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga56b712f5ed2644f017538062d7bf7388"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga56b712f5ed2644f017538062d7bf7388">RhinoMergeCurves</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;input_curves, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;output, double join_tol=0.0, BOOL bPreserveDir=FALSE, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; *key=nullptr)</td></tr>
 <tr class="separator:ga56b712f5ed2644f017538062d7bf7388"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga4ddcb257eceb3afb8bd638824e2173f2"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___brep.html">ON_Brep</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga4ddcb257eceb3afb8bd638824e2173f2">RhinoMergeSrf</a> (const <a class="el" href="class_o_n___brep.html">ON_Brep</a> *in_brep0, const <a class="el" href="class_o_n___brep.html">ON_Brep</a> *in_brep1, double tolerance, double angtolrads, const <a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a> *pick_point0=nullptr, const <a class="el" href="class_o_n__2d_point.html">ON_2dPoint</a> *pick_point1=nullptr, double roundness=1.0, bool smooth=true)</td></tr>
@@ -2250,9 +2256,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga303be488101e48baae51c9defac64d52"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga5bf8b57d43cd3ed3d52bc2d6755ea1ab"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga5bf8b57d43cd3ed3d52bc2d6755ea1ab">RhinoProjectCurvesToMeshes</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;Meshes, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;Curves, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;ProjDir, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___curve.html">ON_Curve</a> * &gt; &amp;OutCurves, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;CurveIndices, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;MeshIndices, double tolerance)</td></tr>
 <tr class="separator:ga5bf8b57d43cd3ed3d52bc2d6755ea1ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga14a640895034a78e250a70f16181ece3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga14a640895034a78e250a70f16181ece3">RhinoProjectPointsToBreps</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;Breps, const ON_3dPointArray &amp;Points, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;ProjDir, ON_3dPointArray &amp;OutPoints, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;Indices, double tolerance)</td></tr>
+<tr class="memitem:ga14a640895034a78e250a70f16181ece3"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga14a640895034a78e250a70f16181ece3">RhinoProjectPointsToBreps</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;Breps, const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;Points, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;ProjDir, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;OutPoints, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;Indices, double tolerance)</td></tr>
 <tr class="separator:ga14a640895034a78e250a70f16181ece3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga21828897e75295f861d90225d843cb1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga21828897e75295f861d90225d843cb1d">RhinoProjectPointsToMeshes</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;Meshes, const ON_3dPointArray &amp;Points, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;ProjDir, ON_3dPointArray &amp;OutPoints, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;Indices, double tolerance)</td></tr>
+<tr class="memitem:ga21828897e75295f861d90225d843cb1d"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga21828897e75295f861d90225d843cb1d">RhinoProjectPointsToMeshes</a> (<a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> * &gt; &amp;Meshes, const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;Points, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;ProjDir, <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;OutPoints, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;Indices, double tolerance)</td></tr>
 <tr class="separator:ga21828897e75295f861d90225d843cb1d"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gaab206543b3d1d1b3ab319df773248a5e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> BOOL&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gaab206543b3d1d1b3ab319df773248a5e">RhinoProjectToPlane</a> (<a class="el" href="class_o_n___bounding_box.html">ON_BoundingBox</a> &amp;curve, <a class="el" href="class_o_n___plane.html">ON_Plane</a> &amp;plane)</td></tr>
 <tr class="separator:gaab206543b3d1d1b3ab319df773248a5e"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2323,19 +2329,13 @@ Functions</h2></td></tr>
 <tr class="separator:ga9a1955ccc4abcbc5d62d94291b56ab95"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gab9c1f28be26ab09d13304e30f9f883cb"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gab9c1f28be26ab09d13304e30f9f883cb">RhinoSdkLoft</a> (<a class="el" href="class_c_args_rhino_loft.html">CArgsRhinoLoft</a> &amp;args, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;breps, <a class="el" href="class_c_rhino_history.html">CRhinoHistory</a> *history=nullptr)</td></tr>
 <tr class="separator:gab9c1f28be26ab09d13304e30f9f883cb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ga5751176d7a21fa31ed1c735af6823fcc"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga5751176d7a21fa31ed1c735af6823fcc">RhinoSdkLoftEx</a> (<a class="el" href="class_c_args_rhino_loft_ex.html">CArgsRhinoLoftEx</a> &amp;args, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_c_rhino_loft_curve.html">CRhinoLoftCurve</a> * &gt; &amp;input_curves, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___geometry.html">ON_Geometry</a> * &gt; &amp;lofts_out)</td></tr>
-<tr class="memdesc:ga5751176d7a21fa31ed1c735af6823fcc"><td class="mdescLeft">&#160;</td><td class="mdescRight">RHINO_SDK_FUNCTION.  <a href="group___rhino.html#ga5751176d7a21fa31ed1c735af6823fcc">More...</a><br /></td></tr>
-<tr class="separator:ga5751176d7a21fa31ed1c735af6823fcc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga656e874cf1737c41fa99c2d5958914bf"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga656e874cf1737c41fa99c2d5958914bf">RhinoSdkLoftSurface</a> (<a class="el" href="class_c_args_rhino_loft.html">CArgsRhinoLoft</a> &amp;args, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> * &gt; &amp;srfs, <a class="el" href="class_c_rhino_history.html">CRhinoHistory</a> *history=nullptr)</td></tr>
 <tr class="separator:ga656e874cf1737c41fa99c2d5958914bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gafe136c60d71962ca0d869156441558d3"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gafe136c60d71962ca0d869156441558d3">RhinoSdkLoftSurfaceEx</a> (<a class="el" href="class_c_args_rhino_loft_ex.html">CArgsRhinoLoftEx</a> &amp;args, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_c_rhino_loft_curve.html">CRhinoLoftCurve</a> * &gt; &amp;input_curves, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> * &gt; &amp;srfs)</td></tr>
-<tr class="separator:gafe136c60d71962ca0d869156441558d3"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0faeb45cc1dfedc359605d1b2ec08095"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga0faeb45cc1dfedc359605d1b2ec08095">RhinoSdkServiceRelease</a> ()</td></tr>
 <tr class="separator:ga0faeb45cc1dfedc359605d1b2ec08095"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga13dfe5c8a810cd23102feb6eb0c6e10e"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> unsigned int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga13dfe5c8a810cd23102feb6eb0c6e10e">RhinoSdkVersion</a> ()</td></tr>
 <tr class="separator:ga13dfe5c8a810cd23102feb6eb0c6e10e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac9fa9c4c316222d168cf4dbcff2f5262"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gac9fa9c4c316222d168cf4dbcff2f5262">RhinoSelectDimstyle</a> (bool interactive)</td></tr>
-<tr class="memdesc:gac9fa9c4c316222d168cf4dbcff2f5262"><td class="mdescLeft">&#160;</td><td class="mdescRight">Old version replaced 11/09/2009 SDKbreak.  <a href="group___rhino.html#gac9fa9c4c316222d168cf4dbcff2f5262">More...</a><br /></td></tr>
 <tr class="separator:gac9fa9c4c316222d168cf4dbcff2f5262"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga26d19e9980d65b13febb4c88024fcdf4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga26d19e9980d65b13febb4c88024fcdf4">RhinoSelectDimstyle</a> (<a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> &amp;doc, bool interactive)</td></tr>
 <tr class="memdesc:ga26d19e9980d65b13febb4c88024fcdf4"><td class="mdescLeft">&#160;</td><td class="mdescRight">Added 11/10/2009 to eliminate ActiveDoc() call.  <a href="group___rhino.html#ga26d19e9980d65b13febb4c88024fcdf4">More...</a><br /></td></tr>
@@ -2357,7 +2357,7 @@ Functions</h2></td></tr>
 <tr class="memitem:gabe7b385b53bd98761da431c95f0b71c4"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gabe7b385b53bd98761da431c95f0b71c4">RhinoSetGrevillePoints</a> (const <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> &amp;in_curve, int point_count, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> *in_points, <a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> *out_curve=nullptr)</td></tr>
 <tr class="separator:gabe7b385b53bd98761da431c95f0b71c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga7bb476302ff018204c27ac2276e8d2ea"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga7bb476302ff018204c27ac2276e8d2ea">RhinoSetNurbsCurveEndCondition</a> (<a class="el" href="class_o_n___nurbs_curve.html">ON_NurbsCurve</a> *curve, int end, int continuity, const <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &amp;point, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;tangent, const <a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a> &amp;curvature)</td></tr>
-<tr class="memdesc:ga7bb476302ff018204c27ac2276e8d2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight"><a class="el" href="_rhino_sdk_match_curve_8h_source.html">RhinoSdkMatchCurve.h</a>.  <a href="group___rhino.html#ga7bb476302ff018204c27ac2276e8d2ea">More...</a><br /></td></tr>
+<tr class="memdesc:ga7bb476302ff018204c27ac2276e8d2ea"><td class="mdescLeft">&#160;</td><td class="mdescRight">RhinoSdkMatchCurve.h.  <a href="group___rhino.html#ga7bb476302ff018204c27ac2276e8d2ea">More...</a><br /></td></tr>
 <tr class="separator:ga7bb476302ff018204c27ac2276e8d2ea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga1c8fca5479f47da6330278c285489d9c"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga1c8fca5479f47da6330278c285489d9c">RhinoShellBrep</a> (const <a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;brep, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; int &gt; &amp;faces_to_remove, double distance, double tolerance, <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___brep.html">ON_Brep</a> * &gt; &amp;shells)</td></tr>
 <tr class="separator:ga1c8fca5479f47da6330278c285489d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2411,9 +2411,9 @@ Functions</h2></td></tr>
 <tr class="separator:ga6a9319f2c9c03b70328598d89810a0dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:gac582bf6c49dd3137ce3503679dfa3f01"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gac582bf6c49dd3137ce3503679dfa3f01">RhinoSplitMeshEdge</a> (<a class="el" href="class_o_n___mesh.html">ON_Mesh</a> *pMesh, const int edgeidx, const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> &gt; &amp;points)</td></tr>
 <tr class="separator:gac582bf6c49dd3137ce3503679dfa3f01"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gab40471a969f74fff32a3173242b4007a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gab40471a969f74fff32a3173242b4007a">RhinoSrfControlPtGrid</a> (int point_count[2], int degree[2], const ON_3dPointArray &amp;point_array, <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *nurbs_surface=nullptr)</td></tr>
+<tr class="memitem:gab40471a969f74fff32a3173242b4007a"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gab40471a969f74fff32a3173242b4007a">RhinoSrfControlPtGrid</a> (int point_count[2], int degree[2], const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;point_array, <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *nurbs_surface=nullptr)</td></tr>
 <tr class="separator:gab40471a969f74fff32a3173242b4007a"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:gac60f823d8f87a6383811b1654fc257b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gac60f823d8f87a6383811b1654fc257b6">RhinoSrfPtGrid</a> (int point_count[2], int degree[2], BOOL is_closed[2], const ON_3dPointArray &amp;point_array, <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *nurbs_surface=nullptr)</td></tr>
+<tr class="memitem:gac60f823d8f87a6383811b1654fc257b6"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#gac60f823d8f87a6383811b1654fc257b6">RhinoSrfPtGrid</a> (int point_count[2], int degree[2], BOOL is_closed[2], const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;point_array, <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> *nurbs_surface=nullptr)</td></tr>
 <tr class="separator:gac60f823d8f87a6383811b1654fc257b6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ga0bbae86c2e0dfe4b6bce38837ce34867"><td class="memItemLeft" align="right" valign="top"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="group___rhino.html#ga0bbae86c2e0dfe4b6bce38837ce34867">RhinoStraightenBrep</a> (<a class="el" href="class_o_n___brep.html">ON_Brep</a> &amp;B, double tol=0.0)</td></tr>
 <tr class="separator:ga0bbae86c2e0dfe4b6bce38837ce34867"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -2915,7 +2915,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>This define may be used in code that needs to know which version of Rhino is being built but wants to avoid including <a class="el" href="rhino_sdk_version_8h_source.html">rhinoSdkVersion.h</a> to limit the number of files that are compiled when the build system increments the version numbers. </p>
+<p>This define may be used in code that needs to know which version of Rhino is being built but wants to avoid including rhinoSdkVersion.h to limit the number of files that are compiled when the build system increments the version numbers. </p>
 
 </div>
 </div>
@@ -2946,7 +2946,7 @@ Variables</h2></td></tr>
 </div><div class="memdoc">
 <p>This header file defines RHINO_PLUG_IN_DECLARE for plug-ins. Rhino plugins can include this file in exactly one .cpp rather than in stdafx.h if they want to minimize the amount of recompiling that is reqired when the version numbers are updated.</p><ul>
 <li>For plug-ins that use an installed Rhino SDK, this isn't an issue.</li>
-<li>For Rhino plug-ins that compile against the core Rhino souce code, this is an issue and using <a class="el" href="rhino_sdk_plug_in_declare_8h_source.html">rhinoSdkPlugInDeclare.h</a> substantually reduces the amount of recompiling that is required when a developer updates source code. </li>
+<li>For Rhino plug-ins that compile against the core Rhino souce code, this is an issue and using rhinoSdkPlugInDeclare.h substantually reduces the amount of recompiling that is required when a developer updates source code. </li>
 </ul>
 
 </div>
@@ -3095,8 +3095,8 @@ Variables</h2></td></tr>
 
 <p>A Rhino plug-in is being compiled - import Rhino SDK symbols. </p>
 <p>&lt;RHINO SDK_MFC If you get this error, then include .../SDK/inc/rhinoSdkPlugInDeclare.h on the line immediately before the line that has RHINO_PLUG_IN_DECLARE</p><ul>
-<li>The definition of RHINO_PLUG_IN_DECLARE depends on values defined in <a class="el" href="rhino_sdk_version_8h_source.html">rhinoSdkVersion.h</a> that are frequently changed by the build system.</li>
-<li>Using <a class="el" href="rhino_sdk_plug_in_declare_8h_source.html">rhinoSdkPlugInDeclare.h</a> to define RHINO_PLUG_IN_DECLARE dramatically reduces the amount of code developers have to build when this version information is updated. </li>
+<li>The definition of RHINO_PLUG_IN_DECLARE depends on values defined in rhinoSdkVersion.h that are frequently changed by the build system.</li>
+<li>Using rhinoSdkPlugInDeclare.h to define RHINO_PLUG_IN_DECLARE dramatically reduces the amount of code developers have to build when this version information is updated. </li>
 </ul>
 
 </div>
@@ -3609,7 +3609,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Use <a class="el" href="group___rhino.html#ga4c840d50b075e0e1fdb40aa0ca25f73e" title="returns theApp">RhinoApp()</a>.SdkServiceReleaseVersion() to get the value of RHINO_SDK_SERVICE_RELEASE.</p>
-<p>RHINO_VERSION_NUMBER is defined in <a class="el" href="rhino_sdk_rhino_version_8h_source.html">rhinoSdkRhinoVersion.h</a> and is automatically set by the build system. Do not hard code this value. RHINO_SDK_SERVICE_RELEASE must increase so SDK addtions work as expected. Plug-ins that are built with an "updated SDK" will required a host Rhino that is the same or more recent than the "updated SDK". </p>
+<p>RHINO_VERSION_NUMBER is defined in rhinoSdkRhinoVersion.h and is automatically set by the build system. Do not hard code this value. RHINO_SDK_SERVICE_RELEASE must increase so SDK addtions work as expected. Plug-ins that are built with an "updated SDK" will required a host Rhino that is the same or more recent than the "updated SDK". </p>
 
 </div>
 </div>
@@ -3750,7 +3750,7 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 
-<p>Public SDK path to <a class="el" href="opennurbs__version_8h_source.html">opennurbs_version.h</a>. </p>
+<p>Public SDK path to opennurbs_version.h. </p>
 <p>"major" will be 6 for all versions of Rhinoceros 6 </p>
 
 </div>
@@ -4182,8 +4182,8 @@ Variables</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Enumeration Type Documentation</h2>
-<a id="gad87d118aceda0b3632297355311336cf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gad87d118aceda0b3632297355311336cf">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="ga81bed731bfc3feb503ae46847f8a0560"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga81bed731bfc3feb503ae46847f8a0560">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -4199,11 +4199,11 @@ Variables</h2></td></tr>
 <p>THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY. ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF MERCHANTABILITY ARE HEREBY DISCLAIMED.</p>
 <p>For complete Rhino SDK copyright information see <a href="http://www.rhino3d.com/developer">http://www.rhino3d.com/developer</a>. </p>
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="ggad87d118aceda0b3632297355311336cfa25abd432840a2ed691b970605d836ff9"></a>COMBINE_ADD&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggad87d118aceda0b3632297355311336cfaf491e0bc0a98b82ccc987ae6a0d91367"></a>COMBINE_MULTIPLY&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggad87d118aceda0b3632297355311336cfa0cd466084755bf78c5309c0d1ecaf189"></a>COMBINE_BLEND&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggad87d118aceda0b3632297355311336cfa5890e31f4939fa66d7e770f838a6d14f"></a>COMBINE_HATCHED&#160;</td><td class="fielddoc"></td></tr>
-<tr><td class="fieldname"><a id="ggad87d118aceda0b3632297355311336cfae5684b026324e729d41ac4a24b433513"></a>COMBINE_MULTIPLY_WITH_COLOR&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="gga81bed731bfc3feb503ae46847f8a0560a25abd432840a2ed691b970605d836ff9"></a>COMBINE_ADD&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga81bed731bfc3feb503ae46847f8a0560af491e0bc0a98b82ccc987ae6a0d91367"></a>COMBINE_MULTIPLY&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga81bed731bfc3feb503ae46847f8a0560a0cd466084755bf78c5309c0d1ecaf189"></a>COMBINE_BLEND&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga81bed731bfc3feb503ae46847f8a0560a5890e31f4939fa66d7e770f838a6d14f"></a>COMBINE_HATCHED&#160;</td><td class="fielddoc"></td></tr>
+<tr><td class="fieldname"><a id="gga81bed731bfc3feb503ae46847f8a0560ae5684b026324e729d41ac4a24b433513"></a>COMBINE_MULTIPLY_WITH_COLOR&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -5088,8 +5088,8 @@ Variables</h2></td></tr>
 <p>Copyright (c) 1993-2017 Robert McNeel &amp; Associates. All rights reserved. Rhinoceros is a registered trademark of Robert McNeel &amp; Associates.</p>
 <p>THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY. ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF MERCHANTABILITY ARE HEREBY DISCLAIMED.</p>
 <p>For complete Rhino SDK copyright information see <a href="http://www.rhino3d.com/developer">http://www.rhino3d.com/developer</a>. Deep, sigh. ... This file is included by Mac Rhino projects in a complicated, contrived, controversial, and complex, manner. <br  />
- In MacRhino, in some projects, the enum and functions are delcared at different points in time. In other projects, everything simply includes <a class="el" href="rhino_sdk_8h_source.html">RhinoSdk.h</a> and life is, well, simple.</p>
-<p>In all Windows code, include <a class="el" href="rhino_sdk_8h_source.html">RhinoSdk.h</a> and move on. "There is nothing to see here."</p>
+ In MacRhino, in some projects, the enum and functions are delcared at different points in time. In other projects, everything simply includes RhinoSdk.h and life is, well, simple.</p>
+<p>In all Windows code, include RhinoSdk.h and move on. "There is nothing to see here."</p>
 <p>Too keep Mac Rhino building.</p>
 <p>NO NO NO NO #prag once</p>
 <p>RhinoYesNoResponse is a list of possible responses to a question that can be answered yes or no.</p>
@@ -5909,7 +5909,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a>&#160;</td>
-          <td class="paramname"><em>roadlike_normal</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a></code>, </td>
+          <td class="paramname"><em>roadlike_normal</em> = <code><a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -5966,10 +5966,10 @@ Variables</h2></td></tr>
     <tr><td class="paramname">output_surfaces</td><td>Sweep results </td></tr>
     <tr><td class="paramname">pRailCurve</td><td>Rail going the right direction </td></tr>
     <tr><td class="paramname">shapes</td><td>Shapes will be sorted on rail </td></tr>
-    <tr><td class="paramname">start_point</td><td>The start point, specify <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
-    <tr><td class="paramname">end_point</td><td>The ending point, specify <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
+    <tr><td class="paramname">start_point</td><td>The start point, specify <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
+    <tr><td class="paramname">end_point</td><td>The ending point, specify <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
     <tr><td class="paramname">frame_type</td><td>The frame type: 0 = freeform, 1 = roadlike </td></tr>
-    <tr><td class="paramname">roadlike_normal</td><td>The roadlike normal direction, or <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to ignore. </td></tr>
+    <tr><td class="paramname">roadlike_normal</td><td>The roadlike normal direction, or <a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to ignore. </td></tr>
     <tr><td class="paramname">bClosed</td><td>Only matters if rails are closed </td></tr>
     <tr><td class="paramname">blend_type</td><td>The blend type: 0 = local, 1 = global. </td></tr>
     <tr><td class="paramname">miter_type</td><td>The miter type: 0 = none, 1 = trimmed, 2 = untrimmed miters </td></tr>
@@ -6155,7 +6155,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void RhGetGripPoints_Box </td>
           <td>(</td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>aOut</em></td><td>)</td>
           <td></td>
         </tr>
@@ -6173,7 +6173,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void RhGetGripPoints_Cylinder </td>
           <td>(</td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>aOut</em></td><td>)</td>
           <td></td>
         </tr>
@@ -6191,7 +6191,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void RhGetGripPoints_Plane_UV </td>
           <td>(</td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>aOut</em></td><td>)</td>
           <td></td>
         </tr>
@@ -6209,7 +6209,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void RhGetGripPoints_Plane_UVW </td>
           <td>(</td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>aOut</em></td><td>)</td>
           <td></td>
         </tr>
@@ -6227,7 +6227,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> void RhGetGripPoints_Sphere </td>
           <td>(</td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>aOut</em></td><td>)</td>
           <td></td>
         </tr>
@@ -6339,7 +6339,7 @@ Variables</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype"><a class="el" href="class_o_n__3d_vector.html">ON_3dVector</a>&#160;</td>
-          <td class="paramname"><em>roadlike_normal</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a></code>, </td>
+          <td class="paramname"><em>roadlike_normal</em> = <code><a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be">ON_3dVector::UnsetVector</a></code>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
@@ -6396,10 +6396,10 @@ Variables</h2></td></tr>
     <tr><td class="paramname">output_surfaces</td><td>Sweep results </td></tr>
     <tr><td class="paramname">pRailCurve</td><td>Rail going the right direction </td></tr>
     <tr><td class="paramname">shapes</td><td>Shapes will be sorted on rail </td></tr>
-    <tr><td class="paramname">start_point</td><td>The start point, specify <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
-    <tr><td class="paramname">end_point</td><td>The ending point, specify <a class="el" href="group__open_n_u_r_b_s.html#gaa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
+    <tr><td class="paramname">start_point</td><td>The start point, specify <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
+    <tr><td class="paramname">end_point</td><td>The ending point, specify <a class="el" href="class_o_n__3d_point.html#aa68906e3e7650b01ce88c527f6088d7d" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dPoint::UnsetPoint</a> to ignore. </td></tr>
     <tr><td class="paramname">frame_type</td><td>The frame type: 0 = freeform, 1 = roadlike </td></tr>
-    <tr><td class="paramname">roadlike_normal</td><td>The roadlike normal direction, or <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to ignore. </td></tr>
+    <tr><td class="paramname">roadlike_normal</td><td>The roadlike normal direction, or <a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to ignore. </td></tr>
     <tr><td class="paramname">bClosed</td><td>Only matters if rails are closed </td></tr>
     <tr><td class="paramname">blend_type</td><td>The blend type: 0 = local, 1 = global. </td></tr>
     <tr><td class="paramname">miter_type</td><td>The miter type: 0 = none, 1 = trimmed, 2 = untrimmed miters </td></tr>
@@ -8702,6 +8702,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000158">Deprecated:</a></b></dt><dd>use RhinoColorDialogEx </dd></dl>
 
 </div>
 </div>
@@ -9381,7 +9382,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Creates one or more hatches. Parameters: args - [in] The hatching arguments. tolerance - [in] The tolerance used for detecting planar loops. When in doubt, use the document's absolute tolerance. Returns: True if one or more hatches were created, false otherwise. </p>
+<p>Description: Creates one or more hatches. Parameters: args - [in] The hatching arguments. tolerance - [in] The tolerance used for detecting planar loops. When in doubt, use the document's absolute tolerance. Returns: True if one or more hatches were created, false otherwise. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000132">Deprecated:</a></b></dt><dd>use overload that accepts tolerance parameter </dd></dl>
 
 </div>
 </div>
@@ -10409,7 +10410,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>points</em>&#160;</td>
         </tr>
         <tr>
@@ -10544,7 +10545,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>points</em>&#160;</td>
         </tr>
         <tr>
@@ -10765,7 +10766,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Detailed tool to compute 'splines' on a surface. This function creates a discrete 'spline' curve on the surface, i.e. a sequence of point on the surface each with a corresponding parameter value. The curve interpolates a sequence of points on the surface. Parameters: Srf - [in] The surface on which the curve is constructed. Fixed2 - [in] Surface points to interpolate given by parameters. These must be distinct. tol - [in] Relative tolerance used in solver. Use 0 for default value. Periodic - [in] Construct a smoothly closed curve when true. Fixed2[0]==Fixed2.Last() (at least up to addition of a period) init_count - [in] Maximum number of points to insert between fixed points on first level. nlevels - [in] Number of levels to be used in multilevel solver. out - [out] Sequence of surface points (given by surface parameters). t - [out] Curve parameter associated with each out value, where: out.Count()==t.Count() pIndex - [out] If not null, then out[(*pIndex)[i]]==Fixed2[i] Remarks: Srf should be G1 continuous. If Srf is closed in the u or the v direction and is G1 at the seam then the function can construct point sequences that cross over the seam. In this case the surface parameter space points in Fixed2 and out are in the covering space of Srf.Domain, i.e they extend across the domain boundaries of Srf.Domain(0) in the the sense of a natural periodic extension. (See ON_PeriodicDomain for more information). Also, the number of out points is approximately 2^(nlevel-1)*init_count*Fixed2.Count() </p>
+<p>Description: Detailed tool to compute 'splines' on a surface. This function creates a discrete 'spline' curve on the surface, i.e. a sequence of point on the surface each with a corresponding parameter value. The curve interpolates a sequence of points on the surface. Parameters: Srf - [in] The surface on which the curve is constructed. Fixed2 - [in] Surface points to interpolate given by parameters. These must be distinct. tol - [in] Relative tolerance used in solver. Use 0 for default value. Periodic - [in] Construct a smoothly closed curve when true. Fixed2[0]==Fixed2.Last() (at least up to addition of a period) init_count - [in] Maximum number of points to insert between fixed points on first level. nlevels - [in] Number of levels to be used in multilevel solver. out - [out] Sequence of surface points (given by surface parameters). t - [out] Curve parameter associated with each out value, where: out.Count()==t.Count() pIndex - [out] If not null, then out[(*pIndex)[i]]==Fixed2[i] Remarks: Srf should be G1 continuous. If Srf is closed in the u or the v direction and is G1 at the seam then the function can construct point sequences that cross over the seam. In this case the surface parameter space points in Fixed2 and out are in the covering space of Srf.Domain, i.e they extend across the domain boundaries of Srf.Domain(0) in the the sense of a natural periodic extension. (See <a class="el" href="class_o_n___periodic_domain.html">ON_PeriodicDomain</a> for more information). Also, the number of out points is approximately 2^(nlevel-1)*init_count*Fixed2.Count() </p>
 
 </div>
 </div>
@@ -10824,7 +10825,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Expert function to compute CurveOnSurfacePoints using a multilevel solver. On input out, index and t provide a rough approximation of the curve. Parameters: Srf -[in] Surface on which curve lies out- [in/out] on input out is a rough approximation of the curve including all interpolation points. On output out is a discrete version of the curve on surface. On output out.Count() = 2^Num_Multilevels*( n_0 - 1) + 1 where n0 = out&lt;.Count() at input. index -[in/out] The fixed interpolation values are identified by index. On input index.Count()&lt;=out.Count() and the count of index is the same on output as on input. on both input and output index is an increasing list of indices in the range 0 to out.Count()-1. Furthermore index[0]=0 and index.Last()==out.Count()-1. Srf.Evaluate( out[index[j]] ) is a surface point to be interpolated and this value is the same on input as on output. t -[in/out] - on input t is an increasing list of parameters. t[i] is the parameter corresponding to the surface point Srf.Evaluate( out[i] ). t.Count()==out.Count(). on output t is an increasing list of parameters t.Count()=out.Count(). The first and last value in t are the same as they were in the input list. t is a refinement of the list at input. tol -[in] - An array of Num_level tolerance values. tol[0] is used for the top coarsest level etc.. set all tol values to 0 for default values. Periodic -[in] Set to true to generate a periodic curve instead of an open curve. If true then out.First() == out.Last() mod domain. Num_Levels -[in] Number of levels in multilevel solver. Use Num_Level=1 for single level solve, in this case out.Count() doesn't change. Use sparingly probably should have Num_Level&lt;4. Remarks: If Srf is G1-closed in one or both directions the points in out may be taken in a covering space of Srf.Domain. See ON_PeriodicDomain. </p>
+<p>Description: Expert function to compute CurveOnSurfacePoints using a multilevel solver. On input out, index and t provide a rough approximation of the curve. Parameters: Srf -[in] Surface on which curve lies out- [in/out] on input out is a rough approximation of the curve including all interpolation points. On output out is a discrete version of the curve on surface. On output out.Count() = 2^Num_Multilevels*( n_0 - 1) + 1 where n0 = out&lt;.Count() at input. index -[in/out] The fixed interpolation values are identified by index. On input index.Count()&lt;=out.Count() and the count of index is the same on output as on input. on both input and output index is an increasing list of indices in the range 0 to out.Count()-1. Furthermore index[0]=0 and index.Last()==out.Count()-1. Srf.Evaluate( out[index[j]] ) is a surface point to be interpolated and this value is the same on input as on output. t -[in/out] - on input t is an increasing list of parameters. t[i] is the parameter corresponding to the surface point Srf.Evaluate( out[i] ). t.Count()==out.Count(). on output t is an increasing list of parameters t.Count()=out.Count(). The first and last value in t are the same as they were in the input list. t is a refinement of the list at input. tol -[in] - An array of Num_level tolerance values. tol[0] is used for the top coarsest level etc.. set all tol values to 0 for default values. Periodic -[in] Set to true to generate a periodic curve instead of an open curve. If true then out.First() == out.Last() mod domain. Num_Levels -[in] Number of levels in multilevel solver. Use Num_Level=1 for single level solve, in this case out.Count() doesn't change. Use sparingly probably should have Num_Level&lt;4. Remarks: If Srf is G1-closed in one or both directions the points in out may be taken in a covering space of Srf.Domain. See <a class="el" href="class_o_n___periodic_domain.html">ON_PeriodicDomain</a>. </p>
 
 </div>
 </div>
@@ -13147,7 +13148,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Fit a sequence of 3d points on a surface to make a curve on the surface. Parameters: srf - [in] Surface on which to construct curve. points - [in] Parameter space coordinates of the points to interpolate. If srf is closed the points can be in the domain covering space of srf (See ON_PeriodicDomain). tol - [in] Curve should be within tolerance of surface and points. (srf.Evaluate(points[i]) Periodic - [in] When true make a periodic curve. Returns: A curve interpolating the points. </p>
+<p>Description: Fit a sequence of 3d points on a surface to make a curve on the surface. Parameters: srf - [in] Surface on which to construct curve. points - [in] Parameter space coordinates of the points to interpolate. If srf is closed the points can be in the domain covering space of srf (See <a class="el" href="class_o_n___periodic_domain.html">ON_PeriodicDomain</a>). tol - [in] Curve should be within tolerance of surface and points. (srf.Evaluate(points[i]) Periodic - [in] When true make a periodic curve. Returns: A curve interpolating the points. </p>
 
 </div>
 </div>
@@ -15299,13 +15300,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>basepoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>corners</em>&#160;</td>
         </tr>
         <tr>
@@ -15357,13 +15358,13 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>basepoints</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>corners</em>&#160;</td>
         </tr>
         <tr>
@@ -15535,7 +15536,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> *&#160;</td>
           <td class="paramname"><em>points</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -15582,7 +15583,7 @@ Variables</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray *&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> *&#160;</td>
           <td class="paramname"><em>points</em> = <code>nullptr</code>&#160;</td>
         </tr>
         <tr>
@@ -16596,7 +16597,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Creates planar Breps of 1 face from array of curves Parameters: input_loops [in] loops to sort and use as boundaries breps [out] array of 1 face Breps notused - optional array to hold indices of the input curves that got used Returns: @untitled table TRUE Success FALSE Failure Remarks: calls RhinoMakePlanarFaces() to sort the input curves into faces See Also: RhinoMakePlanarBrep() </p>
+<p>Description: Creates planar Breps of 1 face from array of curves Parameters: input_loops [in] loops to sort and use as boundaries breps [out] array of 1 face Breps notused - optional array to hold indices of the input curves that got used Returns: @untitled table TRUE Success FALSE Failure Remarks: calls RhinoMakePlanarFaces() to sort the input curves into faces See Also: RhinoMakePlanarBrep() </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000159">Deprecated:</a></b></dt><dd>use overload that takes a tolerance </dd></dl>
 
 </div>
 </div>
@@ -16893,7 +16894,7 @@ Variables</h2></td></tr>
 </div>
 </div>
 <a id="ga5dc3ab97df14deb73b689746c06282c8"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5dc3ab97df14deb73b689746c06282c8">&#9670;&nbsp;</a></span>RhinoMergeCoplanarFaces()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#ga5dc3ab97df14deb73b689746c06282c8">&#9670;&nbsp;</a></span>RhinoMergeCoplanarFaces() <span class="overload">[1/4]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -16924,6 +16925,129 @@ Variables</h2></td></tr>
       </table>
 </div><div class="memdoc">
 <p>Description: Merges adjacent coplanar faces into single faces. Parameters: brep - [in/out] The Brep. tolerance - [in] 3d tolerance for determining when edges are adjacent. If &lt;= 0, then the current document tolerance is used. angle_tolerance - [in] 3d angle tolerance for determining when faces are parallel. If &lt;= 0, then the current document angle tolerance is used. Returns: true if faces were merged, false if no faces were merged. </p>
+
+</div>
+</div>
+<a id="gab1861224ff2ab7af46e8aebf7ec705a9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gab1861224ff2ab7af46e8aebf7ec705a9">&#9670;&nbsp;</a></span>RhinoMergeCoplanarFaces() <span class="overload">[2/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool RhinoMergeCoplanarFaces </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___geometry.html">ON_Geometry</a> *&#160;</td>
+          <td class="paramname"><em>geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle_tolerance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Merges adjacent coplanar faces into single faces. Parameters: geometry - [in/out] Geometry to modify. Breps, SubDs or meshes. tolerance - [in] 3d tolerance for determining when edges are adjacent. If in doubt, use document tolerance. angle_tolerance - [in] 3d angle tolerance for determining when faces are parallel. If in doubt, use current document angle tolerance. Returns: true if faces were merged, false if no faces were merged. </p>
+
+</div>
+</div>
+<a id="gad21aa2409e3ab82bfbc7880c1a480d57"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#gad21aa2409e3ab82bfbc7880c1a480d57">&#9670;&nbsp;</a></span>RhinoMergeCoplanarFaces() <span class="overload">[3/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool RhinoMergeCoplanarFaces </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___geometry.html">ON_Geometry</a> *&#160;</td>
+          <td class="paramname"><em>geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>&#160;</td>
+          <td class="paramname"><em>face_index</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle_tolerance</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Merges coplanar faces adjacent to index into a single face. Parameters: geometry - [in/out] Geometry to modify. Breps, SubDs or meshes. face_index - [in] face index to use as the input (use overload that doesn't have this argument to merge all applicable faces of the entire object) tolerance - [in] 3d tolerance for determining when edges are adjacent. If in doubt, use document tolerance. angle_tolerance - [in] 3d angle tolerance for determining when faces are parallel. If in doubt, use current document angle tolerance. Returns: true if faces were merged, false if no faces were merged. </p>
+
+</div>
+</div>
+<a id="ga32056d6aad353ba6694d8d7bd6f016b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ga32056d6aad353ba6694d8d7bd6f016b0">&#9670;&nbsp;</a></span>RhinoMergeCoplanarFaces() <span class="overload">[4/4]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname"><a class="el" href="group___rhino.html#gae0ca1c334125e1735d6bf07ae91bbb66">RHINO_SDK_FUNCTION</a> bool RhinoMergeCoplanarFaces </td>
+          <td>(</td>
+          <td class="paramtype"><a class="el" href="class_o_n___geometry.html">ON_Geometry</a> *&#160;</td>
+          <td class="paramname"><em>geometry</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>&#160;</td>
+          <td class="paramname"><em>face_index1</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="class_o_n___c_o_m_p_o_n_e_n_t___i_n_d_e_x.html">ON_COMPONENT_INDEX</a>&#160;</td>
+          <td class="paramname"><em>face_index2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>tolerance</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a></code>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">double&#160;</td>
+          <td class="paramname"><em>angle_tolerance</em> = <code><a class="el" href="group__open_n_u_r_b_s.html#ga586b2913cf0137fe229a3097c2a119ff">ON_UNSET_VALUE</a></code>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+<p>Description: Merges 2 coplanar, adjacent faces into a single face. Parameters: geometry - [in/out] Geometry to modify. Breps, SubDs or meshes. face_index1 - [in] first face index face_index2 - [in] second face index tolerance - [in] 3d tolerance for determining when edges are adjacent. If in doubt, use document tolerance. angle_tolerance - [in] 3d angle tolerance for determining when faces are parallel. If in doubt, use current document angle tolerance. Returns: true if faces were merged, false if no faces were merged. </p>
 
 </div>
 </div>
@@ -18217,8 +18341,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Makes a new mesh with vertices offset at distance d along the direction vector parameter. Optionally, based on the value of bSolidify, adds the input mesh and a ribbon of faces along any naked edges. If direction is <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> it acts exactly as the function above.</p>
-<p>Parameters: d - Input offset distance. pMesh - Input mesh. bSolidify - Input bool to determine whether the output mesh should be turned into a closed mesh, see description above. direction - Input vector for offset direction for all vertices or <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to use vertex normals. Returns: Returns a <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> pointer on success. Returns null on failure. </p>
+<p>Description: Makes a new mesh with vertices offset at distance d along the direction vector parameter. Optionally, based on the value of bSolidify, adds the input mesh and a ribbon of faces along any naked edges. If direction is <a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> it acts exactly as the function above.</p>
+<p>Parameters: d - Input offset distance. pMesh - Input mesh. bSolidify - Input bool to determine whether the output mesh should be turned into a closed mesh, see description above. direction - Input vector for offset direction for all vertices or <a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to use vertex normals. Returns: Returns a <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> pointer on success. Returns null on failure. </p>
 
 </div>
 </div>
@@ -18265,8 +18389,8 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Makes a new mesh with vertices offset at distance d along the direction vector parameter. Optionally, based on the value of bSolidify, adds the input mesh and a ribbon of faces along any naked edges. If direction is <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> it acts exactly as the function above. Optionally returns list of wall faces, i.e. the faces that connect original and offset mesh when solidified.</p>
-<p>Parameters: d - Input offset distance. pMesh - Input mesh. bSolidify - Input bool to determine whether the output mesh should be turned into a closed mesh, see description above. direction - Input vector for offset direction for all vertices or <a class="el" href="group__open_n_u_r_b_s.html#gaa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to use vertex normals. pWallFacesOut - If not null then gets filled with indices of the wall faces Returns: Returns a <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> pointer on success. Returns null on failure. </p>
+<p>Description: Makes a new mesh with vertices offset at distance d along the direction vector parameter. Optionally, based on the value of bSolidify, adds the input mesh and a ribbon of faces along any naked edges. If direction is <a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> it acts exactly as the function above. Optionally returns list of wall faces, i.e. the faces that connect original and offset mesh when solidified.</p>
+<p>Parameters: d - Input offset distance. pMesh - Input mesh. bSolidify - Input bool to determine whether the output mesh should be turned into a closed mesh, see description above. direction - Input vector for offset direction for all vertices or <a class="el" href="class_o_n__3d_vector.html#aa62d84d9817922de5f60ef3b057ed0be" title="(ON_UNSET_VALUE,ON_UNSET_VALUE,ON_UNSET_VALUE)">ON_3dVector::UnsetVector</a> to use vertex normals. pWallFacesOut - If not null then gets filled with indices of the wall faces Returns: Returns a <a class="el" href="class_o_n___mesh.html">ON_Mesh</a> pointer on success. Returns null on failure. </p>
 
 </div>
 </div>
@@ -19174,6 +19298,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000160">Deprecated:</a></b></dt><dd>use RhinoInterpCurve </dd></dl>
 
 </div>
 </div>
@@ -19557,7 +19682,7 @@ Variables</h2></td></tr>
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: OBSOLETE - Use the version of RhinoOffsetCurve declared below. </p>
+<p>Description: OBSOLETE - Use the version of RhinoOffsetCurve declared below. </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000162">Deprecated:</a></b></dt><dd>use other version of RhinoOffsetCurve </dd></dl>
 
 </div>
 </div>
@@ -20478,7 +20603,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Creates a single-walled pipe. Parameters: rail - [in] The rail, or path, curve. rail_params - [in] An array of one or more normalized curve parameters where changes in radius occur. Important: curve parameters must be normalized - ranging between 0.0 and 1.0. Use <a class="el" href="group__open_n_u_r_b_s.html#ga7e475217007660d32e9f4135527eaee0">ON_Interval::NormalizedParameterAt</a> to calculate these. radii - [in] An array of radii - one at each normalized curve parameter in rail_params. results - [out] The results of the pipe creation. If rail is a line segment, rail_params contains two normalized curve parameters, radii contains two identical values, and and cap_mode is either 0 (None) or 1 (Flat), then an <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> object will be returned. Otherwise, an <a class="el" href="class_o_n___brep.html">ON_Brep</a> object will be returned. Note, it is possible for more than one <a class="el" href="class_o_n___brep.html">ON_Brep</a> to be returned (when it is not possible to miter sharp corners, for example). abstol - [in] The sweeping and fitting tolerance. If you are unsure whaat to use, then use the document's absolute tolerance - <a class="el" href="class_c_rhino_doc.html#ad3b7a1021e98d843102f74d914ec87b1">CRhinoDoc::AbsoluteTolerance()</a>. angtol - [in] The angle tolerance. If you are unsure what to use, then either use the document's angle tolerance in radians - <a class="el" href="class_c_rhino_doc.html#aece402023b6ee29014e294c3a6c1c843">CRhinoDoc::AngleToleranceRadians()</a>. blend_type - [in] The shape blending, where: 0: Local (pipe radius stays constant at the ends and changes more rapidly in the middle) 1: Global (radius is linearly blended from one end to the other, creating pipes that taper from one radius to the other) cap_mode - [in] The end cap mode, where: 0: None 1: Flat (cap with planar surface) 2: Round (cap with hemispherical surface) fit_rail - [in] If the curve is a polycurve of lines and arcs, the curve is fit and a single surface is created; otherwise the result is a polysurface with joined surfaces created from the polycurve segments. Returns: true if success, false otherwise. Remarks: CRITICAL: Memory for the resulting <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> or <a class="el" href="class_o_n___brep.html">ON_Brep</a> object is allocated. It is the calling functions responsibility to clean up the memory. </p>
+<p>Description: Creates a single-walled pipe. Parameters: rail - [in] The rail, or path, curve. rail_params - [in] An array of one or more normalized curve parameters where changes in radius occur. Important: curve parameters must be normalized - ranging between 0.0 and 1.0. Use <a class="el" href="class_o_n___interval.html#a7e475217007660d32e9f4135527eaee0">ON_Interval::NormalizedParameterAt</a> to calculate these. radii - [in] An array of radii - one at each normalized curve parameter in rail_params. results - [out] The results of the pipe creation. If rail is a line segment, rail_params contains two normalized curve parameters, radii contains two identical values, and and cap_mode is either 0 (None) or 1 (Flat), then an <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> object will be returned. Otherwise, an <a class="el" href="class_o_n___brep.html">ON_Brep</a> object will be returned. Note, it is possible for more than one <a class="el" href="class_o_n___brep.html">ON_Brep</a> to be returned (when it is not possible to miter sharp corners, for example). abstol - [in] The sweeping and fitting tolerance. If you are unsure whaat to use, then use the document's absolute tolerance - <a class="el" href="class_c_rhino_doc.html#ad3b7a1021e98d843102f74d914ec87b1">CRhinoDoc::AbsoluteTolerance()</a>. angtol - [in] The angle tolerance. If you are unsure what to use, then either use the document's angle tolerance in radians - <a class="el" href="class_c_rhino_doc.html#aece402023b6ee29014e294c3a6c1c843">CRhinoDoc::AngleToleranceRadians()</a>. blend_type - [in] The shape blending, where: 0: Local (pipe radius stays constant at the ends and changes more rapidly in the middle) 1: Global (radius is linearly blended from one end to the other, creating pipes that taper from one radius to the other) cap_mode - [in] The end cap mode, where: 0: None 1: Flat (cap with planar surface) 2: Round (cap with hemispherical surface) fit_rail - [in] If the curve is a polycurve of lines and arcs, the curve is fit and a single surface is created; otherwise the result is a polysurface with joined surfaces created from the polycurve segments. Returns: true if success, false otherwise. Remarks: CRITICAL: Memory for the resulting <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> or <a class="el" href="class_o_n___brep.html">ON_Brep</a> object is allocated. It is the calling functions responsibility to clean up the memory. </p>
 
 </div>
 </div>
@@ -20555,7 +20680,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Creates a double-walled pipe. Parameters: rail - [in] The rail, or path, curve. rail_params - [in] An array of one or more normalized curve parameters where changes in radius occur. Important: curve parameters must be normalized - ranging between 0.0 and 1.0. Use <a class="el" href="group__open_n_u_r_b_s.html#ga7e475217007660d32e9f4135527eaee0">ON_Interval::NormalizedParameterAt</a> to calculate these. radii0 - [in] An array of radii for the first wall - one at each normalized curve parameter in rail_params. radii1 - [in] An array of radii for the second wall - one at each normalized curve parameter in rail_params. results - [out] The results of the pipe creation. If rail is a line segment, rail_params contains two normalized curve parameters, radii0 contains two identical values, radii1 contains two identical values, and and cap_mode is 1 (Flat), then a single <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> object will be returned. If cap_mode is 0 (None), then two <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> objects will be returned. Otherwise, an <a class="el" href="class_o_n___brep.html">ON_Brep</a> object will be returned. Note, it is possible for more than one <a class="el" href="class_o_n___brep.html">ON_Brep</a> to be returned (if cap_mode = 0, or when it is not possible to miter sharp corners, for example). abstol - [in] The sweeping and fitting tolerance. If you are unsure what to use, then use the document's absolute tolerance - <a class="el" href="class_c_rhino_doc.html#ad3b7a1021e98d843102f74d914ec87b1">CRhinoDoc::AbsoluteTolerance()</a>. angtol - [in] The angle tolerance. If you are unsure what to use, then either use the document's angle tolerance in radians - <a class="el" href="class_c_rhino_doc.html#aece402023b6ee29014e294c3a6c1c843">CRhinoDoc::AngleToleranceRadians()</a>. blend_type - [in] The shape blending, where: 0: Local (pipe radius stays constant at the ends and changes more rapidly in the middle) 1: Global (radius is linearly blended from one end to the other, creating pipes that taper from one radius to the other) cap_mode - [in] The end cap mode, where: 0: None 1: Flat (cap with planar surface) 2: Round (cap with hemispherical surface) fit_rail - [in] If the curve is a polycurve of lines and arcs, the curve is fit and a single surface is created; otherwise the result is a polysurface with joined surfaces created from the polycurve segments. Returns: true if success, false otherwise. Remarks: CRITICAL: Memory for the resulting <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> or <a class="el" href="class_o_n___brep.html">ON_Brep</a> object is allocated. It is the calling functions responsibility to clean up the memory. </p>
+<p>Description: Creates a double-walled pipe. Parameters: rail - [in] The rail, or path, curve. rail_params - [in] An array of one or more normalized curve parameters where changes in radius occur. Important: curve parameters must be normalized - ranging between 0.0 and 1.0. Use <a class="el" href="class_o_n___interval.html#a7e475217007660d32e9f4135527eaee0">ON_Interval::NormalizedParameterAt</a> to calculate these. radii0 - [in] An array of radii for the first wall - one at each normalized curve parameter in rail_params. radii1 - [in] An array of radii for the second wall - one at each normalized curve parameter in rail_params. results - [out] The results of the pipe creation. If rail is a line segment, rail_params contains two normalized curve parameters, radii0 contains two identical values, radii1 contains two identical values, and and cap_mode is 1 (Flat), then a single <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> object will be returned. If cap_mode is 0 (None), then two <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> objects will be returned. Otherwise, an <a class="el" href="class_o_n___brep.html">ON_Brep</a> object will be returned. Note, it is possible for more than one <a class="el" href="class_o_n___brep.html">ON_Brep</a> to be returned (if cap_mode = 0, or when it is not possible to miter sharp corners, for example). abstol - [in] The sweeping and fitting tolerance. If you are unsure what to use, then use the document's absolute tolerance - <a class="el" href="class_c_rhino_doc.html#ad3b7a1021e98d843102f74d914ec87b1">CRhinoDoc::AbsoluteTolerance()</a>. angtol - [in] The angle tolerance. If you are unsure what to use, then either use the document's angle tolerance in radians - <a class="el" href="class_c_rhino_doc.html#aece402023b6ee29014e294c3a6c1c843">CRhinoDoc::AngleToleranceRadians()</a>. blend_type - [in] The shape blending, where: 0: Local (pipe radius stays constant at the ends and changes more rapidly in the middle) 1: Global (radius is linearly blended from one end to the other, creating pipes that taper from one radius to the other) cap_mode - [in] The end cap mode, where: 0: None 1: Flat (cap with planar surface) 2: Round (cap with hemispherical surface) fit_rail - [in] If the curve is a polycurve of lines and arcs, the curve is fit and a single surface is created; otherwise the result is a polysurface with joined surfaces created from the polycurve segments. Returns: true if success, false otherwise. Remarks: CRITICAL: Memory for the resulting <a class="el" href="class_o_n___extrusion.html">ON_Extrusion</a> or <a class="el" href="class_o_n___brep.html">ON_Brep</a> object is allocated. It is the calling functions responsibility to clean up the memory. </p>
 
 </div>
 </div>
@@ -20725,6 +20850,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000161">Deprecated:</a></b></dt><dd>use overload that accepts tolerance parameter </dd></dl>
 
 </div>
 </div>
@@ -21030,7 +21156,7 @@ for(;;)
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>Points</em>, </td>
         </tr>
         <tr>
@@ -21042,7 +21168,7 @@ for(;;)
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>OutPoints</em>, </td>
         </tr>
         <tr>
@@ -21083,7 +21209,7 @@ for(;;)
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>Points</em>, </td>
         </tr>
         <tr>
@@ -21095,7 +21221,7 @@ for(;;)
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype"><a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>OutPoints</em>, </td>
         </tr>
         <tr>
@@ -21409,6 +21535,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000163">Deprecated:</a></b></dt><dd>use overload that has an <a class="el" href="class_o_n___object_array.html">ON_ObjectArray</a> parameter </dd></dl>
 
 </div>
 </div>
@@ -22412,42 +22539,6 @@ for(;;)
 
 </div>
 </div>
-<a id="ga5751176d7a21fa31ed1c735af6823fcc"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ga5751176d7a21fa31ed1c735af6823fcc">&#9670;&nbsp;</a></span>RhinoSdkLoftEx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RhinoSdkLoftEx </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_c_args_rhino_loft_ex.html">CArgsRhinoLoftEx</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_c_rhino_loft_curve.html">CRhinoLoftCurve</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>input_curves</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___geometry.html">ON_Geometry</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>lofts_out</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-
-<p>RHINO_SDK_FUNCTION. </p>
-
-</div>
-</div>
 <a id="ga656e874cf1737c41fa99c2d5958914bf"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#ga656e874cf1737c41fa99c2d5958914bf">&#9670;&nbsp;</a></span>RhinoSdkLoftSurface()</h2>
 
@@ -22481,41 +22572,6 @@ for(;;)
 </div><div class="memdoc">
 <hr  />
 <p> Rhino SDK function to make a loft surface through curves. </p>
-
-</div>
-</div>
-<a id="gafe136c60d71962ca0d869156441558d3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#gafe136c60d71962ca0d869156441558d3">&#9670;&nbsp;</a></span>RhinoSdkLoftSurfaceEx()</h2>
-
-<div class="memitem">
-<div class="memproto">
-      <table class="memname">
-        <tr>
-          <td class="memname">bool RhinoSdkLoftSurfaceEx </td>
-          <td>(</td>
-          <td class="paramtype"><a class="el" href="class_c_args_rhino_loft_ex.html">CArgsRhinoLoftEx</a> &amp;&#160;</td>
-          <td class="paramname"><em>args</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; const <a class="el" href="class_c_rhino_loft_curve.html">CRhinoLoftCurve</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>input_curves</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype"><a class="el" href="class_o_n___simple_array.html">ON_SimpleArray</a>&lt; <a class="el" href="class_o_n___nurbs_surface.html">ON_NurbsSurface</a> * &gt; &amp;&#160;</td>
-          <td class="paramname"><em>srfs</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-</div><div class="memdoc">
-<p>Function to make a loft surface through curves. RHINO_SDK_FUNCTION </p>
 
 </div>
 </div>
@@ -22572,8 +22628,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
-
-<p>Old version replaced 11/09/2009 SDKbreak. </p>
+<p>Old version replaced 11/09/2009 SDKbreak </p><dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000105">Deprecated:</a></b></dt><dd>use overload that takes a <a class="el" href="class_c_rhino_doc.html">CRhinoDoc</a> parameter </dd></dl>
 
 </div>
 </div>
@@ -22818,7 +22873,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
-<p>Description: Sets external texture packing routine. Parameters: routine [in] - Pointer to a texture packing function. This function takes in two parameters: const <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray&lt;const ON_Mesh*&gt;</a>&amp; meshes Array of Brep meshes. Never modify meshes in this array. <a class="el" href="class_o_n___simple_array.html">ON_SimpleArray&lt;ON_Mesh*&gt;</a>&amp; packed_tex_out Array of empty meshes to transfer packing settings. Routine is supposed to fill in m_packed_tex_domain and m_packed_tex_rotate. Return true if the packing settings in packed_tex_out are good to apply, or false if they are to be discarded. Return: True if the routine is successfully hooked up and otherwise false. </p>
+<p>Description: Sets external texture packing routine. Parameters: routine [in] - Pointer to a texture packing function. This function takes in two parameters: const ON_SimpleArray&lt;const ON_Mesh*&gt;&amp; meshes Array of Brep meshes. Never modify meshes in this array. ON_SimpleArray&lt;ON_Mesh*&gt;&amp; packed_tex_out Array of empty meshes to transfer packing settings. Routine is supposed to fill in m_packed_tex_domain and m_packed_tex_rotate. Return true if the packing settings in packed_tex_out are good to apply, or false if they are to be discarded. Return: True if the routine is successfully hooked up and otherwise false. </p>
 
 </div>
 </div>
@@ -22913,7 +22968,7 @@ for(;;)
       </table>
 </div><div class="memdoc">
 
-<p><a class="el" href="_rhino_sdk_match_curve_8h_source.html">RhinoSdkMatchCurve.h</a>. </p>
+<p>RhinoSdkMatchCurve.h. </p>
 <dl class="section rcs"><dt>NoKeywords</dt><dd></dd></dl>
 <p>/ / Copyright (c) 1993-2007 Robert McNeel &amp; Associates. All rights reserved. / Rhinoceros is a registered trademark of Robert McNeel &amp; Associates. / / THIS SOFTWARE IS PROVIDED "AS IS" WITHOUT EXPRESS OR IMPLIED WARRANTY. / ALL IMPLIED WARRANTIES OF FITNESS FOR ANY PARTICULAR PURPOSE AND OF / MERCHANTABILITY ARE HEREBY DISCLAIMED. / / For complete Rhino SDK copyright information see <a href="http://www.rhino3d.com/developer">http://www.rhino3d.com/developer</a>. / ////////////////////////////////////////////////////////////// Set end geometry of a nurbs curve to match the specified conditions position, tangency and curvature.</p>
 <p>ON_NurbsCurve* curve - Curve to be modified in place bool bSetStart - true: Set start of curve, false: set end of curve int continuity - what to set - 0: nothing, 1: position, 2: position &amp; tangency, 3: position, tangency &amp; curvature <a class="el" href="class_o_n__3d_point.html">ON_3dPoint</a> point - Point to set as curve endpoint ON_3dVector* tangent - Tangent for curve end if tangency is being set, or NULL ON_3dVector* curvature - Curvature for curve end if curvature is being set, or NULL returns bool true if sesuccessful, or false if not</p>
@@ -23340,6 +23395,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000164">Deprecated:</a></b></dt><dd>use the version of RhinoSmoothCurve that accepts a plane parameter </dd></dl>
 
 </div>
 </div>
@@ -23534,6 +23590,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000166">Deprecated:</a></b></dt><dd>use the version of RhinoSmoothMesh that accepts a plane parameter </dd></dl>
 
 </div>
 </div>
@@ -23657,6 +23714,7 @@ for(;;)
         </tr>
       </table>
 </div><div class="memdoc">
+<dl class="deprecated"><dt><b><a class="el" href="deprecated.html#_deprecated000165">Deprecated:</a></b></dt><dd>use the version of RhinoSmoothSurface that accepts a plane parameter </dd></dl>
 
 </div>
 </div>
@@ -24226,7 +24284,7 @@ for(;;)
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>point_array</em>, </td>
         </tr>
         <tr>
@@ -24273,7 +24331,7 @@ for(;;)
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">const ON_3dPointArray &amp;&#160;</td>
+          <td class="paramtype">const <a class="el" href="class_o_n__3d_point_array.html">ON_3dPointArray</a> &amp;&#160;</td>
           <td class="paramname"><em>point_array</em>, </td>
         </tr>
         <tr>
@@ -26768,7 +26826,7 @@ for(;;)
 <div class="ttc" id="agroup___rhino_html_ga2fa073809d595133ddcfe6d8da265848"><div class="ttname"><a href="group___rhino.html#ga2fa073809d595133ddcfe6d8da265848">RHINO_VERSION_BRANCH</a></div><div class="ttdeci">#define RHINO_VERSION_BRANCH</div><div class="ttdef"><b>Definition:</b> rhinoSdkVersion.h:87</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
-Generated on Fri Aug 21 2020 12:55:23 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
+Generated on Tue Nov 10 2020 14:00:05 for Rhino C++ API by &#160;<a href="http://www.doxygen.org/index.html">
 <img class="footer" src="doxygen.png" alt="doxygen"/>
 </a> 1.8.17
 </small></address>
