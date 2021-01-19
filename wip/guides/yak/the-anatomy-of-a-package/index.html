@@ -468,7 +468,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-anatomy-of-a-package.md" target="_blank">15 Aug 2020</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/the-anatomy-of-a-package.md" target="_blank">04 Jan 2021</a>)
     
   </span>
 
@@ -503,7 +503,7 @@ so that Rhino and Grasshopper can find and load them</li>
 
 <h2 id="distributions">Distributions</h2>
 
-<p>Prior to v0.9 of the package server, each new .yak package uploaded represented a new version. Now, for a single version it’s possible to upload multiple “distributions” to target different Rhino versions and platforms. This information is encoded in a “distribution tag” that is appended to the filename of the package, e.g. <em>example-1.0.0-rh7-win.yak</em>.</p>
+<p>For a single package version it’s possible to upload multiple “distributions” to target different Rhino versions and platforms. This information is encoded in a “distribution tag” that is appended to the filename of the package, e.g. <em>example-1.0.0-rh7-win.yak</em>.</p>
 
 <p>The distribution tag consists of an “app” identifier and version, and a platform. Currently the only supported apps are <code>rh</code> and <code>any</code> – Grasshopper ships with Rhino so it doesn’t need its own identifier. Unless the app is <code>any</code>, an app version must be included in the form <code>&lt;major&gt;_&lt;minor&gt;</code>. The minor version is optional and is useful if a plug-in relies on an SDK change made in a service release. The platform can be <code>win</code>, <code>mac</code> or <code>any</code> (i.e. cross-platform).</p>
 
@@ -516,13 +516,9 @@ so that Rhino and Grasshopper can find and load them</li>
   <li><code>any-any</code> - anything goes! (existing behaviour)</li>
 </ul>
 
-<p>When installing packages, the server will check the version of Rhino<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> and determine whether a compatible distribution exists for the requested version.</p>
+<p>When installing packages, the package manager checks whether a compatible distribution exists for the requested version. Only package versions that have at least one compatible distribution will show up when the <code>_PackageManager</code> command is run in Rhino 7+.</p>
 
 <p>The updated server works seamlessly with existing packages and old versions of Rhino. Pre-existing versions on the server (without distributions) will be treated as <code>any-any</code> when installing. New package versions that do not include a distribution tag, e.g. those created by previous versions of the CLI, will also be treated as <code>any-any</code> when publishing.</p>
-
-<div class="alert alert-info" role="alert">
-<strong>Note:</strong> Distributions are new and may change slightly before the release of Rhino 7!
-</div>
 
 <hr />
 
@@ -534,16 +530,6 @@ so that Rhino and Grasshopper can find and load them</li>
   <li><a href="../pushing-a-package-to-the-server">Create a Grasshopper package</a> of your plugin.</li>
   <li><a href="../pushing-a-package-to-the-server">Create a Rhino package</a> for everyone.</li>
 </ul>
-
-<hr />
-
-<div class="footnotes" role="doc-endnotes">
-  <ol>
-    <li id="fn:1" role="doc-endnote">
-      <p>Each installation of Rhino comes with it’s own version of the package manager. <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a></p>
-    </li>
-  </ol>
-</div>
 
         </article>
 
@@ -589,7 +575,7 @@ so that Rhino and Grasshopper can find and load them</li>
         </div>
 
         <div class="row text-center">
-          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          © 1997 - 2021 Robert McNeel &amp; Associates<br/>
           <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/wip/authors">Contributions welcome</a>
         </div>
 

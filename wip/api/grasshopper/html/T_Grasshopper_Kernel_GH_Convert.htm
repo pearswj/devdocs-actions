@@ -33,6 +33,9 @@
  Create a hash of a file.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_FindRhinoObjectByNameAndType.htm">FindRhinoObjectByNameAndType</a></td><td><div class="summary">
  Search the current Rhino document for an object with a given name of a given type.
+ </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_GeometryToObjRef.htm">GeometryToObjRef</a></td><td><div class="summary">
+ Create an ObjRef for a referenced IGH_GeometricGoo. Unreferenced
+ IGH_GeometryGoo will return null
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_GetBrepFromDocument.htm">GetBrepFromDocument</a></td><td><div class="summary">
  Harvest a brep object from a Rhino document.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_GetClippingPlaneFromDocument.htm">GetClippingPlaneFromDocument</a></td><td><div class="summary">
@@ -43,6 +46,8 @@
  Harvest a mesh object from a Rhino document.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_GetPointFromDocument.htm">GetPointFromDocument</a></td><td><div class="summary">
  Harvest a point object from a Rhino document.
+ </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_GetSubDFromDocument.htm">GetSubDFromDocument</a></td><td><div class="summary">
+ Harvest a sub-d object from a Rhino document.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_GetSurfaceFromDocument.htm">GetSurfaceFromDocument</a></td><td><div class="summary">
  Harvest a surface object from a Rhino document.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_GetTimeKind.htm">GetTimeKind(DateTime)</a></td><td><div class="summary">
@@ -317,6 +322,14 @@
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToGHString_Secondary.htm">ToGHString_Secondary</a></td><td><div class="summary">
  Converts similar data into a GH_String instance.
  Data is not quaranteed to be duplicated.
+ </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToGHSubD.htm">ToGHSubD</a></td><td><div class="summary">
+ Convert data into GH_SubDs.
+ </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToGHSubD_Primary.htm">ToGHSubD_Primary</a></td><td><div class="summary">
+ Converts similar data into a GH_SubD instance.
+ Data is not quaranteed to be duplicated.
+ </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToGHSubD_Secondary.htm">ToGHSubD_Secondary</a></td><td><div class="summary">
+ Converts similar data into a GH_Brep instance.
+ Data is not quaranteed to be duplicated.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToGHSurface.htm">ToGHSurface</a></td><td><div class="summary">
  Convert data into GH_Surfaces.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToGHSurface_Primary.htm">ToGHSurface_Primary</a></td><td><div class="summary">
@@ -443,6 +456,9 @@
  Performs a direct cast from String and GH_String. 
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToString_Secondary.htm">ToString_Secondary</a></td><td><div class="summary">
  Creates a String representation of an object by calling the ToString() function.
+ </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToSubD_Secondary.htm">ToSubD_Secondary</a></td><td><div class="summary">
+ Attempts to convert other data types into a Sub-D. 
+ Data is not quaranteed to be duplicated.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToSurface.htm">ToSurface</a></td><td><div class="summary">
  Convert data into Rhino.Geometry.Surface.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="M_Grasshopper_Kernel_GH_Convert_ToSurface_Primary.htm">ToSurface_Primary</a></td><td><div class="summary">
@@ -479,4 +495,4 @@
  Represents the total number of ticks past midnight that (by Grasshopper convention) identifies a pure date.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="F_Grasshopper_Kernel_GH_Convert_PureTimeTicks.htm">PureTimeTicks</a></td><td><div class="summary">
  Represents the total number of ticks past a whole second that (by Grasshopper convention) identifies a pure time.
- </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID6RB')" onkeypress="SectionExpandCollapse_CheckKey('ID6RB', event)" tabindex="0"><img id="ID6RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID6RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_Grasshopper_Kernel.htm">Grasshopper.Kernel Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Grasshopper for Rhino 6.25.20114.05270 (Last updated: 4/28/2020)<br />Copyright © 2009-2020 Robert McNeel &amp; Associates<p><a href="https://discourse.mcneel.com/c/grasshopper" target="_blank">Report wishes and bugs at discourse.mcneel.com</a></p> </div></body></html>
+ </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID6RB')" onkeypress="SectionExpandCollapse_CheckKey('ID6RB', event)" tabindex="0"><img id="ID6RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID6RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_Grasshopper_Kernel.htm">Grasshopper.Kernel Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Grasshopper for Rhino 8.0.21012.12300 (Last updated: 1/19/2021)<br />Copyright © 2009-2021 Robert McNeel &amp; Associates<p><a href="https://discourse.mcneel.com/c/grasshopper" target="_blank">Report wishes and bugs at discourse.mcneel.com</a></p> </div></body></html>

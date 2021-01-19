@@ -468,7 +468,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/installing-and-managing-packages.md" target="_blank">21 Oct 2020</a>)
+      by <a href="/wip/authors/will_pearson">Will Pearson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/yak/installing-and-managing-packages.md" target="_blank">12 Nov 2020</a>)
     
   </span>
 
@@ -479,14 +479,19 @@ $(document).ready(function()
           <div class="alert alert-info" role="alert">
 <strong>Note:</strong> Yak is cross-platform. The examples below are for Windows.
 For Mac, replace the path to the Yak CLI tool with
-<code>/Applications/RhinoWIP.app/Contents/Resources/bin/yak</code>.
+<code>"/Applications/Rhino 7.app/Contents/Resources/bin/yak"</code>.
 </div>
+
+<!-- TODO: remove warning when 7.1 is released -->
+<!-- <div class="alert alert-warning" role="alert">
+    <strong>Warning!</strong> The <code>"/Applications/Rhino 7.app/Contents/Resources/bin/yak"</code> script is broken in Rhino 7.0 and will be fixed in Rhino 7.1 <u>Release Candidate 2</u>. <a href="https://discourse.mcneel.com/t/rhino-7-service-release-candidate-available/111989" class="alert-link">Check the forum</a> for updates.
+</div> -->
 
 <h2 id="install">Install</h2>
 
 <p>Installing a yak package with the CLI tool is simple.</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" install marmoset
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7\System\Yak.exe" install marmoset
 
 Downloading marmoset (1.0.0)...
 Downloaded marmoset (1.0.0)
@@ -500,7 +505,7 @@ Successfully installed marmoset (1.0.0)
 
 <p>You can also ask Yak to install a specific version.</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" install marmoset 1.0.0
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7\System\Yak.exe" install marmoset 1.0.0
 
 ...
 </code></pre>
@@ -512,7 +517,7 @@ Libraries folder but with a folder/file structure that Yak controls.</p>
 
 <p>Packages can also be easily uninstalled using the Yak CLI tool.</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" uninstall marmoset
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7\System\Yak.exe" uninstall marmoset
 
 marmoset successfully uninstalled
 </code></pre>
@@ -526,7 +531,7 @@ the next time it starts.
 
 <p>At any point you can check which packages are currently installed.</p>
 
-<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7 WIP\System\Yak.exe" list
+<pre><code class="language-commandline">&gt; "C:\Program Files\Rhino 7\System\Yak.exe" list
 
 marmoset (1.0.0)
 </code></pre>
@@ -585,7 +590,7 @@ marmoset (1.0.0)
         </div>
 
         <div class="row text-center">
-          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          © 1997 - 2021 Robert McNeel &amp; Associates<br/>
           <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/wip/authors">Contributions welcome</a>
         </div>
 

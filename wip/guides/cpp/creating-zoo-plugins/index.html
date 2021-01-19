@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Creating Plugins that use the Zoo with C/C++</title>
-  <meta name="description" content="This guide discusses how to create C/C++ plugins that can obtain licenses from the Zoo.  Using C/C++">
+  <title>Creating Plugins that use the LAN Zoo with C/C++</title>
+  <meta name="description" content="This guide discusses how to create C/C++ plugins that can obtain licenses from the LAN Zoo.  Using C/C++">
 
   <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/guides/cpp/creating-zoo-plugins/" />
-  <meta property="og:title" content="Creating Plugins that use the Zoo" />
-  <meta property="og:description" content="This guide discusses how to create C/C++ plugins that can obtain licenses from the Zoo." />
+  <meta property="og:title" content="Creating Plugins that use the LAN Zoo" />
+  <meta property="og:description" content="This guide discusses how to create C/C++ plugins that can obtain licenses from the LAN Zoo." />
   <meta property=”og:site_name” content="developer.rhino3d.com"/>
   <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
 
   <!-- twitter card tags additive with the og: tags -->
   <meta name="twitter:domain" value="developer.rhino3d.com" />
-  <meta name="twitter:title" value="Creating Plugins that use the Zoo" />
-  <meta name="twitter:description" value="This guide discusses how to create C/C++ plugins that can obtain licenses from the Zoo." />
+  <meta name="twitter:title" value="Creating Plugins that use the LAN Zoo" />
+  <meta name="twitter:description" value="This guide discusses how to create C/C++ plugins that can obtain licenses from the LAN Zoo." />
   
     <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
   
@@ -465,33 +465,33 @@ $(document).ready(function()
               
           </ol>
 
-          <h1>Creating Plugins that use the Zoo</h1>
+          <h1>Creating Plugins that use the LAN Zoo</h1>
 
           <p>
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/cpp/creating-zoo-plugins.md" target="_blank">05 Dec 2018</a>)
+      by <a href="/wip/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/cpp/creating-zoo-plugins.md" target="_blank">10 Dec 2020</a>)
     
   </span>
 
 </p>
 
-          <p>This guide discusses how to create C/C++ plugins that can obtain licenses from the Zoo.</p>
+          <p>This guide discusses how to create C/C++ plugins that can obtain licenses from the LAN Zoo.</p>
 
           <h2 id="overview">Overview</h2>
 
-<p>The Zoo supports 3rd party plugins. The Rhino C/C++ SDK allows developers to write plugins for Rhino that use the Rhino license manager and obtain licenses from Zoo servers.</p>
+<p>The LAN Zoo supports 3rd party plugins. The Rhino C/C++ SDK allows developers to write plugins for Rhino that use the Rhino license manager and obtain licenses from LAN Zoo servers.</p>
 
-<p>When a customer attempts to add a product license to the Zoo, the product’s plugin is called to validate the user’s request.  Upon validation, the plugin will return the product’s licensing information back to the Zoo.  In turn, the Zoo will serialize, maintain, and distribute this license.</p>
+<p>When a customer attempts to add a product license to the LAN Zoo, the product’s plugin is called to validate the user’s request.  Upon validation, the plugin will return the product’s licensing information back to the LAN Zoo.  In turn, the LAN Zoo will serialize, maintain, and distribute this license.</p>
 
 <h2 id="prerequisites">Prerequisites</h2>
 
 <p>It is presumed you already have the necessary tools installed and are ready to go.  If you are not there yet, see <a href="/wip/guides/cpp/installing-tools-windows">Installing Tools (Windows)</a>.</p>
 
-<p>Also, all plugins that use the Zoo license system must be signed with an Authenticode certificate issued by McNeel Plugin Security.  These certificates are free, but must be requested by each developer.  Developers must agree to the Terms of Use before a certificate is issued.  For more information on plugin signing, see <a href="/wip/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for Zoo</a>.</p>
+<p>Also, all plugins that use the LAN Zoo license system must be signed with an Authenticode certificate issued by McNeel Plugin Security.  These certificates are free, but must be requested by each developer.  Developers must agree to the Terms of Use before a certificate is issued.  For more information on plugin signing, see <a href="/wip/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for LAN Zoo</a>.</p>
 
-<p>It is also presumed you have a C/C++plugin you wish to add license support to. See the <a href="http://developer.rhino3d.com/guides/cpp/your-first-plugin-windows/">Your First Plugin (Windows)</a> guide for instructions.</p>
+<p>It is also presumed you have a C/C++ plugin you wish to add license support to. See the <a href="http://developer.rhino3d.com/guides/cpp/your-first-plugin-windows/">Your First Plugin (Windows)</a> guide for instructions.</p>
 
 <h2 id="adding-licensing-support">Adding Licensing Support</h2>
 
@@ -503,7 +503,7 @@ $(document).ready(function()
   <li>Add a new <em>.cpp</em> file to your project.</li>
   <li>In this <em>.cpp</em> file, declare a new class that is derived from <code>CRhinoLicenseValidator</code>.</li>
   <li>Override the <code>CRhinoLicenseValidator::ProductBuildType</code> virtual function and return the build type of the license that your product requires.</li>
-  <li>Override and implement the <code>CRhinoLicenseValidator::VerifyLicenseKey</code> virtual function.  Rhino will call into this function whenever it needs your plugin to validate a license that is entered by a user, returned by the Rhino license manager (standalone node), or returned from a Zoo server (network node).</li>
+  <li>Override and implement the <code>CRhinoLicenseValidator::VerifyLicenseKey</code> virtual function.  Rhino will call into this function whenever it needs your plugin to validate a license that is entered by a user, returned by the Rhino license manager (standalone node), or returned from a LAN Zoo server (network node).</li>
   <li>Override and implement the <code>CRhinoLicenseValidator::VerifyPreviousVersionLicense</code> virtual function.  Rhino will call into this function if a license key from a previous version of your product is required to validate the license key being verified.</li>
   <li>Override and implement the <code>CRhinoLicenseValidator::OnLeaseChanged</code> virtual function.  Rhino will call into this function if your product supports Rhino Accounts. When Rhino Accounts gets a new lease, this function is called.</li>
   <li>Create one (and only one) static instance of your <code>CRhinoLicenseValidator</code>-derived object.</li>
@@ -517,8 +517,8 @@ $(document).ready(function()
 <h2 id="related-topics">Related Topics</h2>
 
 <ul>
-  <li><a href="/wip/guides/rhinocommon/creating-zoo-plugins">Creating Zoo Plugins</a></li>
-  <li><a href="/wip/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for Zoo</a></li>
+  <li><a href="/wip/guides/rhinocommon/creating-zoo-plugins">Creating LAN Zoo Plugins</a></li>
+  <li><a href="/wip/guides/rhinocommon/digitally-signing-plugins-for-zoo">Digitally Signing Plugins for LAN Zoo</a></li>
   <li><a href="https://github.com/mcneel/rhino-developer-samples/tree/6/cpp/SampleWithLicensing">Sample C/C++ plugin project (on GitHub)</a></li>
 </ul>
 
@@ -567,7 +567,7 @@ $(document).ready(function()
         </div>
 
         <div class="row text-center">
-          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          © 1997 - 2021 Robert McNeel &amp; Associates<br/>
           <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/wip/authors">Contributions welcome</a>
         </div>
 

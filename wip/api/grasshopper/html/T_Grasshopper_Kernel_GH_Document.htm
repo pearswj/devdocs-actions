@@ -78,6 +78,10 @@
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_Grasshopper_Kernel_GH_Document_Owner.htm">Owner</a></td><td><div class="summary">
  Gets or sets the owner of this document. A document is typically owned 
  when it is subsidiary to some object, such as a cluster.
+ </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_Grasshopper_Kernel_GH_Document_PreviewBoundary.htm">PreviewBoundary</a></td><td><div class="summary">
+ Gets or sets the preview boundary applied to this document.
+ If a boundary has been set, only those objects which are inside
+ the boundary will be previewed.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_Grasshopper_Kernel_GH_Document_PreviewBoundingBox.htm">PreviewBoundingBox</a></td><td><div class="summary">
  Gets the boundingbox used for previews.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_Grasshopper_Kernel_GH_Document_PreviewColour.htm">PreviewColour</a></td><td><div class="summary">
@@ -131,6 +135,8 @@
  Gets the UndoServer instance that belongs to this document.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_Grasshopper_Kernel_GH_Document_UndoUtil.htm">UndoUtil</a></td><td><div class="summary">
  Gets a temporary undo utility instance that allows you to easily create standard undo events.
+ </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubproperty.gif" alt="Public property" title="Public property" /></td><td><a href="P_Grasshopper_Kernel_GH_Document_ValueTable.htm">ValueTable</a></td><td><div class="summary">
+ Gets the value table associated with this document.
  </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID5RB')" onkeypress="SectionExpandCollapse_CheckKey('ID5RB', event)" tabindex="0"><img id="ID5RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Methods</span></div><div id="ID5RBSection" class="collapsibleSection"><table class="members" id="methodList"><tr><th class="iconColumn">
 								 
 							</th><th>Name</th><th>Description</th></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_ActiveObjects.htm">ActiveObjects</a></td><td><div class="summary">
@@ -218,6 +224,8 @@
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_DestroyObjectTable.htm">DestroyObjectTable</a></td><td><div class="summary">
  Erase the Object fast lookup table. You <i>must</i> call this whenever you add or remove 
  objects to or from the document while circumventing the regular channels.
+ </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_DestroyPreviewCaches.htm">DestroyPreviewCaches</a></td><td><div class="summary">
+ Wipe all caches for Viewport Preview logic.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_DestroyPreviewMeshes.htm">DestroyPreviewMeshes</a></td><td><div class="summary">
  Attempts to destroy all the preview meshes in this document. 
  It might not work for all objects, but this is still your best bet.
@@ -264,8 +272,7 @@
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_FindAttribute_1.htm">FindAttribute(Guid)</a></td><td><div class="summary">
  Find the object that matches the ID
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_FindAttribute.htm">FindAttribute(PointF, Boolean)</a></td><td><div class="summary">
- Search for attributes that contain a certain point. The attribute balloon boxes 
- are also taken into account.
+ Search for attributes that contain a certain point.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_FindAttributeByGrip_1.htm">FindAttributeByGrip(PointF, Boolean, Int32)</a></td><td><div class="summary">
  Search for attributes that contain grips near the search locus
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_FindAttributeByGrip.htm">FindAttributeByGrip(PointF, Boolean, Boolean, Boolean, Int32)</a></td><td><div class="summary">
@@ -299,6 +306,10 @@
  Search for parameters using an ID filter
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_FindWireAt.htm">FindWireAt</a></td><td><div class="summary">
  Find the wire at or near the given coordinate.
+ </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_ForcePreview.htm">ForcePreview</a></td><td><div class="summary">
+ If true, the document will draw viewport previews regardless of other
+ conditions. Typically a document only previews if it is loaded in the canvas
+ or when it has an RCP.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_GetAllInstanceIDs.htm">GetAllInstanceIDs</a></td><td><div class="summary">
  Get a sorted list of all the IGH_DocumentObject instance IDs in this document.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_InactiveObjects.htm">InactiveObjects</a></td><td><div class="summary">
@@ -413,7 +424,7 @@
  Set the preview flags of all selected objects to true or false
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_SetPreviewFlags_1.htm">SetPreviewFlags(List<span id="LSTBB1231F4_17"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTBB1231F4_17?cs=&lt;|vb=(Of |cpp=&lt;|fs=&lt;'|nu=(");</script>IGH_DocumentObject<span id="LSTBB1231F4_18"></span><script type="text/javascript">AddLanguageSpecificTextSet("LSTBB1231F4_18?cs=&gt;|vb=)|cpp=&gt;|fs=&gt;|nu=)");</script>, Boolean)</a></td><td><div class="summary">
  Set the preview flags of all specified objects to true or false
- </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_ShowPreviewSettings.htm">ShowPreviewSettings</a></td><td><div class="summary">
+ </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_SetStatusBarEventHelper.htm">SetStatusBarEventHelper</a></td><td /></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_ShowPreviewSettings.htm">ShowPreviewSettings</a></td><td><div class="summary">
  Display the Preview settings dialog.
  </div></td></tr><tr data="public;declared;notNetfw;"><td><img src="../icons/pubmethod.gif" alt="Public method" title="Public method" /></td><td><a href="M_Grasshopper_Kernel_GH_Document_SolutionProgress.htm">SolutionProgress</a></td><td><div class="summary">
  Returns the progress of the current solution.
@@ -476,8 +487,11 @@
  Raised whenever there is a change to the document undo/redo stack.
  </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID7RB')" onkeypress="SectionExpandCollapse_CheckKey('ID7RB', event)" tabindex="0"><img id="ID7RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />Fields</span></div><div id="ID7RBSection" class="collapsibleSection"><table class="members" id="fieldList"><tr><th class="iconColumn">
 								 
-							</th><th>Name</th><th>Description</th></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="F_Grasshopper_Kernel_GH_Document_ScheduleInactive.htm">ScheduleInactive</a></td><td><div class="summary">
+							</th><th>Name</th><th>Description</th></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="F_Grasshopper_Kernel_GH_Document_IgnoredUnknowns.htm">IgnoredUnknowns</a></td><td><div class="summary">
+ A collection of missing component IDs to ignore during file load operations.
+ Erase this cache to re-enable all the load warnings.
+ </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="F_Grasshopper_Kernel_GH_Document_ScheduleInactive.htm">ScheduleInactive</a></td><td><div class="summary">
  Defined the delay used to indicate the absence of a schedule.
  </div></td></tr><tr data="public;static;declared;notNetfw;"><td><img src="../icons/pubfield.gif" alt="Public field" title="Public field" /><img src="../icons/static.gif" alt="Static member" title="Static member" /></td><td><a href="F_Grasshopper_Kernel_GH_Document_ScheduleRecursive.htm">ScheduleRecursive</a></td><td><div class="summary">
  Defines the delay used to indicate the schedule should be immedate and recursive.
- </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID8RB')" onkeypress="SectionExpandCollapse_CheckKey('ID8RB', event)" tabindex="0"><img id="ID8RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID8RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_Grasshopper_Kernel.htm">Grasshopper.Kernel Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Grasshopper for Rhino 6.25.20114.05270 (Last updated: 4/28/2020)<br />Copyright © 2009-2020 Robert McNeel &amp; Associates<p><a href="https://discourse.mcneel.com/c/grasshopper" target="_blank">Report wishes and bugs at discourse.mcneel.com</a></p> </div></body></html>
+ </div></td></tr></table><a href="#PageHeader">Top</a></div><div class="collapsibleAreaRegion" id="seeAlsoSection"><span class="collapsibleRegionTitle" onclick="SectionExpandCollapse('ID8RB')" onkeypress="SectionExpandCollapse_CheckKey('ID8RB', event)" tabindex="0"><img id="ID8RBToggle" class="collapseToggle" src="../icons/SectionExpanded.png" />See Also</span></div><div id="ID8RBSection" class="collapsibleSection"><h4 class="subHeading">Reference</h4><div class="seeAlsoStyle"><a href="N_Grasshopper_Kernel.htm">Grasshopper.Kernel Namespace</a></div></div></div></div><div id="pageFooter" class="pageFooter">Grasshopper for Rhino 8.0.21012.12300 (Last updated: 1/19/2021)<br />Copyright © 2009-2021 Robert McNeel &amp; Associates<p><a href="https://discourse.mcneel.com/c/grasshopper" target="_blank">Report wishes and bugs at discourse.mcneel.com</a></p> </div></body></html>

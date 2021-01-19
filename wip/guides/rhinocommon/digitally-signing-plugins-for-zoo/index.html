@@ -6,21 +6,21 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
-  <title>Digitally Signing Zoo Plugins with BAT</title>
-  <meta name="description" content="This guide discusses how to digitally sign Zoo and Rhino plugins.  Using BAT">
+  <title>Digitally Signing LAN Zoo Plugins with BAT</title>
+  <meta name="description" content="This guide discusses how to digitally sign LAN Zoo and Rhino plugins.  Using BAT">
 
   <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
   <meta property="og:type" content="website" />
   <meta property="og:url" content="/guides/rhinocommon/digitally-signing-plugins-for-zoo/" />
-  <meta property="og:title" content="Digitally Signing Zoo Plugins" />
-  <meta property="og:description" content="This guide discusses how to digitally sign Zoo and Rhino plugins." />
+  <meta property="og:title" content="Digitally Signing LAN Zoo Plugins" />
+  <meta property="og:description" content="This guide discusses how to digitally sign LAN Zoo and Rhino plugins." />
   <meta property=”og:site_name” content="developer.rhino3d.com"/>
   <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
 
   <!-- twitter card tags additive with the og: tags -->
   <meta name="twitter:domain" value="developer.rhino3d.com" />
-  <meta name="twitter:title" value="Digitally Signing Zoo Plugins" />
-  <meta name="twitter:description" value="This guide discusses how to digitally sign Zoo and Rhino plugins." />
+  <meta name="twitter:title" value="Digitally Signing LAN Zoo Plugins" />
+  <meta name="twitter:description" value="This guide discusses how to digitally sign LAN Zoo and Rhino plugins." />
   
     <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
   
@@ -481,23 +481,23 @@ $(document).ready(function()
               
           </ol>
 
-          <h1>Digitally Signing Zoo Plugins</h1>
+          <h1>Digitally Signing LAN Zoo Plugins</h1>
 
           <p>
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/digitally-signing-plugins-for-zoo.md" target="_blank">05 Dec 2018</a>)
+      by <a href="/wip/authors/dale_fugier">Dale Fugier</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinocommon/digitally-signing-plugins-for-zoo.md" target="_blank">10 Dec 2020</a>)
     
   </span>
 
 </p>
 
-          <p>This guide discusses how to digitally sign Zoo and Rhino plugins.</p>
+          <p>This guide discusses how to digitally sign LAN Zoo and Rhino plugins.</p>
 
           <h2 id="overview">Overview</h2>
 
-<p>To add plugins to Zoo, and to call the license functions from within your Rhino plugin, you must digitally sign your plugins using a certificate signed by the <em>Robert McNeel &amp; Associates Code Signing Authority</em>.</p>
+<p>To add plugins to the LAN Zoo, and to call the license functions from within your Rhino plugin, you must digitally sign your plugins using a certificate signed by the <em>Robert McNeel &amp; Associates Code Signing Authority</em>.</p>
 
 <h2 id="generate-private-key--certificate-signing-request">Generate Private Key &amp; Certificate Signing Request</h2>
 
@@ -549,7 +549,7 @@ Saved CSR: 'TestZooPluginKey.csr'
 
 <h2 id="creating-a-personal-information-exchange">Creating a Personal Information Exchange</h2>
 
-<p>To digitally sign your Zoo or Rhino plugin, convert the signed digital certificate (<em>.crt</em>), emailed to you upon approval, into a personal information exchange (<em>.pfx</em>) file…</p>
+<p>To digitally sign your LAN Zoo or Rhino plugin, convert the signed digital certificate (<em>.crt</em>), emailed to you upon approval, into a personal information exchange (<em>.pfx</em>) file…</p>
 
 <ol>
   <li>Copy the signed digital certificate (<em>.crt</em>) you receive into the same folder as your private key (<em>.key</em>) and certificate signing request (<em>.csr</em>).</li>
@@ -567,7 +567,7 @@ Created 'TestZooPluginKey.pfx'. Use this to sign your executable code.
 
 <h2 id="sign-your-plugins">Sign Your Plugins</h2>
 
-<p>Now that you have a personal information exchange (<em>.pfx</em>), you can use it to sign Zoo and Rhino plugins.</p>
+<p>Now that you have a personal information exchange (<em>.pfx</em>), you can use it to sign LAN Zoo and Rhino plugins.</p>
 
 <ol>
   <li>Open a <em>Visual Studio Command Prompt</em>.</li>
@@ -638,7 +638,7 @@ Number of errors: 0
         </div>
 
         <div class="row text-center">
-          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          © 1997 - 2021 Robert McNeel &amp; Associates<br/>
           <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/wip/authors">Contributions welcome</a>
         </div>
 

@@ -521,7 +521,7 @@ $(document).ready(function()
   <span class="guide_byline">
     
       
-      by <a href="/wip/authors/scott_davidson">Scott Davidson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinopython/ghpython-bake.md" target="_blank">14 Aug 2019</a>)
+      by <a href="/wip/authors/scott_davidson">Scott Davidson</a> (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/master/_guide_topics/rhinopython/ghpython-bake.md" target="_blank">06 Jul 2020</a>)
     
   </span>
 
@@ -580,31 +580,31 @@ import Rhino
 
 
 if B:
-    
+
     print(type(G)) #debug message to Python output
-    
+
     #we obtain the reference in the Rhino doc
-    doc_object = rs.coercerhinoobject(G, True, True)
+    doc_object = scriptcontext.doc.Objects.Find(G)
     print(type(doc_object))
-    
+
     attributes = doc_object.Attributes
     print('the type of attributes is: ' + str(type(attributes)))     #debug message to Python output
 
     geometry = doc_object.Geometry
     print('the type of geometry is: ' + str(type(doc_object)))     #debug message to Python output
-    
+
     #we change the scriptcontext
     scriptcontext.doc = Rhino.RhinoDoc.ActiveDoc
-    
+
     #we add both the geometry and the attributes to the Rhino doc
     rhino_brep = scriptcontext.doc.Objects.Add(geometry, attributes)
     print('the Rhino doc ID is: ' + str(rhino_brep))     #debug message to Python output
-    
+
     #we can for example change the layer in Rhino...
-    if not rs.IsLayer(L): 
+    if not rs.IsLayer(L):
         rs.AddLayer(L)
     rs.ObjectLayer(rhino_brep, L)
-    
+
     #we put back the original Grasshopper document as default
     scriptcontext.doc = ghdoc
     a = G
@@ -623,15 +623,15 @@ if B:
 </tr>
 <tr>
 <td>22</td>
-<td>The coercerhinoobject method will attempt to take anything input and convert the results a Rhino Geoemtry Object.  There are many coerce methods for various input types.</td>
+<td>The doc.Objects.Find method will attempt to take the Object ID and find the actual Rhino Geometry Object.</td>
 </tr>
 <tr>
 <td>25</td>
-<td>Split off the coerced object's Attributes.  The attributes of an object include such properties as color, layer, linetype, render material, and group membership, amongst others. The Advanced section below covers object attributes some more.</td>
+<td>Split off the object's Attributes.  The attributes of an object include such properties as color, layer, linetype, render material, and group membership, amongst others. The Advanced section below covers object attributes some more.</td>
 </tr>
 <tr>
 <td>31</td>
-<td>Split off the coerced object's Geometry. Used when baking the object into Rhino.</td>
+<td>Split off the object's Geometry. Used when baking the object into Rhino.</td>
 </tr>
 <tr>
 <td>32</td>
@@ -773,7 +773,7 @@ if B:
         </div>
 
         <div class="row text-center">
-          © 1997 - 2020 Robert McNeel &amp; Associates<br/>
+          © 1997 - 2021 Robert McNeel &amp; Associates<br/>
           <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/wip/authors">Contributions welcome</a>
         </div>
 
