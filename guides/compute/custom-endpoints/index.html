@@ -436,9 +436,7 @@ $(document).ready(function()
 
 <p>By default Compute exposes a long list of endpoints, designed to expose functionality in RhinoCommon as well as enabling Grasshopper definitions and Python scripts to be solved. It’s also possible to extend Compute with your own custom endpoints by registering functions in a Rhino plug-in. Compute handles the serialization.</p>
 
-<p>There is a function in the V7 RhinoCommon named <code>Rhino.Runtime.HostUtils.RegisterComputeEndPoint(string, Type)</code>.</p>
-
-<p>First define a static class in your plug-in and add the new function as a static method.</p>
+<p>First define a static class in your plug-in and add the new function as a static method (you can add more than one!).</p>
 
 <pre><code class="language-csharp">static class MyCustomComputeFunctions
 {
