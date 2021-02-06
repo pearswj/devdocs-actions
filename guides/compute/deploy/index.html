@@ -465,6 +465,22 @@ $(document).ready(function()
           
 
         
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#footnotes">Footnotes</a>
+
+              
+
+            </li>
+          
+
+        
     </ul>
 </nav>
 
@@ -504,7 +520,7 @@ $(document).ready(function()
         
         <a href="/authors/will_pearson">Will Pearson</a>
         
-           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/compute/deploy.md" target="_blank">07 Jan 2021</a>)
+           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/compute/deploy.md" target="_blank">06 Feb 2021</a>)
     
   </span>
 
@@ -554,20 +570,20 @@ Running Compute locally uses your existing Rhino license. This is the best optio
     <pre><code class="language-powershell"> iwr -useb https://raw.githubusercontent.com/mcneel/compute.rhino3d/master/script/bootstrap-server.ps1 -outfile bootstrap.ps1; .\bootstrap.ps1 -install
 </code></pre>
 
-    <p>This <a href="https://github.com/mcneel/compute.rhino3d/blob/master/script/bootstrap-server.ps1">script</a> will install Rhino and the latest build of Compute as well as ensuring that clients can communicate with Compute. Compute will be installed as a Windows service (named “compute.geometry”) so that it starts automatically when the server or virtual machine starts. You will be asked to enter a few things…</p>
+    <p>This <a href="https://github.com/mcneel/compute.rhino3d/blob/master/script/bootstrap-server.ps1">script</a> will install Rhino and the latest build of Compute as well as ensuring that clients can communicate with Compute. Compute will be installed as a Windows service (named “rhino.compute”<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>) so that it starts automatically when the server or virtual machine starts. You will be asked to enter a few things…</p>
     <ul>
       <li><code>EmailAddress</code> - the Rhino download link requires a valid email address</li>
       <li><code>ApiKey</code> - the API Key that clients will use when communicating with Compute</li>
       <li><code>RhinoToken</code> – the long token that links Rhino to your core-hour billing team</li>
     </ul>
   </li>
-  <li>At the end of the installation process, Windows will restart to complete the setup. Wait a minute and log back in to check that the “compute.geometry” service is running.</li>
+  <li>At the end of the installation process, Windows will restart to complete the setup. Wait a minute and log back in to check that the “rhino.compute”<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> service is running.</li>
 </ol>
 
 <!-- Compute won't start the first time because the .NET 4.8 install needs to finish up -->
 <!-- TODO: check if we can install the service with "delayed" start to make this work better -->
 <div class="alert alert-warning" role="alert">
-<strong>After the first restart</strong> you may need to start the "compute.geometry" service manually. <strong>Every other time it will start automatically.</strong>
+<strong>After the first restart</strong> you may need to start the "rhino.compute"[^1] service manually. <strong>Every other time it will start automatically.</strong>
 </div>
 
 <h2 id="4-verify-compute-and-license-usage">4. Verify Compute and license usage</h2>
@@ -580,12 +596,24 @@ Running Compute locally uses your existing Rhino license. This is the best optio
 </ol>
 
 <div class="alert alert-info" role="alert">
-You are now being charged via <a href="../core-hour-billing" class="alert-link">Core-Hour Billing</a>. To stop the billing, either stop the "compute.geometry" service or shutdown the server or virtual machine.
+You are now being charged via <a href="../core-hour-billing" class="alert-link">Core-Hour Billing</a>. To stop the billing, either stop the "rhino.compute"[^1] service or shutdown the server or virtual machine.
 </div>
 
 <h2 id="5-next-steps">5. Next steps</h2>
 
 <p>Check out the <a href="https://github.com/mcneel/compute.rhino3d.appserver">Rhino Compute AppServer</a> – a node.js server acting as a bridge between client apps and private Compute servers.</p>
+
+<hr />
+
+<h2 id="footnotes">Footnotes</h2>
+
+<div class="footnotes" role="doc-endnotes">
+  <ol>
+    <li id="fn:1" role="doc-endnote">
+      <p>The Windows service display name was changed from “compute.geometry” to “rhino.compute” in early 2021 <a href="#fnref:1" class="reversefootnote" role="doc-backlink">&#8617;</a> <a href="#fnref:1:1" class="reversefootnote" role="doc-backlink">&#8617;<sup>2</sup></a></p>
+    </li>
+  </ol>
+</div>
 
         </article>
 
