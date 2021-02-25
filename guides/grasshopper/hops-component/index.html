@@ -1,0 +1,831 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hops Component with C#</title>
+  <meta name="description" content="Hops adds functions to Grasshopper.  Using C#">
+
+  <!-- OpenGraph for Facebook, Twitter, Slack unfurling -->
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="/guides/grasshopper/hops-component/" />
+  <meta property="og:title" content="Hops Component" />
+  <meta property="og:description" content="Hops adds functions to Grasshopper." />
+  <meta property=”og:site_name” content="developer.rhino3d.com"/>
+  <meta property=”og:image” content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png"/>
+
+  <!-- twitter card tags additive with the og: tags -->
+  <meta name="twitter:domain" value="developer.rhino3d.com" />
+  <meta name="twitter:title" value="Hops Component" />
+  <meta name="twitter:description" value="Hops adds functions to Grasshopper." />
+  
+    <meta name="twitter:image" content="http://developer.rhino3d.com/images/rhinodev-logo-unfurl.png" />
+  
+  <meta name="twitter:url" value="http://developer.rhino3d.com" />
+  
+  <meta name="twitter:label1" value="Platform(s)" />
+  <meta name="twitter:data1" value="Windows, Mac" />
+  
+  
+  <meta name="twitter:label2" value="Language(s)" />
+  <meta name="twitter:data2" value="C#" />
+  
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/github.min.css">
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/highlight.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/vbnet.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/languages/yaml.min.js"></script>
+  <script src="/node_modules/highlightjs-line-numbers.js/dist/highlightjs-line-numbers.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+  <script>hljs.initLineNumbersOnLoad();</script>
+
+  <!-- Overridden theme -->
+  <link rel="stylesheet" href="/css/main.css">
+
+  <!-- Latest compiled and minified CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+  <!-- Optional theme -->
+  <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous"> -->
+  <!-- Bootstrap override -->
+  <link rel="stylesheet" href="/css/bootstrap-override.css">
+
+  <link rel="canonical" href="http://developer.rhino3d.com/guides/grasshopper/hops-component/">
+  <link rel="alternate" type="application/rss+xml" title="Rhino Developer Docs" href="http://developer.rhino3d.com/feed.xml" />
+
+  <link rel="shortcut icon" href="https://developer.rhino3d.com/favicon.ico?v=2" />
+  <!-- Saving bookmarks to mobile devices -->
+  <!-- For non-Retina (@1× display) iPhone, iPod Touch, and Android 2.1+ devices: -->
+  <link rel="apple-touch-icon-precomposed" href="/images/apple-touch-icon-precomposed.png"><!-- 57×57px -->
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="72x72" href="/images/apple-touch-icon-72x72-precomposed.png">
+  <!-- For the iPad mini and the first- and second-generation iPad (@1× display) on iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="76x76" href="/images/apple-touch-icon-76x76-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="114x114" href="/images/apple-touch-icon-114x114-precomposed.png">
+  <!-- For iPhone with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="120x120" href="/images/apple-touch-icon-120x120-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≤ 6: -->
+  <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
+  <!-- For iPad with @2× display running iOS ≥ 7: -->
+  <link rel="apple-touch-icon-precomposed" sizes="152x152" href="/images/apple-touch-icon-152x152-precomposed.png">
+  <!-- For iPhone 6 Plus with @3× display: -->
+  <link rel="apple-touch-icon-precomposed" sizes="180x180" href="/images/apple-touch-icon-180x180-precomposed.png">
+  <!-- For Chrome for Android: -->
+  <link rel="icon" sizes="192x192" href="/images/touch-icon-192x192.png">
+
+  <!-- Enable crawling because this version is the stable version -->
+  <!--<meta name="robots" content="noindex" />-->
+</head>
+
+
+  <body>
+
+    <!-- Google Tag Manager **This belongs right after the <body> tag**-->
+    <noscript>
+        <iframe src="//www.googletagmanager.com/ns.html?id=GTM-MWMDKN"
+        height="0" width="0" style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <script>
+        (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+        '//www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+        })(window,document,'script','dataLayer','GTM-MWMDKN');
+    </script>
+    <!-- End Google Tag Manager -->
+
+
+    
+
+<!-- The following are "casts" from the string to number using math filters... -->
+
+
+
+<!-- ...but we need to check to see if the original branches were numbers or not... -->
+
+
+
+
+
+
+
+
+
+  <div class="version-banner">
+
+    
+      
+        
+        
+          <!-- <strong>NEW:</strong> Welcome to the <strong>Rhino 7</strong> version of this page! <a href="/6/guides/grasshopper/hops-component/">Looking for the older Rhino 6 version?</a> -->
+          Welcome to the <strong>Rhino 7</strong> version of this page!
+          <a href="/wip/guides/grasshopper/hops-component/">Looking for the newer Rhino 8 WIP version?</a>
+        
+        
+      
+    
+</div>
+
+<!-- Check the version banner for broken links and remove the link if found -->
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+<!-- <script>
+$(document).ready(function()
+{
+  var splitPath = window.location.pathname.split("/");
+  var linkURL = "/" + splitPath.splice(2,splitPath.length-2).join("/");
+
+  $.get(linkURL).fail(function ()
+  {
+    var $aTag = $("div.version-banner > a");
+    $aTag.text("View the current site instead.");
+    $aTag.attr("href", "/");
+  });
+});
+</script> -->
+
+
+    <div class="container">
+
+      <header class="site-header">
+
+
+    <a class="site-title" href="/"><img src="/images/rhinodevlogo148x128.png" alt="Rhino Developer Docs" height="48" width="56"></a><a class="site-title" href="/">Rhino Developer Docs</a>
+
+    <nav class="site-nav">
+      <img class="menu-icon" src="/images/gi.svg">
+      
+      <div class="trigger">
+      	<!--<a class="page-link" href="/">Welcome</a>-->
+        <!-- get current page title and "collection" to figure out which nav
+             link should be "active" -->
+        
+        
+        
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+            
+              
+                
+              
+            
+          
+        
+          
+        
+          
+            
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link active" href="/guides/">Guides</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/api/">API</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/samples/">Samples</a>
+                    
+                  
+              
+            
+          
+        
+          
+            
+          
+        
+          
+            
+              
+                
+                  
+                    <a class="page-link" href="/videos/">Videos</a>
+                    
+                  
+              
+            
+          
+        
+        <a class="page-link" href="https://discourse.mcneel.com/c/rhino-developer">Forums</a>
+        <!-- Google Search Engine -->
+        <!-- TODO Move to this site back into the Mcneel search, or use a simple site only search for results -->
+        <div id="sitesearch">
+            <!-- CSE Search Box Begins  -->
+            <form id="search-box" name="search-box" onsubmit="sitesearchFunction()" action="/search-results.html">
+                <input id="searchtext" type="search" name="q" size="24" value="" placeholder="Search" />
+                <input class="searchBox" type="submit" size="2" value=" " />
+            </form>
+			<script type="text/javascript">
+			function sitesearchFunction(){
+				var form_id = document.getElementById("search-box");
+				var form_action = form_id.action;
+                var form_sb = document.getElementById("searchtext");
+				var query_src = form_sb.value + " site:developer.rhino3d.com";
+				form_sb.value = query_src.toString();
+			}
+			</script>
+<!-- Google CSE Search Box Ends -->
+        </div>
+        <!--End of Google Search Engine -->
+      </div>
+    </nav>
+
+</header>
+
+
+      <div class="page-content">
+        <!--div class="wrapper"-->
+          <div class="container-fluid">
+
+<div class="row-fluid">
+    <!--Nav Bar -->
+    <nav class="col-xs-0 col-md-3 bs-docs-sidebar">
+    <ul id="sidebar" class="nav nav-stacked fixed">
+        <!-- Find the h2 group and any h3 subgroups -->
+        
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#hops">Overview </a>
+
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#how-to-use-hops-">How to use Hops </a>
+
+              
+                <ul class="nav nav-stacked">
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#install-hops-using-the-package-manager-in-rhino-7-for-windows">Install Hops using the Pa...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#create-a-hops-function">Create a Hops Function</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#use-the-hops-component">Use the Hops component</a>
+                    </li>
+                  
+
+                </ul>
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
+              <a href="#frequently-asked-questions">Frequently asked Questions:</a>
+
+              
+                <ul class="nav nav-stacked">
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#can-hops-use-other-machines">Can Hops use other machines?</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#can-you-nest-hops-functions-within-other-functions">Can you nest hops functio...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#does-it-cost-money-to-use-hops">Does it cost money to use...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#can-hops-be-used-with-grasshopper-player-to-make-commands">Can Hops be used with Gra...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#does-hops-support-parallel-processing">Does hops support paralle...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#what-inputs-and-output-types-does-hops-support-it-supports-all-common-types-ask-about-other-ones-if-you-need-them">What inputs and output ty...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#can-plugin-components-run-in-hops-functions">Can plugin components run...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#can-this-be-used-for-extremely-long-calculations-within-a-function">Can this be used for extr...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#can-any-existing-component-be-run-remotely">Can any existing componen...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#can-the-code-for-hops-be-used-in-my-c-or-python-scripts">Can the code for Hops be ...</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#what-is-hops-performance">What is hops performance?</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#how-does-hops-deal-with-datatrees">How does Hops deal with D...</a>
+                    </li>
+                  
+
+                </ul>
+              
+
+            </li>
+          
+
+        
+    </ul>
+</nav>
+
+
+    <!--Main Content -->
+    <div class="col-xs-12 col-md-9">
+      <!--<div class="post">-->
+
+        <article class="post-content">
+
+          <ol class="breadcrumb">
+              
+              
+              
+              
+              <li><a href="/guides/grasshopper">Grasshopper</a></li>
+
+              
+                
+                  <li class="active">In Depth</li>
+                
+              
+          </ol>
+
+          <h1>Hops Component</h1>
+
+          <p>
+  <span class="guide_byline">
+    
+    
+    by
+      
+        
+        <a href="/authors/steve_baer">Steve Baer</a>
+         and
+      
+        
+        <a href="/authors/scott_davidson">Scott Davidson</a>
+        
+           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/grasshopper/hops-component.md" target="_blank">24 Feb 2021</a>)
+    
+  </span>
+
+</p>
+
+          <p>Hops adds functions to Grasshopper.</p>
+
+          <h2 id="hops">Overview <img src="/images/win-logo-small.png" alt="Windows" class="guide_icon" /></h2>
+
+<p><img src="/images/hops-overview.png" class="img-center" width="100%" /></p>
+
+<p>Hops is a new component for Grasshopper in Rhino 7 for Windows. Hops adds functions to Grasshopper. Functions are defined in separate Grasshopper document. Like other programming languages, functions let you:</p>
+
+<ul>
+  <li>Simplify complex algorithms by using the same function multiple times.</li>
+  <li>Eliminate duplicate component combinations by placing common combinations in a function.</li>
+  <li>Share Grasshopper documents with other team members.</li>
+  <li>Reference Grasshopper documents across multiple projects.</li>
+  <li>Solve external documents in parallel, potentially speeding up large projects.</li>
+</ul>
+
+<p>Hops displays inputs and outputs that match a function specified. During calculation the component solves the definition in a separate process and then returns the outputs to the current document.</p>
+
+<h2 id="how-to-use-hops-">How to use Hops <img src="/images/hops.svg" alt="Windows" class="guide_icon" /></h2>
+
+<h3 id="install-hops-using-the-package-manager-in-rhino-7-for-windows">Install Hops using the Package Manager in Rhino 7 for Windows:</h3>
+<ol>
+  <li>To install <a href="rhino://package/search?name=hops">Hops, click in this link</a></li>
+  <li>Or, type <code>PackageManger</code> on the Rhino command line.</li>
+  <li>Search for “Hops”</li>
+  <li>Select Hops and then Install</li>
+</ol>
+
+<p><img src="/images/hopsinstall.jpg" class="img-center" width="80%" /></p>
+
+<h3 id="create-a-hops-function">Create a Hops Function</h3>
+
+<p>Hops functions are Grasshopper documents with special inputs and outputs.</p>
+
+<p><img src="/images/hops-function.png" class="img-center" width="100%" /></p>
+
+<p>Hops inputs are Get components. The name of the component is used for the name the Hops input parameter.</p>
+
+<p><img src="/images/hops-input.png" class="img-center" width="40%" /></p>
+
+<p>Available Get components are:</p>
+
+<p><img src="/images/get-components.jpg" class="img-center" width="80%" /></p>
+
+<p>Hops outputs are geometry or primitive params in a group named: “RH_OUT:[name]”, where [name] is the name of the output parameter. In this case, the name of the output is “o”.</p>
+
+<p><img src="/images/hops-output.png" class="img-center" width="30%" /></p>
+
+<h3 id="use-the-hops-component">Use the Hops component</h3>
+
+<ol>
+  <li>Place the Grasshopper Params Tab &gt; Util Group &gt; Hops component on the canvas.</li>
+  <li>Right-click the Hops Component, then click Path</li>
+  <li>Select a Hops Function.</li>
+  <li>The component will show the inputs and outputs.</li>
+  <li>Wire it up like any other component.</li>
+</ol>
+
+<p><img src="/images/gh-hops-path.png" class="img-center" width="100%" /></p>
+
+<h2 id="frequently-asked-questions">Frequently asked Questions:</h2>
+
+<h3 id="can-hops-use-other-machines">Can Hops use other machines?</h3>
+
+<p>No, at this time Hops functions using the local machine.  Files can be stored at any location available to Windows.</p>
+
+<h3 id="can-you-nest-hops-functions-within-other-functions">Can you nest hops functions within other functions?</h3>
+
+<p>Not at this time.</p>
+
+<h3 id="does-it-cost-money-to-use-hops">Does it cost money to use Hops?</h3>
+
+<p>Hops it free to use.</p>
+
+<h3 id="can-hops-be-used-with-grasshopper-player-to-make-commands">Can Hops be used with Grasshopper Player to make commands?</h3>
+
+<p>Yes, Hops functions can use Context Bake and Context Print components to create Rhino commands in Grasshopper Player..</p>
+
+<h3 id="does-hops-support-parallel-processing">Does hops support parallel processing?</h3>
+
+<p>Yes, Hops by default will launch a parallel process for each branch of a datatree input stream. Also, by right-clicking on the component additional parallel threads can be created. (1 vs 6-pack)</p>
+
+<h3 id="what-inputs-and-output-types-does-hops-support-it-supports-all-common-types-ask-about-other-ones-if-you-need-them">What inputs and output types does hops support? (It supports all common types, ask about other ones if you need them)</h3>
+
+<p>Hops passes standard Grasshopper data types (Strings, Numbers, Lines, etc…) For other datatypes such as images or EPW weather files use a string for the file name so that the external function might also read in the same file.</p>
+
+<h3 id="can-plugin-components-run-in-hops-functions">Can plugin components run in Hops Functions?</h3>
+
+<p>Yes, all the installed Grasshopper plugins can run within a Hops Function.</p>
+
+<h3 id="can-this-be-used-for-extremely-long-calculations-within-a-function">Can this be used for extremely long calculations within a function?</h3>
+
+<p>Yes, Hops will wait for all function calls to return before passing the outputs to the downstream components.</p>
+
+<h3 id="can-any-existing-component-be-run-remotely">Can any existing component be run remotely?</h3>
+
+<p>All plugins and existing Grasshopper component can be run as a</p>
+
+<h3 id="can-the-code-for-hops-be-used-in-my-c-or-python-scripts">Can the code for Hops be used in my C# or Python scripts?</h3>
+
+<p>Not at this time.  As of now you could embed custom C#or Python component within a function or before or after a Hops component. https://github.com/mcneel/compute.rhino3d/tree/master/src/compute.components</p>
+
+<h3 id="what-is-hops-performance">What is hops performance?</h3>
+
+<p>We have not done extensive benchmarking on this. Any performance improvement comes from solving a complex calculation in parallel ; each solution is calculated at the same speed as in Rhino plus the overhead of making the calls to the external function.</p>
+
+<h3 id="how-does-hops-deal-with-datatrees">How does Hops deal with DataTrees?</h3>
+
+<p>Standard datamatching rule apply to datatrees.  But Hops will spawn a new parallel thread for each branch of a tree</p>
+
+        </article>
+
+      <!--</div>-->
+
+    </div>
+</div>
+</div>
+
+        <!--/div-->
+      </div>
+
+      <footer class="site-footer">
+
+  <div class="wrapper">
+
+    <div class="footer-col-wrapper">
+
+      
+        <div class="row">
+          <div class="col-md-4">
+
+            <p class="text">
+              
+                Authors:
+                <ul>
+                  
+                  
+                    
+                    <li><a href="/authors/steve_baer">Steve Baer</a></li>
+                  
+                    
+                    <li><a href="/authors/scott_davidson">Scott Davidson</a></li>
+                  
+                </ul>
+              
+            </p>
+          </div>
+          <div class="col-md-4 text-center">
+            <span class="icon  icon--github">
+              <svg viewBox="0 0 16 16">
+                <path fill="#828282" d="M7.999,0.431c-4.285,0-7.76,3.474-7.76,7.761 c0,3.428,2.223,6.337,5.307,7.363c0.388,0.071,0.53-0.168,0.53-0.374c0-0.184-0.007-0.672-0.01-1.32 c-2.159,0.469-2.614-1.04-2.614-1.04c-0.353-0.896-0.862-1.135-0.862-1.135c-0.705-0.481,0.053-0.472,0.053-0.472 c0.779,0.055,1.189,0.8,1.189,0.8c0.692,1.186,1.816,0.843,2.258,0.645c0.071-0.502,0.271-0.843,0.493-1.037 C4.86,11.425,3.049,10.76,3.049,7.786c0-0.847,0.302-1.54,0.799-2.082C3.768,5.507,3.501,4.718,3.924,3.65 c0,0,0.652-0.209,2.134,0.796C6.677,4.273,7.34,4.187,8,4.184c0.659,0.003,1.323,0.089,1.943,0.261 c1.482-1.004,2.132-0.796,2.132-0.796c0.423,1.068,0.157,1.857,0.077,2.054c0.497,0.542,0.798,1.235,0.798,2.082 c0,2.981-1.814,3.637-3.543,3.829c0.279,0.24,0.527,0.713,0.527,1.437c0,1.037-0.01,1.874-0.01,2.129 c0,0.208,0.14,0.449,0.534,0.373c3.081-1.028,5.302-3.935,5.302-7.362C15.76,3.906,12.285,0.431,7.999,0.431z"/>
+              </svg>
+            </span>
+            <a href="https://github.com/mcneel/developer-rhino3d-com/blob/7/_guide_topics/grasshopper/hops-component.md" target="_blank">Edit page on GitHub</a>
+          </div>
+            <div class="col-md-4">
+              <span class="pull-right">
+                <span class="glyphicon glyphicon-cog"></span>&nbsp;<a href="/admin">Admin</a>
+              </span>
+            </div>
+        </div>
+
+        <div class="row text-center">
+          © 1997 - 2021 Robert McNeel &amp; Associates<br/>
+          <span class="glyphicon glyphicon-heart-empty"></span>&nbsp;<a href="/authors">Contributions welcome</a>
+        </div>
+
+      
+
+    </div>
+
+  </div>
+
+  <script>
+    if (navigator.appVersion.indexOf("Win")!=-1)
+    {
+      var body = document.getElementsByTagName("body");
+      body[0].style.fontWeight = '400';
+    }
+  </script>
+
+</footer>
+
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+
+    <!-- Latest compiled and minified JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+
+    <!-- MathJax -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+
+    <script type="text/javascript">
+    $('body').scrollspy({
+        target: '.bs-docs-sidebar',
+        offset: 150 /* fixed header is about 40px high */
+    });
+    </script>
+  </body>
+</html>
