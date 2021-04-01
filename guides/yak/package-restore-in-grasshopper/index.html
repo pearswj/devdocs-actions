@@ -492,7 +492,7 @@ the process of satisfying those dependencies.</p>
 <p><img src="/images/yak-gh-restore.gif" alt="Grasshopper package restore" /></p>
 
 <p>Package Restore uses the name, ID and version of the missing plug-ins to search the package server. If any packages match the search query
-then they will be installed and, if possible, loaded prior to opening the definition<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote">1</a></sup>.</p>
+then they will be installed and, if possible, loaded prior to opening the definition<sup id="fnref:3" role="doc-noteref"><a href="#fn:3" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <iframe width="560" height="315" src="https://www.youtube.com/embed/MsjRdRtHW08" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe>
 
@@ -500,13 +500,13 @@ then they will be installed and, if possible, loaded prior to opening the defini
 
 <h3 id="naming">Naming</h3>
 
-<p>Ideally, the name of the Grasshopper plug-in and the package will match. In case this isn’t possible – due to either the constraints of the package naming scheme<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">2</a></sup> or the fact that there are multiple plug-ins in a package each with a different name – the correct package can also be identified by the plug-in ID.</p>
+<p>Ideally, the name of the Grasshopper plug-in and the package will match. In case this isn’t possible – due to either the constraints of the package naming scheme<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">2</a></sup> or the fact that there are multiple plug-ins in a package each with a different name – the correct package can also be identified by the plug-in ID.</p>
 
 <p>For each .gha file, the plug-in ID is extracted and added to the <code>manifest.yml</code> when you run <code>yak build</code>.</p>
 
 <h3 id="version-numbers">Version numbers</h3>
 
-<p>Package version numbers can either follow the <a href="https://semver.org">Semantic Versioning 2.0.0</a> (SemVer) spec or they can be four-digits<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">3</a></sup>, as per <code>System.Version</code>. See the <a href="../the-package-server">package server</a> guide for more details on the allowed version number formats.</p>
+<p>Package version numbers can either follow the <a href="https://semver.org">Semantic Versioning 2.0.0</a> (SemVer) spec or they can be four-digits<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">3</a></sup>, as per <code>System.Version</code>. See the <a href="../the-package-server">package server</a> guide for more details on the allowed version number formats.</p>
 
 <p>The server allows both SemVer and four-digit because some Grasshopper plug-ins will specify their version number as a <code>string</code> in a class derived from <code>GH_AssemblyInfo</code> whereas others will rely on the <code>AssemblyVersionAttribute</code>.</p>
 

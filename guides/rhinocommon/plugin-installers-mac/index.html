@@ -517,7 +517,7 @@ $(document).ready(function()
   <li><em>Single-click the name</em> your plugin’s <em>Release</em> (or <em>Debug</em>) folder to <em>Rename</em> it.  The new name should be your plugin assembly with a <em>.rhp</em> suffix.  For example, if your plugin is called <em>HelloRhinoCommon</em>, rename the folder that contains this file <em>HelloRhinoCommon.rhp</em>…</li>
   <li>You will be prompted to confirm this change.  Click the “<strong>Add</strong>” button:
 <img src="/images/plugin-installer-mac-02.png" alt="Click Add" /></li>
-  <li>The icon of the folder<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup> should now look like this…
+  <li>The icon of the folder<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup> should now look like this…
 <img src="/images/plugin-installer-mac-03.png" alt="New Icon" /></li>
   <li><em>Archive</em> the plugin <em>folder</em>.  <em>Right-click</em> (option-click) the plugin <em>.rhp</em> <em>folder</em> you created in the previous step and select “<em>Compress</em> (your plugin name).”  This creates a zip archive of the contents of the folder.</li>
   <li><em>Single-click the name</em> of the new archive you created in step 5.  This allows you <em>to rename</em> the archive.</li>
@@ -534,7 +534,7 @@ $(document).ready(function()
 
 <h2 id="behind-the-scenes">Behind the Scenes</h2>
 
-<p>The <em>.macrhi</em> extension is a file extension associated with the Rhino for Mac application (both <em>Rhinoceros.app</em> and <em>RhinoWIP.app</em>).  This extension denotes a “Rhino for Mac plugin installer.”  Rhino for Mac knows that such files are actually .zip archives that need to be decompressed and copied into the user’s Library folder at the appropriate location, specifically the <em>~/Library/Application Support/McNeel/Rhinoceros/MacPlugIns/</em> folder<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote">2</a></sup>.</p>
+<p>The <em>.macrhi</em> extension is a file extension associated with the Rhino for Mac application (both <em>Rhinoceros.app</em> and <em>RhinoWIP.app</em>).  This extension denotes a “Rhino for Mac plugin installer.”  Rhino for Mac knows that such files are actually .zip archives that need to be decompressed and copied into the user’s Library folder at the appropriate location, specifically the <em>~/Library/Application Support/McNeel/Rhinoceros/MacPlugIns/</em> folder<sup id="fnref:2" role="doc-noteref"><a href="#fn:2" class="footnote" rel="footnote">2</a></sup>.</p>
 
 <p>When Rhino for Mac launches, it searches the contents of the</p>
 

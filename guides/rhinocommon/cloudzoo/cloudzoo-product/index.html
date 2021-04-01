@@ -487,7 +487,7 @@ $(document).ready(function()
 <ul>
   <li><code>id</code> (<em>readonly</em>) - A GUID that uniquely describes each product. This GUI must be unique in the entire system.</li>
   <li><code>creationDate</code> (<em>readonly</em>) - A unix timestamp in seconds representing the date the product was added to Cloud Zoo.</li>
-  <li><code> iss</code> (<em>readonly</em>) - The id of the issuer as registered with Cloud Zoo.</li>
+  <li>` iss` (<em>readonly</em>) - The id of the issuer as registered with Cloud Zoo.</li>
   <li><code>format</code> - A <a href="/guides/rhinocommon/cloudzoo/cloudzoo-licenseformat">License Format object</a>. Cloud Zoo will send all requests to add a license to the system to the issuer of the product whose license format matches the given license key.</li>
   <li><code>version</code> - The version of the product that this license represents. This string is user facing and will be used in Rhino as well as in the Licenses Portal.</li>
   <li><code>platforms</code> - An array of supported platforms for this license. Currently, only <code>Windows</code> and <code>Mac</code> are supported.</li>
