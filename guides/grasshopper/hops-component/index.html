@@ -624,7 +624,7 @@ $(document).ready(function()
   <li>Solve external documents in parallel, potentially speeding up large projects.</li>
 </ul>
 
-<p>Hops functions are stored as seperate Grasshopper documents. The Hops component will adapt its inputs and outputs to match the function specified. During calculation Hops solves the definition in a separate process, then returns the outputs to the current document.</p>
+<p>Hops functions are stored as separate Grasshopper documents. The Hops component will adapt its inputs and outputs to match the function specified. During calculation Hops solves the definition in a separate process, then returns the outputs to the current document.</p>
 
 <h2 id="how-to-use-hops-">How to use Hops <img src="/images/hops.svg" alt="Windows" class="guide_icon" /></h2>
 
@@ -638,7 +638,7 @@ $(document).ready(function()
 
 <ol>
   <li>To install <a href="rhino://package/search?name=hops">Hops, click in this link</a></li>
-  <li>Or, type <code>PackageManger</code> on the Rhino command line.</li>
+  <li>Or, type <code>PackageManager</code> on the Rhino command line.</li>
   <li>Search for “Hops”</li>
   <li>Select Hops and then Install</li>
 </ol>
@@ -651,7 +651,7 @@ $(document).ready(function()
 
 <p><img src="/images/hops-function.png" class="img-center" width="100%" /></p>
 
-<p>Hops inputs are Get components. The name of the component is used for the name the Hops input parameter.</p>
+<p>Hops inputs are Get components. The name of the component is used for the name of the Hops input parameter.</p>
 
 <p><img src="/images/hops-input.png" class="img-center" width="40%" /></p>
 
@@ -677,25 +677,25 @@ $(document).ready(function()
 
 <h2 id="frequently-asked-questions">Frequently asked Questions:</h2>
 
-<h4 id="can-you-nest-hops-functions-within-other-functions">Can you nest hops functions within other functions?</h4>
+<h4 id="can-you-nest-hops-functions-within-other-functions">Can you nest Hops functions within other functions?</h4>
 
 <p>Not at this time.</p>
 
 <h4 id="does-it-cost-money-to-use-hops">Does it cost money to use Hops?</h4>
 
-<p>Hops it free to use.</p>
+<p>Hops is free to use.</p>
 
 <h4 id="can-hops-be-used-with-grasshopper-player-to-make-commands">Can Hops be used with Grasshopper Player to make commands?</h4>
 
 <p>Yes, Hops functions can use Context Bake and Context Print components to create Rhino commands in Grasshopper Player.</p>
 
-<h4 id="does-hops-support-parallel-processing">Does hops support parallel processing?</h4>
+<h4 id="does-hops-support-parallel-processing">Does Hops support parallel processing?</h4>
 
 <p>Yes, Hops by default will launch a parallel process for each branch of a datatree input stream. Also, by right-clicking on the component additional parallel threads can be created. (1 vs 6-pack)</p>
 
-<h4 id="what-inputs-and-output-types-does-hops-support-it-supports-all-common-types-ask-about-other-ones-if-you-need-them">What inputs and output types does hops support? (It supports all common types, ask about other ones if you need them)</h4>
+<h4 id="what-inputs-and-output-types-does-hops-support-it-supports-all-common-types-ask-about-other-ones-if-you-need-them">What inputs and output types does Hops support? (It supports all common types, ask about other ones if you need them)</h4>
 
-<p>Hops passes standard Grasshopper data types (Strings, Numbers, Lines, etc…) For other datatypes such as images or EPW weather files use a string for the file name so that the external function might also read in the same file.</p>
+<p>Hops passes standard Grasshopper data types (Strings, Numbers, Lines, etc…). For other datatypes such as images or EPW weather files use a string for the file name so that the external function might also read in the same file.</p>
 
 <h4 id="can-plugin-components-run-in-hops-functions">Can plugin components run in Hops Functions?</h4>
 
@@ -707,19 +707,19 @@ $(document).ready(function()
 
 <h4 id="can-any-existing-component-be-run-remotely">Can any existing component be run remotely?</h4>
 
-<p>All plugins and existing Grasshopper component can be run as a single component.</p>
+<p>All plugins and existing Grasshopper components can be run as a single component.</p>
 
 <h4 id="can-the-code-for-hops-be-used-in-my-c-or-python-scripts">Can the code for Hops be used in my C# or Python scripts?</h4>
 
-<p>Not at this time.  As of now you could embed custom C# or Python component within a function or before or after a Hops component. https://github.com/mcneel/compute.rhino3d/tree/master/src/compute.components</p>
+<p>Not at this time.  As of now you could embed a custom C# or Python component within a function or before or after a Hops component. https://github.com/mcneel/compute.rhino3d/tree/master/src/compute.components</p>
 
-<h4 id="what-is-hops-performance">What is hops performance?</h4>
+<h4 id="what-is-hops-performance">What is Hops performance?</h4>
 
-<p>We have not done extensive benchmarking on this. Any performance improvement comes from solving a complex calculation in parallel ; each solution is calculated at the same speed as in Rhino plus the overhead of making the calls to the external function.</p>
+<p>We have not done extensive benchmarking on this. Any performance improvement comes from solving a complex calculation in parallel; each solution is calculated at the same speed as in Rhino plus the overhead of making the calls to the external function.</p>
 
 <h4 id="how-does-hops-deal-with-datatrees">How does Hops deal with DataTrees?</h4>
 
-<p>Standard datamatching rule apply to datatrees.  But Hops will spawn a new parallel thread for each branch of a tree</p>
+<p>Standard data-matching rules apply to datatrees.  But Hops will spawn a new parallel thread for each branch of a tree</p>
 
 <h2 id="remote-machine-configuration">Remote Machine Configuration</h2>
 
@@ -734,7 +734,7 @@ $(document).ready(function()
   <li>Make sure Rhino runs and is properly licensed.</li>
   <li>Get the very latest version of compute.geometry.exe. Either build it yourself or get build from our CI server at
 https://ci.appveyor.com/project/mcneel/compute-rhino3d/branch/master/artifacts</li>
-  <li>Run compute.geometry.exe from an Adminirator Command Line with an address parameter. For example
+  <li>Run compute.geometry.exe from an Administrator Command Line with an address parameter. For example
 ‘compute.geometry.exe -address http://192.168.1.6:6123’. 192.168.1.6 is your computer’s address. The port can be any you want; but we tend to use values above 6000.</li>
   <li>Note the IP address of the remote machine.</li>
 </ol>
@@ -748,7 +748,7 @@ https://ci.appveyor.com/project/mcneel/compute-rhino3d/branch/master/artifacts</
 <p>If you get the word “healthy” back, you are all set up.</p>
 
 <h3 id="setting-up-hops-to-communicate-with-the-remote-machine">Setting up Hops to communicate with the remote machine</h3>
-<p>In the grasshopper preferences &gt; Solver &gt; Hops - Compute Server URLs enter the IP and port of each remote computer.  For the above example enter:
+<p>In the Grasshopper preferences &gt; Solver &gt; Hops - Compute Server URLs enter the IP and port of each remote computer.  For the above example enter:
 http://192.168.1.6:6123</p>
 
 <p><strong>Video Tutorial:</strong></p>
@@ -773,7 +773,7 @@ http://192.168.1.6:6123</p>
 </ol>
 
 <h3 id="getting-started-with-cpython-in-grasshopper">Getting started with CPython in Grasshopper.</h3>
-<p>This python module helps you create python (specifically CPython) functions and use them inside your Grasshopper scripts using the new <em>Hops</em> components.</p>
+<p>This Python module helps you create Python (specifically CPython) functions and use them inside your Grasshopper scripts using the new Hops components.</p>
 
 <p><strong>Required:</strong></p>
 
@@ -796,11 +796,11 @@ http://192.168.1.6:6123</p>
 
 <h2 id="shortcut-to-a-single-grasshopper-component">Shortcut to a single Grasshopper Component</h2>
 
-<p>Hops can call into a single grasshopper component using the remote instance to solve it. This can be helpful if many parralel instances of the component would speed up a defintinion. Simply enter the name of the component</p>
+<p>Hops can call into a single Grasshopper component using the remote instance to solve it. This can be helpful if many parallel instances of the component would speed up a definition. Simply enter the name of the component.</p>
 
 <h2 id="using-remote-services">Using Remote Services</h2>
 
-<p>Hops may call into other applications for results.  What is required on the other application is Hops protocol awarness.  An example of calling into a remote service the Hops component calling into CPython. These libraries can also be used in the Python API of other applciations and services. See the Cpython Example above. For details see the <a href="https://github.com/mcneel/compute.rhino3d/tree/master/src/ghhops-server-py">ReadMe on GH Hops CPython project</a></p>
+<p>Hops may call into other applications for results.  What is required on the other application is Hops protocol awarness.  An example of calling into a remote service is the Hops component calling into CPython. These libraries can also be used in the Python API of other applciations and services. See the CPython Example above. For details see the <a href="https://github.com/mcneel/compute.rhino3d/tree/master/src/ghhops-server-py">ReadMe on GH Hops CPython project</a>.</p>
 
 <div class="embed-responsive embed-responsive-16by9">
   <iframe class="embed-responsive-item" src="https://player.vimeo.com/video/537498238?title=0&amp;byline=0&amp;badge=0&amp;portrait=0"></iframe>
