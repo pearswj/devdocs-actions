@@ -733,7 +733,7 @@ $(document).ready(function()
 
 <h4 id="does-hops-support-parallel-processing">Does Hops support parallel processing?</h4>
 
-<p>Yes, Hops by default will launch a parallel process for each branch of a datatree input stream. Also, by right-clicking on the component additional parallel threads can be created. (1 vs 6-pack)</p>
+<p>Yes, Hops by default will launch a parallel process for each branch of a datatree input stream.</p>
 
 <h4 id="what-input-and-output-types-does-hops-support-it-supports-all-common-types-ask-about-other-ones-if-you-need-them">What input and output types does Hops support? (It supports all common types, ask about other ones if you need them)</h4>
 
@@ -761,13 +761,13 @@ $(document).ready(function()
 
 <h4 id="how-does-hops-deal-with-datatrees">How does Hops deal with datatrees?</h4>
 
-<p>Standard data-matching rules apply to datatrees.  But Hops will spawn a new parallel thread for each branch of a tree</p>
+<p>Standard data-matching rules apply to datatrees.  But Hops will spawn a new parallel thread for each branch of a tree.</p>
 
 <h2 id="hops-settings">Hops Settings</h2>
 
 <h3 id="application-settings">Application Settings</h3>
 
-<p>The Hops settings control how hops runs on an application level.  It is available through the Grasshopper File pulldown &gt; Preferences.</p>
+<p>The Hops settings control how Hops runs on an application level.  It is available through the Grasshopper File pulldown &gt; Preferences.</p>
 
 <p><img src="/images/gh-hops-preferences.jpg" class="img-center" width="60%" /></p>
 
@@ -776,7 +776,7 @@ $(document).ready(function()
   <li><strong>Max Concurrent requests</strong> - Used to limit the number of active requests in asynchronous situations. This way hops doesn’t make thousands of requests while the original request is being processed.</li>
   <li><strong>Clear Hops Memory cache</strong> - Clears all previously stored solutions from memory.</li>
   <li><strong>Hide Rhino.Compute Console Window</strong> - Hops will solve in the background, but showing the window can be helpful for troubleshooting.</li>
-  <li><strong>Launch Local Rhino.COmpute at Start</strong> - Use this for remote machines when Compute needs to start before any requests are sent.</li>
+  <li><strong>Launch Local Rhino.Compute at Start</strong> - Use this for remote machines when Compute needs to start before any requests are sent.</li>
   <li><strong>Child Process Count</strong> - Used to limit the number of requests for additional parallel processes. May want to set this to the number of cores available.</li>
 </ul>
 
@@ -787,7 +787,7 @@ $(document).ready(function()
 <p><img src="/images/gh-hops-options.jpg" class="img-center" width="60%" /></p>
 
 <ul>
-  <li><strong>Parallel Computing</strong> - Pass each item to a new parrelel node if available.</li>
+  <li><strong>Parallel Computing</strong> - Pass each item to a new parallel node if available.</li>
   <li><strong>Path…</strong> - Add the location of the GH function to be solved. This may be a file name, IP address or URL.</li>
   <li><strong>Show Input: Path</strong> - Makes the Path an input on the component so Path can be set through the GH Canvas.</li>
   <li><strong>Show Input: Enabled</strong> - Shows an Enabled input that runs the component based on a <code>True</code> or <code>False</code> Boolean value.</li>
