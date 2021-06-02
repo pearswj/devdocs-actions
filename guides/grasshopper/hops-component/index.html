@@ -475,6 +475,47 @@ $(document).ready(function()
             
             
             <li>
+              <a href="#hops-settings">Hops Settings</a>
+
+              
+                <ul class="nav nav-stacked">
+                  
+
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#application-settings">Application Settings</a>
+                    </li>
+                  
+                    
+                    
+                    
+                    
+                    
+                    <li>
+                        <a href="#component-settings">Component Settings</a>
+                    </li>
+                  
+
+                </ul>
+              
+
+            </li>
+          
+
+        
+          
+
+          
+            
+            
+            
+            
+            <li>
               <a href="#remote-machine-configuration">Remote Machine Configuration</a>
 
               
@@ -602,7 +643,7 @@ $(document).ready(function()
         
         <a href="/authors/scott_davidson">Scott Davidson</a>
         
-           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/grasshopper/hops-component.md" target="_blank">10 May 2021</a>)
+           (Last modified: <a href="https://github.com/mcneel/developer-rhino3d-com/commits/7/_guide_topics/grasshopper/hops-component.md" target="_blank">02 Jun 2021</a>)
     
   </span>
 
@@ -622,6 +663,7 @@ $(document).ready(function()
   <li>Share Grasshopper documents with other team members.</li>
   <li>Reference Grasshopper documents across multiple projects.</li>
   <li>Solve external documents in parallel, potentially speeding up large projects.</li>
+  <li>Can run asynchronously on long running calculations without blocking Rhino and Grasshopper interactions.</li>
 </ul>
 
 <p>Hops functions are stored as separate Grasshopper documents. The Hops component will adapt its inputs and outputs to match the function specified. During calculation Hops solves the definition in a separate process, then returns the outputs to the current document.</p>
@@ -703,7 +745,7 @@ $(document).ready(function()
 
 <h4 id="can-this-be-used-for-extremely-long-calculations-within-a-function">Can this be used for extremely long calculations within a function?</h4>
 
-<p>Yes, Hops will wait for all function calls to return before passing the outputs to the downstream components.</p>
+<p>Yes, each Hops component has an option to solve asynchronously. The user interface will not be blocked while waiting for a remote process to solve and the definition will be updated when the solve is complete. Hops will wait for all function calls to return before passing the outputs to the downstream components.</p>
 
 <h4 id="can-any-existing-component-be-run-remotely">Can any existing component be run remotely?</h4>
 
@@ -720,6 +762,39 @@ $(document).ready(function()
 <h4 id="how-does-hops-deal-with-datatrees">How does Hops deal with DataTrees?</h4>
 
 <p>Standard data-matching rules apply to datatrees.  But Hops will spawn a new parallel thread for each branch of a tree</p>
+
+<h2 id="hops-settings">Hops Settings</h2>
+
+<h3 id="application-settings">Application Settings</h3>
+
+<p>The Hops settings that control how hops runs on an application level.  It is available through the Grasshopper File pulldown &gt; Preferences.</p>
+
+<p><img src="/images/gh-hops-preferences.jpg" class="img-center" width="60%" /></p>
+
+<ul>
+  <li><strong>Hops-Compute server URL</strong> - List the IP address or URL of any remote machines or Compute servers.</li>
+  <li><strong>Max Concurrent requests</strong> - Used to limit the number of active requests in asynchronous situations. This way hops does nto make thousands of requests while the original request is being processed.</li>
+  <li><strong>Clear Hops Memory cache</strong> - Clears all previously stored solutions from memory.</li>
+  <li><strong>Hide Rhino.Compute Console Window</strong> - Hops will solve in the background, but showing the window can be helpful for troubleshooting.</li>
+  <li><strong>Launch Local Rhino.COmpute at Start</strong> - Use this for remote machines when Compute needs to start before any requests are sent.</li>
+  <li><strong>Child Process Count</strong> - Used to limit the number of requests for additional parallel processes. May want to set this to the number of cores avilable.</li>
+</ul>
+
+<h3 id="component-settings">Component Settings</h3>
+
+<p>Right_click on the Hops component to select any number of options that control how Hops runs.</p>
+
+<p><img src="/images/gh-hops-options.jpg" class="img-center" width="60%" /></p>
+
+<ul>
+  <li><strong>Parallel Computing</strong> - Pass each item to a new parrelel node if available.</li>
+  <li><strong>Path…</strong> - Add the location of the GH function to be solved. This may be a file name, IP address or URL.</li>
+  <li><strong>Show Input: Path</strong> - Makes the Path an input on the component so Path can be set through the GH Canvas.</li>
+  <li><strong>Show Input: Enabled</strong> - Shows a Enabled input that runs the component based on a <code>True</code> or <code>False</code> boolean value.</li>
+  <li><strong>Asynchronous</strong> - The user interface will not be blocked while waiting for a remote process to solve and the definition will be updated when the solve is complete.</li>
+  <li><strong>Cache In Memory</strong> - Previous solutions are stored in memory on the local machine to imporve preformance if the same inputs were previously calculated.</li>
+  <li><strong>Cache On Server</strong> - Previous solutions are stored on the remote server to imporve performance. Currently available on Remote Hops services only.</li>
+</ul>
 
 <h2 id="remote-machine-configuration">Remote Machine Configuration</h2>
 
@@ -770,9 +845,11 @@ http://192.168.1.6:6123</p>
   <li>Supports real debugging modes including breakpoints.</li>
   <li>Full support of Visual Studio Code.</li>
   <li>Other applications and services that support a Python API can also use the libraries included here.</li>
+  <li>The hops component attempts to detect when inputs and outputs have changed on a server and will rebuild itself.</li>
 </ol>
 
-<h3 id="getting-started-with-cpython-in-grasshopper">Getting started with CPython in Grasshopper.</h3>
+<h3 id="getting-started-with-cpython-in-grasshopper">Getting started with CPython in Grasshopper</h3>
+
 <p>This Python module helps you create Python (specifically CPython) functions and use them inside your Grasshopper scripts using the new Hops components.</p>
 
 <p><strong>Required:</strong></p>
