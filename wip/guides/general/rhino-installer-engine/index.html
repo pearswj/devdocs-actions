@@ -543,7 +543,7 @@ $(document).ready(function()
 
 <p>A Rhino Installer package is a zip file with an <em>.rhi</em> extension. The package can include more than one version of a plug-in however all versions must share the same GUID (i.e. they’re different versions of the <em>same</em> plug-in).</p>
 
-<p>There are no file structure or naming requirements. For example the two packages below are functionally equivalent. Both contain versions of “Marmoset” – a fictitious C++ plug-in compiled for Rhino 5 (32-bit and 64-bit) and Rhino 6<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>There are no file structure or naming requirements. For example the two packages below are functionally equivalent. Both contain versions of “Marmoset” – a fictitious C++ plug-in compiled for Rhino 5 (32-bit and 64-bit) and Rhino 6<sup id="fnref:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <pre><code>Marmoset_tree.rhi/
 ├── Rhino 6/
@@ -572,7 +572,7 @@ $(document).ready(function()
 
 <h3 id="installation-and-compatibility">Installation and compatibility</h3>
 
-<p>The Rhino Installer Engine examines each <em>.rhp</em> file and extracts the plugin GUID, Title, Version, the SDK used (e.g. RhinoCommon, C++) and the SDK version. This information is used to determine which version of the plug-in will be installed for which installed version of Rhino for Windows; the newest compatible plugin is registered with the corresponding version of Rhino. RhinoCommon plug-ins compiled as <code>AnyCPU</code> will be installed for both 32- and 64-bit Rhino 5<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote">1</a></sup>.</p>
+<p>The Rhino Installer Engine examines each <em>.rhp</em> file and extracts the plugin GUID, Title, Version, the SDK used (e.g. RhinoCommon, C++) and the SDK version. This information is used to determine which version of the plug-in will be installed for which installed version of Rhino for Windows; the newest compatible plugin is registered with the corresponding version of Rhino. RhinoCommon plug-ins compiled as <code>AnyCPU</code> will be installed for both 32- and 64-bit Rhino 5<sup id="fnref:1:1" role="doc-noteref"><a href="#fn:1" class="footnote" rel="footnote">1</a></sup>.</p>
 
 <div class="alert alert-info" role="alert">
 <strong>Since Rhino 6:</strong> Where a RhinoCommon plug-in is found that has been compiled against an earlier _major_ version of Rhino than is installed, an in-depth compatibility check will be performed to determine whether the SDK of the installed Rhino still supports the functionality used by the plug-in. If the check is successful then the outdated plug-in will be installed.
