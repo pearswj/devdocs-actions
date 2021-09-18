@@ -138,7 +138,8 @@ end
 
 remote = `git config remote.origin.url`.strip
 puts ENV['GITHUB_ACTOR']
-# remote.sub! "https://github.com/", "https://#{ENV['GITHUB_ACTOR']}:#{ENV['GITHUB_TOKEN']}@github.com/"
+puts ENV['GITHUB_TOKEN']
+remote_auth = remote.sub "https://github.com/", "https://#{ENV['GITHUB_ACTOR']}:#{ENV['GITHUB_TOKEN']}@github.com/"
 puts "Deploying to #{remote.yellow} (production)"
 
 # intialise git repo
@@ -206,5 +207,5 @@ end
 
 # deploy
 puts "Pushing commit: #{`git rev-parse --verify --short HEAD`.rstrip.yellow}"
-puts `git push -n "#{remote}" HEAD:#{deploy_branch}`.cyan # stderr, whatever
+puts `git push -n "#{remote_auth}" HEAD:#{deploy_branch}`.cyan # stderr, whatever
 exit $?.exitstatus
