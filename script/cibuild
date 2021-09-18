@@ -137,7 +137,7 @@ if ENV['CI'] != "true"
 end
 
 remote = `git config remote.origin.url`.strip
-remote_auth = remote.sub "https://github.com/", "git@github.com:"
+remote.sub! "https://github.com/", "git@github.com:"
 puts "Deploying to #{remote.yellow} (production)"
 
 # intialise git repo
