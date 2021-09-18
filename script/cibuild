@@ -206,4 +206,4 @@ end
 puts "Pushing commit: #{`git rev-parse --verify --short HEAD`.rstrip.yellow}"
 
 # deploy (via ssh using bozo's deploy key)
-puts `git push #{production} HEAD:#{deploy_branch}`.cyan # stderr, whatever
+puts `git push -n #{production} HEAD:#{deploy_branch}`.cyan # stderr, whatever
