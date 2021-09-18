@@ -137,7 +137,6 @@ if ENV['CI'] != "true"
 end
 
 remote = `git config remote.origin.url`.strip
-remote.sub! "https://github.com/", "git@github.com:"
 puts "Deploying to #{remote.yellow} (production)"
 
 # intialise git repo
@@ -146,7 +145,7 @@ puts `git init`.cyan
 # setup the git user
 user = {
   name: ENV['GITHUB_USER_NAME'] || "Bozo",
-  email: ENV['GITHUB_USER_EMAIL'] || "brian+build@mcneel.com"
+  email: ENV['GITHUB_USER_EMAIL'] || "bozo@mcneel.com"
 }
 
 # inside this git repo we'll pretend to be a new user
