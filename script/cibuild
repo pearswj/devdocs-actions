@@ -137,6 +137,7 @@ if ENV['CI'] != "true"
 end
 
 remote = `git config remote.origin.url`.strip
+puts ENV['GITHUB_ACTOR']
 # remote.sub! "https://github.com/", "https://#{ENV['GITHUB_ACTOR']}:#{ENV['GITHUB_TOKEN']}@github.com/"
 puts "Deploying to #{remote.yellow} (production)"
 
