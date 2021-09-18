@@ -137,6 +137,7 @@ if ENV['CI'] != "true"
 end
 
 remote = `git config remote.origin.url`.strip
+remote.sub! "https://github.com/", "https://#{ENV['GITHUB_ACTOR']}:#{ENV['GITHUB_TOKEN']}@github.com/"
 puts "Deploying to #{remote.yellow} (production)"
 
 # intialise git repo
@@ -202,7 +203,7 @@ end
 # exit if commit failed
 (puts "WARNING: Commit failed. Probably empty!".red; exit) if $?.exitstatus > 0
 
+# deploy
 puts "Pushing commit: #{`git rev-parse --verify --short HEAD`.rstrip.yellow}"
-
-# deploy (via ssh using bozo's deploy key)
 puts `git push -n #{production} HEAD:#{deploy_branch}`.cyan # stderr, whatever
+exit $?.exitstatus
