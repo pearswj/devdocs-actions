@@ -18,4 +18,10 @@ jobs:
         # ruby-version: 2.7.3 # uses .ruby-version
         bundler-cache: true
     - name: Run script
-      run: ./script/cibuild
+      env:
+        DEPLOY_KEY: ${{ secrets.DEPLOY_KEY }}
+        GIT_SSH_COMMAND: "ssh -o StrictHostKeyChecking=no"
+      run: |
+        eval "$(ssh-agent -s)"
+        ssh-add - <<< "${DEPLOY_KEY}"
+        ./script/cibuild
