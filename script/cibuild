@@ -205,5 +205,5 @@ end
 
 # deploy
 puts "Pushing commit: #{`git rev-parse --verify --short HEAD`.rstrip.yellow}"
-puts `git push -n #{production} HEAD:#{deploy_branch}`.cyan # stderr, whatever
+puts `git push -n "#{remote}" HEAD:#{deploy_branch}`.cyan # stderr, whatever
 exit $?.exitstatus
