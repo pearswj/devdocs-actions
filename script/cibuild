@@ -190,14 +190,16 @@ if is_stable
   # stage and commit
   `git add -A .`
   # puts `git status -s` # debug
-  puts "Committing staged changes"
+  puts "::group::Committing staged changes"
   puts `git commit -m "Deploy #{sha}#{"+" if dirty} (default: #{branch})"`.cyan
+  puts "::endgroup::"
 else
   # stage and commit (branch directory only)
   `git add -A #{branch_dir}`
   # puts `git status -s #{branch_dir}` # debug
-  puts "Committing staged changes"
+  puts "::group::Committing staged changes"
   puts `git commit -m "Deploy #{sha}#{"+" if dirty} (#{branch})"`.cyan
+  puts "::endgroup::"
 end
 
 # exit if commit failed
